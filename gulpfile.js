@@ -53,7 +53,8 @@ gulp.task('script', function(){
 gulp.task('js', function(){
   return gulp.src([
     // 'node_modules/slick-carousel/slick/slick.js',
-    'assest/js/swiper.js',
+    // 'assest/js/swiper.js',
+        'node_modules/swiper/swiper-bundle.min.js'
     // 'assest/js/jquery.simplemarquee.js',
     // 'assest/js/aos.js',
     // 'assest/js/slick.js',

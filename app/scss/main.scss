@@ -4,6 +4,12 @@
 $dark-pink:#0D1526;
 $inputs-color:#132039;
 $light-blue:#9FB5DF;
+$grey:#808080;
+$red:#FF0040;
+$redHover:#E50039;
+$navcolor:#14181F;
+$pagcolor:#868A92;
+$mainbg:#F0F1F5;
 html{
     height: 100%;
     margin: 0;
@@ -55,6 +61,27 @@ button{
   outline: none;
   border: none;
 }
+.button{
+  cursor: pointer;
+  transition: .3s;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 3px;
+  box-sizing: border-box ;
+  display: inline-flex;
+  &--default{
+    background-color: #FF0040;
+    columns: $white;
+    text-align: center;
+    &:hover{
+      background-color: $redHover;
+    }
+  }
+  &--size-big{
+    padding: 16.5px 20px;
+    font-weight: 700;
+  }
+}
 .header{
   padding: 20px 0;
   background-color: $dark-pink;
@@ -65,8 +92,19 @@ button{
   &__logo{
     max-width: 100%;
     height: 40px;
-    margin-right: 30px;
+    flex-shrink: 0;
   }
+  &__search{
+    width: 100%;
+    margin: 0 30px;
+  }
+  &__nav-tabs{
+    flex-shrink: 0;
+  }
+
+}
+.main{
+  background-color: $mainbg;
 }
 .logo{
   img{
@@ -83,6 +121,8 @@ button{
       border-radius: 2px;
       display: block;
       width: 100%;
+      padding: 0 40px 0 20px;
+      box-sizing: border-box;
       transition: .3s;
       &::placeholder{
         color: $light-blue;
@@ -96,9 +136,261 @@ button{
     }
     &-voice-button{
       position: absolute;
-      
+      right: 10px;
+      padding: 10px;
+      top: 50%;
+      transform: translateY(-50%);
       background: transparent;
       color: $light-blue;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      i{
+        font-size: 18px;
+      }
     }
   }
+}
+.nav-tabs{
+  display: flex;
+  align-items: center;
+  &__item{
+    display: flex;
+    align-items: center;
+    & + .nav-tabs__item{
+      margin-left: 30px;
+    }
+    &-icon{
+      position: relative;
+      height: 30px;
+      width: 30px;
+      flex-shrink: 0;
+     &:not(.nav-tabs__item-icon--without-info){
+       margin-right: 15px;
+     }
+      svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-value{
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: -8px;
+      right: -8px;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      text-align: center;
+      font-size: 10px;
+      line-height: 19px;
+      color: $white;
+      border: 2px solid $dark-pink;
+      border-radius: 50%;
+      &:not(.nav-tabs__item-value--active){
+        background-color: $grey;
+      }
+      &--active{
+        background-color: $red;
+      }
+    }
+    &-top{
+      a{
+        font-size: 14px;
+        line-height: 17px;
+        color: $white;
+        font-weight: 700;
+      }
+    }
+    &-bottom{
+      a{
+        color: $light-blue;
+      }
+    }
+  }
+}
+.hero{
+  padding: 30px;
+  &__main-slider{
+    width: 69.5%;
+  }
+  &__banners{
+    width: 31.5%;
+  }
+  &__row{
+    margin: 0 -15px;
+  }
+  &__main-slider,&__banners{
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  &__banners-item{
+    display: block;
+    min-height: 200px;
+    box-sizing: border-box;
+    padding: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
+    &-name{
+      margin-bottom: 10px;
+    }
+    &-name,&-coast{
+      font-size: 16px;
+      line-height: 20px;
+      color: $white;
+      display: block;
+    }
+
+    & + .hero__banners-item{
+      margin-top: 30px;
+    }
+  }
+}
+.main-slider{
+  &__swiper{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+  }
+  &__swiper-slide{
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 60px;
+    transition: .3s;
+  }
+  
+  &__pretitle{
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+  }
+  &__title{
+    font-size: 30px;
+    line-height: 36px;
+    color: $white;
+    margin: 20px 0;
+  }
+  &__nav{
+    position: absolute;
+    left: 60px;
+    display: flex;
+    bottom: 60px;
+    z-index: 50;
+    &-arrow{
+      font-size: 18px;
+      color: $navcolor;
+      background-color: $white;
+      width: 40px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:first-child{
+        border-radius: 3px 0 0 3px;
+      }
+      &:last-child{
+        border-radius: 0 3px 3px 0;
+      }
+    }
+    &-arrow + &-arrow{
+      margin-left: 2px;
+    }
+  }
+  &__swiper-pagination{
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    z-index: 50;
+    display: flex;
+    .swiper-pagination-bullet{
+      background-color: rgba($white, .5);
+      transition: .3s;
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+
+
+      &.swiper-pagination-bullet-active{
+        background-color: rgba($white, 1);
+      }
+    }
+    .swiper-pagination-bullet + .swiper-pagination-bullet{
+      margin-left: 10px;
+    }
+  }
+  &__bottom{
+    box-sizing: border-box;
+    padding-left: 95px;
+  }
+  &__button{
+    max-width: 180px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+  }
+}
+.aboutUs{
+  &__row{
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  &__item{
+    width: 50%;
+    padding: 0 15px;
+  }
+  &__info{
+    display: flex;
+    align-items: flex-start;
+  }
+  &__left{
+    flex-shrink: 0;
+    width: 160px;
+    margin-right: 30px;
+  }
+  &__right{
+    width: 100%;
+  }
+}
+
+
+.tizers{
+  background-color: $red;
+  padding: 30px 0;
+  &__row{
+    margin: 0 -15px;
+  }
+  &__item-container{
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 33.3%;
+  }
+  &__item{
+    &-image-container{
+      height: 100px;
+      width: 100px;
+      flex-shrink: 0;
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background-color: $white;
+    }
+    &-image{
+      max-width: 100%;
+    }
+  }
+
 }

@@ -60,6 +60,23 @@ function _transcriptHandler(e) {
         $searchForm.submit();
     }
 }
+
+
+$('.main-slider__swiper').each(function(){
+    let mainSlider = new Swiper(this, {
+        pagination: {
+            clickable: true,
+            el: $(this).parent().find(".swiper-pagination")[0],
+          },
+      navigation: {
+        nextEl: $(this).parent().find('.swiper-button-next')[0],
+        prevEl: $(this).parent().find('.swiper-button-prev')[0],
+      },
+    //   effect: "fade",
+      observer: true,  
+      observeParents: true,
+    });
+  });
 // $(".burger").click(function(){
 //     $(this).toggleClass("active")
 //     $("body").toggleClass("hidden")
