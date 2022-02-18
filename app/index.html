@@ -17,12 +17,16 @@
         <header class="header">
             <div class="container">
               <div class="row header__row">
-                <img class="header__logo logo" src="images/logo.svg" alt="">
+                <div class="header__logo logo">
+                    <img src="images/logo.svg" alt="">
+                </div>
+               
                 <div class="header__search search">
-                    <div class="search__form">
+                    <form class="search__form">
                         <input type="text" class="search__form-input" placeholder="Поиск по товарам...">
-                        <button class="search__form-voice-button"><i class="fa-solid fa-microphone"></i></button>
-                    </div>
+                        <div class="search__form-voice-button"><i class="fa-solid fa-microphone"></i></div>
+                        <div id="result"></div>
+                    </form>
                 </div>
               </div>
             </div>
