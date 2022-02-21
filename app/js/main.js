@@ -77,6 +77,30 @@ $('.main-slider__swiper').each(function(){
       observeParents: true,
     });
   });
+  $('.visited-slider').each(function(){
+    let visitedSlider = new Swiper(this, {
+        pagination: {
+            clickable: true,
+            el: $(this).parent().find(".swiper-pagination")[0],
+          },
+    //   navigation: {
+    //     nextEl: $(this).parent().find('.swiper-button-next')[0],
+    //     prevEl: $(this).parent().find('.swiper-button-prev')[0],
+    //   },
+    //   effect: "fade",
+          
+      observer: true,  
+      observeParents: true,
+      slidesPerView: 5,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 30,
+    });
+  });
+
+
+
 // $(".burger").click(function(){
 //     $(this).toggleClass("active")
 //     $("body").toggleClass("hidden")
