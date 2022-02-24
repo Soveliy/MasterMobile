@@ -68,6 +68,7 @@ $('.main-slider__swiper').each(function(){
             clickable: true,
             el: $(this).parent().find(".swiper-pagination")[0],
           },
+          spaceBetween: 30,
       navigation: {
         nextEl: $(this).parent().find('.swiper-button-next')[0],
         prevEl: $(this).parent().find('.swiper-button-prev')[0],
@@ -99,7 +100,54 @@ $('.main-slider__swiper').each(function(){
     });
   });
 
+  $('.preview-item__image-slider').each(function(){
+    let previewSlider = new Swiper(this, {
+        pagination: {
+            clickable: true,
+            el: $(this).find(".swiper-pagination")[0],
+            dynamicBullets:true,
+            dynamicMainBullets:4,
 
+          },
+    //   navigation: {
+    //     nextEl: $(this).parent().find('.swiper-button-next')[0],
+    //     prevEl: $(this).parent().find('.swiper-button-prev')[0],
+    //   },
+    //   effect: "fade",
+        
+      observer: true,  
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+    });
+  });
+
+// Убавляем кол-во по клику
+$('.counter__button--minus').click(function() {
+  let $input = $(this).parent().find('.counter__input');
+  let count = parseInt($input.val()) - 1;
+  count = count < 1 ? 1 : count;
+  $input.val(count);
+});
+// Прибавляем кол-во по клику
+$('.counter__button--plus').click(function() {
+  let $input = $(this).parent().find('.counter__input');
+  let count = parseInt($input.val()) + 1;
+  count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
+  $input.val(parseInt(count));
+}); 
+// Убираем все лишнее и невозможное при изменении поля
+$('.counter__input').bind("change keyup input click", function() {
+  if (this.value.match(/[^0-9]/g)) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+  }
+  if (this.value == "") {
+      this.value = 1;
+  }
+  if (this.value > parseInt($(this).data('max-count'))) {
+      this.value = parseInt($(this).data('max-count'));
+  }    
+}); 
 
 // $(".burger").click(function(){
 //     $(this).toggleClass("active")
