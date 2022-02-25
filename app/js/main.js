@@ -73,7 +73,6 @@ $('.main-slider__swiper').each(function(){
         nextEl: $(this).parent().find('.swiper-button-next')[0],
         prevEl: $(this).parent().find('.swiper-button-prev')[0],
       },
-    //   effect: "fade",
       observer: true,  
       observeParents: true,
     });
@@ -92,11 +91,26 @@ $('.main-slider__swiper').each(function(){
           
       observer: true,  
       observeParents: true,
-      slidesPerView: 5,
+      slidesPerView: 1,
       grid: {
-        rows: 2,
+        rows: 3,
       },
       spaceBetween: 30,
+
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      }
     });
   });
 
@@ -109,11 +123,6 @@ $('.main-slider__swiper').each(function(){
             dynamicMainBullets:4,
 
           },
-    //   navigation: {
-    //     nextEl: $(this).parent().find('.swiper-button-next')[0],
-    //     prevEl: $(this).parent().find('.swiper-button-prev')[0],
-    //   },
-    //   effect: "fade",
         
       observer: true,  
       observeParents: true,
@@ -147,6 +156,10 @@ $('.counter__input').bind("change keyup input click", function() {
   if (this.value > parseInt($(this).data('max-count'))) {
       this.value = parseInt($(this).data('max-count'));
   }    
+}); 
+$('.footer__title-btn').click(function() {
+  $(this).parent().toggleClass("is-active");
+ $(this).parent().next().slideToggle();
 }); 
 
 // $(".burger").click(function(){

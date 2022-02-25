@@ -58,7 +58,7 @@ img{
   @include for-desk(){
     width: 100%;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 15px;
   }
 }
 .row{
@@ -536,11 +536,26 @@ button{
   padding: 30px 0;
   &__row{
     margin: 0 -15px;
+    @include for-md(){
+      flex-wrap: wrap;
+    }
   }
   &__item-container{
     padding: 0 15px;
     box-sizing: border-box;
     width: 33.3%;
+    @include for-md(){
+      width: 50%;
+      &:nth-child(n + 3){
+        margin-top: 30px;
+      }
+    }
+    @include for-sm(){
+      width: 100%;
+      &:nth-child(n + 2){
+        margin-top: 30px;
+      }
+    }
   }
   &__item{
     display: flex;
@@ -557,25 +572,43 @@ button{
       box-sizing: border-box;
       border-radius: 50%;
       background-color: $white;
+      @include for-sm(){
+        height: 60px;
+        width: 60px;
+        margin-right: 15px;
+      }
     }
     &-image{
       max-width: 100%;
       max-height: 50px;
+      @include for-sm(){
+        max-height: 30px;
+      }
     }
     &-content{
       padding: 15px 0;
       box-sizing: border-box;
       color: $white;
+      @include for-sm(){
+        padding: 0;
+      }
     }
     &-title{
       font-size: 12px;
       line-height: 15px;
       font-weight: 700;
       margin-bottom: 15px;
+      @include for-sm(){
+        margin-bottom: 5px;
+      }
     }
     &-desc{
       font-size: 12px;
       line-height: 15px;
+      @include for-sm(){
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
   }
   
@@ -649,11 +682,20 @@ button{
   background-color: $dark-pink;
   color: $white;
 
+  @include for-md(){
+    padding: 20px 0;
+  }
+
   &__row{
     margin: 0 -15px;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    &--bottom{
+      @include for-sm(){
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
   &__item{
     padding: 0 15px;
@@ -661,16 +703,49 @@ button{
 
     &--w25{
       width: 25%;
+      @include for-md(){
+        width: 50%;
+        margin-bottom: 15px;
+      }
+      @include for-sm(){
+        width: 100%;
+      }
     }
     &--grow{
       flex-grow: 1;
     }
   }
   &__title{
-    font-size: 30px;
-    line-height: 33px;
-    font-weight: 500;
     margin-bottom: 20px;
+    
+    @include for-md(){
+      margin-bottom: 20px;
+    }
+    @include for-sm(){
+     position: relative;
+     margin-bottom: 0;
+    }
+    a{
+      font-size: 30px;
+      line-height: 33px;
+      font-weight: 500;
+      color: $white;
+    
+      @include for-md(){
+        font-size: 24px;
+        line-height: 27px;
+      }
+      @include for-sm(){
+        display: block;
+        background-color: #132039;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 16.5px 15px;
+
+      }
+    }
+   
     &:after{
       content: '';
       display: block;
@@ -678,8 +753,39 @@ button{
       height: 2px;
       width: 50px;
       margin-top: 15px;
+      @include for-sm(){
+        display: none;
+      }
+    }
+    &.is-active{
+      .footer__title-btn i{
+        transform: rotate(45deg);
+      }
+    }
+    &-btn{
+      display: none;
+      @include for-sm(){
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+        height: 100%;
+        width: 50px;
+        text-align: center;
+        color: #9FB5DF;
+
+        i{
+          font-size: 18px;
+          line-height: 21px;
+          transition: .3s;
+        }
+      }
     }
   }
+
   &__nav-list,&__contacts{
     padding: 0;
     margin: 0;
@@ -687,6 +793,12 @@ button{
    &Item + .footer__nav-listItem{
      margin-top: 10px;
    }
+  }
+  &__nav,&__contacts{
+    @include for-sm(){
+      display: none;
+      padding-top: 15px;
+    }
   }
   &__link{
     color: #9FB5DF;
@@ -718,12 +830,18 @@ button{
     line-height: 18px;
     color: $white;
     margin-top: 70px;
+    @include for-sm(){
+      margin-top: 0;
+    }
     p{
       margin: 0;
     }
   }
   &__social{
     margin-top: 50px;
+    @include for-sm(){
+      margin-top: 30px;
+    }
   }
   &__pays{
     display: flex;
@@ -740,6 +858,9 @@ button{
     margin-top: 30px;
     padding-top: 50px;
     border-top: 1px solid $dark-blue;
+    @include for-sm(){
+      margin-top: 20px;
+    }
   }
   &__otherMenu{
     list-style: none;
@@ -747,25 +868,56 @@ button{
     margin: 0;
     align-items: center;
     display: flex;
-
+    @include for-sm(){
+      padding-top: 30px;
+      columns: 2;
+      display: block;
+    }
+    &-item{
+      &:nth-child(n+2){
+        @include for-sm(){
+          margin-top: 10px;
+        }
+      }
+      a{
+        display: block;
+        padding: 11.5px 25px;
+      }
+    }
     &-item + .footer__otherMenu-item{
       margin-left: 15px;
+      @include for-sm(){
+        margin-left: 0;
+      }
     }
   }
   &__logo{
     display: flex;
     align-items: center;
+    @include for-sm(){
+      flex-direction: column;
+    }
     img{
       max-width: 45px;
       flex-shrink: 0;
       margin-right: 20px;
+      @include for-sm(){
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
     }
     &-content{
       width: 100%;
+      
     }
     &-dev{
       font-size: 10px;
       line-height: 13px;
+      @include for-sm(){
+        text-align: center;
+        margin-top: 2px;
+      }
+
     }
 
   }
