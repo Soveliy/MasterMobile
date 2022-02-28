@@ -494,6 +494,7 @@ button{
       &:focus{
         &::placeholder{
           opacity: 0;
+          
         }
       }
       &--mob{
