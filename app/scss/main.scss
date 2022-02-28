@@ -56,6 +56,9 @@ img{
 .content{
   transition: .3s;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+
   // &--active{
     
   // }
@@ -460,6 +463,7 @@ button{
 }
 .main{
   background-color: $mainbg;
+  flex: 1;
 }
 .logo{
   img{
@@ -467,6 +471,7 @@ button{
   }
 }
 .search{
+  position: relative;
   &__logo{
     position: absolute;
     top: 50%;
@@ -487,13 +492,21 @@ button{
       padding: 0 25px 0 20px;
       box-sizing: border-box;
       transition: .3s;
+      color: #8592AD;
       &::placeholder{
         color: $light-blue;
         transition: .3s;
       }
       &:focus{
+          background-color: $white;
+          
+          border-radius: 5px 5px 0 0;
+          ~ .search-items{
+            display: block;
+          }
         &::placeholder{
-          opacity: 0;
+          // opacity: 0;
+          color: #8592AD;
           
         }
       }
@@ -520,6 +533,84 @@ button{
   }
 }
 
+.search-items{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  border-radius: 0 0 5px 5px;
+  z-index: 500;
+  &__list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  // &__item-title{
+  //   display: flex;
+  //   padding: 0px 20px;
+  // }
+}
+.search-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  &__head{
+    background-color: #F0F1F5;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+  }
+  &__title{
+    font-size: 12px;
+    line-height: 15px;
+    &-link{
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  &:not(.search-item__head){
+    position: relative;
+    .search-item__name{
+      font-size: 14px;
+      line-height: 17px;
+      color: $dark-pink;
+      width: 100%;
+      padding: 11.5px 0;
+    }
+    .search-item__remove{
+      width: 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #8592AD;
+      font-size: 18px;
+      display: none;
+    }
+    &:hover{
+      .search-item__name{
+        color: $redHover;
+        
+      }
+      .search-item__remove{
+        display: block;
+      }
+    }
+  }
+  &:not(.search-item__head) + &:not(.search-item__head){
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: calc(100% - 40px);
+      border-top: 1px dotted #C2C9D6;
+    }
+  }
+}
 .hero{
   padding: 30px 0;
   @include for-md(){
