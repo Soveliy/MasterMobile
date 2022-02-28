@@ -1534,7 +1534,7 @@ button{
   &__item-container{
     width: 20%;
     box-sizing: border-box;
-    margin-bottom: 15px;
+   
     padding: 0 1px;
     @include for-lg(){
       width: 25%;
@@ -1544,6 +1544,7 @@ button{
     }
     @include for-md(){
       width: 33.3%;
+      margin-bottom: 15px;
       padding: 0 7.5px;
     }
     @include for-sm(){
