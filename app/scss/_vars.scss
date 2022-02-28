@@ -33,7 +33,7 @@ $resolution2: 320;
     @media (max-width: 992px) { @content; }
   }
   @mixin for-md {
-    @media (max-width: 992px) { @content; }
+    @media (max-width: 1024px) { @content; }
   }
   @mixin for-lit-md {
     @media (max-width: 850px) { @content; }

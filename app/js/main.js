@@ -1,3 +1,16 @@
+
+$('.header__button--catalog-js').on('click', function(e) {
+  e.preventDefault();
+  $('.catalog-menu').toggleClass('catalog-menu--active');
+  $('.content').toggleClass('content--active');
+  $(this).hide(300);
+})
+$('.catalog-menu__exit-button').on('click', function(e) {
+  e.preventDefault();
+  $('.catalog-menu').toggleClass('catalog-menu--active');
+  $('.content').toggleClass('content--active');
+  $(".header__button--catalog-js").show(300)
+})
 // Voice Search
 /* setup vars for our trigger, form, text input and result elements */
 const $voiceTrigger = $(".search__form-voice-button");
@@ -98,17 +111,25 @@ $('.main-slider__swiper').each(function(){
       spaceBetween: 30,
 
       breakpoints: {
-        640: {
+        768: {
           slidesPerView: 2,
           spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+          grid: {
+            rows: 3,
+          },
         },
         1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+          grid: {
+            rows: 2,
+          },
+        },
+        1200: {
           slidesPerView: 5,
-          spaceBetween: 50,
+          grid: {
+            rows: 2,
+          },
         },
       }
     });
@@ -161,7 +182,27 @@ $('.footer__title-btn').click(function() {
   $(this).parent().toggleClass("is-active");
  $(this).parent().next().slideToggle();
 }); 
+let el = document.querySelector('.flyBasket__scroll');
+  SimpleScrollbar.initEl(el);
+  $('.nav-tabs__item--basket').click(function() {
+    $(".flyBasket").show(300)
+  }); 
+  $('.flyBasket__bg,.flyBasket__close').click(function() {
+    $(".flyBasket").hide(300)
+  }); 
+  $('.header__burger').click(function() {
+    $(this).toggleClass("is-active")
+  }); 
+  
+// new Mmenu(document.querySelector("#catalog-menu"));
 
+//             document.addEventListener("click", function (evnt) {
+//                 var anchor = evnt.target.closest('a[href="#/"]');
+//                 if (anchor) {
+//                     alert("Thank you for clicking, but that's a demo link.");
+//                     evnt.preventDefault();
+//                 }
+//             });
 // $(".burger").click(function(){
 //     $(this).toggleClass("active")
 //     $("body").toggleClass("hidden")

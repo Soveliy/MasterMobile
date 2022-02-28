@@ -10,11 +10,154 @@
 </head>
 <body>
  <div class="wrapper">
-     <div class="catalog-menu"></div>
+     <div id="catalog-menu" class="catalog-menu">
+         <div class="catalog-menu__container">
+            <div class="catalog-menu__exit-button button">
+                Каталог товаров
+                <svg class="icon icon-menu-show"><use xlink:href="images/sprite.svg#icon-menu-show"></use></svg>
+             </div>
+             <div class="catalog-menu__list-container">
+                <ul class="catalog-menu__list">
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-icon"> <img src="images/category_icons/mob.svg" alt=""></span>
+                            <span class="catalog-menu__item-name">Запчасти для мобильной техники</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-icon"> <img src="images/category_icons/mob.svg" alt=""></span>
+                            <span class="catalog-menu__item-name">Запчасти для мобильной техники</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-icon"> <img src="images/category_icons/mob.svg" alt=""></span>
+                            <span class="catalog-menu__item-name">Запчасти для мобильной техники</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-icon"> <img src="images/category_icons/mob.svg" alt=""></span>
+                            <span class="catalog-menu__item-name">Запчасти для мобильной техники</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-icon"> <img src="images/category_icons/mob.svg" alt=""></span>
+                            <span class="catalog-menu__item-name">Запчасти для мобильной техники</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-icon"> <img src="images/category_icons/mob.svg" alt=""></span>
+                            <span class="catalog-menu__item-name">Запчасти для мобильной техники</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="catalog-menu__list-title">
+                    По брендам устройств:
+                </div>
+                <div class="catalog-menu__list">
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-brand" style="background-color: #fff;color: #14181F;">A</span>
+                            <span class="catalog-menu__item-name">Apple</span>
+                         
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-brand" style="background-color: #0080FF;color: #fff;">S</span>
+                            <span class="catalog-menu__item-name">Samsung</span>
+                         
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-brand" style="background-color: #FF002B;color: #fff;">H</span>
+                            <span class="catalog-menu__item-name">Huawei</span>
+                         
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-brand" style="background-color: #FF8000;color: #fff;">X</span>
+                            <span class="catalog-menu__item-name">Xiaomi</span>
+                         
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-brand" style="background-color: #FF8000;color: #fff;">X</span>
+                            <span class="catalog-menu__item-name">Xiaomi</span>
+                         
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="catalog-menu__list-brand" style="background-color: #fff;color: #14181F;"><i class="fa-solid fa-star-sharp"></i></span>
+                            <span class="catalog-menu__item-name">Смотреть все бренды</span>
+                         
+                        </a>
+                    </li>
+                </div>
+                <div class="catalog-menu__list-title">
+                    Информация:
+                </div>
+                <div class="catalog-menu__list">
+                    <li>
+                        <a href="#">
+                         
+                            <span class="catalog-menu__item-name">О компании</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                         
+                            <span class="catalog-menu__item-name">Оформление заказа </span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                         
+                            <span class="catalog-menu__item-name">Контакты и магазины </span>
+                 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                         
+                            <span class="catalog-menu__item-name">Блог </span>
+         
+                        </a>
+                    </li>
+                </div>
+                
+             </div>
+         </div>
+     </div>
+     <div class="mobile-menu">
+
+     </div>
     <div class="content">
         <header class="header">
             <div class="container">
-              <div class="row header__row">
+              <div class="row header__row header__row--desktop">
+                  <a class="button header__button button--with-icon header__button--catalog-js">
+                      <span class="button__icon">
+                        <svg class="icon icon-menu-show2"><use xlink:href="images/sprite.svg#icon-menu-show2"></use></svg>
+                      </span>
+                      Каталог
+                    </a>
                 <div class="header__logo logo">
                     <img src="images/logo.svg" alt="">
                 </div>
@@ -27,7 +170,7 @@
                     </form>
                 </div>
                 <div class="header__nav-tabs nav-tabs">
-                    <div class="div nav-tabs__item">
+                    <div class=" nav-tabs__item">
                         <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-map-marker"></use></svg></div>
                         <div class="nav-tabs__item-info">
                             <div class="nav-tabs__item-top">
@@ -39,7 +182,7 @@
                            
                         </div>
                     </div>
-                    <div class="div nav-tabs__item">
+                    <div class=" nav-tabs__item">
                         <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-profile"></use></svg></div>
                         <div class="nav-tabs__item-info">
                             <div class="nav-tabs__item-top">
@@ -51,7 +194,7 @@
                            
                         </div>
                     </div>
-                    <div class="div nav-tabs__item">
+                    <div class=" nav-tabs__item">
                         <div class="nav-tabs__item-icon nav-tabs__item-icon--without-info">
                             <div class="nav-tabs__item-value nav-tabs__item-value--active">
                                 9
@@ -59,10 +202,10 @@
                             <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-sliders"></use></svg>
                         </div>
                     </div>
-                    <div class="div nav-tabs__item">
+                    <div class=" nav-tabs__item">
                         <div class="nav-tabs__item-icon nav-tabs__item-icon--without-info"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-heart"></use></svg></div>
                     </div>
-                    <div class="div nav-tabs__item">
+                    <div class="nav-tabs__item--basket nav-tabs__item">
                         <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-shopping-cart"></use></svg></div>
                         <div class="nav-tabs__item-info">
                             <div class="nav-tabs__item-top">
@@ -76,8 +219,25 @@
                     </div>
                   
                 </div>
+               
                 
               </div>
+              <div class="header__row header__row--mobile">
+                <div class="header__search search">
+                    <form class="search__form">
+                        <div class="search__logo">
+                            <img src="images/footer_logo.svg" alt="">
+                        </div>
+                        <input type="text" class="search__form-input search__form-input--mob" placeholder="Я ищу...">
+                       
+                        
+                    </form>
+                </div>
+                <div class="header__burger">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
             </div>
         </header>
         <main class="main">
@@ -310,6 +470,505 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="catalog-preview__item-container">
+                            <div class="preview-item">
+                                <div class="preview-item__image-container">
+                                    <div class="stickers preview-item__stickers">
+                                        <a href="#" class="stickers__item stickers__item--new">
+                                            Новинка
+                                        </a>
+                                    </div>
+                                    <div class="preview-item__image-slider">
+                                        <div class="preview-item__image-slider-wraper swiper-wrapper">
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__swiper-pagination swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="preview-item__body">
+                                    <div class="preview-item__top">
+                                        <a class="preview-item__rating">
+                                            <span class="preview-item__rating-value">
+                                                <i class="fa-solid fa-star"></i>
+                                                4.8
+                                            </span>
+                                            <span class="preview-item__rating-counter">6 оценок</span>
+                                            <span class="preview-item__rating-text">Оставить отзыв</span>
+                                        </a>
+                                        <div class="preview-item__like-icons like-icons">
+                                            <div class="like-icons__row row">
+                                                <div class="like-icons__item like-icons__item--compare">
+                                                    <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-sliders"></use></svg>
+                                                    
+                                                </div>
+                                                <div class="like-icons__item like-icons__item--tofav">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item__name-container">
+                                        <a class="preview-item__name" href="#">Оригинальный тачскрин для Xiaomi Mi Play (Черный)</a>
+                                    </div>
+                                    <div class="preview-item__info">
+                                        <div class="preview-item__info-left">
+                                            <div class="preview-item__coast">
+                                                <div class="preview-item__coast-value">
+                                                    1 200 ₽ <span>/ 1 шт.</span>
+                                                </div>
+                                                <div class="preview-item__available-container">
+                                                    <div class="preview-item__available preview-item__available--true">
+                                                        <i class="fa-solid fa-box-check"></i>
+                                                        В наличие
+                                                    </div>
+                                                    <div class="preview-item__available-coast">
+                                                        <i></i>
+
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item__available-value">
+                                                    <i class="fa-solid fa-boxes-stacked"></i> 
+                                                    234 шт. доступно
+                                                </div>
+                                              
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__info-vendor">
+                                            Арт.: 084412
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="preview-item__bottom">
+                                        <div class="preview-item__counter-wrap">
+                                            <div class="counter preview-item__counter">
+                                                <button class="counter__button counter__button--minus">-</button>
+                                                <input type="text" class="counter__input" value="1" data-max-count="20">
+                                                <button class="counter__button counter__button--plus">+</button>
+                                            </div>
+                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                                В корзину
+                                            </button>
+                                        </div>
+                                        <button class="preview-item__fastBuy button button--grey button--size-medium">Купить в один клик</button>
+                                        <ul class="preview-item__options">
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Бренд/ТМ:</span>
+                                                <a href="#" class="preview-item__option-value">Noname</a>
+                                            </li>
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Назначение</span>
+                                                <span class="preview-item__option-value">Xiaomi Mi Play</span>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+                                  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-preview__item-container">
+                            <div class="preview-item">
+                                <div class="preview-item__image-container">
+                                    <div class="stickers preview-item__stickers">
+                                        <a href="#" class="stickers__item stickers__item--new">
+                                            Новинка
+                                        </a>
+                                    </div>
+                                    <div class="preview-item__image-slider">
+                                        <div class="preview-item__image-slider-wraper swiper-wrapper">
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__swiper-pagination swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="preview-item__body">
+                                    <div class="preview-item__top">
+                                        <a class="preview-item__rating">
+                                            <span class="preview-item__rating-value">
+                                                <i class="fa-solid fa-star"></i>
+                                                4.8
+                                            </span>
+                                            <span class="preview-item__rating-counter">6 оценок</span>
+                                            <span class="preview-item__rating-text">Оставить отзыв</span>
+                                        </a>
+                                        <div class="preview-item__like-icons like-icons">
+                                            <div class="like-icons__row row">
+                                                <div class="like-icons__item like-icons__item--compare">
+                                                    <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-sliders"></use></svg>
+                                                    
+                                                </div>
+                                                <div class="like-icons__item like-icons__item--tofav">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item__name-container">
+                                        <a class="preview-item__name" href="#">Оригинальный тачскрин для Xiaomi Mi Play (Черный)</a>
+                                    </div>
+                                    <div class="preview-item__info">
+                                        <div class="preview-item__info-left">
+                                            <div class="preview-item__coast">
+                                                <div class="preview-item__coast-value">
+                                                    1 200 ₽ <span>/ 1 шт.</span>
+                                                </div>
+                                                <div class="preview-item__available-container">
+                                                    <div class="preview-item__available preview-item__available--true">
+                                                        <i class="fa-solid fa-box-check"></i>
+                                                        В наличие
+                                                    </div>
+                                                    <div class="preview-item__available-coast">
+                                                        <i></i>
+
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item__available-value">
+                                                    <i class="fa-solid fa-boxes-stacked"></i> 
+                                                    234 шт. доступно
+                                                </div>
+                                              
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__info-vendor">
+                                            Арт.: 084412
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="preview-item__bottom">
+                                        <div class="preview-item__counter-wrap">
+                                            <div class="counter preview-item__counter">
+                                                <button class="counter__button counter__button--minus">-</button>
+                                                <input type="text" class="counter__input" value="1" data-max-count="20">
+                                                <button class="counter__button counter__button--plus">+</button>
+                                            </div>
+                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                                В корзину
+                                            </button>
+                                        </div>
+                                        <button class="preview-item__fastBuy button button--grey button--size-medium">Купить в один клик</button>
+                                        <ul class="preview-item__options">
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Бренд/ТМ:</span>
+                                                <a href="#" class="preview-item__option-value">Noname</a>
+                                            </li>
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Назначение</span>
+                                                <span class="preview-item__option-value">Xiaomi Mi Play</span>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+                                  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-preview__item-container">
+                            <div class="preview-item">
+                                <div class="preview-item__image-container">
+                                    <div class="stickers preview-item__stickers">
+                                        <a href="#" class="stickers__item stickers__item--new">
+                                            Новинка
+                                        </a>
+                                    </div>
+                                    <div class="preview-item__image-slider">
+                                        <div class="preview-item__image-slider-wraper swiper-wrapper">
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__swiper-pagination swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="preview-item__body">
+                                    <div class="preview-item__top">
+                                        <a class="preview-item__rating">
+                                            <span class="preview-item__rating-value">
+                                                <i class="fa-solid fa-star"></i>
+                                                4.8
+                                            </span>
+                                            <span class="preview-item__rating-counter">6 оценок</span>
+                                            <span class="preview-item__rating-text">Оставить отзыв</span>
+                                        </a>
+                                        <div class="preview-item__like-icons like-icons">
+                                            <div class="like-icons__row row">
+                                                <div class="like-icons__item like-icons__item--compare">
+                                                    <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-sliders"></use></svg>
+                                                    
+                                                </div>
+                                                <div class="like-icons__item like-icons__item--tofav">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item__name-container">
+                                        <a class="preview-item__name" href="#">Оригинальный тачскрин для Xiaomi Mi Play (Черный)</a>
+                                    </div>
+                                    <div class="preview-item__info">
+                                        <div class="preview-item__info-left">
+                                            <div class="preview-item__coast">
+                                                <div class="preview-item__coast-value">
+                                                    1 200 ₽ <span>/ 1 шт.</span>
+                                                </div>
+                                                <div class="preview-item__available-container">
+                                                    <div class="preview-item__available preview-item__available--true">
+                                                        <i class="fa-solid fa-box-check"></i>
+                                                        В наличие
+                                                    </div>
+                                                    <div class="preview-item__available-coast">
+                                                        <i></i>
+
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item__available-value">
+                                                    <i class="fa-solid fa-boxes-stacked"></i> 
+                                                    234 шт. доступно
+                                                </div>
+                                              
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__info-vendor">
+                                            Арт.: 084412
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="preview-item__bottom">
+                                        <div class="preview-item__counter-wrap">
+                                            <div class="counter preview-item__counter">
+                                                <button class="counter__button counter__button--minus">-</button>
+                                                <input type="text" class="counter__input" value="1" data-max-count="20">
+                                                <button class="counter__button counter__button--plus">+</button>
+                                            </div>
+                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                                В корзину
+                                            </button>
+                                        </div>
+                                        <button class="preview-item__fastBuy button button--grey button--size-medium">Купить в один клик</button>
+                                        <ul class="preview-item__options">
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Бренд/ТМ:</span>
+                                                <a href="#" class="preview-item__option-value">Noname</a>
+                                            </li>
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Назначение</span>
+                                                <span class="preview-item__option-value">Xiaomi Mi Play</span>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+                                  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-preview__item-container">
+                            <div class="preview-item">
+                                <div class="preview-item__image-container">
+                                    <div class="stickers preview-item__stickers">
+                                        <a href="#" class="stickers__item stickers__item--new">
+                                            Новинка
+                                        </a>
+                                    </div>
+                                    <div class="preview-item__image-slider">
+                                        <div class="preview-item__image-slider-wraper swiper-wrapper">
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="preview-item__image-slide swiper-slide">
+                                                <a href="#" class="preview-item__image-link">
+                                                    <img src="images/prod.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__swiper-pagination swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="preview-item__body">
+                                    <div class="preview-item__top">
+                                        <a class="preview-item__rating">
+                                            <span class="preview-item__rating-value">
+                                                <i class="fa-solid fa-star"></i>
+                                                4.8
+                                            </span>
+                                            <span class="preview-item__rating-counter">6 оценок</span>
+                                            <span class="preview-item__rating-text">Оставить отзыв</span>
+                                        </a>
+                                        <div class="preview-item__like-icons like-icons">
+                                            <div class="like-icons__row row">
+                                                <div class="like-icons__item like-icons__item--compare">
+                                                    <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-sliders"></use></svg>
+                                                    
+                                                </div>
+                                                <div class="like-icons__item like-icons__item--tofav">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item__name-container">
+                                        <a class="preview-item__name" href="#">Оригинальный тачскрин для Xiaomi Mi Play (Черный)</a>
+                                    </div>
+                                    <div class="preview-item__info">
+                                        <div class="preview-item__info-left">
+                                            <div class="preview-item__coast">
+                                                <div class="preview-item__coast-value">
+                                                    1 200 ₽ <span>/ 1 шт.</span>
+                                                </div>
+                                                <div class="preview-item__available-container">
+                                                    <div class="preview-item__available preview-item__available--true">
+                                                        <i class="fa-solid fa-box-check"></i>
+                                                        В наличие
+                                                    </div>
+                                                    <div class="preview-item__available-coast">
+                                                        <i></i>
+
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item__available-value">
+                                                    <i class="fa-solid fa-boxes-stacked"></i> 
+                                                    234 шт. доступно
+                                                </div>
+                                              
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="preview-item__info-vendor">
+                                            Арт.: 084412
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="preview-item__bottom">
+                                        <div class="preview-item__counter-wrap">
+                                            <div class="counter preview-item__counter">
+                                                <button class="counter__button counter__button--minus">-</button>
+                                                <input type="text" class="counter__input" value="1" data-max-count="20">
+                                                <button class="counter__button counter__button--plus">+</button>
+                                            </div>
+                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                                В корзину
+                                            </button>
+                                        </div>
+                                        <button class="preview-item__fastBuy button button--grey button--size-medium">Купить в один клик</button>
+                                        <ul class="preview-item__options">
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Бренд/ТМ:</span>
+                                                <a href="#" class="preview-item__option-value">Noname</a>
+                                            </li>
+                                            <li class="preview-item__option">
+                                                <span class="preview-item__option-name"> Назначение</span>
+                                                <span class="preview-item__option-value">Xiaomi Mi Play</span>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+                                  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-preview__button-container">
+                        <a class="button button--size-medium  catalog-preview__button">Показать больше</a>
                     </div>
                 </div>
             </div>
@@ -586,7 +1245,7 @@
                                 </div>
                                <div class="aboutUs__right">
                                     <h2 class="aboutUs__title">
-                                        Про Master Mobile
+                                        Про <span>Master Mobile</span>
                                     </h2>
                                     <div class="aboutUs__content-block content-block">
                                         <p>
@@ -604,9 +1263,9 @@
                             <div class="aboutUs__miniblog miniblog">
                                <div class="section-head miniblog__section-head">
                                    <h2 class="section-head__title">
-                                    Популярные категории:
+                                    Блог
                                    </h2>
-                                   <a class="section-head__button button" href="#">Все записи</a>
+                                   <a class="section-head__button link" href="#">Все записи</a>
                                </div>
                                <div class="miniblog__row row">
                                    <div class="miniblog__item-container">
@@ -659,11 +1318,14 @@
                 <div class="container">
                     <div class="reviews__row row">
                         <div class="reviews__content">
+                            <h3 class="reviews__title reviews__title--mobile">
+                                Клиенты считают, что наш сервис просто супер!
+                            </h3>
                             <div class="reviews__icon-container">
 
                             </div>
                             <div class="reviews__side">
-                                <h3 class="reviews__title">
+                                <h3 class="reviews__title reviews__title--desktop">
                                     Клиенты считают, что наш сервис просто супер!
                                 </h3>
                                 <div class="reviews__rating">
@@ -821,6 +1483,7 @@
                             
                     
                             </div>
+                            <div class="visited__swiper-pagination swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
@@ -1074,6 +1737,201 @@
                 </div>
             </div>
         </footer>
+        <div class="flyBasket">
+            <div class="flyBasket__bg"></div>
+            <div class="flyBasket__container">
+               <div class="flyBasket__header">
+                <div class="flyBasket__title">
+                    Корзина
+                </div>
+                <div class="flyBasket__close">
+                    <svg class="icon icon-close"><use xlink:href="images/sprite.svg#icon-close"></use></svg>
+                </div>
+               </div>
+               <div class="flyBasket__body">
+                   <div class="flyBasket__scroll">
+                    <div class="flyBasket-item">
+                        <a class="flyBasket-item__image-container">
+                            <img src="images/prod.jpg" alt="">
+                        </a>
+                        <div class="flyBasket-item__info">
+                            <div class="flyBasket-item__top">
+                                <a class="flyBasket-item__name" href="#">
+                                    Оригинальный тачскрин для Xiaomi Mi Play (Черный)
+                                </a>
+                                <div class="flyBasket-item__remove-button">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
+                            <div class="flyBasket-item__bottom">
+                                <div class="flyBasket-item__one-elem">
+                                    <div class="flyBasket-item__coast">400 ₽</div>
+                                    <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
+                                </div>
+                                <div class="counter flyBasket-item__counter">
+                                    <button class="counter__button counter__button--minus">-</button>
+                                    <input type="text" class="counter__input" value="1" data-max-count="20">
+                                    <button class="counter__button counter__button--plus">+</button>
+                                </div>
+                                <div class="flyBasket-item__all-elems">
+                                    <div class="flyBasket-item__coast">800 ₽</div>
+                                    <div class="flyBasket-item__coast-title">всего</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flyBasket-item">
+                        <a class="flyBasket-item__image-container">
+                            <img src="images/prod.jpg" alt="">
+                        </a>
+                        <div class="flyBasket-item__info">
+                            <div class="flyBasket-item__top">
+                                <a class="flyBasket-item__name" href="#">
+                                    Оригинальный тачскрин для Xiaomi Mi Play (Черный)
+                                </a>
+                                <div class="flyBasket-item__remove-button">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
+                            <div class="flyBasket-item__bottom">
+                                <div class="flyBasket-item__one-elem">
+                                    <div class="flyBasket-item__coast">400 ₽</div>
+                                    <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
+                                </div>
+                                <div class="counter flyBasket-item__counter">
+                                    <button class="counter__button counter__button--minus">-</button>
+                                    <input type="text" class="counter__input" value="1" data-max-count="20">
+                                    <button class="counter__button counter__button--plus">+</button>
+                                </div>
+                                <div class="flyBasket-item__all-elems">
+                                    <div class="flyBasket-item__coast">800 ₽</div>
+                                    <div class="flyBasket-item__coast-title">всего</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="flyBasket-item">
+                            <a class="flyBasket-item__image-container">
+                                <img src="images/prod.jpg" alt="">
+                            </a>
+                            <div class="flyBasket-item__info">
+                                <div class="flyBasket-item__top">
+                                    <a class="flyBasket-item__name" href="#">
+                                        Оригинальный тачскрин для Xiaomi Mi Play (Черный)
+                                    </a>
+                                    <div class="flyBasket-item__remove-button">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                                <div class="flyBasket-item__bottom">
+                                    <div class="flyBasket-item__one-elem">
+                                        <div class="flyBasket-item__coast">400 ₽</div>
+                                        <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
+                                    </div>
+                                    <div class="counter flyBasket-item__counter">
+                                        <button class="counter__button counter__button--minus">-</button>
+                                        <input type="text" class="counter__input" value="1" data-max-count="20">
+                                        <button class="counter__button counter__button--plus">+</button>
+                                    </div>
+                                    <div class="flyBasket-item__all-elems">
+                                        <div class="flyBasket-item__coast">800 ₽</div>
+                                        <div class="flyBasket-item__coast-title">всего</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flyBasket-item">
+                            <a class="flyBasket-item__image-container">
+                                <img src="images/prod.jpg" alt="">
+                            </a>
+                            <div class="flyBasket-item__info">
+                                <div class="flyBasket-item__top">
+                                    <a class="flyBasket-item__name" href="#">
+                                        Оригинальный тачскрин для Xiaomi Mi Play (Черный)
+                                    </a>
+                                    <div class="flyBasket-item__remove-button">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                                <div class="flyBasket-item__bottom">
+                                    <div class="flyBasket-item__one-elem">
+                                        <div class="flyBasket-item__coast">400 ₽</div>
+                                        <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
+                                    </div>
+                                    <div class="counter flyBasket-item__counter">
+                                        <button class="counter__button counter__button--minus">-</button>
+                                        <input type="text" class="counter__input" value="1" data-max-count="20">
+                                        <button class="counter__button counter__button--plus">+</button>
+                                    </div>
+                                    <div class="flyBasket-item__all-elems">
+                                        <div class="flyBasket-item__coast">800 ₽</div>
+                                        <div class="flyBasket-item__coast-title">всего</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flyBasket-item">
+                            <a class="flyBasket-item__image-container">
+                                <img src="images/prod.jpg" alt="">
+                            </a>
+                            <div class="flyBasket-item__info">
+                                <div class="flyBasket-item__top">
+                                    <a class="flyBasket-item__name" href="#">
+                                        Оригинальный тачскрин для Xiaomi Mi Play (Черный)
+                                    </a>
+                                    <div class="flyBasket-item__remove-button">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                                <div class="flyBasket-item__bottom">
+                                    <div class="flyBasket-item__one-elem">
+                                        <div class="flyBasket-item__coast">400 ₽</div>
+                                        <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
+                                    </div>
+                                    <div class="counter flyBasket-item__counter">
+                                        <button class="counter__button counter__button--minus">-</button>
+                                        <input type="text" class="counter__input" value="1" data-max-count="20">
+                                        <button class="counter__button counter__button--plus">+</button>
+                                    </div>
+                                    <div class="flyBasket-item__all-elems">
+                                        <div class="flyBasket-item__coast">800 ₽</div>
+                                        <div class="flyBasket-item__coast-title">всего</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  
+                   </div>
+               </div>
+               <div class="flyBasket__footer">
+                   <div class="flyBasket__promocode promocode">
+                    <input type="text" class="promocode__input" placeholder="Промокод">
+                    <button class="promocode__button">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                   </div>
+                   <div class="flyBasket__total">
+                       <div class="flyBasket__total-left">
+                        <div class="flyBasket__total-title">
+                            Итог стоимости:
+                        </div>
+                        <div class="flyBasket__total-desc">
+                            к оплате без доставки
+                        </div>
+                       </div>
+                       <div class="flyBasket__total-value">
+                        22 740 ₽
+                       </div>
+                       
+                     
+                   </div>
+                   <div class="flyBasket__buttons">
+                       <button class="flyBasket__button flyBasket__button--fastOrder button button--size-medium button--default">Быстрый заказ</button>
+                       <a class="flyBasket__button flyBasket__button--inBasket button button--size-medium button--round-type-2">Перейти в корзину</a>
+                   </div>
+               </div>
+            </div>
+        </div>
     </div>
  </div>
     <link rel="stylesheet" href="css/all.min.css">
