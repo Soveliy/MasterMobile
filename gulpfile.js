@@ -31,7 +31,7 @@ gulp.task('css', function(){
     'node_modules/normalize.css/normalize.css',
     // 'node_modules/slick-carousel/slick/slick.css',
       'node_modules/swiper/swiper.min.css',
-    // 'assest/css/swiper.min.css',
+    // 'assest/css/mmenu.css',
     // 'assest/css/aos.css',
   ])
     .pipe(concat('_libs.scss'))
@@ -54,9 +54,9 @@ gulp.task('js', function(){
   return gulp.src([
     // 'node_modules/slick-carousel/slick/slick.js',
     // 'assest/js/swiper.js',
-        'node_modules/swiper/swiper-bundle.min.js'
+        'node_modules/swiper/swiper-bundle.min.js',
     // 'assest/js/jquery.simplemarquee.js',
-    // 'assest/js/aos.js',
+    // 'assest/js/mmenu.js',
     // 'assest/js/slick.js',
     // 'assest/js/dotdotdot.js',
     // 'assest/js/jquery.validate.min.js'
