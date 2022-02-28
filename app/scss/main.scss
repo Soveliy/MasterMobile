@@ -113,6 +113,10 @@ button{
     border: 1px solid $red;
     border-radius: 3px;
     padding: 10.5px 59px;
+    @include for-md(){
+      padding-right: 15px;
+      padding-left: 15px;
+    }
     &:hover{
       color: $white;
       background-color: $red;
@@ -262,9 +266,9 @@ button{
   &__search{
     width: 100%;
     margin: 0 30px;
-    // @include for-md(){
-    //   display: none;
-    // }
+    @include for-md(){
+      margin: 0 15px 0 0;
+    }
   }
   &__nav-tabs{
     flex-shrink: 0;
@@ -278,10 +282,12 @@ button{
     border: 1px solid #192B4D;
     border-radius: 3px;
     box-sizing: border-box;
+    flex-shrink: 0;
     i{
       position: absolute;
       height: 100%;
       width: 100%;
+      color: $white !important;
       // top: 50%;
       // left: 50%;
       // transform: translate(-50%);
@@ -478,7 +484,7 @@ button{
         }
       }
       &--mob{
-        padding: 0 20px 0 28px;
+        padding: 0 20px 0 35px;
       }
     }
     &-voice-button{
@@ -501,19 +507,53 @@ button{
 }
 
 .hero{
-  padding: 30px;
+  padding: 30px 0;
+  @include for-md(){
+    padding: 0 0 15px;
+  }
+  .container{
+    @include for-sm(){
+      padding: 0;
+    }
+  }
   &__main-slider{
     width: 69.5%;
+    @include for-md(){
+      width: 100%;
+    }
   }
   &__banners{
     width: 31.5%;
+    @include for-md(){
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
   }
   &__row{
     margin: 0 -15px;
+    @include for-md(){
+      // display: none;
+      flex-direction: column;
+      margin: 0;
+    }
+    @include for-sm(){
+      display: none;
+    }
+  }
+  &__mob-slider{
+    display: none;
+   @include for-sm(){
+     display: block;
+   }
   }
   &__main-slider,&__banners{
     padding: 0 15px;
     box-sizing: border-box;
+    @include for-md(){
+      padding: 0;
+    }
   }
   &__banners-item{
     display: block;
@@ -524,6 +564,9 @@ button{
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 3px;
+    @include for-md(){
+      width: 49%;
+    }
     &-name{
       margin-bottom: 10px;
     }
@@ -536,6 +579,9 @@ button{
 
     & + .hero__banners-item{
       margin-top: 30px;
+      @include for-md(){
+        margin-top: 0;
+      }
     }
   }
 }
@@ -554,8 +600,34 @@ button{
     box-sizing: border-box;
     padding: 60px;
     transition: .3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    img{
+      @include for-sm(){
+        margin-right: -30px;
+        margin-left: auto;
+      }
+    }
+    @include for-sm(){
+      padding: 60px 30px 0;
+      text-align: center;
+    }
   }
-  
+  &__button-link{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #364563;
+    font-size: 20px;
+    background-color: $white;
+  }
   &__pretitle{
     font-size: 14px;
     line-height: 17px;
@@ -597,9 +669,16 @@ button{
   &__swiper-pagination{
     position: absolute;
     top: 60px;
+    // left: auto !important;
     right: 60px;
     z-index: 50;
     display: flex;
+    @include for-sm(){
+      left: 30px;
+      bottom: 30px;
+      top: auto;
+      right: auto;
+    }
     .swiper-pagination-bullet{
       background-color: rgba($white, .5);
       transition: .3s;
@@ -616,6 +695,7 @@ button{
       margin-left: 10px;
     }
   }
+ 
   &__bottom{
     box-sizing: border-box;
     padding-left: 95px;
@@ -648,6 +728,11 @@ button{
   }
   &__button{
     margin-left: 20px;
+    &--desktop{
+     @include for-md(){
+       display: none;
+     }
+    }
   }
 }
 .aboutUs{
@@ -1402,14 +1487,47 @@ button{
   }
   &__row{
     margin: 0 -1px;
+    flex-wrap: wrap;
+    @include for-sm(){
+      margin: 0 -15px;
+    }
   }
   &__item-container{
     width: 20%;
     box-sizing: border-box;
     padding: 0 1px;
+    @include for-lg(){
+      width: 25%;
+      &:nth-child(5n){
+        display: none;
+      }
+    }
+    @include for-md(){
+      width: 33.3%;
+      padding: 0 7.5px;
+    }
+    @include for-sm(){
+      width: 50%;
+    }
   }
   &__button-container{
     background-color: $white;
+    @include for-md(){
+      display: flex;
+      background-color: transparent;
+      margin-top: 15px;
+      justify-content: space-between;
+    }
+
+  }
+  &__more{
+    display: none;
+    @include for-md(){
+      display: block;
+      
+      width: calc(50% - 7.5px);
+      // margin-left: 15px;
+    }
   }
   &__button{
     display: block;
@@ -1422,6 +1540,19 @@ button{
     color: $red;
     text-transform: uppercase;
     // background-color: ;
+    @include for-md(){
+      max-width: 50%;
+      background-color: $white;
+      border-radius: 3px;
+      border: 1px solid $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(50% - 7.5px);
+      margin: 0;
+      text-transform: none;
+      // margin-right: 15px;
+    }
   }
 }
 .preview-item{
@@ -1430,7 +1561,9 @@ button{
   padding: 10px 20px 20px;
   box-sizing: border-box;
   transition: .3s;
-  
+  @include for-md(){
+    padding: 10px;
+  }
   &:hover{
     box-shadow: 0px 5px 15px 0px rgba(194, 201, 214, .9);
     z-index: 100;
@@ -1444,6 +1577,10 @@ button{
     top: 0;
     left: 0;
     z-index: 50;
+    @include for-md(){
+      left: -10px;
+      top: -5px !important;
+    }
   }
   &__top{
     display: flex;
@@ -1453,10 +1590,11 @@ button{
   }
   &__image-container{
     position: relative;
-    overflow: hidden;
+  
   }
   &__image-slider{
     position: relative;
+    overflow: hidden;
     padding-bottom: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
@@ -1471,6 +1609,9 @@ button{
     align-items: center;
     height: 195px;
     width: 100%;
+    @include for-md(){
+      height: 145px;
+    }
     img{
       max-height: 205px;
     }
@@ -1540,11 +1681,16 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
+    @include for-md(){
+      margin-top: 20px;
+    }
     &-vendor{
       font-size: 12px;
       line-height: 15px;
       color: #8592AD;
+      @include for-md(){
+        display: none;
+      }
     }
 
 
@@ -1700,6 +1846,10 @@ a.preview-item__option-value{
     }
     &--new{
       background: linear-gradient(90deg, rgba(0,204,136,1) 0%, rgba(0,179,149,1) 100%);
+    }
+    @include for-md(){
+      border: 1px solid $white;
+      border-left: none;
     }
   }
   
@@ -2572,5 +2722,24 @@ body.mm-ocd-opened {
       padding: 18px 0;
       box-sizing: border-box;
     }
+  }
+}
+@include for-md(){
+  .catalog-preview + .catalog-preview{
+    display: none;
+  }
+}
+.mmenu_input{
+  height: 40px;
+  width: calc(100% - 30px);
+  border: 1px solid #E0E4EB;
+  box-sizing: border-box;
+  margin: 0 15px 15px;
+  padding: 0 15px;
+}
+
+.mmenu__catalog{
+ > a:after{
+    display: none !important; 
   }
 }

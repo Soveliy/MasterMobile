@@ -220,13 +220,16 @@ let el = document.querySelector('.flyBasket__scroll');
 			var drawer = menu.offcanvas({
 				 // position: 'right'
 			});
-
-			//	Open the menu.
-			// document.querySelector( 'a[href="#menu"]' )
-			// 	.addEventListener( 'click', evnt => {
-			// 		evnt.preventDefault();
-			// 		drawer.open();
-			// 	});
+      $('.mm-ocd__backdrop').on('click', function(e) {
+        $(".header__burger").removeClass("is-active")
+      })
+			
+      $(".mm-ocd__backdrop")
+			document.querySelector( 'a[href="#menu"]' )
+				.addEventListener( 'click', evnt => {
+					evnt.preventDefault();
+					drawer.open();
+				});
 
 // new Mmenu(document.querySelector("#mobile-menu"));
 
