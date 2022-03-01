@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@fancyapps/ui": "^4.0.0",
+        "jquery-nice-select": "^1.1.0",
         "slick-carousel": "^1.8.1",
         "swiper": "^8.0.6"
     }

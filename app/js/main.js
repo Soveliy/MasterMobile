@@ -231,6 +231,11 @@ let el = document.querySelector('.flyBasket__scroll');
 					drawer.open();
 				});
 
+
+        $(document).ready(function() {
+          $('select').niceSelect();
+        });
+
 // new Mmenu(document.querySelector("#mobile-menu"));
 
 // document.addEventListener("click", function (evnt) {
