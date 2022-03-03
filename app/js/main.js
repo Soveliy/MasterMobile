@@ -233,16 +233,21 @@ let el = document.querySelector('.flyBasket__scroll');
 
         $(document).ready(function() {
           $('select').niceSelect();
-          $('.search__form-input').on('focus', function(e) {
-            $(".search-items").slideDown(300)
-            $(".search-items").toggleClass("is-visible")
-          })
+          // $('.search__form-input').on('focus', function(e) {
+          //   $(".search-items").slideToggle(300)
+          //   $(".search-items").toggleClass("is-visible")
+          // })
 
-          $('.search__form-input').on('keypress', function(e) {
-            $(".search-items").slideUp(300)
-            $(".live-search").slideDown(300)
+          // $('.search__form-input').on('keypress', function(e) {
+          //   $(".search-items").slideUp(300)
+          //   $(".live-search").slideDown(300)
             // $(".search-items").toggleClass("is-visible")
-          })
+          // })
+          // $('.search-item').on('mouseleave', function(e) {
+          //   $(".search-items").slideUp(300)
+          //   $(".search-items").toggleClass("is-visible")
+          // })
+
           
         $(document).click( function(e){
           if ( $(e.target).closest('.search-items').length ) {

@@ -146,129 +146,182 @@
         </div>
     </div>
    <div class="content">
-       <header class="header">
-           <div class="container">
-             <div class="row header__row header__row--desktop">
-                    <a class="button header__button button--with-icon header__button--catalog-js">
-                        <span class="button__icon">
-                        <svg class="icon icon-menu-show2"><use xlink:href="images/sprite.svg#icon-menu-show2"></use></svg>
-                        </span>
-                        Каталог
-                   </a>
-                   <div class="header__logo logo">
-                    <img src="images/logo.svg" alt="">
-                    </div>
-               
-                    <div class="header__search search">
-                        <form class="search__form">
-                            <input type="text" class="search__form-input" placeholder="Поиск по товарам...">
-                            <div class="search__form-voice-button"><i class="fa-solid fa-microphone"></i></div>
-                            <div class="search-items">
-                                <ul class="search-items__list">
-                                    <li class="search-items__list-item search-item search-item__head">
-                                        <div class="search-item__title">
-                                            История поиска
-
-                                        </div>
-                                        <a class="search-item__title-link" href="#">Очистить историю</a>
-
-
-                                    </li>
-                                    <li class="search-items__list-item search-item">
-                                        <a href="" class="search-item__name">Canon i-SENSYS LBP6030B (8468B006AA)</a>
-                                        <a class="search-item__remove" href="#"><i class="fa-solid fa-xmark"></i></a>
-
-
-                                    </li>
-                                    <li class="search-items__list-item search-item">
-                                        <a href="" class="search-item__name">Canon I-SENSYS MF112 (2219C008)</a>
-                                        <a class="search-item__remove" href="#"><i class="fa-solid fa-xmark"></i></a>
-
-
-                                    </li>
-                                    <li class="search-items__list-item search-item">
-                                        <a href="" class="search-item__name">HP LaserJet Pro M28a (W2G54A)</a>
-                                        <a class="search-item__remove" href="#"><i class="fa-solid fa-xmark"></i></a>
-
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="header__nav-tabs nav-tabs">
-                        <div class=" nav-tabs__item">
-                            <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-map-marker"></use></svg></div>
-                            <div class="nav-tabs__item-info">
-                                <div class="nav-tabs__item-top">
-                                    <a href="#">Москва</a>
-                                </div>
-                                <div class="nav-tabs__item-bottom">
-                                    <a href="tel:+745448889880" class="nav-tabs__item-name__link">  +74 (544) 888-98-80</a>
-                                </div>
-                            
-                            </div>
-                        </div>
-                        <div class=" nav-tabs__item">
-                            <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-profile"></use></svg></div>
-                            <div class="nav-tabs__item-info">
-                                <div class="nav-tabs__item-top">
-                                    <a href="#">Overlord</a>
-                                </div>
-                                <div class="nav-tabs__item-bottom">
-                                    <a href="#"> Мой кабинет</a>
-                                </div>
-                            
-                            </div>
-                        </div>
-                        <div class=" nav-tabs__item">
-                            <div class="nav-tabs__item-icon nav-tabs__item-icon--without-info">
-                                <div class="nav-tabs__item-value nav-tabs__item-value--active">
-                                    9
-                                </div>
-                                <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-sliders"></use></svg>
-                            </div>
-                        </div>
-                        <div class=" nav-tabs__item">
-                         
-                            <div class="nav-tabs__item-icon nav-tabs__item-icon--without-info">   <div class="nav-tabs__item-value">
-                                0
-                            </div><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-heart"></use></svg></div>
-                        </div>
-                        <div class="nav-tabs__item--basket nav-tabs__item">
-                            <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-shopping-cart"></use></svg></div>
-                            <div class="nav-tabs__item-info">
-                                <div class="nav-tabs__item-top">
-                                    <a href="#">Корзина</a>
-                                </div>
-                                <div class="nav-tabs__item-bottom">
-                                    <a href="tel:+745448889880" class="nav-tabs__item-name__link"> пуста</a>
-                                </div>
-                            
-                            </div>
-                        </div>
-                    
-                    </div>
-             
-             </div>
-             <div class="header__row header__row--mobile">
-                <div class="header__search search">
-                    <form class="search__form">
-                        <div class="search__logo">
-                            <img src="images/footer_logo.svg" alt="">
-                        </div>
-                        <input type="text" class="search__form-input search__form-input--mob" placeholder="Я ищу...">
-                       
-                        
-                    </form>
-                </div>
-                <a href="#menu" class="header__burger">
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-xmark"></i>
+    <header class="header">
+        <div class="container">
+          <div class="row header__row header__row--desktop">
+                 <a class="button header__button button--with-icon header__button--catalog-js">
+                     <span class="button__icon">
+                     <svg class="icon icon-menu-show2"><use xlink:href="images/sprite.svg#icon-menu-show2"></use></svg>
+                     </span>
+                     Каталог
                 </a>
-            </div>
-        </div>
-        </header>
+                <div class="header__logo logo">
+                 <img src="images/logo.svg" alt="">
+                 </div>
+            
+                 <div class="header__search search">
+                     
+                     <form class="search__form">
+                         <!-- <span class="search__form-voice-button"></span> -->
+                         <div class="search__form-voice"><i class=" fa-solid fa-microphone"></i></div>
+                         
+                         <input type="text" class="search__form-input" placeholder="Поиск по товарам...">
+                         
+                         <div class="search-items">
+                             <ul class="search-items__list">
+                                 <li class="search-items__list-item search-item search-item__head">
+                                     <div class="search-item__title">
+                                         История поиска
+
+                                     </div>
+                                     <a class="search-item__title-link" href="#">Очистить историю</a>
+
+
+                                 </li>
+                                 <li class="search-items__list-item search-item">
+                                     <a href="" class="search-item__name">Canon i-SENSYS LBP6030B (8468B006AA)</a>
+                                     <a class="search-item__remove" href="#"><i class="fa-solid fa-xmark"></i></a>
+
+
+                                 </li>
+                                 <li class="search-items__list-item search-item">
+                                     <a href="" class="search-item__name">Canon I-SENSYS MF112 (2219C008)</a>
+                                     <a class="search-item__remove" href="#"><i class="fa-solid fa-xmark"></i></a>
+
+
+                                 </li>
+                                 <li class="search-items__list-item search-item">
+                                     <a href="" class="search-item__name">HP LaserJet Pro M28a (W2G54A)</a>
+                                     <a class="search-item__remove" href="#"><i class="fa-solid fa-xmark"></i></a>
+
+
+                                 </li>
+                             </ul>
+                         </div>
+                         <div class="live-search">
+                             <div class="live-search__item live-search__item--title">
+                                 Поиск в товарах
+                             </div>
+                             <div class="live-search__item live-search__item--card">
+                                 <a href="#" class="live-search-item">
+                                     <span class="live-search-item__name">
+                                         <b>Cano</b>n i-SENSYS LBP6030B (8468B006AA)
+                                     </span>
+                                     <span class="live-search-item__value">15 650 ₽</span>
+                                     <span class="live-search-item__image">
+                                         <img src="images/noimage-medium.jpg" alt="">
+                                     </span>
+                                 </a>
+                             </div>
+                             <div class="live-search__item live-search__item--card">
+                                 <a href="#" class="live-search-item">
+                                     <span class="live-search-item__name">
+                                         <b>Cano</b>n i-SENSYS LBP6030B (8468B006AA)
+                                     </span>
+                                     <span class="live-search-item__value">15 650 ₽</span>
+                                     <span class="live-search-item__image">
+                                         <img src="images/noimage-medium.jpg" alt="">
+                                     </span>
+                                 </a>
+                             </div>
+                             <div class="live-search__item live-search__item--card">
+                                 <a href="#" class="live-search-item">
+                                     <span class="live-search-item__name">
+                                         <b>Cano</b>n i-SENSYS LBP6030B (8468B006AA)
+                                     </span>
+                                     <span class="live-search-item__value">15 650 ₽</span>
+                                     <span class="live-search-item__image">
+                                         <img src="images/noimage-medium.jpg" alt="">
+                                     </span>
+                                 </a>
+                             </div>
+                             <div class="live-search__item live-search__item--title">
+                                 Поиск в категориях
+                             </div>
+                             <div class="live-search__item live-search__item--card">
+                                 <a href="#" class="live-search-item live-search-item--category">
+                                     <span class="live-search-item__name">
+                                         cano <span>в категории:</span> Мфу, Принтеры
+                                     </span>
+                                    
+                                 </a>
+                             </div>
+                         </div>
+                     </form>
+                 </div>
+                 <div class="header__nav-tabs nav-tabs">
+                     <div class=" nav-tabs__item">
+                         <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-map-marker"></use></svg></div>
+                         <div class="nav-tabs__item-info">
+                             <div class="nav-tabs__item-top">
+                                 <a href="#">Москва</a>
+                             </div>
+                             <div class="nav-tabs__item-bottom">
+                                 <a href="tel:+745448889880" class="nav-tabs__item-name__link">  +74 (544) 888-98-80</a>
+                             </div>
+                         
+                         </div>
+                     </div>
+                     <div class=" nav-tabs__item">
+                         <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-profile"></use></svg></div>
+                         <div class="nav-tabs__item-info">
+                             <div class="nav-tabs__item-top">
+                                 <a href="#">Overlord</a>
+                             </div>
+                             <div class="nav-tabs__item-bottom">
+                                 <a href="#"> Мой кабинет</a>
+                             </div>
+                         
+                         </div>
+                     </div>
+                     <div class=" nav-tabs__item">
+                         <div class="nav-tabs__item-icon nav-tabs__item-icon--without-info">
+                             <div class="nav-tabs__item-value nav-tabs__item-value--active">
+                                 9
+                             </div>
+                             <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-sliders"></use></svg>
+                         </div>
+                     </div>
+                     <div class=" nav-tabs__item">
+                      
+                         <div class="nav-tabs__item-icon nav-tabs__item-icon--without-info">   <div class="nav-tabs__item-value">
+                             0
+                         </div><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-heart"></use></svg></div>
+                     </div>
+                     <div class="nav-tabs__item--basket nav-tabs__item">
+                         <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-shopping-cart"></use></svg></div>
+                         <div class="nav-tabs__item-info">
+                             <div class="nav-tabs__item-top">
+                                 <a href="#">Корзина</a>
+                             </div>
+                             <div class="nav-tabs__item-bottom">
+                                 <a href="tel:+745448889880" class="nav-tabs__item-name__link"> пуста</a>
+                             </div>
+                         
+                         </div>
+                     </div>
+                 
+                 </div>
+          
+          </div>
+          <div class="header__row header__row--mobile">
+             <div class="header__search search">
+                 <form class="search__form">
+                     <div class="search__logo">
+                         <img src="images/footer_logo.svg" alt="">
+                     </div>
+                     <input type="text" class="search__form-input search__form-input--mob" placeholder="Я ищу...">
+                    
+                     
+                 </form>
+             </div>
+             <a href="#menu" class="header__burger">
+                 <i class="fa-solid fa-bars"></i>
+                 <i class="fa-solid fa-xmark"></i>
+             </a>
+         </div>
+     </div>
+     </header>
        <main class="main">
            <div class="container">
                <ol>
