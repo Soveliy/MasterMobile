@@ -88,6 +88,9 @@ $('.main-slider__swiper').each(function(){
       },
       observer: true,  
       observeParents: true,
+      autoplay: {
+        delay: 5000,
+      },
     });
   });
   $('.visited-slider').each(function(){
@@ -233,17 +236,21 @@ let el = document.querySelector('.flyBasket__scroll');
 
         $(document).ready(function() {
           $('select').niceSelect();
-          // $('.search__form-input').on('focus', function(e) {
-          //   $(".search-items").slideToggle(300)
-          //   $(".search-items").toggleClass("is-visible")
-          // })
+          $('.search__form-input').on('focus', function(e) {
+            
+            $(".search-items").slideDown(300)
+            $(".search-items").toggleClass("is-visible")
+            setTimeout(() => {
+              $(this).addClass("is-focus")
+            }, 100);
+          })
 
-          // $('.search__form-input').on('keypress', function(e) {
-          //   $(".search-items").slideUp(300)
-          //   $(".live-search").slideDown(300)
+          $('.search__form-input').on('keypress', function(e) {
+            $(".search-items").slideUp(300)
+            $(".live-search").slideDown(300)
             // $(".search-items").toggleClass("is-visible")
-          // })
-          // $('.search-item').on('mouseleave', function(e) {
+          })
+          // $('.search-items').on('mouseleave', function(e) {
           //   $(".search-items").slideUp(300)
           //   $(".search-items").toggleClass("is-visible")
           // })
@@ -254,9 +261,29 @@ let el = document.querySelector('.flyBasket__scroll');
               // клик внутри элемента 
               return;
           }
-          // клик снаружи элемента 
+          if ( $(e.target).closest('.live-search').length ) {
+            // клик внутри элемента 
+            return;
+          }
+          if ( $(e.target).closest('.search__form-input').length ) {
+            // клик внутри элемента 
+            return;
+          }
+
+          
+        //  клик снаружи элемента 
+          if($(".search__form-input").hasClass("is-focus")){
+            $('.search-items').slideUp();
+            $('.live-search').slideUp();
+            $(".search__form-input").removeClass("is-focus")
+          }
+
+          // if($(".search__form-input").hasClass("is-focus")){
+          
+          //   $(".search__form-input").removeClass("is-focus")
+          // }
          
-            // $('.search-items:not()').slideUp();
+          
           
           
          });

@@ -172,7 +172,7 @@ button{
     padding: 11.5px 10px;
   }
   &--size-big{
-    padding: 16.5px 20px;
+    padding: 16.5px 30px;
     font-weight: 700;
   }
   &--black{
@@ -476,13 +476,18 @@ select:invalid {
         color: $light-blue;
       }
     }
+    &--basket{
+      .nav-tabs__item-bottom{
+        margin-top:-5px;
+      }
+    }
   }
 }
 .header{
   // padding: 20px 0;
     background-color: $dark-pink;
     @include for-md(){
-      padding: 20px 0;
+      padding: 15px 0;
     }
   &__row{
     justify-content: space-between;
@@ -517,7 +522,7 @@ select:invalid {
   }
   &__search{
     width: 100%;
-    margin: 0 30px;
+    margin: 0 15px 0 30px;
     @include for-md(){
       margin: 0 15px 0 0;
     }
@@ -573,6 +578,9 @@ select:invalid {
   }
 
 }
+#menu{
+  display: none;
+}
 .catalog-menu{
   // position: absolute;
   // left: 0;
@@ -623,7 +631,7 @@ select:invalid {
     padding-top: 0;
   }
   &__list{
-    padding: 30px 30px 0;
+    padding: 21px 30px 0;
     margin: 0;
     list-style: none;
     &-title{
@@ -640,6 +648,7 @@ select:invalid {
       align-items: center;
       color: $white;
       padding: 10px 0;
+      line-height: 18px;
       box-sizing: border-box;
 
       &:before{
@@ -879,13 +888,13 @@ select:invalid {
     }
   }
   &__main-slider{
-    width: 69.5%;
+    width: 68.5%;
     @include for-md(){
       width: 100%;
     }
   }
   &__banners{
-    width: 31.5%;
+    width: 32.5%;
     @include for-md(){
       width: 100%;
       display: flex;
@@ -997,7 +1006,7 @@ select:invalid {
   }
   &__title{
     font-size: 30px;
-    line-height: 36px;
+    line-height: 42px;
     color: $white;
     margin: 20px 0;
   }
@@ -1064,6 +1073,8 @@ select:invalid {
   }
   &__button{
     max-width: 180px;
+    padding-right: 10px;
+    padding-left: 10px;
     width: 100%;
     display: inline-flex;
     justify-content: center;
@@ -1254,7 +1265,7 @@ select:invalid {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   @include for-md(){
     margin-bottom: 15px;
   }
@@ -1271,6 +1282,8 @@ select:invalid {
   }
   &__button{
     margin-left: 20px;
+    padding-right: 29px;
+    padding-left: 29px;
     &--desktop{
      @include for-md(){
        display: none;
@@ -1301,7 +1314,7 @@ select:invalid {
     padding-top: 15px;
   }
   &__title{
-    margin: 0 0 25px 0;
+    margin: 0 0 18px 0;
     font-size: 26px;
     line-height: 30px;
     @include for-sm(){
@@ -1605,7 +1618,7 @@ select:invalid {
       height: 100px;
       width: 100px;
       flex-shrink: 0;
-      margin-right: 30px;
+      margin-right: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1644,8 +1657,8 @@ select:invalid {
       }
     }
     &-desc{
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 14px;
+      line-height: 17px;
       @include for-sm(){
         font-size: 14px;
         line-height: 17px;
@@ -1663,8 +1676,8 @@ select:invalid {
     font-size: 18px;
     line-height: 21px;
     color: $navcolor;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
     margin-top: 0;
     @include for-md(){
       font-size: 16px;
@@ -1723,7 +1736,7 @@ select:invalid {
     display: flex;
   }
   &__slide{
-    margin-bottom: 30px;
+    margin-bottom: 21px;
     margin-top: 0 !important;
     @include for-md(){
       margin-bottom: 15px;
@@ -1755,7 +1768,7 @@ select:invalid {
   }
 }
 .footer{
-  padding: 100px 0 50px;
+  padding: 106px 0 50px;
   background-color: $dark-pink;
   color: $white;
 
@@ -1793,7 +1806,7 @@ select:invalid {
     }
   }
   &__title{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     
     @include for-md(){
       margin-bottom: 20px;
@@ -1868,7 +1881,7 @@ select:invalid {
     margin: 0;
     list-style: none;
    &Item + .footer__nav-listItem{
-     margin-top: 10px;
+     margin-top: 9px;
    }
   }
   &__nav,&__contacts{
@@ -1893,7 +1906,7 @@ select:invalid {
     font-size: 14px;
     line-height: 17px;
     & + .footer__contacts-item{
-      margin-top: 10px;
+      margin-top: 25px;
     }
     i{
       flex-shrink: 0;
@@ -1906,7 +1919,7 @@ select:invalid {
     font-size: 14px;
     line-height: 18px;
     color: $white;
-    margin-top: 70px;
+    margin-top: 62px;
     @include for-sm(){
       margin-top: 0;
     }
@@ -1915,7 +1928,7 @@ select:invalid {
     }
   }
   &__social{
-    margin-top: 50px;
+    margin-top: 64px;
     @include for-sm(){
       margin-top: 30px;
     }
@@ -1958,7 +1971,9 @@ select:invalid {
       }
       a{
         display: block;
+       @include for-sm(){
         padding: 11.5px 25px;
+       }
       }
     }
     &-item + .footer__otherMenu-item{
@@ -2051,7 +2066,11 @@ select:invalid {
 }
 
 .catalog-preview{
-  padding: 30px 0;
+  padding: 18px 0;
+
+  & + .catalog-preview{
+    margin-top: 10px;
+  }
   @include for-md(){
     padding: 15px 0;
   }
@@ -2176,8 +2195,8 @@ select:invalid {
   }
   &__stickers{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -6px;
+    left: -10px;
     z-index: 50;
     @include for-md(){
       left: -10px;
@@ -2188,7 +2207,7 @@ select:invalid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     @include for-md(){
       align-items: center;
       margin-bottom: 15px;
@@ -2202,6 +2221,7 @@ select:invalid {
     position: relative;
     overflow: hidden;
     padding-bottom: 10px;
+    padding-top: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
     @include for-md(){
@@ -2209,8 +2229,8 @@ select:invalid {
     }
   }
   &__stickers{
-    position: absolute;
-    top: 0;
+    // position: absolute;
+    // top: 0;
   }
   &__image-link{
     display: flex;
@@ -2248,6 +2268,7 @@ select:invalid {
     
   }
   &__rating{
+    cursor: pointer;
     display: flex;
     align-items: center;
     @include for-md(){
@@ -2307,10 +2328,12 @@ select:invalid {
     color: $dark-pink;
     font-size: 14px;
     line-height: 17px;
-
+    &-container{
+      min-height: 64px;
+    }
   }
   &__info{
-    margin-top: 35px;
+    margin-top: 8px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -2335,6 +2358,7 @@ select:invalid {
       line-height: 21px;
       color: $dark-pink;
       font-weight: 700;
+      margin-bottom: 3px;
 
       span{
         font-size: 12px;
@@ -2473,6 +2497,7 @@ a.preview-item__option-value{
     flex-shrink: 0;
     line-height: 38px;
     color: #C1C8D7;
+    font-size: 18px;
     background-color: transparent;
   }
   input{
@@ -2541,11 +2566,17 @@ a.preview-item__option-value{
       width: 20px;
       stroke: #8592AD;
     }
+    &--tofav-active{
+      i{
+        color: $red;
+        text-shadow: 1px 1px 5px (rgba($red, .5));
+      }
+    }
   }
 
 }
 .categories{
-  padding-bottom: 30px;
+  padding: 36px 0 30px;
   @include for-md(){
     padding-bottom: 15px;
   }
@@ -2579,6 +2610,7 @@ a.preview-item__option-value{
     &-icon{
       height: 60px;
       width: 120px;
+      margin-bottom: 13px;
       @include for-sm(){
         width: 60px;
         margin-bottom: 15px;
@@ -2590,7 +2622,7 @@ a.preview-item__option-value{
     }
     &-name{
       color: $navcolor;
-      margin-bottom: 5px;
+      // margin-bottom: 5px;
 
       @include for-sm(){
         margin-bottom: 0;
@@ -2829,6 +2861,7 @@ a.preview-item__option-value{
     color: $red;
     flex-shrink: 0;
     margin-left: 15px;
+    cursor: pointer;
   }
   &__bottom{
     display: flex;
@@ -2945,10 +2978,20 @@ body {
 .mmenu_header img {
   display: none;
 }
-
+.mm-spn--navbar:not(.mm-spn--main){
+  .mmenu_header{
+    background-color: #F0F1F5;
+  }
+}
+.mmenu_header{
+  display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
+  align-items: center;
+  height: 70px;
+}
 .mm-spn--main img {
-  padding: 20px;
-  height: 20px;
+  height: 30px;
   display: block;
 }
 
@@ -2997,6 +3040,9 @@ body.mm-ocd-opened {
   -webkit-transition-delay: 0s;
   -o-transition-delay: 0s;
   transition-delay: 0s;
+  #menu{
+    display: block;
+  }
 }
 .mm-ocd__content {
   position: absolute;
@@ -3092,7 +3138,7 @@ body.mm-ocd-opened {
   bottom: 0;
   z-index: 2;
   width: 130%;
-  padding-right: 30%;
+  padding-right: 26%;
   line-height: 24px;
   line-height: var(--mm-spn-line-height);
   overflow: visible;
@@ -3147,8 +3193,10 @@ body.mm-ocd-opened {
   display: block;
   margin-left: 20px;
   margin-left: var(--mm-spn-item-indent);
-  border-top: 1px solid;
-  opacity: 0.1;
+  border-top: 1px solid #E0E4EB;
+  // opacity: 0.1;
+  width: calc(100% + 20px);
+  // background-color: #192B4D;
 }
 .mm-spn a,
 .mm-spn span,
@@ -3213,15 +3261,15 @@ body.mm-ocd-opened {
   content: attr(data-mm-spn-title);
   display: block;
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 5px;
   right: 0;
-  height: 50px;
-  height: var(--mm-spn-item-height);
+  height: 70px;
+  // height: var(--mm-spn-item-height);
   padding: 0 40px;
   padding: 0 calc(var(--mm-spn-item-indent) * 2);
-  line-height: 60px;
-  line-height: var(--mm-spn-head-height);
+  line-height: 70px;
+  // line-height: var(--mm-spn-head-height);
   opacity: 1;
   text-align: left;
   overflow: hidden;
@@ -3230,14 +3278,16 @@ body.mm-ocd-opened {
   text-overflow: ellipsis;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 .mm-spn.mm-spn--navbar.mm-spn--main:after {
   padding-left: 20px;
   padding-left: var(--mm-spn-item-indent);
 }
 .mm-spn.mm-spn--navbar ul {
-  top: 61px;
-  top: calc(var(--mm-spn-head-height) + 1px);
+  top: 70px;
+  // top: calc(var(--mm-spn-head-height) + 1px);
 }
 .mm-spn.mm-spn--navbar ul:before {
   content: "";
@@ -3336,6 +3386,13 @@ body.mm-ocd-opened {
   margin-right: 5px;
   width: 25px;
 }
+.mm-spn a > svg{
+  margin-top: -5px;
+  margin-right: 10px;
+  width: 20px;
+  max-height: 20px;
+  stroke: #14181F;
+}
 .mm-spn li:before{
   width: 7px;
   height: 7px;
@@ -3349,7 +3406,7 @@ body.mm-ocd-opened {
  opacity: 1;
  color: #14181F;
  font-size: 18px;
- margin-top: -14px;
+ margin-top: -11px;
 }
 
 .mobile-links{
@@ -3704,4 +3761,7 @@ body.mm-ocd-opened {
     display: flex;
     align-items: flex-end;
   }
+}
+.swiper-pagination-bullet{
+  cursor: pointer;
 }
