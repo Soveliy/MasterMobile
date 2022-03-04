@@ -3756,11 +3756,13 @@ body.mm-ocd-opened {
   }
   &__right{
     flex-shrink: 0;
+    margin-left: 20px;
   }
   .preview-item__coast-value{
     display: flex;
     align-items: flex-end;
   }
+
 }
 .swiper-pagination-bullet{
   cursor: pointer;
