@@ -36,6 +36,28 @@ input{
   outline: none;
   border: none;
 }
+button:active, button:focus {
+  outline: none !important;
+}
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus
+{
+outline: 0!important;
+outline-color: transparent!important;
+outline-width: 0!important;
+outline-style: none!important;
+box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
+}
 a{
   color: $red-light;
   text-decoration: none;
@@ -185,7 +207,7 @@ button{
   }
   &--size-big{
     padding: 16.5px 30px;
-    font-weight: 700;
+    font-weight: 500;
   }
   &--black{
     color: $white;
@@ -469,7 +491,7 @@ select:invalid {
       border: 2px solid $dark-pink;
       border-radius: 50%;
       &:not(.nav-tabs__item-value--active){
-        background-color: $grey;
+        background-color: #303A50;
       }
       &--active{
         background-color: $red;
@@ -750,7 +772,7 @@ select:invalid {
       border-radius: 2px;
       display: block;
       width: 100%;
-      padding: 0 25px 0 20px;
+      padding: 0 50px 0 20px;
       box-sizing: border-box;
       transition: .3s;
       color: #8592AD;
@@ -807,9 +829,15 @@ select:invalid {
       background-color: #F0F1F5;
       padding: 7.5px 20px;
       box-sizing: border-box;
+      color: #8592AD;
   
     }
+
+    &--card + &--card{
+      border-top: 1px dotted #C2C9D6;
+    }
   }
+
 }
 .search-items{
   display: none;
@@ -843,6 +871,7 @@ select:invalid {
   &__title{
     font-size: 12px;
     line-height: 15px;
+    color: #8592AD;
     &-link{
       font-size: 12px;
       line-height: 15px;
@@ -863,9 +892,10 @@ select:invalid {
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       flex-shrink: 0;
       color: #8592AD;
-      font-size: 18px;
+      font-size: 20px;
       display: none;
     }
     &:hover{
@@ -995,6 +1025,7 @@ select:invalid {
     @include for-sm(){
       padding: 60px 30px 0;
       text-align: center;
+      border-radius: 0;
     }
   }
   &__button-link{
@@ -1029,8 +1060,8 @@ select:invalid {
     bottom: 60px;
     z-index: 50;
     &-arrow{
-      font-size: 18px;
-      color: $navcolor;
+      font-size: 16px;
+      color: #14181F;
       background-color: $white;
       width: 40px;
       height: 50px;
@@ -1448,6 +1479,11 @@ select:invalid {
       display: block;
     }
   }
+  &__name-container{
+    @include for-sm(){
+      margin-top: -5px;
+    }
+  }
   &__name{
     color: $red;
   }
@@ -1557,8 +1593,15 @@ select:invalid {
   &__rating{
     font-size: 30px;
     line-height: 40px;
+    display: flex;
+    align-items: center;
+    span{
+      font-size: 14px;
+      margin: 0 3px;
+    }
     b{
       font-size: 40px;
+      font-weight: 500;
     }
   }
   &__desc{
@@ -1691,6 +1734,7 @@ select:invalid {
     padding-bottom: 18px;
     margin-bottom: 18px;
     margin-top: 0;
+    font-weight: 400;
     @include for-md(){
       font-size: 16px;
       line-height: 20px;
@@ -1770,6 +1814,7 @@ select:invalid {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+    margin-top: -7px;
 
   }
   &__coast{
@@ -2143,6 +2188,18 @@ select:invalid {
     color: $red;
     text-transform: uppercase;
     // background-color: ;
+
+    &--desktop{
+      @include for-md(){
+        display: none !important;
+      }
+    }
+    &--mobile{
+      display: none;
+      @include for-md(){
+        display: block;
+      }
+    }
     @include for-md(){
       max-width: 50%;
       background-color: $white;
@@ -2188,6 +2245,7 @@ select:invalid {
       i{
         font-size: 10px;
         color: #FFFFFF;
+        margin-right: 0;
       }
     }
     .preview-item__rating-counter{
@@ -2777,6 +2835,7 @@ a.preview-item__option-value{
       font-weight: 700;
     }
     &-title{
+      font-weight: 500;
          font-size: 22px;
       line-height: 25px;
     }
@@ -3573,7 +3632,7 @@ body.mm-ocd-opened {
     max-width: 140px;
   }
   .search-items,.live-search{
-    width: 150%;
+    // width: 150%;
   }
 }
 
@@ -3582,6 +3641,7 @@ body.mm-ocd-opened {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  
   &--category{
     padding: 16.5px 20px;
 
