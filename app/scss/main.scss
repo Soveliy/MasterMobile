@@ -127,6 +127,7 @@ button{
   &__icon{
     background-color: $redHover;
     width: 40px;
+    height: 40px;
     margin-right: 10px;
     flex-shrink: 0;
     display: flex;
@@ -814,6 +815,7 @@ select:invalid {
       cursor: pointer;
       i{
         font-size: 18px;
+        font-weight: 300;
       }
     }
   }
@@ -1320,6 +1322,7 @@ select:invalid {
     font-size: 26px;
     line-height: 30px;
     color: $navcolor;
+    font-weight: 500;
     @include for-md(){
       font-size: 20px;
       line-height: 24px;
@@ -1737,7 +1740,7 @@ select:invalid {
     padding-bottom: 18px;
     margin-bottom: 18px;
     margin-top: 0;
-    font-weight: 400;
+    font-weight: 500;
     @include for-md(){
       font-size: 16px;
       line-height: 20px;
@@ -1878,7 +1881,7 @@ select:invalid {
     a{
       font-size: 30px;
       line-height: 33px;
-      font-weight: 500;
+      font-weight: 400;
       color: $white;
     
       @include for-md(){
@@ -2163,6 +2166,7 @@ select:invalid {
   }
   &__button-container{
     background-color: $white;
+    border-top: 1px solid #F0F1F5;
     @include for-md(){
       display: flex;
       background-color: transparent;
@@ -2227,20 +2231,7 @@ select:invalid {
   @include for-md(){
     padding: 10px;
   }
-  &:hover{
-    box-shadow: 0px 5px 15px 0px rgba(194, 201, 214, .9);
-    z-index: 100;
-    .preview-item__available{
-      display: none;
-    }
-    .preview-item__available-value{
-      display: block;
-      color: #8592AD;
-    }
-    .preview-item__bottom{
-      display: block;
-      box-shadow: 0px 15px 15px 0px rgba(194, 201, 214, .9);
-    }
+  &__rating--active{
     .preview-item__rating-value{
       font-size: 0;
       background-color: #E0E4EB;
@@ -2264,6 +2255,25 @@ select:invalid {
         color: #8592AD;
       }
     }
+  }
+  &:hover{
+    box-shadow: 0px 5px 15px 0px rgba(194, 201, 214, .9);
+    z-index: 100;
+    .preview-item__swiper-pagination{
+      opacity: 1;
+    }
+    .preview-item__available{
+      display: none;
+    }
+    .preview-item__available-value{
+      display: block;
+      color: #8592AD;
+    }
+    .preview-item__bottom{
+      display: block;
+      box-shadow: 0px 15px 15px 0px rgba(194, 201, 214, .9);
+    }
+   
 
   }
   &__economy{
@@ -2338,20 +2348,32 @@ select:invalid {
     }
   }
   &__swiper-pagination{
+    opacity: 0;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100% !important;
     display: flex;
     justify-content: space-between;
+    transition: .3s;
     @include for-md(){
       display: none;
     }
     .swiper-pagination-bullet{
+      position: relative;
       height: 2px;
       background-color: #E0E4EB;
       transition: .3s;
       width: calc(25% - 2px);
+      left: 0 !important;
+      &:before{
+        content: '';
+        width: 100%;
+        height: 200px;
+        top: -200px;
+        position: absolute;
+        z-index: 50;
+      }
       &.swiper-pagination-bullet-active{
         background-color: #C1C8D7;
       }
@@ -2661,7 +2683,7 @@ a.preview-item__option-value{
     &--tofav-active{
       i{
         color: $red;
-        text-shadow: 1px 1px 5px (rgba($red, .5));
+        text-shadow: 0px 2px 5px rgba(255, 0, 64, .2);
       }
     }
   }

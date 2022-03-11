@@ -77,6 +77,10 @@ function _transcriptHandler(e) {
 
 $('.main-slider__swiper').each(function(){
     let mainSlider = new Swiper(this, {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
         pagination: {
             clickable: true,
             el: $(this).parent().find(".swiper-pagination")[0],
@@ -153,8 +157,13 @@ $('.main-slider__swiper').each(function(){
       slidesPerView: 1,
       spaceBetween: 30,
     });
+    // $('.preview-item__image-slider .swiper-pagination-bullet ').on('mouseover', function() {
+    //   previewSlider.slideTo($(this).index());
+    // })
   });
-
+  $('.preview-item__image-slider .swiper-pagination-bullet').hover(function() {
+    $( this ).trigger( "click" );
+ });   
 // Убавляем кол-во по клику
 $('.counter__button--minus').click(function() {
   let $input = $(this).parent().find('.counter__input');
