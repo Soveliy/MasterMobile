@@ -21,7 +21,7 @@ $resolution2: 320;
     @media (max-width: 1500px) { @content; }
   }
 @mixin for-lg {
-    @media (max-width: 1300px) { @content; }
+    @media (max-width: 1200px) { @content; }
   }
   @mixin for-lit-desktop {
     @media (max-width: 1050px) { @content; }

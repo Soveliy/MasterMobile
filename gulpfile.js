@@ -29,7 +29,8 @@ gulp.task('scss', function(){
 gulp.task('css', function(){
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
-    // 'node_modules/slick-carousel/slick/slick.css',
+     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+   
     'node_modules/jquery-nice-select/css/nice-select.css',
     'node_modules/swiper/swiper.min.css',
     'assest/css/simple-scrollbar.css',
@@ -59,7 +60,7 @@ gulp.task('js', function(){
       'assest/js/mmenu.js',
         'node_modules/swiper/swiper-bundle.min.js',
         'node_modules/jquery-nice-select/js/jquery.nice-select.js',
-        
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
       'assest/js/simple-scrollbar.js',
     // 'assest/js/aos.js',
     // 'assest/js/swiper.js',
