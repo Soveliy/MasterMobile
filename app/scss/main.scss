@@ -96,6 +96,9 @@ img{
   max-width: 1500px;
   margin: 0 auto;
   width: 94%;
+  &--big{
+    max-width: 1800px;
+  }
   @include for-desk(){
     width: 100%;
     box-sizing: border-box;
@@ -748,7 +751,7 @@ select:invalid {
 .main{
   background-color: $mainbg;
   flex: 1;
-
+  padding-bottom: 50px;
   &--white{
     background-color: $white;
   }
@@ -1832,6 +1835,7 @@ select:invalid {
   }
 }
 .footer{
+
   padding: 106px 0 50px;
   background-color: $dark-pink;
   color: $white;
@@ -4253,4 +4257,213 @@ body.mm-ocd-opened {
       margin-top: 15px;
     }
   }
+}
+
+.breadcrumbs{
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding: 30px 0 15px;
+    margin: 0;
+  }
+  &__list-item:not(:first-child){
+    .breadcrumbs__link{
+      &::before{
+        content: '\f054';
+        font-family: "Font Awesome 6 Pro";
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 4px;
+      }
+    }
+  }
+  &__link{
+    font-size: 14px;
+    line-height: 17px;
+    color: #0D1526;
+    
+  }
+  span.breadcrumbs__link{
+    color: #8592AD;
+    &:before{
+      color: #8592AD;
+    }
+  }
+}
+.page-navigation{
+  &__title{
+    font-size: 30px;
+    line-height: 31px;
+    font-weight: 500;
+    color: #0D1526;
+    margin: 0 0 20px 0;
+  }
+}
+.category-list{
+  &__row{
+    flex-wrap: wrap;
+  }
+  &__item-container{
+    width: 33.3%;
+    &:first-child{
+      .category-item{
+     
+        border-top-left-radius: 5px;
+      }
+    }
+    &:nth-child(3){
+      .category-item{
+        border-top-right-radius: 5px;
+      }
+    }
+    &:last-child{
+      .category-item{
+        border-bottom-left-radius: 5px;
+      }
+    }
+    &:nth-last-child(3){
+      .category-item{
+        border-bottom-right-radius: 5px;
+      }
+    }
+   
+  }
+  @include for-lg(){
+    &__item-container{
+      width: 50%;
+
+      &:first-child{
+        .category-item{
+       
+          border-top-left-radius: 5px;
+        }
+      }
+      &:nth-child(3){
+        .category-item{
+          border-top-right-radius: 0;
+        }
+      }
+    
+      &:nth-last-child(3){
+        .category-item{
+          border-bottom-right-radius: 0;
+        }
+      }
+      &:nth-last-child(2){
+        .category-item{
+          border-bottom-right-radius: 5px;
+        }
+      }
+      
+    }
+  }
+  @include for-sm(){
+    &__item-container{
+      width: 100%;
+    }
+    &__item-container + &__item-container{
+      margin-top: 10px;
+    }
+  }
+}
+.category-item{
+  height: 100%;
+  padding: 30px;
+  transition: .3s;
+  background-color: #fff;
+  box-sizing: border-box;
+  
+  box-shadow: 0px 0px 15px 0 rgba(133,146,173,.1);
+  &:hover{
+    position: relative;
+    z-index: 50;
+    box-shadow: 0px 10px 15px 10px rgba(133,146,173,.3);
+  }
+  @include for-sm(){
+    border-radius: 5px !important;
+  }
+  &__left{
+    width: 80px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  &__icon-container{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+  }
+  &__icon{
+    max-height: 40px;
+    max-width: 100%;
+  }
+  &__counter{
+    font-size: 12px;
+    line-height: 15px;
+    color: #14181F;
+    background-color: #F0F1F5;
+    padding: 9px 0 6px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  &__name{
+    font-size: 22px;
+    line-height: 28px;
+    color: #14181F;
+
+    @include for-sm(){
+      font-size: 16px;
+      line-height: 20px;
+
+    }
+    &:hover{
+      color: #FF0040;
+    }
+  }
+  &__name-container{
+    @include for-sm(){
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+  &__list{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin: 10px 0 0 0;
+    flex-wrap: wrap;
+    gap: 5px;
+    &-item{
+      width: calc(50% - 5px);
+    }
+    @include for-sm(){
+      margin-top: 20px;
+      margin-left: -110px;
+    }
+    &-item:not(:last-child){
+      .category-item__link{
+        font-size: 14px;
+        line-height: 17px;
+        color: #14181F;
+        transition: .3s;
+        &:hover{
+          color: #FF0040;
+        }
+      }
+    }
+    &-item:last-child{
+      color: #FF0040;
+      font-weight: 600;
+    }
+  } 
 }
