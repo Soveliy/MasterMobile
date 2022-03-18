@@ -4206,58 +4206,7 @@ body.mm-ocd-opened {
   
 }
 
-@include for-lg(){
-  .nav-tabs__item-top,.nav-tabs__item-bottom{
-    display: none;
-  }
-  .nav-tabs__item-icon:not(.nav-tabs__item-icon--without-info){
-    margin-right: 0;
-  }
-  .content--active{
-    // .nav-tabs__item-top,.nav-tabs__item-bottom{
-    //   display: none;
-    // }
-    // .nav-tabs__item-icon:not(.nav-tabs__item-icon--without-info){
-    //   margin-right: 0;
-    // }
 
-    .catalog-preview__item-container{
-      width: 33.3%;
-    }
-    .catalog-preview__button{
-      width: calc(33.3% + 3px);
-    }
-    .catalog-preview__item-container:nth-child(4n){
-      display: none;
-    }
-    .categories__grid{
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    .aboutUs__row,.reviews__row{
-      flex-direction: column;
-    }
-    .reviews__agr-list{
-      width: 100%;
-      padding: 30px 0 0 0;
-      margin-top: 15px;
-      border-left: none;
-      border-top: 1px solid #E0E4EB;
-    }
-    .aboutUs__item,.reviews__content{
-      width: 100%;
-    }
-    .aboutUs__item +  .aboutUs__item{
-      margin-top: 15px;
-    }
-    .footer__item--w25{
-      width: 50%;
-      
-    }
-    .footer__item--w25 +  .footer__item--w25 +  .footer__item--w25{
-      margin-top: 15px;
-    }
-  }
-}
 
 .breadcrumbs{
   &__list{
@@ -4320,7 +4269,7 @@ body.mm-ocd-opened {
     }
     &:last-child{
       .category-item{
-        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
       }
     }
     &:nth-last-child(3){
@@ -4345,6 +4294,11 @@ body.mm-ocd-opened {
           border-top-right-radius: 0;
         }
       }
+      &:nth-child(2){
+        .category-item{
+          border-top-right-radius: 5px;
+        }
+      }
     
       &:nth-last-child(3){
         .category-item{
@@ -4353,7 +4307,7 @@ body.mm-ocd-opened {
       }
       &:nth-last-child(2){
         .category-item{
-          border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 5px;
         }
       }
       
@@ -4445,6 +4399,15 @@ body.mm-ocd-opened {
     gap: 5px;
     &-item{
       width: calc(50% - 5px);
+      &:nth-child(n + 10){
+        display: none;
+      }
+      &:last-child{
+        display: block;
+        .category-item__link{
+          cursor: pointer;
+        }
+      }
     }
     @include for-sm(){
       margin-top: 20px;
@@ -4466,4 +4429,92 @@ body.mm-ocd-opened {
       font-weight: 600;
     }
   } 
+}
+
+
+@include for-lg(){
+  .nav-tabs__item-top,.nav-tabs__item-bottom{
+    display: none;
+  }
+  .nav-tabs__item-icon:not(.nav-tabs__item-icon--without-info){
+    margin-right: 0;
+  }
+  .content--active{
+    // .nav-tabs__item-top,.nav-tabs__item-bottom{
+    //   display: none;
+    // }
+    // .nav-tabs__item-icon:not(.nav-tabs__item-icon--without-info){
+    //   margin-right: 0;
+    // }
+
+    .catalog-preview__item-container{
+      width: 33.3%;
+    }
+    .catalog-preview__button{
+      width: calc(33.3% + 3px);
+    }
+    .catalog-preview__item-container:nth-child(4n){
+      display: none;
+    }
+    .categories__grid{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .aboutUs__row,.reviews__row{
+      flex-direction: column;
+    }
+    .reviews__agr-list{
+      width: 100%;
+      padding: 30px 0 0 0;
+      margin-top: 15px;
+      border-left: none;
+      border-top: 1px solid #E0E4EB;
+    }
+    .aboutUs__item,.reviews__content{
+      width: 100%;
+    }
+    .aboutUs__item +  .aboutUs__item{
+      margin-top: 15px;
+    }
+    .footer__item--w25{
+      width: 50%;
+      
+    }
+    .footer__item--w25 +  .footer__item--w25 +  .footer__item--w25{
+      margin-top: 15px;
+    }
+  }
+}
+@include for-big(){
+  .content--active{
+    .category-list__item-container{
+      width: 50%;
+      &:first-child{
+        .category-item{
+       
+          border-top-left-radius: 5px;
+        }
+      }
+      &:nth-child(3){
+        .category-item{
+          border-top-right-radius: 0;
+        }
+      }
+      &:nth-child(2){
+        .category-item{
+          border-top-right-radius: 5px;
+        }
+      }
+    
+      &:nth-last-child(3){
+        .category-item{
+          border-bottom-right-radius: 0;
+        }
+      }
+      &:nth-last-child(2){
+        .category-item{
+          border-bottom-left-radius: 5px;
+        }
+      }
+    }
+  }
 }

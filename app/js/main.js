@@ -205,7 +205,27 @@ let el = document.querySelector('.flyBasket__scroll');
   $('.header__burger').click(function() {
     $(this).toggleClass("is-active")
   }); 
-  
+  let counter_items
+  let toggler_text = "Скрыть"
+  $(".category-item__list-item:last-child .category-item__link").click(function(e){
+    e.preventDefault()
+    if(!$(this).hasClass("js-active")){
+      counter_items = $(this).html()
+    }
+    $(this).toggleClass("js-active");
+    
+    $(this).closest("ul").find("li:not(:last-child):nth-child(n + 10)").slideToggle();
+    
+    
+      if($(this).hasClass("js-active")){
+        $(this).html(toggler_text)
+      }
+      else {
+        
+        $(this).html(counter_items)
+      }
+    
+  })
 // new Mmenu(document.querySelector("#catalog-menu"));
 
 //             document.addEventListener("click", function (evnt) {
