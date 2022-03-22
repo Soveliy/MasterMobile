@@ -330,7 +330,7 @@
             </div>
         </div>
         </header>
-        <main class="main main--padding-bottom">
+        <main class="main">
            <div class="page-navigation">
             <div class="container container--big">
                 <div class="page-navigation__breadcrumbs breadcrumbs">
@@ -339,357 +339,686 @@
                             <ul class="breadcrumbs__list">
                                 <li class="breadcrumbs__list-item">
                                     <a href="/" class="breadcrumbs__link">Главная </a>
-                                </li>    
+                                </li>  
                                 <li class="breadcrumbs__list-item">
-                                    <span class="breadcrumbs__link"> Каталог </span>
+                                    <a href="/" class="breadcrumbs__link">Каталог  </a>
+                                </li>
+                                <li class="breadcrumbs__list-item">
+                                    <a href="/" class="breadcrumbs__link">Кабели и переходники  </a>
+                                </li>   
+                                
+                                <li class="breadcrumbs__list-item">
+                                    <span class="breadcrumbs__link"> Кабели для передачи данных и синхронизации </span>
                                 </li>
                             </ul>
                         </nav>
                 
                 </div>
                 <h1 class="page-navigation__title">
-                    Каталог категорий
+                    Кабели для передачи данных и синхронизации
                 </h1>
             </div>
             
            </div>
-           <!-- end page-navigation-->
-            <div class="category-list">
+           <!--end page-navigation-->
+           <div class="catalog">
                <div class="container container--big">
-                <div class="category-list__row row">
-                    <div class="category-list__item-container">
-                        <div class="category-item">
-                            <div class="category-item__row row">
-                                <div class="category-item__left">
-                                    <div class="category-item__icon-container container--big" style="background-image:url(images/category_bg/1.jpg)">
-                                        <img src="images/category_icons/mob.svg" alt="" class="category-item__icon">
+                   <div class="row catalog__row">
+                       <div class="catalog__SmartFilter">
+                           <div class="SmartFilter">
+                               <a class="SmartFilter__back-btn" href="#">
+                                    <i class="fa-regular fa-arrow-left"></i>
+                                    Кабели и переходники
+                               </a>
+                               <div class="SmartFilter__item">
+                                   <div class="SmartFilter__itemTitle">
+                                    Цена:
+                                    <i class="fa-regular fa-angle-up"></i>
+                                   </div>
+                                   <div class="SmartFilter__itemBody">
+                                       <div class="SmartFilter__slider slider">
+                                           <div class="slider__top">
+                                               <input type="text" class="slider__input" id="slider__input-left">
+                                               <span>-</span>
+                                               <input type="text" class="slider__input" id="slider__input-right">
+                                           </div>
+                                           <div class="slider__bottom">
+                                               <div class="slider__js" id="slider"></div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               
+                               </div>
+                               <div class="SmartFilter__item">
+                                   <div class="SmartFilter__itemTitle">
+                                    Особенности:
+                                    <span class="SmartFilter__itemTitle-counter">+1</span>
+                                    <i class="fa-regular fa-angle-up"></i>
+                                   </div>
+                                   <div class="SmartFilter__itemBody">
+                                       <label class="checkbox">
+                                           <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Товар в наличии
+                                            <span class="checkbox__more">(+14)</span>
+                                       </label>
+                                       <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-group1">
+                                         <span class="checkbox__icon">
+                                             <i class="fa-regular fa-check"></i>
+                                         </span>
+                                         Товар в наличии
+                                         <span class="checkbox__more">(+14)</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-group1">
+                                         <span class="checkbox__icon">
+                                             <i class="fa-regular fa-check"></i>
+                                         </span>
+                                         Товар в наличии
+                                         <span class="checkbox__more">(+14)</span>
+                                    </label>
+                                   </div>
+                               
+                               </div>
+                               <div class="SmartFilter__item">
+                                    <div class="SmartFilter__itemTitle">
+                                    Бренд
+                                    
+                                    <i class="fa-regular fa-angle-up"></i>
                                     </div>
-                                    <div class="category-item__counter">
-                                        1 607
+                                    <div class="SmartFilter__itemBody">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Samsung 
+                                            <span class="checkbox__more">(140)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                        <input type="checkbox" name="checkbox-group1">
+                                        <span class="checkbox__icon">
+                                            <i class="fa-regular fa-check"></i>
+                                        </span>
+                                        Apple 
+                                        <span class="checkbox__more">(88)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Huawei 
+                                            <span class="checkbox__more">(72)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Huawei 
+                                            <span class="checkbox__more">(72)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Canon  
+                                            <span class="checkbox__more">(15)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            SVEN  
+                                            <span class="checkbox__more">(15)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Unifi  
+                                            <span class="checkbox__more">(15)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Logitech  
+                                            <span class="checkbox__more">(11)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Sony  
+                                            <span class="checkbox__more">(11)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            JBL  
+                                            <span class="checkbox__more">(9)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Baseus  
+                                            <span class="checkbox__more">(8)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Baseus  
+                                            <span class="checkbox__more">(8)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Baseus  
+                                            <span class="checkbox__more">(8)</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-group1">
+                                            <span class="checkbox__icon">
+                                                <i class="fa-regular fa-check"></i>
+                                            </span>
+                                            Baseus  
+                                            <span class="checkbox__more">(8)</span>
+                                        </label>
+                                        <div class="SmartFilter__showmore-container">
+                                            <a class="SmartFilter__showmore">Показать остальные</a>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                                <div class="SmartFilter__item">
+                                    <div class="SmartFilter__itemTitle">
+                                        Совместимость
+                                    
+                                     <i class="fa-regular fa-angle-up"></i>
+                                    </div>
+                                    <div class="SmartFilter__itemBody">
+                                        <select>
+                                            <option value="Все производители">Все производители</option>
+                                            <option value="Все производители">Все производители</option>
+                                            <option value="Все производители">Все производители</option>
+                                            <option value="Все производители">Все производители</option>
+                                        </select>
+                                        <select disabled>
+                                            <option value="Выберите модель">Выберите модель</option>
+                                            <option value="Выберите модель">Выберите модель</option>
+                                            <option value="Выберите модель">Выберите модель</option>
+                                            <option value="Выберите модель">Выберите модель</option>
+                                        </select>
+                                    </div>
+                                
+                                </div>
+                                <div class="SmartFilter__item">
+                                    <div class="SmartFilter__itemTitle">
+                                        Количество каналов
+                                        <span class="SmartFilter__itemTitle-counter">+2</span>
+                                    
+                                     <i class="fa-regular fa-angle-up"></i>
+                                    </div>
+                                    <div class="SmartFilter__itemBody">
+                                        <div class="custom-checkboxex">
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        1.0
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        1.1
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        2.0
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        2.1
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        2.2
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        3.0
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        4.0
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        5.0
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="SmartFilter__item">
+                                    <div class="SmartFilter__itemTitle">
+                                        Цвет
+                                        <span class="SmartFilter__itemTitle-counter">+2</span>
+                                    
+                                     <i class="fa-regular fa-angle-up"></i>
+                                    </div>
+                                    <div class="SmartFilter__itemBody">
+                                        <div class="custom-checkboxex">
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                       <span class="custom-checkbox__color" style="background-color: #000;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #FF0040;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #8800CC;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #3333FF;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,170,255,1) 100%);"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #1AFFD9;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #00CC88;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #99E500;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #FFEA00;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="custom-checkboxex__container">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="custom-checkbox__item">
+                                                        <span class="custom-checkbox__color" style="background-color: #F0F1F5;"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="SmartFilter__item">
+                                    <div class="SmartFilter__itemTitle SmartFilter__itemTitle--closed">
+                                        Материал
+                                       
+                                        
+                                    
+                                     <i class="fa-regular fa-angle-up"></i>
+                                    </div>
+                                    <div class="SmartFilter__itemBody" style="display: none;"></div>
+                                
+                                </div>
+                                <div class="SmartFilter__item">
+                                    <div class="SmartFilter__itemTitle SmartFilter__itemTitle--closed">
+                                        Назначение
+                                        
+                                    
+                                     <i class="fa-regular fa-angle-up"></i>
+                                    </div>
+                                    <div class="SmartFilter__itemBody" style="display: none;"></div>
+                                
+                                </div>
+                                <div class="SmartFilter__item">
+                                    <div class="SmartFilter__itemTitle SmartFilter__itemTitle--closed">
+                                        Конструктивные особенности
+                                       
+                                    
+                                     <i class="fa-regular fa-angle-up"></i>
+                                    </div>
+                                    <div class="SmartFilter__itemBody" style="display: none;"></div>
+                                
+                                </div>
+                                <div class="SmartFilter__footer">
+                                    <button class="SmartFilter__button button button--round">Сбросить все фильтры</button>
+                                </div>
+                           </div>
+                       </div>
+                       <div class="catalog__content">
+                           <div class="subcategory catalog__subcategory">
+                               <div class="subcategory__row row">
+                                   <div class="subcategory__item-container">
+                                       <a class="subcategory-item" href="#">
+                                            <span class="subcategory-item__image-container">
+                                                <img class="subcategory-item__image" src="images/subcat/1.jpg" alt="">
+                                            </span>
+                                            <span class="subcategory-item__title">
+                                                Кабели для передачи
+                                                данных
+                                            </span>
+                                            <span class="subcategory-item__counter">76 товаров</span>
+                                            
+                                       </a>
+                                   </div>
+                                   <div class="subcategory__item-container">
+                                    <a class="subcategory-item" href="#">
+                                         <span class="subcategory-item__image-container">
+                                             <img class="subcategory-item__image" src="images/subcat/2.jpg" alt="">
+                                         </span>
+                                         <span class="subcategory-item__title">
+                                             Кабели для передачи
+                                             данных
+                                         </span>
+                                         <span class="subcategory-item__counter">76 товаров</span>
+                                         
+                                    </a>
+                                </div>
+                                <div class="subcategory__item-container">
+                                    <a class="subcategory-item" href="#">
+                                         <span class="subcategory-item__image-container">
+                                             <img class="subcategory-item__image" src="images/subcat/3.jpg" alt="">
+                                         </span>
+                                         <span class="subcategory-item__title">
+                                             Кабели для передачи
+                                             данных
+                                         </span>
+                                         <span class="subcategory-item__counter">76 товаров</span>
+                                         
+                                    </a>
+                                </div>
+                                <div class="subcategory__item-container">
+                                    <a class="subcategory-item" href="#">
+                                         <span class="subcategory-item__image-container">
+                                             <img class="subcategory-item__image" src="images/subcat/4.jpg" alt="">
+                                         </span>
+                                         <span class="subcategory-item__title">
+                                             Кабели для передачи
+                                             данных
+                                         </span>
+                                         <span class="subcategory-item__counter">76 товаров</span>
+                                         
+                                    </a>
+                                </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <section class="visited">
+            <div class="container container--big">
+                <div class="visited__row">
+                    <h3 class="visited__title">
+                        Вы смотрели ранее
+                    </h3>
+                    <div class="visited-slider">
+                        <div class="visited-slider__wrapper swiper-wrapper">
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10) 123 123 123 13 13 123 123 23 </a>
+                                        <div class="visited-item__coast">670 ₽</div>
                                     </div>
                                 </div>
-                                <div class="category-item__right">
-                                    <div class="category-item__name-container container--big">
-                                        <a href="#" class="category-item__name">Запчасти для мобильной техники</a>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
                                     </div>
-                                    <ul class="category-item__list">
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Аккумуляторы </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Антенны</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Вибромоторы</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Винты</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Держатели сим-карт</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Динамики</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a class="category-item__link">Показать еще 13</a>
-                                        </li>
-
-                                    </ul>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visited-slider__slide swiper-slide">
+                                <div class="visited-item">
+                                    <a class="visited-item__image-container" href="#">
+                                        <img class="visited-item__img visited-item__img--noimage" src="images/noimage.jpg" alt="">
+                                    </a>
+                                    <div class="visited-item__content">
+                                        <a class="visited-item__name" href="#">Карта памяти OltraMax MicroSDXC 64Gb (class 10)</a>
+                                        <div class="visited-item__coast">670 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                
+                        </div>
+                        <div class="visited__swiper-pagination swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end visited-->
+        <div class="tizers">
+            <div class="container container--big">
+                <div class="tizers__row row">
+                    <div class="tizers__item-container">
+                        <div class="tizers__item">
+                            <div class="tizers__item-image-container">
+                                <img src="images/tizersfront/1.svg" alt="" class="tizers__item-image">
+                            </div>
+                            <div class="tizers__item-content">
+                                <div class="tizers__item-title">
+                                    Мы предлагаем:
+                                </div>
+                                <div class="tizers__item-desc">
+                                    Интересные предложения для <br>
+                                    постоянных покупателей
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="category-list__item-container">
-                        <div class="category-item">
-                            <div class="category-item__row row">
-                                <div class="category-item__left">
-                                    <div class="category-item__icon-container container--big" style="background-image:url(images/category_bg/2.jpg)">
-                                        <img src="images/category_icons/laptop.svg" alt="" class="category-item__icon">
-                                    </div>
-                                    <div class="category-item__counter">
-                                        1 607
-                                    </div>
+                    <div class="tizers__item-container">
+                        <div class="tizers__item">
+                            <div class="tizers__item-image-container">
+                                <img src="images/tizersfront/2.svg" alt="" class="tizers__item-image">
+                            </div>
+                            <div class="tizers__item-content">
+                                <div class="tizers__item-title">
+                                    Мы гарантируем:
                                 </div>
-                                <div class="category-item__right">
-                                    <div class="category-item__name-container container--big">
-                                        <a href="#" class="category-item__name">Запчасти для ноутбуков</a>
-                                    </div>
-                                    <ul class="category-item__list">
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Аккумуляторы </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Антенны</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Вибромоторы</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Винты</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Держатели сим-карт</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Динамики</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Показать еще 13</a>
-                                        </li>
-
-                                    </ul>
+                                <div class="tizers__item-desc">
+                                    Полную исправность и качество <br>
+                                    на продаваемые товары
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="category-list__item-container">
-                        <div class="category-item">
-                            <div class="category-item__row row">
-                                <div class="category-item__left">
-                                    <div class="category-item__icon-container container--big" style="background-image:url(images/category_bg/3.jpg)">
-                                        <img src="images/category_icons/smart-watch.svg" alt="" class="category-item__icon">
-                                    </div>
-                                    <div class="category-item__counter">
-                                        1 607
-                                    </div>
-                                </div>
-                                <div class="category-item__right">
-                                    <div class="category-item__name-container container--big">
-                                        <a href="#" class="category-item__name">Запчасти для смарт-часов</a>
-                                    </div>
-                                    <ul class="category-item__list">
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Аккумуляторы </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Антенны</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Вибромоторы</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Винты</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Держатели сим-карт</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Динамики</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Показать еще 13</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
+                    <div class="tizers__item-container">
+                        <div class="tizers__item">
+                            <div class="tizers__item-image-container">
+                                <img src="images/tizersfront/3.svg" alt="" class="tizers__item-image">
                             </div>
-                        </div>
-                    </div>
-                    <div class="category-list__item-container">
-                        <div class="category-item">
-                            <div class="category-item__row row">
-                                <div class="category-item__left">
-                                    <div class="category-item__icon-container container--big" style="background-image:url(images/category_bg/4.jpg)">
-                                        <img src="images/category_icons/inventory.svg" alt="" class="category-item__icon">
-                                    </div>
-                                    <div class="category-item__counter">
-                                        1 607
-                                    </div>
+                            <div class="tizers__item-content">
+                                <div class="tizers__item-title">
+                                    Мы консультируем:
                                 </div>
-                                <div class="category-item__right">
-                                    <div class="category-item__name-container container--big">
-                                        <a href="#" class="category-item__name">Аксессуары для мобильной техники</a>
-                                    </div>
-                                    <ul class="category-item__list">
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Аккумуляторы </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Антенны</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Вибромоторы</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Винты</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Держатели сим-карт</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Динамики</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Показать еще 13</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-list__item-container">
-                        <div class="category-item">
-                            <div class="category-item__row row">
-                                <div class="category-item__left">
-                                    <div class="category-item__icon-container container--big" style="background-image:url(images/category_bg/5.jpg)">
-                                        <img src="images/category_icons/inventory.svg" alt="" class="category-item__icon">
-                                    </div>
-                                    <div class="category-item__counter">
-                                        1 607
-                                    </div>
-                                </div>
-                                <div class="category-item__right">
-                                    <div class="category-item__name-container container--big">
-                                        <a href="#" class="category-item__name">Аксессуары для ноутбуков</a>
-                                    </div>
-                                    <ul class="category-item__list">
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Аккумуляторы </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Антенны</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Вибромоторы</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Винты</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Держатели сим-карт</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Динамики</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Показать еще 13</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-list__item-container">
-                        <div class="category-item">
-                            <div class="category-item__row row">
-                                <div class="category-item__left">
-                                    <div class="category-item__icon-container container--big" style="background-image:url(images/category_bg/6.jpg)">
-                                        <img src="images/category_icons/inventory.svg" alt="" class="category-item__icon">
-                                    </div>
-                                    <div class="category-item__counter">
-                                        1 607
-                                    </div>
-                                </div>
-                                <div class="category-item__right">
-                                    <div class="category-item__name-container container--big">
-                                        <a href="#" class="category-item__name">Аксессуары для смарт-часов</a>
-                                    </div>
-                                    <ul class="category-item__list">
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Аккумуляторы </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Антенны</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Вибромоторы</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Винты</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Держатели сим-карт</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link"> Динамики</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Дисплеи</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Рамки дисплеев                                            </a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Камеры</a>
-                                        </li>
-                                        <li class="category-item__list-item">
-                                            <a href="#" class="category-item__link">Показать еще 13</a>
-                                        </li>
-
-                                    </ul>
+                                <div class="tizers__item-desc">
+                                    И оказываем техподдержку по <br>
+                                    мобильным устройствам
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-               </div>
             </div>
+        </div>
+        <!--end tizers-->
         </main>
         <footer class="footer">
             <div class="container container--big">

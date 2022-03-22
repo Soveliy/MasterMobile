@@ -277,136 +277,130 @@ let el = document.querySelector('.flyBasket__scroll');
           $('.search__form-input').on('keypress', function(e) {
             $(".search-items").slideUp(300)
             $(".live-search").slideDown(300)
-            // $(".search-items").toggleClass("is-visible")
+           
           })
-          // $('.search-items').on('mouseleave', function(e) {
-          //   $(".search-items").slideUp(300)
-          //   $(".search-items").toggleClass("is-visible")
-          // })
+        
 
           
         $(document).click( function(e){
-          if ( $(e.target).closest('.search-items').length ) {
+            if ( $(e.target).closest('.search-items').length ) {
+                // клик внутри элемента 
+                return;
+            }
+            if ( $(e.target).closest('.live-search').length ) {
               // клик внутри элемента 
               return;
-          }
-          if ( $(e.target).closest('.live-search').length ) {
-            // клик внутри элемента 
-            return;
-          }
-          if ( $(e.target).closest('.search__form-input').length ) {
-            // клик внутри элемента 
-            return;
-          }
+            }
+            if ( $(e.target).closest('.search__form-input').length ) {
+              // клик внутри элемента 
+              return;
+            }
 
           
         //  клик снаружи элемента 
-          if($(".search__form-input").hasClass("is-focus")){
-            $('.search-items').slideUp();
-            $('.live-search').slideUp();
-            $(".search__form-input").removeClass("is-focus")
-          }
+            if($(".search__form-input").hasClass("is-focus")){
+              $('.search-items').slideUp();
+              $('.live-search').slideUp();
+              $(".search__form-input").removeClass("is-focus")
+            }
 
-          // if($(".search__form-input").hasClass("is-focus")){
-          
-          //   $(".search__form-input").removeClass("is-focus")
-          // }
+          });
+          $('.tabs__wrapper').each(function() {
+            let ths = $(this);
+            ths.find('.tabs__content').not(':first').hide();
+            ths.find('.tabs__caption').click(function() {
+              ths.find('.tabs__caption').removeClass('is-active').eq($(this).index()).addClass('is-active');
+              ths.find('.tabs__content').hide().eq($(this).index()).fadeIn()
+            }).eq(0).addClass('is-active');
+          });
+          $(".accordeon__item-body").hide().prev().click(function() {
+            $(this).parents(".accordeon__container").find(".accordeon__item-body").not(this).slideUp().prev().removeClass("is-active");
+            $(this).next().not(":visible").slideDown().prev().addClass("is-active");
+          });
+
+          // SmartFilter
+
+          $(".SmartFilter__itemTitle").click(function(){
+            $(this).toggleClass("SmartFilter__itemTitle--closed");
+            $(this).next().slideToggle();
+          })
+
+          $(".SmartFilter__showmore").click(function(e){
+            e.preventDefault()
          
+           
+            $(this).toggleClass("js-active")
+            $(this).closest(".SmartFilter__itemBody").find(".checkbox:nth-child(n + 11)").slideToggle();
+              if($(this).hasClass("js-active")){
+                $(this).html("Скрыть")
+              }
+              else {
+                
+                $(this).html("Показать остальные")
+              }
+            
+          })
+          var $range = $("#slider");
+          let $inputFrom = $("#slider__input-left");
+          let $inputTo = $("#slider__input-right");
+          let instance;
           
+          $range.ionRangeSlider({
+              skin: "round",
+              type: "double",
+              min: 0,
+              max: 225000,
+              from: 200,
+              to: 800,
+              hide_from_to:true,
+              onStart: updateInputs,
+              onChange: updateInputs,
+              onFinish: updateInputs
+          });
+          instance = $range.data("ionRangeSlider");
           
+          function updateInputs (data) {
+              from = data.from;
+              to = data.to;
+              $inputFrom.prop("value", from);
+              $inputTo.prop("value", to);
+          }
           
-         });
+          $inputFrom.on("change", function () {
+              var val = $(this).prop("value");
+          
+              // validate
+              if (val < min) {
+                  val = min;
+              } else if (val > to) {
+                  val = to;
+              }
+          
+              instance.update({
+                  from: val
+              });
+          
+              $(this).prop("value", val);
+          
+          });
+          
+          $inputTo.on("change", function () {
+              var val = $(this).prop("value");
+          
+              // validate
+              if (val < from) {
+                  val = from;
+              } else if (val > max) {
+                  val = max;
+              }
+          
+              instance.update({
+                  to: val
+              });
+          
+              $(this).prop("value", val);
+          });
         });
-        $('.tabs__wrapper').each(function() {
-          let ths = $(this);
-          ths.find('.tabs__content').not(':first').hide();
-          ths.find('.tabs__caption').click(function() {
-            ths.find('.tabs__caption').removeClass('is-active').eq($(this).index()).addClass('is-active');
-            ths.find('.tabs__content').hide().eq($(this).index()).fadeIn()
-          }).eq(0).addClass('is-active');
-        });
-        $(".accordeon__item-body").hide().prev().click(function() {
-          $(this).parents(".accordeon__container").find(".accordeon__item-body").not(this).slideUp().prev().removeClass("is-active");
-          $(this).next().not(":visible").slideDown().prev().addClass("is-active");
-        });
+      
 
 
-// new Mmenu(document.querySelector("#mobile-menu"));
-
-// document.addEventListener("click", function (evnt) {
-//     var anchor = evnt.target.closest('a[href="#/"]');
-//     if (anchor) {
-//         alert("Thank you for clicking, but that's a demo link.");
-//         evnt.preventDefault();
-//     }
-// });
-// $(".burger").click(function(){
-//     $(this).toggleClass("active")
-//     $("body").toggleClass("hidden")
-//     $(".main-menu").slideToggle()
-
-// })
-// $(".footer .menu__title").click(function(){
-//     $(this).toggleClass("active")
-// //    .toggleClass("hidden")
-//     $(this).next().slideToggle()
-
-// })
-
-// const fraction = document.getElementById("fraction");
-// const slides = document.querySelectorAll(".hero .swiper-slide");
-// const slideCount = slides.length;
-// fraction.textContent = `1 / ${slideCount}`;
-
-// const swiper = new Swiper(".hero .swiper-container", {
-//   // If we need pagination
-//   pagination: {
-//     el: ".hero .swiper-pagination",
-//     clickable: true,
-//     autoplay: {
-//         delay: 5000,
-//       },
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".hero .swiper-button-next",
-//     prevEl: ".hero .swiper-button-prev"
-//   },
-
-//   on: {
-//     slideChange: () => {
-//       fraction.textContent = `${swiper.realIndex + 1}/${slideCount}`;
-//     }
-//   }
-// });
-
-// var swiper2 = new Swiper(".parthers .swiper-container", {
-//     slidesPerView: "auto",
-//     spaceBetween: 20,
-//     autoplay: {
-//         delay: 5000,
-//       },
-//     // pagination: {
-//     //   el: ".swiper-pagination",
-//     //   clickable: true,
-//     // },
-//     navigation: {
-//         nextEl: ".parthers .swiper-button-next",
-//         prevEl: ".parthers .swiper-button-prev"
-//       },
-//     breakpoints: {
-//       640: {
-//         slidesPerView: 2,
-//         spaceBetween: 20,
-//       },
-//       768: {
-//         slidesPerView: 3,
-//         spaceBetween: 50,
-//       },
-//       1200: {
-//         slidesPerView: 4,
-//         spaceBetween: 77,
-//       },
-//     },
-//   });
