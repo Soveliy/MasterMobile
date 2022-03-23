@@ -317,7 +317,20 @@ let el = document.querySelector('.flyBasket__scroll');
             $(this).parents(".accordeon__container").find(".accordeon__item-body").not(this).slideUp().prev().removeClass("is-active");
             $(this).next().not(":visible").slideDown().prev().addClass("is-active");
           });
-
+          // Catalog
+          $('.filters__button').click(function(){
+            $(this).toggleClass("filters__button--active");
+            $(".catalog__SmartFilter").toggleClass("catalog__SmartFilter--active");
+            if($(this).hasClass("filters__button--active")){
+            
+              $(this).html(`<i class="fa-solid fa-filter"></i> Показать фильтры`)
+            }
+            else {
+              
+              $(this).html(`<i class="fa-solid fa-filter"></i> Скрыть фильтры`)
+            }
+            
+          })
           // SmartFilter
 
           $(".SmartFilter__itemTitle").click(function(){

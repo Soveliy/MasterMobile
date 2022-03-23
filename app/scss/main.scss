@@ -95,7 +95,7 @@ img{
 .container{
   max-width: 1500px;
   margin: 0 auto;
-  width: 94%;
+  width: 92.7%;
   &--big{
     max-width: 1800px;
   }
@@ -4020,6 +4020,10 @@ body.mm-ocd-opened {
 .card-tiny{
   padding: 20px;
   box-sizing: border-box;
+  background-color: $white;
+  & + &{
+    margin-top: 1px;
+  }
   &__row{
     display: flex;
     align-items: center;
@@ -4143,6 +4147,9 @@ body.mm-ocd-opened {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: $white;
+    box-sizing: border-box;
   }
   &__items{
     display: flex;
@@ -4279,7 +4286,7 @@ body.mm-ocd-opened {
     flex-wrap: wrap;
     align-items: center;
     list-style: none;
-    padding: 30px 0 15px;
+    padding: 27px 0 12px;
     margin: 0;
   }
   &__list-item:not(:first-child){
@@ -4289,7 +4296,7 @@ body.mm-ocd-opened {
         font-family: "Font Awesome 6 Pro";
         font-size: 14px;
         line-height: 17px;
-        margin: 0 4px;
+        margin: 0 9px 0 4px;
         vertical-align: middle;
       }
     }
@@ -4501,7 +4508,7 @@ body.mm-ocd-opened {
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 17px 20px;
+    padding: 18px 20px 16px;
     display: block;
     border-radius: 3px;
     margin-bottom: 15px;
@@ -4516,7 +4523,7 @@ body.mm-ocd-opened {
  &__item{
    background-color: $white;
    &Title{
-     padding: 19.5px 20px 17.5px;
+     padding: 20.5px 20px 18.5px;
      display: flex;
      align-items: center;
      cursor: pointer;
@@ -4668,14 +4675,34 @@ body.mm-ocd-opened {
   }
 }
 .catalog{
+  &__SmartFilter-container{
+    width: 270px;
+  }
   &__SmartFilter{
-    max-width: 270px;
-    width: 100%;
-    margin-right: 30px;
-    flex-shrink: 0;
+    max-width:0;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+
+    &--active{
+      max-width: 270px;
+      width: 100%;
+      margin-right: 30px;
+      flex-shrink: 0;
+    }
   }
   &__content{
     width: 100%;
+    transition: .3s;
+  }
+  &__current-filters{
+    margin: 20px 0;
+  }
+  &__pagination{
+    margin-top: 20px;
+  }
+  &__list{
+    margin-top: 20px;
   }
 }
 .subcategory{
@@ -4700,7 +4727,7 @@ body.mm-ocd-opened {
 .subcategory-item{
   display: flex;
   flex-direction: column;
-  padding: 20px 25px;
+  padding: 20px 25px 13.5px;
   box-sizing: border-box;
   align-items: center;
   background-color: $white;
@@ -4715,8 +4742,8 @@ body.mm-ocd-opened {
   }
   &__title{
     font-size: 18px;
-    line-height: 21px;
-    margin-bottom: 15px;
+    line-height: 23px;
+    margin-bottom: 9px;
     color: #0D1526;
     max-width: 250px;
   }
@@ -4729,6 +4756,131 @@ body.mm-ocd-opened {
     object-fit: contain;
     object-position: center;
     border-radius: 50%;
+  }
+}
+.current-filters{
+  &__row{
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+  &__reset{
+    margin: 5px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0040;
+    padding: 4.5px 10px;
+    box-sizing: border-box;
+    background-color: $white;
+    cursor: pointer;
+  }
+  &__item{
+    margin: 5px;
+    display: flex;
+  }
+  &__icon-container{
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    background-color: #FF0040;
+    color: $white;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+    i{
+      line-height: 24px;
+    }
+  }
+  &__item-content{
+    padding: 6px 20px 3px 10px;
+    box-sizing: border-box;
+    background-color: $white;
+    font-size: 12px;
+    line-height: 15px;
+    color: #14181F;
+    border-radius: 0 3px 3px 0;
+  }
+}
+.filters{
+  &__row{
+    background-color: $white;
+    box-sizing: border-box;
+  }
+  &__view{
+    margin-left: auto;
+  }
+  &__left{
+    padding: 18px 20px 18px;
+    box-sizing: border-box;
+    border-right: 1px solid $mainbg;
+    display: flex;
+
+  }
+  &__button{
+    // display: flex;
+    // align-items: center;
+    color: #000;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 18px;
+
+    i{
+      font-size: 18px;
+      margin-right: 9px;
+      margin-top: -2px;
+      vertical-align: middle;
+    }
+
+  }
+  &__sort{
+    padding: 20px 20px 20px 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    &-title{
+      font-size: 12px;
+      line-height: 12px;
+      color: #14181F;
+    }
+    
+    &-button{
+      font-size: 14px;
+      line-height: 17px;
+      color: #14181F;
+    }
+    &-button{
+      margin-left: 20px;
+      cursor: pointer;
+      &--curent{
+        color: #FF0040;
+        font-weight: 700;
+      }
+    }
+  }
+  &__view{
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid $mainbg;
+    display: flex;
+
+    &-button{
+      font-size: 18px;
+      line-height: 20px;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      background-color: transparent;
+      transition: .3s;
+      &--curent,&:hover{
+        color: #FF0040;
+      }
+    
+    }
+    &-button +  &-button{
+      margin-left: 20px;
+    }
   }
 }
 @include for-lg(){
