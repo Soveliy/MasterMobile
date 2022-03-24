@@ -95,6 +95,7 @@ $('.main-slider__swiper').each(function(){
       autoplay: {
         delay: 5000,
       },
+      loop:true,
     });
   });
   $('.visited-slider').each(function(){
@@ -318,16 +319,38 @@ let el = document.querySelector('.flyBasket__scroll');
             $(this).next().not(":visible").slideDown().prev().addClass("is-active");
           });
           // Catalog
+
+
+          
+          $('.card-second__btn').click(function(){
+              $(this).toggleClass("js-active");
+              $(this).next().slideToggle();
+            
+          })
+          $('.catalog__SmartFilter-shadow').click(function(){
+            $(".filters__button").removeClass("filters__button--active");
+            $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")
+            $(".filters__button .filters__button--desktop").html(`Показать фильтры`)
+            
+          })
+          $('.SmartFilter__close').click(function(){
+            $(".filters__button").removeClass("filters__button--active");
+            $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")
+            $(".filters__button .filters__button--desktop").html(`Показать фильтры`)
+            
+          })
+
           $('.filters__button').click(function(){
             $(this).toggleClass("filters__button--active");
+              $(".catalog__content").toggleClass("catalog__content--active")
             $(".catalog__SmartFilter").toggleClass("catalog__SmartFilter--active");
             if($(this).hasClass("filters__button--active")){
             
-              $(this).html(`<i class="fa-solid fa-filter"></i> Показать фильтры`)
+              $(this).find("span.filters__button--desktop").html(`Показать фильтры`)
             }
             else {
               
-              $(this).html(`<i class="fa-solid fa-filter"></i> Скрыть фильтры`)
+              $(this).find("span.filters__button--desktop").html(`Скрыть фильтры`)
             }
             
           })
@@ -357,14 +380,27 @@ let el = document.querySelector('.flyBasket__scroll');
           let $inputFrom = $("#slider__input-left");
           let $inputTo = $("#slider__input-right");
           let instance;
-          
+          let max_value = 225000;
+          let value1,value2,value3,value4;
+          function urpadeValues(){
+            // value1 = max_value * 0.2;
+            // value2 = max_value * 0.4;
+            // value3 = max_value * 0.6;
+            // value4 = max_value;
+            // console.log(value1)
+            $(".slider__values-item:nth-child(2)").html((max_value*0.2)/1000 + "к");
+            $(".slider__values-item:nth-child(3)").html((max_value*0.4)/1000 + "к");
+            $(".slider__values-item:nth-child(4)").html((max_value*0.6)/1000 + "к");
+            $(".slider__values-item:nth-child(5)").html(max_value/1000 + "к");
+          }
+          urpadeValues();
           $range.ionRangeSlider({
               skin: "round",
               type: "double",
               min: 0,
-              max: 225000,
-              from: 200,
-              to: 800,
+              max: max_value,
+              from: 0,
+              to: max_value,
               hide_from_to:true,
               onStart: updateInputs,
               onChange: updateInputs,
@@ -417,3 +453,13 @@ let el = document.querySelector('.flyBasket__scroll');
       
 
 
+        function windowSize(){
+          if ($(window).width() <= '1300'){
+             $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")
+          } else {
+              
+          }
+      }
+
+
+      $(window).on('load resize',windowSize);

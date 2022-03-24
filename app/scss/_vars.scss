@@ -17,9 +17,19 @@ $resolution2: 320;
 @mixin for-xl {
     @media (min-width: 3100px) { @content; }
   }
+  @mixin content-active {
+    @media (max-width: 1600px) { @content; }
+  }
   @mixin for-big {
     @media (max-width: 1500px) { @content; }
   }
+  @mixin content-active-1400 {
+    @media (max-width: 1400px) { @content; }
+  }
+  @mixin content-active-1300 {
+    @media (max-width: 1300px) { @content; }
+  }
+  
 @mixin for-lg {
     @media (max-width: 1200px) { @content; }
   }

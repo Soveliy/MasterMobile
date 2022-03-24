@@ -365,8 +365,18 @@
                <div class="container container--big">
                    <div class="row catalog__row">
                        <div class="catalog__SmartFilter catalog__SmartFilter--active">
+                            <div class="catalog__SmartFilter-shadow"></div>
                             <div class="catalog__SmartFilter-container">
                                 <div class="SmartFilter">
+                                    <div class="SmartFilter__head">
+                                        <div class="SmartFilter__close">
+                                            <svg class="icon icon-close"><use xlink:href="images/sprite.svg#icon-close"></use></svg>
+                                        </div>
+                                        <div class="SmartFilter__title">
+                                            Фильтр товаров
+                                        </div>
+                                    </div>
+                                   
                                     <a class="SmartFilter__back-btn" href="#">
                                          <i class="fa-regular fa-arrow-left"></i>
                                          Кабели и переходники
@@ -385,6 +395,14 @@
                                                 </div>
                                                 <div class="slider__bottom">
                                                     <div class="slider__js" id="slider"></div>
+                                                    <div class="slider__values">
+                                                        <span class="slider__values-item">0</span>
+                                                        <span class="slider__values-item"></span>
+                                                        <span class="slider__values-item"></span>
+                                                        <span class="slider__values-item"></span>
+                                                        <span class="slider__values-item"></span>
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -801,8 +819,7 @@
                                              <img class="subcategory-item__image" src="images/subcat/2.jpg" alt="">
                                          </span>
                                          <span class="subcategory-item__title">
-                                             Кабели для передачи
-                                             данных
+                                            Удлинители
                                          </span>
                                          <span class="subcategory-item__counter">76 товаров</span>
                                          
@@ -814,8 +831,8 @@
                                              <img class="subcategory-item__image" src="images/subcat/3.jpg" alt="">
                                          </span>
                                          <span class="subcategory-item__title">
-                                             Кабели для передачи
-                                             данных
+                                            Аудио-кабели
+
                                          </span>
                                          <span class="subcategory-item__counter">76 товаров</span>
                                          
@@ -827,8 +844,7 @@
                                              <img class="subcategory-item__image" src="images/subcat/4.jpg" alt="">
                                          </span>
                                          <span class="subcategory-item__title">
-                                             Кабели для передачи
-                                             данных
+                                            Переходники
                                          </span>
                                          <span class="subcategory-item__counter">76 товаров</span>
                                          
@@ -863,14 +879,18 @@
                            <div class="catalog__filters filters">
                                <div class="filters__row row">
                                    <div class="filters__left">
-                                       <button class="filters__button"><i class="fa-solid fa-filter"></i>Скрыть фильтры</button>
+                                       <button class="filters__button"><i class="fa-solid fa-filter"></i>
+                                        
+                                        <span class="filters__button--desktop">Скрыть фильтры</span>
+                                        <span class="filters__button--mobile">Фильтры</span>
+                                        </button>
                                    </div>
                                    <div class="filters__sort">
                                        <div class="filters__sort-title">Сначала:</div>
-                                       <a class="filters__sort-button filters__sort-button--curent">популярные</a>
-                                       <a class="filters__sort-button">новинки</a>
-                                       <a class="filters__sort-button">дорогие</a>
-                                       <a class="filters__sort-button">дешевые</a>
+                                       <a class="filters__sort-button filters__sort-button--curent">популярные <i class="fa-solid fa-fire"></i></a>
+                                       <a class="filters__sort-button">новинки <i class="fa-light fa-stars"></i></a>
+                                       <a class="filters__sort-button">дорогие <i class="fa-light fa-circle-arrow-up-right"></i></a>
+                                       <a class="filters__sort-button">дешевые <i class="fa-light fa-circle-arrow-down-right"></i></a>
                                    </div>
                                    <div class="filters__view">
                                         <button class="filters__view-button"><i class="fa-regular fa-grid-2"></i></button>
@@ -908,7 +928,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -931,7 +951,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
@@ -984,7 +1004,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -1007,7 +1027,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
@@ -1056,7 +1076,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -1079,7 +1099,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
@@ -1128,7 +1148,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -1151,7 +1171,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
@@ -1200,7 +1220,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -1223,7 +1243,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
@@ -1272,7 +1292,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -1295,7 +1315,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
@@ -1344,7 +1364,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -1367,7 +1387,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
@@ -1416,7 +1436,7 @@
                                             В наличии
                                             </div>
                                             <div class="preview-item__info-vendor">
-                                                Арт.: 084412
+                                                Артикул: 084412
                                             </div>
                                         </div>
                                     </div>
@@ -1439,7 +1459,7 @@
                                                 <input type="text" class="counter__input" value="1" data-max-count="20">
                                                 <button class="counter__button counter__button--plus">+</button>
                                             </div>
-                                            <button class="preview-item__addToCart button button--size-medium button--default">
+                                            <button class="card-tiny__addToCart button button--size-medium button--default">
                                                 В корзину
                                             </button>
                                             <div class="preview-item__like-icons like-icons">
