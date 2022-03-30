@@ -463,3 +463,37 @@ let el = document.querySelector('.flyBasket__scroll');
 
 
       $(window).on('load resize',windowSize);
+
+
+      // Карточка товара
+      let gallery__thumbs = new Swiper(".image-gallery__thumbs", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction:'vertical',
+        navigation: {
+          nextEl: $(this).parent().find('.swiper-button-next')[0],
+          prevEl: $(this).parent().find('.swiper-button-prev')[0],
+        },
+      });
+      var image_gallery = new Swiper(".image-gallery__main", {
+        loop: true,
+        spaceBetween: 0,
+        
+       
+        thumbs: {
+          swiper: gallery__thumbs,
+        },
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        },
+      });

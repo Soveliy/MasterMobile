@@ -2719,7 +2719,9 @@ a.preview-item__option-value{
   }
 }
 .stickers{
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   &__item{
     color: $white;
     border-radius: 2px;
@@ -2728,9 +2730,30 @@ a.preview-item__option-value{
     font-size: 10px;
     line-height: 13px;
     text-align: center;
+
+    & + &{
+      margin-top: 5px;
+    }
+    &--big{
+      font-size: 12px;
+      line-height: 14px;
+    }
     &:hover{
       color: $white;
     }
+    &--articul{
+      background-color: #14181F;
+      color: $white;
+    }
+
+    &--action{
+      color: #14181F;
+      background-color: #FFDD33;
+      &:hover{
+        color: #14181F;
+      }
+    }
+
     &--new{
       background: linear-gradient(90deg, rgba(0,204,136,1) 0%, rgba(0,179,149,1) 100%);
     }
@@ -4459,8 +4482,9 @@ body.mm-ocd-opened {
         font-family: "Font Awesome 6 Pro";
         font-size: 14px;
         line-height: 17px;
-        margin: 0 9px 0 4px;
+        margin: 0 4px 0 4px;
         vertical-align: middle;
+        color: #8592AD;
       }
     }
   }
@@ -5316,6 +5340,80 @@ body.mm-ocd-opened {
     }
     &-button +  &-button{
       margin-left: 20px;
+    }
+  }
+}
+.card{
+  &__left{
+    width: 53.8%;
+  }
+  &__item{
+    background-color: $white;
+    border-radius: 3px;
+    padding: 30px;
+  }
+}
+.image-gallery{
+  &__stickers{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+  }
+  &__main{
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__thumbs{
+    width: 60px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-right: 20px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    &-slide {
+      height: 60px;
+      width: 100%;
+      border: 1px solid #E0E4EB;
+      border-radius: 3px;
+      box-sizing: border-box;
+      transition: .3s;
+      cursor: pointer;
+      img{
+        border-radius: 3px;
+      }
+      &.swiper-slide-thumb-active{
+        border-color: #FF0040;
+      }
+    }
+  }
+  &__arrow{
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    // bottom: 0;
+    left: 0;
+    z-index: 10;
+    border: 1px solid #E0E4EB;
+    background-color: $white;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.swiper-button-next{
+      bottom: 0;
+      border-radius: 0 0 3px 3px;
+    }
+    &.swiper-button-prev{
+      bottom: 40px;
+      border-radius: 0 0 3px 3px;
     }
   }
 }
