@@ -473,16 +473,17 @@ let el = document.querySelector('.flyBasket__scroll');
         freeMode: true,
         watchSlidesProgress: true,
         direction:'vertical',
-        navigation: {
-          nextEl: $(this).parent().find('.swiper-button-next')[0],
-          prevEl: $(this).parent().find('.swiper-button-prev')[0],
-        },
-      });
-      var image_gallery = new Swiper(".image-gallery__main", {
-        loop: true,
-        spaceBetween: 0,
         
        
+      });
+      let image_gallery = new Swiper(".image-gallery__main", {
+        loop: true,
+        spaceBetween: 0,
+       
+        navigation: {
+          nextEl: '.image-gallery__arrow--next',
+          prevEl: '.image-gallery__arrow--right',
+        },
         thumbs: {
           swiper: gallery__thumbs,
         },
