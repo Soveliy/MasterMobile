@@ -5711,6 +5711,9 @@ body.mm-ocd-opened {
       height: 1px;
       background: linear-gradient(90deg, rgba(224,228,235,1) 15%, rgba(255,255,255,1) 100%);
     }
+    table{
+      width: 100%;
+    }
   }
   &__category-name{
     font-size: 14px;
@@ -5948,6 +5951,87 @@ body.mm-ocd-opened {
     &-body{
       margin-top: 30px;
     }
+  }
+  &__videos{
+    margin-top: 20px;
+    &-row{
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+    &-container{
+      padding: 15px;
+      box-sizing: border-box;
+      width: 50%;
+    }
+    
+  }
+  &__video{
+    // color: #14181F;
+    &-preview{
+      position: relative;
+      height: 200px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        height: 50px;
+        width: 50px;
+        background: url(../images/icons/play.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+      }
+    }
+    &-title{
+      color: #14181F;
+      span{
+        color: #8592AD;
+      }
+    }
+
+    
+  }
+  &__docs{
+    margin-top: 20px;
+  }
+}
+.docs{
+  &__row{
+    margin: -10px;
+    flex-wrap: wrap;
+  }
+  &__item-container{
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+.docs-item{
+  display: flex;
+  align-items: center;
+  img{
+    flex-shrink: 0;
+    margin-right: 10px;
+    height: 40px;
+  }
+  &__name{
+    color: #14181F;
+    line-height: 17px;
+  }
+  &__size{
+    color: #8592AD;
+    line-height: 17px;
   }
 }
 .offers{

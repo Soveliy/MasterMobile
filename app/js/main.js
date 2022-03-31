@@ -452,7 +452,12 @@ let el = document.querySelector('.flyBasket__scroll');
         });
       
 
-
+        var swiper = new Swiper(".mySwiper", {
+          scrollbar: {
+            el: ".list-slider",
+            hide: true,
+          },
+        });
         function windowSize(){
           if ($(window).width() <= '1300'){
              $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")
