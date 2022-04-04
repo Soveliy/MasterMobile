@@ -2371,6 +2371,20 @@ select:invalid {
       background-color: #F0F1F5;
     }
   }
+  &__addToCard-small{
+    height:40px;
+    width: 40px;
+    background-color: #FF0040;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 21px;
+    &:hover{
+      background-color: $redHover;
+    }
+  }
   &__economy{
     display: inline-flex;
     height: 16px;
@@ -3943,6 +3957,7 @@ body.mm-ocd-opened {
     white-space: nowrap;
   }
   &__item{
+    cursor: pointer;
     margin: 0 5px;
     color: $red;
     padding: 8px 20px 5px;
@@ -7018,7 +7033,46 @@ body.mm-ocd-opened {
     box-sizing: border-box;
   }
 }
+.list-slider{
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
 
+  .swiper-slide{
+    width: 180px;
+
+    .preview-item{
+      padding: 0;
+      &:hover{
+        box-shadow: none;
+        .preview-item__bottom{
+          display: none;
+        }
+      }
+    }
+    .preview-item__name{
+      font-size: 12px;
+      line-height: 15px;
+      min-height: 45px;
+    }
+    .preview-item__stickers{
+      top: 0;
+      left: 0;
+    }
+  }
+  .swiper-scrollbar{
+    margin-top: 20px;
+    height: 4px;
+    background-color: #E0E4EB;
+    .swiper-scrollbar-drag{
+      background-color: #FF0040;
+      height: 4px;
+      cursor: pointer;
+    }
+    
+  }
+
+}
 .image-gallery{
   &:hover{
     .image-gallery__fancy{
