@@ -482,7 +482,11 @@ let el = document.querySelector('.flyBasket__scroll');
          
         });
 
+        $(".card__head-close").click(function(){
+          $(this).toggleClass("js-active");
+          $(this).closest(".card__item").find(".card__body").slideToggle();
 
+        })
         var swiper = new Swiper(".visited-list__slider", {
           slidesPerView: "auto",
           spaceBetween: 0,
@@ -498,6 +502,17 @@ let el = document.querySelector('.flyBasket__scroll');
           },
          
         });
+        var tableScroll = new Swiper(".delivery__table-scroll", {
+          direction: "horizontal",
+          slidesPerView: "auto",
+          freeMode: true,
+          scrollbar: {
+            el: ".delivery__table-scroll--scrollbar",
+            hide: false,
+            draggable: true,
+          },
+          mousewheel: true,
+        });
         function windowSize(){
           if ($(window).width() <= '1300'){
              $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")
@@ -511,36 +526,113 @@ let el = document.querySelector('.flyBasket__scroll');
 
 
       // Карточка товара
-      let gallery__thumbs = new Swiper(".image-gallery__thumbs", {
-        loop: true,
+      let galleryThumbs = new Swiper(".image-gallery__thumbs", {
+
         spaceBetween: 10,
         slidesPerView: 'auto',
         freeMode: true,
         watchSlidesProgress: true,
         direction:'horizontal',
-
+        // centeredSlides: true,
+        loop:true,
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
         breakpoints: {
           // when window width is >= 320px
          
           // when window width is >= 640px
           1024: {
+            // centeredSlides: false,
             direction:'vertical',
+            watchSlidesProgress: true,
           }
         }
         
        
       });
-      let image_gallery = new Swiper(".image-gallery__main", {
-        loop: true,
+      let galleryTop = new Swiper(".image-gallery__main", {
+        loop:true,
         spaceBetween: 0,
-       
+        centeredSlides: true,
         navigation: {
           nextEl: '.image-gallery__arrow--next',
           prevEl: '.image-gallery__arrow--right',
         },
         thumbs: {
-          swiper: gallery__thumbs,
+          swiper: galleryThumbs,
         },
-        effect: "fade",
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        // effect: "fade",
         
       });
+
+      let mainNavLinks = document.querySelectorAll(".sticky-card__list a");
+      let mainSections = document.querySelectorAll(".card__item");
+
+      let lastId;
+      let cur = [];
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach(link => {
+          let section = document.querySelector(link.hash);
+
+          if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+          ) {
+            link.classList.add("inside-tabs__item--active");
+          } else {
+            link.classList.remove("inside-tabs__item--active");
+          }
+        });
+      });
+      $(function(){
+        $('a[href^="#"]').on('click', function(event) {
+          // отменяем стандартное действие
+          event.preventDefault();
+          
+          var sc = $(this).attr("href"),
+              dn = $(sc).offset().top;
+          /*
+          * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+          * dn - определяем положение блока на странице
+          */
+          
+          $('html, body').animate({scrollTop: dn}, 1000);
+          
+          /*
+          * 1000 скорость перехода в миллисекундах
+          */
+        });
+      });
+
+
+      $(".card__item--desc .show-more-footer__button").click(function(e){
+        e.preventDefault()
+        $(".card__item--desc").toggleClass("js-active")
+        
+        $(this).toggleClass("js-active")
+      
+          if($(this).hasClass("js-active")){
+            $(this).html("Скрыть")
+          }
+          else {
+            
+            $(this).html("Показать полностью")
+          }
+        
+      })

@@ -5744,6 +5744,10 @@ body.mm-ocd-opened {
   }
 }
 .card{
+  @include for-md(){
+    position: relative;
+    overflow: hidden;
+  }
   &__visited-list{
     margin-top: 30px;
   }
@@ -5769,6 +5773,44 @@ body.mm-ocd-opened {
     background-color: $white;
     border-radius: 3px;
     padding: 30px;
+
+    &--desc{
+      @include for-sm(){
+        height: 330px;
+        position: relative;
+        overflow: hidden;
+        transition: .3s;
+        &.js-active{
+          height: auto;
+          .show-more-footer{
+            position: static;
+            bottom: 15px;
+            width: 100%;
+            margin-top: 15px;
+
+            
+  
+          }
+        }
+        .show-more-footer{
+          position: absolute;
+          bottom: 15px;
+          width: calc(100% - 30px);
+
+        }
+      }
+    }
+    &--delivery{
+      @include for-md(){
+        .card__block--footer:before{
+          display: none;
+        }
+      }
+    }
+    &--sticky{
+      position: sticky;
+      top: 30px;
+    }
     @include for-md(){
       margin: 0 -15px;
       padding: 15px;
@@ -5787,15 +5829,31 @@ body.mm-ocd-opened {
 
     & + &{
       margin-top: 30px;
+      @include for-md(){
+        margin-top: 15px;
+      }
     }
   }
   &__head{
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &-close{
+      flex-shrink: 0;
+      margin-left: 10px;
       height: 16px;
       width: 16px;
       position: relative;
       cursor: pointer;
+      @include for-md(){
+        display: none;
+      }
+      &.js-active{
+        .card__head-close-item{
+          transform: none;
+        }
+      }
       &-item{
         position: absolute;
         background-color: #919db5;
@@ -5815,6 +5873,8 @@ body.mm-ocd-opened {
          
           margin-left: -.5px;
           margin-top: -8px;
+          transition: .3s;
+          transform: rotate(90deg);
         }
       }
     }
@@ -6406,6 +6466,9 @@ body.mm-ocd-opened {
   }
   &__footer{
     margin-top: 20px;
+    @include for-sm(){
+      margin-top: 15px;
+    }
   }
   
   &__button{
@@ -6444,6 +6507,12 @@ body.mm-ocd-opened {
       .coment-item__avatar{
         height: 30px;
         width: 30px;
+      }
+      .coment-item__right:before{
+        display: none;
+      }
+      .coment-item__avatar{
+        margin-right: 0;
       }
     }
   }
@@ -6493,6 +6562,7 @@ body.mm-ocd-opened {
     display: flex;
     @include for-sm(){
       padding: 15px 10px;
+
     }
     // justify-content: space-between;
   }
@@ -6572,6 +6642,10 @@ body.mm-ocd-opened {
   }
   &__date{
     color: #8592AD;
+    @include for-sm(){
+      position: absolute;
+      right: 15px;
+    }
   }
   &__name{
     font-weight: 700;
@@ -6614,6 +6688,13 @@ body.mm-ocd-opened {
       width: 20px;
       background: url(../images/triangle.svg) no-repeat center right;
       background-size: contain;
+      @include for-sm(){
+        top: -16px;
+        width: 16px;
+        height: 16px;
+        left: 10px;
+        transform: rotate(90deg);
+      }
     }
   }
   &__avatar{
@@ -6839,6 +6920,11 @@ body.mm-ocd-opened {
  
   &__table-container{
     margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    .swiper-slide {
+      width: 700px;
+    }
   }
   table{
     width: 100%;
@@ -7224,6 +7310,9 @@ body.mm-ocd-opened {
           color: #00B377;
         }
       }
+      .preview-item__buttoт-mobile{
+        display: none;
+      }
       padding: 0;
       &__image-link{
         height: 165px;
@@ -7339,8 +7428,16 @@ body.mm-ocd-opened {
   &__row{
     @include for-sm(){
       flex-direction: column-reverse;
+      position: relative;
+      overflow: hidden;
     }
   }
+  // .swiper-wrapper{
+  //   @include for-sm(){
+  //     position: relative;
+  //     overflow: hidden;
+  //   }
+  // }
   &__main{
     height: 660px;
     position: relative;
@@ -7361,6 +7458,7 @@ body.mm-ocd-opened {
       width: 100%;
       height: auto;
       margin-top: 15px;
+      margin-right: 0;
     }
     &-slide {
       height: 60px;
@@ -7412,18 +7510,43 @@ body.mm-ocd-opened {
       display: none;
     }
   }
+  &__main{
+    @include for-md(){
+      width: 100%;
+    }
+  }
 }
 .compatibility{
   &__row{
     margin: -15px;
     flex-wrap: wrap;
+    @include for-sm(){
+      margin: -7.5px;
+    }
   }
 
   &__item-container{
     padding: 15px;
     box-sizing: border-box;
-    flex-wrap: wrap;
+    
     width: 33.3%;
+    @include for-sm(){
+      width: 50%;
+      padding: 7.5px;
+      &:nth-child(n + 5){
+        display: none;
+      }
+      &:last-child{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__name{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    color: #FF0040;
   }
   &__button{
     padding: 10.5px;
@@ -7457,20 +7580,29 @@ body.mm-ocd-opened {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include for-sm(){
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+    }
     img{
       max-width: 100%;
     }
   }
-  &__name{
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: 700;
-    color: #FF0040;
+  &__right{
+    line-height: 0;
+    @include for-sm(){
+      padding-top: 3px;
+    }
   }
+ 
   &__counter{
     font-size: 10px;
     line-height: 12px;
     color: #8592AD;
+    @include for-sm(){
+      margin-top: 2px;
+    }
   }
 }
 @include content-active(){
@@ -7630,5 +7762,45 @@ body.mm-ocd-opened {
 .on-desktop{
   @include for-md(){
     display: none;
+  }
+}
+.swiper-scrollbar-custom{
+  height: 4px;
+  background-color: #E0E4EB;
+  .swiper-scrollbar-drag{
+    background-color: #FF0040;
+    height: 4px;
+    cursor: pointer;
+  }
+ 
+}
+.show-more-footer{
+  display: none;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    height: 15px;
+    width: 100%;
+    left: 0;
+    background-color: $white;
+  }
+  @include for-sm(){
+    display: block;
+  }
+  &__button{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }
