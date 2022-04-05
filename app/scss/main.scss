@@ -5791,7 +5791,33 @@ body.mm-ocd-opened {
   }
   &__head{
     position: relative;
-   
+    &-close{
+      height: 16px;
+      width: 16px;
+      position: relative;
+      cursor: pointer;
+      &-item{
+        position: absolute;
+        background-color: #919db5;
+        left: 50%;
+        top: 50%;
+      
+        &:first-child{
+          height: 1px;
+          width: 16px;
+          margin-left: -8px;
+          margin-top: -.5;
+         
+        }
+        &:last-child{
+          height: 16px;
+          width: 1px;
+         
+          margin-left: -.5px;
+          margin-top: -8px;
+        }
+      }
+    }
     
   }
   &__title{
