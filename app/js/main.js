@@ -636,3 +636,20 @@ let el = document.querySelector('.flyBasket__scroll');
           }
         
       })
+
+      $(".card__addToCart").click(function(){
+        $("#callback-modal").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+
+        
+       
+      });
+      
