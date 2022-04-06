@@ -7609,7 +7609,36 @@ body.mm-ocd-opened {
     }
   }
 }
+@media (max-width:1500px) and (min-width:1024px){
+  .image-gallery{
+    .swiper-slide{
+      display: flex;
+      align-items: center;
+      img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .card__top-options{
+    flex-wrap: wrap;
+    
+  }
+  .card__top-options-item{
+    width: 50%;
+  }
+  .card__top-options-item+.card__top-options-item{
+    margin-left: 0;
+  }
+  .card__top-options-item:nth-child(3){
+    border-left: 0;
+    padding-left: 0;
+  }
+}
 @include content-active(){
+ 
   .content--active{
     .card-tiny__info{
       flex-direction: column;
@@ -7683,6 +7712,68 @@ body.mm-ocd-opened {
 }
 @include content-active-1400(){
   .content--active{
+    .sticky-card__buttons{
+      flex-direction: column;
+      align-items: center;
+    }
+    .sticky-card__button{
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .reviews__top-row{
+      flex-direction: column;
+      .reviews__general{
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+    }
+    .other-service{
+    
+        flex-direction: column;
+        padding-left: 40px;
+        position: relative;
+     
+      &__icon-container{
+       
+       
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          
+        
+        
+      }
+      &__name{
+       
+        
+          width: 100%;
+          padding-left: 10px;
+          box-sizing: border-box;
+          padding-top: 5px;
+       
+      }
+      // &__tooltip{
+    
+      // }
+      &__coast{
+        
+          margin-left: 0;
+          padding-left: 10px;
+          box-sizing: border-box;
+          text-align: left;
+          width: 100%;
+          max-width: 100%;
+          margin: 2px 0 5px;
+       
+      }
+      &__button{
+      
+          margin-left: 0;
+          padding-left: 10px;
+        
+      }
+    }
     .card-tiny__row{
       align-items: flex-start;
     }
