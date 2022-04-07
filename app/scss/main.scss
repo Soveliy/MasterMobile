@@ -133,6 +133,12 @@ button{
   color: $white;
   transition: .3s;
   text-align: center;
+  &--shadow{
+    &:hover{
+      box-shadow: 0px 5px 8px 0px rgba(255, 0, 65, 0.5);
+    }
+
+  }
   &:not(.button--with-icon-big) &__icon{
     background-color: $redHover;
     width: 40px;
@@ -163,7 +169,7 @@ button{
     }
   }
   &--round-type-2{
-    
+    background-color: $white;
     color: $red;
     border: 1px solid #8592AD;
     border-radius: 3px;
@@ -367,6 +373,13 @@ select:invalid {
   line-height: 18px;
   color: #001133;
   cursor: pointer;
+
+  &--type-2{
+    .checkbox__icon{
+      background-color: #E0E4EB;
+    }
+    
+  }
   &__icon{
     height: 18px;
     width: 18px;
@@ -7931,6 +7944,18 @@ body.mm-ocd-opened {
    box-sizing: border-box;
    &__head{
      display: flex;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(90deg, #e0e4eb 15%, #fff 100%);
+      }
    }
    &__title{
      font-size: 18px;
@@ -7938,6 +7963,10 @@ body.mm-ocd-opened {
      color: #14181F;
      display: flex;
      align-items: center;
+     font-weight: 500;
+     span{
+       padding-top: 3px;
+     }
      a{
        color: #FF0040;
        border-bottom: 1px solid #FF0040;
@@ -7946,12 +7975,14 @@ body.mm-ocd-opened {
        height: 30px;
        width: 30px;
        margin-right: 10px;
-       path{
-         stroke: #14181F;
-       }
+       stroke: #14181F;
+      
      }
    }
   &__close{
+    position: absolute;
+    top: 0;
+    right: 0;
     cursor: pointer;
     height: 30px;
     width: 30px;
@@ -7961,4 +7992,137 @@ body.mm-ocd-opened {
       stroke: #14181F;
     }
   }
+  &__advise{
+    margin-top: 30px;
+  }
+  &__footer{
+    display: flex;
+    gap: 20px;
+    .button{
+      width: 100%;
+      justify-content: center;
+    }
+  }
+ }
+ .card-added-item{
+   display: flex;
+   &__image-container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 80px;
+     width: 80px;
+     margin-right: 20px;
+     border: 1px solid #E0E4EB;
+     box-sizing: border-box;
+     border-radius: 3px;
+     flex-shrink: 0;
+     img{
+       max-width: 100%;
+       border-radius: 3px;
+     }
+   }
+   &__right{
+     width: 100%;
+     margin-top: -4px;
+   }
+   &__name{
+     margin-bottom: 10px;
+   }
+   &__counter-wrap{
+     display: flex;
+     align-items: center;
+   }
+   &__counter{
+     width: 90px;
+     height: 40px;
+   }
+   &__symbol{
+     color: #8592AD;
+     font-size: 18px;
+     width: 40px;
+     text-align: center;
+     padding-top: 3px;
+   }
+   b{
+     font-size: 18px;
+     line-height: 21px;
+     font-weight: 700;
+    //  padding-top: 3px;
+   }
+ }
+ .advise{
+   &__title{
+     font-weight: 600;
+     margin-bottom: 20px;
+   }
+   &__slider{
+     position: relative;
+     overflow: hidden;
+     padding: 0 20px;
+     margin: 0 -20px;
+   }
+   &__scrollbar{
+     margin-top: 20px;
+   }
+   &-item{
+     padding: 20px;
+     box-sizing: border-box;
+     border: 1px solid #E0E4EB;
+     border-radius: 3px;
+
+     &__top{
+       display: flex;
+      //  justify-content: space-between;
+     }
+     &__image-container{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 60px;
+       width: 60px;
+       margin-right: 10px;
+       flex-shrink: 0;
+
+       img{
+         display: block;
+         max-width: 100%;
+       }
+     }
+     &__name{
+       font-size: 14px;
+       line-height: 17px;
+       color: #14181F;
+       -webkit-line-clamp: 3;
+       display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;  
+     }
+     &__bottom{
+       display: flex;
+       justify-content: space-between;
+     }
+     &__value{
+       font-size: 18px;
+       line-height: 21px;
+       font-weight: 700;
+       flex-shrink: 0;
+     }
+     &__button{
+       max-width: 100px;
+       width: 100%;
+       color: #0D1526;
+       border: 1px solid #C2C9D6;
+       border-radius: 3px;
+       text-align: center;
+       justify-content: center;
+       padding: 7px 0 4px;
+     }
+   }
+ }
+
+ .modal{
+   &__checkbox{
+     margin: 16px 0 30px;
+   }
  }

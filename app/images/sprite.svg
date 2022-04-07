@@ -1,9 +1,9 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <symbol id="icon-shopping-cart" viewBox="0 0 32 32">
-<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M14.667 27.333c0 0.736-0.597 1.333-1.333 1.333s-1.333-0.597-1.333-1.333c0-0.736 0.597-1.333 1.333-1.333s1.333 0.597 1.333 1.333z"></path>
-<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M25.333 27.333c0 0.736-0.597 1.333-1.333 1.333s-1.333-0.597-1.333-1.333c0-0.736 0.597-1.333 1.333-1.333s1.333 0.597 1.333 1.333z"></path>
-<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M3.333 3.333h4l3.6 16.533c0.256 1.257 1.385 2.159 2.667 2.133h10.267c1.282 0.026 2.411-0.877 2.667-2.133l2.133-11.2h-19.2"></path>
+<path fill="none"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M14.667 27.333c0 0.736-0.597 1.333-1.333 1.333s-1.333-0.597-1.333-1.333c0-0.736 0.597-1.333 1.333-1.333s1.333 0.597 1.333 1.333z"></path>
+<path fill="none"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M25.333 27.333c0 0.736-0.597 1.333-1.333 1.333s-1.333-0.597-1.333-1.333c0-0.736 0.597-1.333 1.333-1.333s1.333 0.597 1.333 1.333z"></path>
+<path fill="none"  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6667" d="M3.333 3.333h4l3.6 16.533c0.256 1.257 1.385 2.159 2.667 2.133h10.267c1.282 0.026 2.411-0.877 2.667-2.133l2.133-11.2h-19.2"></path>
 </symbol>
 <symbol id="icon-sliders" viewBox="0 0 32 32">
 <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="1.5" stroke-width="0.9333" d="M28 6.667c0-0.707-0.281-1.386-0.781-1.886-0.5-0.499-1.178-0.781-1.885-0.781h-18.668c-0.707 0-1.385 0.282-1.885 0.781-0.5 0.501-0.781 1.179-0.781 1.886v18.666c0 0.707 0.281 1.386 0.781 1.886 0.5 0.499 1.178 0.781 1.885 0.781h18.668c0.707 0 1.385-0.282 1.885-0.781 0.5-0.501 0.781-1.179 0.781-1.886v-18.666z"></path>

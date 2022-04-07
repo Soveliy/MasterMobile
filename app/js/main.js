@@ -482,6 +482,22 @@ let el = document.querySelector('.flyBasket__scroll');
          
         });
 
+        var swiper = new Swiper(".advise__slider", {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          scrollbar: {
+            el: ".advise__scrollbar",
+            hide: false,
+            draggable: true,
+           
+          },
+          navigation: {
+            nextEl: '.list-slider__nav-arrow-right',
+            prevEl: '.advise__nav-arrow-right',
+          },
+         
+        });
+
         $(".card__head-close").click(function(){
           $(this).toggleClass("js-active");
           $(this).closest(".card__item").find(".card__body").slideToggle();
