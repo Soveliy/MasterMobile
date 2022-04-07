@@ -7925,3 +7925,40 @@ body.mm-ocd-opened {
  .b-modal{
    background-color: #fff;
  }
+
+ .card-added{
+   padding: 30px;
+   box-sizing: border-box;
+   &__head{
+     display: flex;
+   }
+   &__title{
+     font-size: 18px;
+     line-height: 21px;
+     color: #14181F;
+     display: flex;
+     align-items: center;
+     a{
+       color: #FF0040;
+       border-bottom: 1px solid #FF0040;
+     }
+     svg{
+       height: 30px;
+       width: 30px;
+       margin-right: 10px;
+       path{
+         stroke: #14181F;
+       }
+     }
+   }
+  &__close{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    svg{
+      height: 100%;
+      width: 100%;
+      stroke: #14181F;
+    }
+  }
+ }
