@@ -113,8 +113,10 @@ $('.main-slider__swiper').each(function(){
       observer: true,  
       observeParents: true,
       slidesPerView: 1,
+      loop:false,
       grid: {
         rows: 3,
+        fill:"row",
       },
       spaceBetween: 30,
 
@@ -130,7 +132,7 @@ $('.main-slider__swiper').each(function(){
           slidesPerView: 4,
           spaceBetween: 40,
           grid: {
-            rows: 2,
+            rows: 3,
           },
         },
         1200: {
@@ -191,6 +193,13 @@ $('.counter__input').bind("change keyup input click", function() {
       this.value = parseInt($(this).data('max-count'));
   }    
 }); 
+$('.slider__input').bind("change keyup input click", function() {
+  if (this.value.match(/[^0-9]/g)) {
+      this.value = this.value.replace(/[^0-9]/g, '');
+  }
+ 
+}); 
+
 $('.footer__title-btn').click(function() {
   $(this).parent().toggleClass("is-active");
  $(this).parent().next().slideToggle();
@@ -203,9 +212,11 @@ let el = document.querySelector('.flyBasket__scroll');
   
   $('.nav-tabs__item--basket').click(function() {
     $(".flyBasket").show(300)
+    $("body").addClass("js-hidden")
   }); 
   $('.flyBasket__bg,.flyBasket__close').click(function() {
     $(".flyBasket").hide(300)
+    $("body").removeClass("js-hidden")
   }); 
   $('.header__burger').click(function() {
     $(this).toggleClass("is-active")
@@ -569,7 +580,7 @@ let el = document.querySelector('.flyBasket__scroll');
       let galleryTop = new Swiper(".image-gallery__main", {
         loop:true,
         spaceBetween: 0,
-        centeredSlides: true,
+        // centeredSlides: true,
         navigation: {
           nextEl: '.image-gallery__arrow--next',
           prevEl: '.image-gallery__arrow--right',

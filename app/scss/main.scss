@@ -20,7 +20,9 @@ html{
 }
 *{
   outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
+
 body{
     height: 100%;
     font-family: 'Muller', 'sans-serif';
@@ -1311,7 +1313,7 @@ select:invalid {
   a:not(.button){
     position: relative;
     color: $red;
-    border-bottom: 1px dotted $red;
+    // border-bottom: 1px dotted $red;
     transition: .3s;
     // &:before{
     //   content: '';
@@ -1324,7 +1326,7 @@ select:invalid {
     // }
     &:hover{
       color: $redHover;
-      border-bottom-style: solid;
+      // border-bottom-style: solid;
 
       &:before{
         width: 100%;
@@ -1615,6 +1617,9 @@ select:invalid {
   margin: 30px 0;
   @include for-md(){
     margin: 15px 0;
+  }
+  &__top-button{
+    box-shadow: 0px 5px 8px 0px rgba(#14181F, 0.5);
   }
   &__row{
     padding: 30px;
@@ -2259,6 +2264,7 @@ select:invalid {
     justify-content: center;
     text-align: center;
     color: $white;
+    padding-top: 3px;
     font-size: 14px;
     line-height: 17px;
     transition: .3s;
@@ -2445,8 +2451,10 @@ select:invalid {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 21px;
+    padding-top: 3px;
+    box-sizing: border-box;
     &:hover{
       background-color: $redHover;
     }
@@ -2576,6 +2584,7 @@ select:invalid {
       margin-top: -3px;
       i{
         margin-right: 2px;
+        margin-top: -3px;
       }
       @include for-md(){
         display: flex;
@@ -2602,6 +2611,7 @@ select:invalid {
         font-size: 10px;
         line-height: 13px;
         margin-right: 3px;
+        margin-top: -2px;
       }
     }
     &-text{
@@ -2901,7 +2911,7 @@ a.preview-item__option-value{
     &--round{
       height: 40px;
       width: 40px;
-      border: 1px solid #8592AD;
+      border: 1px solid #E0E4EB;
       border-radius: 3px;
     }
     &:hover{
@@ -4157,6 +4167,15 @@ body.mm-ocd-opened {
   &__btn{
     color: #8592AD;
     cursor: pointer;
+    i{
+      margin-right: 5px;
+    }
+  }
+  .preview-item__image-slider{
+    margin-bottom: 0;
+  }
+  .preview-item__rating-counter{
+    padding-top: 2px;
   }
   .preview-item__economy{
     margin-bottom: 24px;
@@ -4172,6 +4191,10 @@ body.mm-ocd-opened {
     }
     .preview-item__available-container{
       margin-right: 20px;
+      padding-top: 2px;
+    }
+    .preview-item__info-vendor{
+      padding-top: 2px;
     }
   }
   &__content-block{
@@ -4282,7 +4305,7 @@ body.mm-ocd-opened {
     margin-right: 25px;
     &-counter{
       color: #00B377;
-      margin: 0 3px;
+      margin: 0 8px 0 3px;
     }
     i{
       color: #00B377;
@@ -4429,6 +4452,7 @@ body.mm-ocd-opened {
   .preview-item__coast-value-old{
     color: #8592AD;
     text-decoration: line-through;
+    margin-left: 5px;
   }
 }
 .pagination{
@@ -4915,6 +4939,8 @@ body.mm-ocd-opened {
      padding: 0 20px 20px;
      box-sizing: border-box;
      border-radius: 0 0 3px 3px;
+
+  
    }
  }
  &__item + &__item{
@@ -4958,6 +4984,7 @@ body.mm-ocd-opened {
    padding: 10.5px 10px;
    width: 100%;
    background-color: $white;
+   transition: .3s;
  }
 }
 .custom-checkboxex{
@@ -5924,6 +5951,9 @@ body.mm-ocd-opened {
     &--footer:last-child{
       clear: both;
       margin-bottom: -5px;
+      a i{
+        margin-right: 5px;
+      }
       a + a{
         margin-left: 15px;
       }
@@ -6287,11 +6317,16 @@ body.mm-ocd-opened {
     height: 60px;
     flex-shrink: 0;
     margin-right: 20px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
     img{
       display: block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+      max-width: 100%;
+      max-height: 19px;
     }
     @include for-sm(){
       width: 100%;
@@ -6326,7 +6361,13 @@ body.mm-ocd-opened {
   }
 }
 .visited-list{
+  &__slider-container{
+    position: relative;
+  }
   &__slider{
+    // margin: 0 -20px;
+    // padding: 0 20px;
+    box-sizing: border-box;
    >  .swiper-wrapper  > .swiper-slide{
       width: 300px;
     }
@@ -6375,12 +6416,15 @@ body.mm-ocd-opened {
     z-index: 50;
     
     cursor: pointer;
+    @include for-md(){
+      display: none;
+    }
 
     &-left{
-      left: 0;
+      left: -20px;
     }
     &-right{
-      right: 0;
+      right: -20px;
       
     }
     &.swiper-button-disabled{
@@ -6432,6 +6476,7 @@ body.mm-ocd-opened {
       margin: 20px 0 15px;
     }
   }
+ 
   &__top-button-container{
     margin-bottom: 35px;
     @include for-sm(){
@@ -6626,8 +6671,11 @@ body.mm-ocd-opened {
     color: #8592AD;
     margin-left: 20px;
   }
-  &__text{
+  &__block + &__text{
     margin-top: 15px;
+  }
+  &__text{
+    // margin-top: 15px;
     p{
       &:first-child{
         margin: 0;
@@ -6989,6 +7037,9 @@ body.mm-ocd-opened {
           background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(240,241,245,1) 50%, rgba(255,255,255,0) 100%);
         }
       }
+      b{
+        color: #000;
+      }
       &:last-child{
         padding-right: 0;
       }
@@ -7152,9 +7203,10 @@ body.mm-ocd-opened {
     }
     &--disabled{
       .offers__option-wrap{
-        background-color: #C2C9D6;
+        background-color: #F0F1F5;
         position: relative;
         color: #8592AD !important;
+        border-color: #F0F1F5;
         &:before{
           content: '';
           height: 1px;
@@ -7459,6 +7511,7 @@ body.mm-ocd-opened {
     height: 660px;
     position: relative;
     overflow: hidden;
+    width: 100%;
     @include for-md(){
       height: 375px;
     }
@@ -7471,6 +7524,18 @@ body.mm-ocd-opened {
     height: 660px;
     position: relative;
     overflow: hidden;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 60px;
+      width: 100%;
+      background-color: $white;
+      z-index: 1;
+      @include for-md(){
+        display: none;
+      }
+    }
     @include for-md(){
       width: 100%;
       height: auto;
@@ -7651,7 +7716,12 @@ body.mm-ocd-opened {
   }
 }
 @include content-active(){
- 
+  .card-second__footer{
+    flex-direction: column;
+  }
+  .card-second__liked+.card-second__liked{
+    margin-left: 0;
+  }
   .content--active{
     .card-tiny__info{
       flex-direction: column;
@@ -7794,6 +7864,22 @@ body.mm-ocd-opened {
       width: 245px;
       flex-wrap: wrap;
     }
+    .card-second__info{
+      flex-wrap: wrap;
+    }
+    .card-second{
+      .preview-item__addToCart{
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 0;
+      }
+      .counter{
+        width: 100%;
+      }
+    }
+    // .card-second .preview-item__counter-wrap{
+    //   width: 100%;
+    // }
     .card-tiny .like-icons{
       margin-left: auto;
       margin-top: 10px;
@@ -8125,4 +8211,7 @@ body.mm-ocd-opened {
    &__checkbox{
      margin: 16px 0 30px;
    }
+ }
+.SmartFilter__itemBody .checkbox:first-child{
+   padding-top: 3px;
  }
