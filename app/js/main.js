@@ -494,7 +494,7 @@ let el = document.querySelector('.flyBasket__scroll');
         });
 
         var swiper = new Swiper(".advise__slider", {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 20,
           scrollbar: {
             el: ".advise__scrollbar",
@@ -506,6 +506,20 @@ let el = document.querySelector('.flyBasket__scroll');
             nextEl: '.list-slider__nav-arrow-right',
             prevEl: '.advise__nav-arrow-right',
           },
+
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            
+            },
+            1024: {
+              slidesPerView: 3,
+            
+            },
+           
+            
+          }
          
         });
 
@@ -557,13 +571,17 @@ let el = document.querySelector('.flyBasket__scroll');
 
         spaceBetween: 10,
         slidesPerView: 'auto',
-        freeMode: true,
+        // freeMode: true,
         watchSlidesProgress: true,
         direction:'horizontal',
         // centeredSlides: true,
-        loop:true,
+        loop:false,
         touchRatio: 0.2,
         slideToClickedSlide: true,
+        navigation: {
+          nextEl: '.image-gallery__arrow--next',
+          prevEl: '.image-gallery__arrow--right',
+        },
         breakpoints: {
           // when window width is >= 320px
          
@@ -574,17 +592,14 @@ let el = document.querySelector('.flyBasket__scroll');
             watchSlidesProgress: true,
           }
         }
-        
+      
        
       });
       let galleryTop = new Swiper(".image-gallery__main", {
-        loop:true,
+        loop:false,
         spaceBetween: 0,
-        // centeredSlides: true,
-        navigation: {
-          nextEl: '.image-gallery__arrow--next',
-          prevEl: '.image-gallery__arrow--right',
-        },
+        centeredSlides: true,
+        
         thumbs: {
           swiper: galleryThumbs,
         },
@@ -675,8 +690,36 @@ let el = document.querySelector('.flyBasket__scroll');
            }, 100);
           },
         });
+      });
 
-        
-       
+
+      $(".reviews__top-button").click(function(){
+        $("#review-modal").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
       });
       
+
+      $(document).ready(() => {
+        $("#fileUpload").change(function () {
+            const file = this.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function (event) {
+                    $("#imgPreview")
+                      .attr("src", event.target.result);
+                };
+                reader.readAsDataURL(file);
+               
+            }
+            $(this).parent().hide();
+            $(this).parent().next().show();
+        });
+    });

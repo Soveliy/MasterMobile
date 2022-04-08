@@ -46,6 +46,9 @@ input{
   outline: none;
   border: none;
 }
+table{
+  border-spacing: 0;
+}
 button:active, button:focus {
   outline: none !important;
 }
@@ -285,6 +288,13 @@ button{
 .form{
   &__item{
     position: relative;
+    line-height: 0;
+    &--w50{
+      width: 50%;
+      @include for-sm(){
+        width: 100%;
+      }
+    }
     i{
       position: absolute;
       top: 0;
@@ -343,6 +353,23 @@ button{
     transition: .3s;
     border: 1px solid transparent;
     box-sizing: border-box;
+
+    &--with-icon{
+      padding-left: 30px;
+    }
+
+    + i{
+      left: 0;
+      height: 40px;
+      top: 3px;
+
+      &.fa-plus{
+        color: #00B277;
+      }
+      &.fa-minus{
+        color: #FF0040;
+      }
+    }
     &::placeholder{
       color: #8592AD;
       transition: .3s;
@@ -1404,7 +1431,7 @@ select:invalid {
         }
         padding: 5px 15px;
       }
-      &:nth-child(2n){
+      &:nth-child(2n + 1){
         td{
           background-color: #F6F7F9;
         }
@@ -1948,8 +1975,8 @@ select:invalid {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #8592AD;
-    color: #8592AD;
+    border: 1px solid #E0E4EB;
+    color: #E0E4EB;
     background-color: $white;
     z-index: 50;
     
@@ -6410,8 +6437,8 @@ body.mm-ocd-opened {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #8592AD;
-    color: #8592AD;
+    border: 1px solid #E0E4EB;
+    color: #E0E4EB;
     background-color: $white;
     z-index: 50;
     
@@ -6938,7 +6965,10 @@ body.mm-ocd-opened {
   display: flex;
   align-items: center;
   line-height: 20px;
-  
+  &__text{
+    line-height: 17px;
+    padding-top: 3px;
+  }
   &__checkbox{
     cursor: pointer;
     position: relative;
@@ -6948,6 +6978,7 @@ body.mm-ocd-opened {
     border-radius: 30px;
     transition: .3s;
     margin-right: 15px;
+    flex-shrink: 0;
 
     &:before{
       content: '';
@@ -7099,6 +7130,7 @@ body.mm-ocd-opened {
       margin-left: 3px;
       font-size: 12px;
       color: #8592AD;
+      font-weight: 400;
     }
     @include for-sm(){
       width: 100%;
@@ -7427,8 +7459,8 @@ body.mm-ocd-opened {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #8592AD;
-    color: #8592AD;
+    border: 1px solid #E0E4EB;
+    color: #E0E4EB;
     background-color: $white;
     z-index: 50;
     cursor: pointer;
@@ -7448,6 +7480,11 @@ body.mm-ocd-opened {
 
 }
 .image-gallery{
+  position: relative;
+  overflow: hidden;
+  .stickers__item{
+    border: none;
+  }
   &:hover{
     .image-gallery__fancy{
       opacity: 1;
@@ -7456,9 +7493,11 @@ body.mm-ocd-opened {
 
   img{
     @include for-md(){
-      max-width: 100%;
+      width: 100%;
       display: block;
       height: 100%;
+      object-fit: cover;
+
     }
   
   }
@@ -8016,7 +8055,7 @@ body.mm-ocd-opened {
  .arcticmodal-container_i { height: 100%; margin: 0 auto; width:100%; }
  .arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle;
      @include for-tiny-tablet(){
-         padding: 0;
+         padding: 10px;
      }
   }
  .arcticmodal-error { padding: 20px;  border-radius: 10px; background: #000; color: #fff; }
@@ -8080,10 +8119,20 @@ body.mm-ocd-opened {
   }
   &__advise{
     margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    @include for-md(){
+      display: none;
+    }
   }
   &__footer{
     display: flex;
     gap: 20px;
+    @include for-sm(){
+      flex-direction: column;
+      gap:10px;
+    }
     .button{
       width: 100%;
       justify-content: center;
@@ -8208,10 +8257,359 @@ body.mm-ocd-opened {
  }
 
  .modal{
+   position: relative;
+   padding: 30px;
+   box-sizing: border-box;
+   @include for-sm(){
+     padding: 15px;
+   }
    &__checkbox{
      margin: 16px 0 30px;
+   }
+   &__head{
+     position: relative;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+     padding-right: 40px;
+     &:after{
+       content: '';
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       height: 1px;
+       width: 100%;
+       background: linear-gradient(90deg, #e0e4eb 15%, #fff 100%);
+     }
+   }
+   &__title{
+     display: flex;
+     align-items: center;
+     svg{
+       height: 30px;
+       width: 30px;
+       margin-right: 10px;
+     }
+     span{
+       font-size: 18px;
+       line-height: 21px;
+     }
+   }
+   &__close{
+     height: 30px;
+     width: 30px;
+     position: absolute;
+     top: 0;
+     right: 0;
+     cursor: pointer;
+     svg{
+       height: 100%;
+       width: 100%;
+       stroke: #14181F;
+     }
    }
  }
 .SmartFilter__itemBody .checkbox:first-child{
    padding-top: 3px;
+ }
+ .reviews-form{
+   &__textarea{
+     height: 80px;
+   }
+   &__load-file{
+     margin-top: 10px;
+   }
+   &__block + &__block{
+     margin-top: 20px;
+   }
+   &__toggler{
+     margin: 20px 0;
+   }
+   &__item{
+     display: flex;
+     align-items: center;
+     margin-bottom: 30px;
+     &-right{
+       line-height: 0;
+     }
+     &-category{
+       color: #8592AD;
+       line-height: 21px;
+     }
+     &-name{
+       font-size: 16px;
+       line-height: 20px;
+     }
+   }
+   &__image{
+     height: 60px;
+     width: 60px;
+     margin-right: 20px;
+     flex-shrink: 0;
+   }
+   &__block-title{
+     margin-bottom: 10px;
+   }
+   &__allert{
+     display: flex;
+     align-items: flex-start;
+     line-height: 0;
+     margin-top: 55px;
+     @include for-sm(){
+       margin-top: 30px;
+     }
+     p{
+       line-height: 21px;
+       margin: 0;
+     }
+     i{
+       height: 30px;
+       width: 30px;
+       font-size: 20px;
+       color: #C2C9D6;
+       display: flex;
+       align-items: center;
+       margin-right: 10px;
+
+     }
+   }
+   .nice-select{
+     background-color: #F0F1F5;
+     border-color:#F0F1F5;
+  }
+ }
+ .reviews-form-rating {
+  margin-top: 20px;
+ }
+ .rating-bar{
+
+   & + &{
+     margin-top: 10px;
+   }
+   display: flex;
+   align-items: center;
+   &__right{
+     line-height: 0;
+   }
+   &__name{
+     color: #0D1526;
+     line-height: 21px;
+   }
+   &__value{
+     font-size: 12px;
+     line-height: 18px;
+     color: #8592AD;
+   }
+   &__wrap{
+     display: flex;
+    direction: rtl;
+    height: 40px;
+    border: 1px solid #C2C8D6;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-right: 10px;
+      span + span{
+        border-right: 1px solid #C2C8D6;
+      }
+
+     span{
+       height: 40px;
+       width: 40px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+      &:first-child{
+        border-radius: 3px 0 0 3px;
+      }
+      &:last-child{
+        border-radius: 0 3px 3px 0;
+      }
+       
+       &.active{
+        &:before{
+          color: #FF0040;
+          font-weight: 900;
+        }
+       }
+      font-family: "Font Awesome 6 Pro";
+     
+        &:before{
+        content: "\f005";
+        font-size: 18px;
+        line-height: 21px;
+        color: #C2C8D6;
+      }
+     }
+     
+   }
+ }
+ .rating-bar span:hover:before,.rating-bar span:hover ~ span:before{
+  font-weight: 900;
+  color: #8592AD;
+ }  
+ .reviews-form-rating{
+   &__all{
+     margin-top: 10px;
+     span{
+       color: #8592AD;
+     }
+     b{
+
+     }
+   }
+ }
+
+ .reviews-form-recomended{
+   &__row{
+     margin: -7.5px;
+     flex-wrap: wrap;
+   }
+   &__container{
+     padding: 7.5px;
+     box-sizing: border-box;
+    width: 33.3%;
+    @include for-sm(){
+      width: 100%;
+    }
+   }
+   input{
+     display: none;
+   }
+   input:checked + .reviews-form-recomended__wrap{
+     border-color: #14181F;
+     .reviews-form-recomended__title{
+       font-weight: 700;
+     }
+   }
+   &__wrap{
+     padding: 10px;
+     border-radius: 3px;
+     box-sizing: border-box;
+    border: 1px solid #C2C9D6;
+    box-sizing: border-box;
+    display: flex;
+   }
+   &__right{
+     line-height: 0;
+   }
+   &__title{
+     line-height: 21px;
+     transition: .3s;
+   }
+   &__counter{
+     display: block;
+     font-size: 10px;
+     line-height: 15px;
+     color: #8592AD;
+   }
+   &__icon{
+     height: 30px;
+     width: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     flex-shrink: 0;
+     margin-right: 10px;
+     i{
+       font-size: 12px;
+     }
+     img{
+       height: 12px;
+     }
+     &--like{
+       background-color: rgba(#00B377, .2);
+       color: #00B377;
+     }
+     &--dislike{
+       background-color: rgba(#FF0040, .2);
+       color: #FF0040;
+     }
+     &--neutral{
+       background-color: rgba(#406ABF, .2);
+     }
+   }
+ }
+
+ .load-file{
+   display: flex;
+   &__row{
+     margin: -5px;
+     flex-wrap: wrap;
+   }
+   &__coment{
+     width: 100%;
+   }
+   &__textarea{
+     height: 100%;
+     width: 100%;
+   }
+   &__container{
+     width: 50%;
+     padding: 5px;
+     box-sizing: border-box;
+     @include for-sm(){
+       width: 100%;
+     }
+   }
+   &__label{
+     flex-shrink: 0;
+     margin-right: 10px;
+     display: block;
+     cursor: pointer;
+     height: 80px;
+     width: 80px;
+     background: url(../images/icons/addfile.svg) #F0F1F5 center center no-repeat;
+     background-size: 40px;
+     input{
+       display: none;
+     }
+   }
+   &__preview{
+    height: 100%;
+    width: 100%;
+    position: relative;
+   }
+   &__preview-container{
+     display: none;
+     width: 80px;
+     height: 80px;
+     flex-shrink: 0;
+     margin-right: 10px;
+     img{
+       display: block;
+       height: 100%;
+       width: 100%;
+       object-fit: contain;
+       border-radius: 3px;
+     }
+   }
+   &__preview-remove{
+      height: 20px;
+      text-align: center;
+      font-size: 10px;
+      line-height: 20px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-radius: 0 0 3px 3px;
+      color: #fff;
+      background-color: rgba(#14181F, .5);
+      cursor: pointer;
+   }
+   &__desc{
+     font-size: 10px;
+     color: #8592AD;
+     margin-top: 5px;
+     p{
+       margin: 0;
+     
+     }
+     p + p{
+       margin-top: 10px;
+     }
+   }
+ }
+ #review-modal{
+   max-width: 600px;
  }
