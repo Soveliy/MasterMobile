@@ -24,7 +24,7 @@ $resolution2: 320;
     @media (max-width: 1500px) { @content; }
   }
   @mixin content-active-1400 {
-    @media (max-width: 1400px) { @content; }
+    @media (max-width: 1400px) and (min-width:1024px) { @content; }
   }
   @mixin content-active-1300 {
     @media (max-width: 1300px) { @content; }

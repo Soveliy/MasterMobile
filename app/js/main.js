@@ -595,6 +595,14 @@ let el = document.querySelector('.flyBasket__scroll');
       
        
       });
+      // $('body').on('click', '.image-gallery__arrow--next', function() {
+      //     galleryThumbs.navigation.nextEl(); 
+      // });
+      // $("body").on("click", ".image-gallery__arrow--next").function () {
+       
+      // }
+     
+      // galleryThumbs.navigation.prevEl()
       let galleryTop = new Swiper(".image-gallery__main", {
         loop:false,
         spaceBetween: 0,
