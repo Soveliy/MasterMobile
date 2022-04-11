@@ -2670,6 +2670,7 @@ select:invalid {
         font-size: 10px;
         color: #FFFFFF;
         margin-right: 0;
+        margin-top: 0;
       }
       
     }
@@ -8530,6 +8531,7 @@ body.mm-ocd-opened {
       }
 
      span{
+       cursor: pointer;
        height: 40px;
        width: 40px;
        display: flex;
@@ -8605,6 +8607,7 @@ body.mm-ocd-opened {
     border: 1px solid #C2C9D6;
     box-sizing: border-box;
     display: flex;
+    cursor: pointer;
    }
    &__right{
      line-height: 0;
@@ -8731,4 +8734,6 @@ body.mm-ocd-opened {
    max-width: 600px;
  }
 
- 
+ .nice-select.open{
+   z-index: 500;
+ }
