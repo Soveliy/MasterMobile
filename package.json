@@ -28,6 +28,7 @@
     "dependencies": {
         "@fancyapps/fancybox": "^3.5.7",
         "@fancyapps/ui": "^4.0.0",
+        "fast-average-color": "^7.1.0",
         "jquery-nice-select": "^1.1.0",
         "nouislider": "^15.5.1",
         "slick-carousel": "^1.8.1",

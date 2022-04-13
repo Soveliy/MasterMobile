@@ -2510,7 +2510,7 @@ select:invalid {
   }
   &__stickers{
     position: absolute;
-    top: -6px;
+    top: 0;
     left: -10px;
     z-index: 50;
     @include for-md(){
@@ -2728,7 +2728,7 @@ select:invalid {
       line-height: 21px;
       color: $dark-pink;
       font-weight: 700;
-      margin-bottom: 3px;
+      margin-bottom: 10px;
 
       span{
         font-size: 12px;
@@ -2813,7 +2813,7 @@ select:invalid {
       bottom: 5px;
       right: 0;
       width: 100%;
-      border-top: 1px dotted #8592AD;
+      border-top: 1px dashed #C2C8D6;
     }
     &-name{
       color: #8592AD;
@@ -4195,7 +4195,7 @@ body.mm-ocd-opened {
     margin-bottom: 10px;
   }
   &__desc{
-    margin: 20px 0 15px;
+    margin: 14px 0 15px;
     font-size: 14px;
     line-height: 21px;
     color: $dark-pink;
@@ -4205,6 +4205,12 @@ body.mm-ocd-opened {
     cursor: pointer;
     i{
       margin-right: 5px;
+      transition: .3s;
+    }
+    &.js-active{
+      i{
+        transform: rotate(180deg);
+      }
     }
   }
   .preview-item__image-slider{
@@ -4226,7 +4232,7 @@ body.mm-ocd-opened {
       margin-right: 20px;
     }
     .preview-item__available-container{
-      margin-right: 20px;
+      margin-right: 14px;
       padding-top: 2px;
     }
     .preview-item__info-vendor{
@@ -4237,7 +4243,7 @@ body.mm-ocd-opened {
     display: none;
   }
   &__footer{
-    margin-top: 30px;
+    margin-top: 18px;
     display: flex;
   }
   &__liked{
@@ -4259,7 +4265,7 @@ body.mm-ocd-opened {
    
   }
   &__liked + &__liked{
-    margin-left: 15px;
+    margin-left: 20px;
   }
   .preview-item__coast-value{
     margin-bottom: 10px;
@@ -4300,6 +4306,7 @@ body.mm-ocd-opened {
   background-color: $white;
   &:hover{
     .card-tiny__image{
+      cursor: pointer;
       &:before{
         background-color: rgba(#14181F, .75);
       }
@@ -4325,12 +4332,12 @@ body.mm-ocd-opened {
   &__info{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2px;
+    margin-top: 6px;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
   }
   &__avia{
-    margin-right: 25px;
+    margin-right: 30px;
     i{
       color: #00B377;
     }
@@ -4482,7 +4489,10 @@ body.mm-ocd-opened {
     border: 1px solid #E0E4EB;
     box-sizing: border-box;
     &:hover{
-      border-color: #FF0040;
+      border-color: #7A8599;
+      i{
+        color: #8592AD;
+      }
     }
   }
   .preview-item__coast-value-old{
@@ -4782,7 +4792,7 @@ body.mm-ocd-opened {
   background-color: #fff;
   box-sizing: border-box;
   
-  box-shadow: 0px 0px 15px 0 rgba(133,146,173,.1);
+  // box-shadow: 0px 0px 15px 0 rgba(133,146,173,.1);
   &:hover{
     position: relative;
     z-index: 50;
@@ -4790,6 +4800,7 @@ body.mm-ocd-opened {
   }
   @include for-sm(){
     border-radius: 5px !important;
+    padding: 15px;
   }
   &__left{
     width: 80px;
@@ -4864,7 +4875,7 @@ body.mm-ocd-opened {
     }
     @include for-sm(){
       margin-top: 20px;
-      margin-left: -110px;
+      margin-left: -95px;
     }
     &-item:not(:last-child){
       .category-item__link{
@@ -4970,10 +4981,15 @@ body.mm-ocd-opened {
      }
      &--closed{
        border-radius: 3px 3px 3px 3px;
+        i{
+          transform: rotate(180deg);
+        }
+
      }
      i{
        color: #8592AD;
        margin-left: auto;
+       transition: .3s;
      }
    }
    &Body{
@@ -5004,9 +5020,14 @@ body.mm-ocd-opened {
  }
  .checkbox[style*="display: block"]{
   display:flex!important;
+  // opacity: 1 !important;
+  // height: auto !important;
 }
  .checkbox:nth-child(n + 11){
    display: none;
+  //  opacity: 0;
+  //  transition: .3s;
+  //  height: 0;
  }
  &__footer{
    padding: 20px;
@@ -5345,6 +5366,11 @@ body.mm-ocd-opened {
   background-color: $white;
   text-align: center;
   height: 100%;
+  &:hover{
+    .subcategory-item__title{
+      color: $redHover;
+    }
+  }
   &__image-container{
     height: 100px;
     width: 100px;
@@ -5363,9 +5389,11 @@ body.mm-ocd-opened {
     margin-bottom: 9px;
     color: #0D1526;
     max-width: 250px;
+    transition: .3s;
     @include for-lg(){
       font-size: 14px;
       line-height: 21px;
+      transition: .3s;
     }
   }
   &__counter{
@@ -5543,6 +5571,9 @@ body.mm-ocd-opened {
       color: #000;
       background-color: transparent;
       transition: .3s;
+      i{
+        font-weight: 300;
+      }
       &--curent,&:hover{
         color: #FF0040;
       }
@@ -5582,10 +5613,18 @@ body.mm-ocd-opened {
 
   }
   &__logo{
-    display: block;
-    width: 100%;
+    // display: block;
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    object-fit: cover;
+    img{
+      max-width: 50%;
+      height: 50%;
+    }
   }
   &__content-block{
     padding: 20px 30px;
@@ -5656,6 +5695,7 @@ body.mm-ocd-opened {
     justify-content: center;
     box-sizing: border-box;
     padding-top: 3px;
+    line-height: 0;
     &:hover{
       color: $white;
     }
@@ -5729,9 +5769,6 @@ body.mm-ocd-opened {
   position: relative;
   display: flex;
   width: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   padding: 20px;
   border-spacing: 3px;
   box-sizing: border-box;
@@ -5740,9 +5777,26 @@ body.mm-ocd-opened {
   @include for-lit-mob(){
     min-height: 252px;
   }
-  > div{
+  &__center,&__top,&__bottom{
     position: relative;
     z-index: 10;
+  }
+  &__gradient{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+  }
+  &__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   &__time{
     margin-left: 8px;
@@ -8425,6 +8479,14 @@ body.mm-ocd-opened {
        stroke: #14181F;
      }
    }
+   &__footer{
+     &--margin-negative{
+       margin: 30px -30px -30px;
+       @include for-md(){
+         margin: 15px -15px -15px;
+       }
+     }
+   }
  }
 .SmartFilter__itemBody .checkbox:first-child{
    padding-top: 3px;
@@ -8737,3 +8799,87 @@ body.mm-ocd-opened {
  .nice-select.open{
    z-index: 500;
  }
+ .modal{
+   position: relative;
+   overflow: hidden;
+ }
+.fast-view{
+  &__row{
+    @include for-md(){
+      flex-direction: column;
+      .image-gallery__main .swiper-slide{
+        width: 100% !important;
+      }
+    }
+  }
+  &__image-gallery{
+    max-width: 460px;
+    margin-right: 20px;
+    .image-gallery__thumbs,.image-gallery__main{
+      height: 400px;
+      
+    }
+    .image-gallery__main{
+      @include for-md(){
+        height: 300px;
+      }
+    }
+    
+    .image-gallery__thumbs{
+      width: 50px;
+      margin-right: 10px;
+      height: 50px;
+      margin-bottom: 15px;
+      @include for-md(){
+        width: 100%;margin-right: 0;
+        margin-top: 15px;
+      }
+    }
+    .image-gallery__thumbs-slide{
+      height: 50px;
+    }
+    .image-gallery__arrow{
+      width: 50px;
+    }
+    
+  }
+  .card__top-options{
+    margin-top: 10px
+  }
+  .card__prices{
+    margin: 20px 0;
+    border: none;
+  }
+  .card__counter-wrap{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: none;
+    margin-bottom: 25px;
+    padding-bottom: 0;
+    .card__counter,.card__addToCart{
+      width: calc(50% - 10px);
+      max-width: initial;
+    }
+    .card__info-button{
+      width: 100%;
+      margin: 20px 0 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  &__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12.5px;
+    &:hover{
+      i{
+        transform: translateX(10px);
+      }
+    }
+    i{
+      transition: .3s;
+      margin-left: 8px;
+    }
+  }
+}

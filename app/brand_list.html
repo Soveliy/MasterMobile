@@ -364,7 +364,10 @@
                    <div class="catalog__brand brand">
                        <div class="brand__row">
                            <div class="brand__logo-container">
-                                <img src="images/samsung.jpg" alt="" class="brand__logo">
+                               <div class="brand__logo" style="background-color: #1428A0;">
+                                <img src="images/samsung.svg" alt="">
+                               </div>
+                                
                            </div>
                            <div class="brand__content-block content-block">
                             <p>
@@ -847,7 +850,7 @@
                            <div class="catalog__filters filters">
                                <div class="filters__row row">
                                    <div class="filters__left">
-                                       <button class="filters__button"><i class="fa-solid fa-filter"></i>
+                                       <button class="filters__button"><i class="fa-solid fa-filter-slash"></i>
                                         
                                         <span class="filters__button--desktop">Скрыть фильтры</span>
                                         <span class="filters__button--mobile">Фильтры</span>
@@ -2363,6 +2366,202 @@
         </ul>
     </nav>
  </div>
+
+  <!-- modals -->
+  <div class="g-hidden">
+    <div class="b-modal" id="callback-modal">
+        <!-- <div class="b-modal_close arcticmodal-close"></div> -->
+
+        <div class="modal-content">
+            <div class="card-added">
+                <div class="card-added__head">
+                    <div class="card-added__title">
+                        <svg class="icon icon-map-marker">
+                            <use xlink:href="/images/sprite.svg#icon-shopping-cart"></use>
+                        </svg>
+                       <span> Добавлен <a class="card-added__title-link" href="#">1 товар</a> на сумму 129 ₽</span>
+                    </div>
+                    <div class="card-added__close arcticmodal-close">
+                        <svg class="icon icon-close">
+                            <use xlink:href="images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-added__body">
+                    <div class="card-added-item">
+                        <div class="card-added-item__image-container">
+                            <img src="images/advices/Add.jpg" alt="">
+                        </div>
+                        <div class="card-added-item__right">
+                            <div class="card-added-item__name">
+                                Держатель сим карты (SIM) + карты памяти (MicroSD) для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5 (2016) / A710 Galaxy A7 (2016) (компл. 2 шт.)
+                            </div>
+                            <div class="card-added-item__counter-wrap">
+                                <div class="counter card-added-item__counter">
+                                    <button class="counter__button counter__button--minus">-</button>
+                                    <input type="text" class="counter__input" value="1" data-max-count="20">
+                                    <button class="counter__button counter__button--plus">+</button>
+                                </div>
+                                <span class="card-added-item__symbol">=</span>  <b>129 ₽</b>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-added__advise advise">
+                        <div class="advise__title">
+                            Советуем взглянуть также на эти товары:
+                        </div>
+                        <div class="advise__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="advise-item">
+                                        <div class="advise-item__top">
+                                            <a href="#" class="advise-item__image-container">
+                                                <img src="images/advices/1.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="advise-item__name">Держатель сим карты (SIM) для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5...</a>
+                                        </div>
+                                        <div class="advise-item__bottom">
+                                            <div class="advise-item__value">
+                                                от 79 ₽
+                                            </div>
+                                            <a href="#" class="advise-item__button button">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="advise-item">
+                                        <div class="advise-item__top">
+                                            <a href="#" class="advise-item__image-container">
+                                                <img src="images/advices/2.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="advise-item__name">Шлейф для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5 (2016) / A710 Gal...</a>
+                                        </div>
+                                        <div class="advise-item__bottom">
+                                            <div class="advise-item__value">
+                                                139 ₽
+                                            </div>
+                                            <a href="#" class="advise-item__button button">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="advise-item">
+                                        <div class="advise-item__top">
+                                            <a href="#" class="advise-item__image-container">
+                                                <img src="images/advices/3.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="advise-item__name">Коннектор сим карты (SIM) + коннектор карты памяти (MMC) для Samsung A310...</a>
+                                        </div>
+                                        <div class="advise-item__bottom">
+                                            <div class="advise-item__value">
+                                                119 ₽
+                                            </div>
+                                            <a href="#" class="advise-item__button button">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="swiper-slide">
+                                    <div class="advise-item">
+                                        <div class="advise-item__top">
+                                            <a href="#" class="advise-item__image-container">
+                                                <img src="images/advices/1.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="advise-item__name">Держатель сим карты (SIM) для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5...</a>
+                                        </div>
+                                        <div class="advise-item__bottom">
+                                            <div class="advise-item__value">
+                                                от 79 ₽
+                                            </div>
+                                            <a href="#" class="advise-item__button button">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="advise-item">
+                                        <div class="advise-item__top">
+                                            <a href="#" class="advise-item__image-container">
+                                                <img src="images/advices/2.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="advise-item__name">Шлейф для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5 (2016) / A710 Gal...</a>
+                                        </div>
+                                        <div class="advise-item__bottom">
+                                            <div class="advise-item__value">
+                                                139 ₽
+                                            </div>
+                                            <a href="#" class="advise-item__button button">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="advise-item">
+                                        <div class="advise-item__top">
+                                            <a href="#" class="advise-item__image-container">
+                                                <img src="images/advices/3.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="advise-item__name">Коннектор сим карты (SIM) + коннектор карты памяти (MMC) для Samsung A310...</a>
+                                        </div>
+                                        <div class="advise-item__bottom">
+                                            <div class="advise-item__value">
+                                                119 ₽
+                                            </div>
+                                            <a href="#" class="advise-item__button button">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-arrow advise__nav-arrow advise__nav-arrow-left swiper-button-prev"></div>
+                            <div class="custom-arrow advise__nav-arrow advise__nav-arrow-right swiper-button-next"></div>
+                            <div class="swiper-scrollbar swiper-scrollbar-custom advise__scrollbar">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__checkbox">
+                        <label class="checkbox checkbox--type-2">
+                            <input type="checkbox">
+                             <span class="checkbox__icon">
+                                 <i class="fa-regular fa-check"></i>
+                             </span>
+                             Отключить это окно на 24 часа
+                            
+                        </label>
+                    </div>
+                </div>
+                <div class="card-added__footer">
+                    <button class="button button--size-big button--round-type-2 button--shadow" type="submit">Оформить заказ</button>
+                    <a href="#" class="button button--size-big button--round-type-2">Открыть корзину</a>
+                    <button class="button button--size-big button--round-type-2 arcticmodal-close">Закрыть окно</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <div class="b-modal" id="fast-view">
+        <!-- <div class="b-modal_close arcticmodal-close"></div> -->
+
+        <div class="modal-content">
+           <div class="modal review">
+            <div class="modal__head">
+                <div class="modal__title">
+                    <svg class="icon icon-map-marker">
+                        <use xlink:href="/images/sprite.svg#icon-review"></use>
+                    </svg>
+                   <span>Что вы думаете об этом товаре?</span>
+                </div>
+                <div class="modal__close arcticmodal-close">
+                    <svg class="icon icon-close">
+                        <use xlink:href="images/sprite.svg#icon-close"></use>
+                    </svg>
+                </div>
+            </div>
+           
+           </div>
+        </div>
+        
+    </div>
+    </div>
     <link rel="stylesheet" href="css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

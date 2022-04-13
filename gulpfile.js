@@ -64,9 +64,10 @@ gulp.task('js', function(){
         'node_modules/swiper/swiper-bundle.min.js',
         'node_modules/jquery-nice-select/js/jquery.nice-select.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-      'assest/js/simple-scrollbar.js',
-      'assest/js/ion.rangeSlider.js',
-      'assest/js/jquery.arcticmodal.js',
+        'node_modules/fast-average-color/dist/index.min.js',
+        'assest/js/simple-scrollbar.js',
+        'assest/js/ion.rangeSlider.js',
+        'assest/js/jquery.arcticmodal.js',
       
     // 'assest/js/aos.js',
     // 'assest/js/swiper.js',

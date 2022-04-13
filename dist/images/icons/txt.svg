@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 60 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g transform="matrix(1,0,0,1,-415,-649)">
+        <g transform="matrix(1,0,0,1,385,0)">
+            <g id="file" transform="matrix(-1.66667,0,0,1.66667,50,669)">
+                <g transform="matrix(1,0,0,1,-12,-12)">
+                    <g transform="matrix(0.8,0,0,0.8,0,0)">
+                        <path d="M16.25,2.5L7.5,2.5C6.129,2.5 5,3.629 5,5L5,25C5,26.375 6.125,27.5 7.5,27.5L22.5,27.5C23.871,27.5 25,26.371 25,25L25,11.25L16.25,2.5Z" style="fill:none;fill-rule:nonzero;stroke:rgb(20,27,31);stroke-width:1.25px;"/>
+                    </g>
+                    <g transform="matrix(0.8,0,0,0.8,0,0)">
+                        <path d="M16.25,2.5L16.25,11.25L25,11.25" style="fill:none;fill-rule:nonzero;stroke:rgb(20,27,31);stroke-width:1.25px;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,385,0)">
+            <g transform="matrix(1.71429,0,0,1.125,-44,-44.625)">
+                <path d="M77,630.778C77,629.796 76.478,629 75.833,629C72.157,629 60.843,629 57.167,629C56.522,629 56,629.796 56,630.778C56,633.856 56,640.144 56,643.222C56,644.204 56.522,645 57.167,645C60.843,645 72.157,645 75.833,645C76.478,645 77,644.204 77,643.222C77,640.144 77,633.856 77,630.778Z" style="fill:none;stroke:white;stroke-width:2.76px;stroke-linecap:butt;stroke-miterlimit:1.5;"/>
+                <path d="M77,630.778C77,629.796 76.478,629 75.833,629C72.157,629 60.843,629 57.167,629C56.522,629 56,629.796 56,630.778C56,633.856 56,640.144 56,643.222C56,644.204 56.522,645 57.167,645C60.843,645 72.157,645 75.833,645C76.478,645 77,644.204 77,643.222C77,640.144 77,633.856 77,630.778Z" style="fill:rgb(133,146,173);"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,385,0)">
+            <g transform="matrix(1,0,0,1,11.6215,312)">
+                <text x="48.935px" y="363.579px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:white;">TXT</text>
+            </g>
+        </g>
+    </g>
+</svg>
