@@ -2879,6 +2879,7 @@ a.preview-item__option-value{
   input{
     height: 38px;
     width: 100%;
+    padding-top: 3px;
     text-align: center;
     box-sizing: border-box;
   }
@@ -4145,6 +4146,7 @@ body.mm-ocd-opened {
   margin-top: 1px;
 }
 .card-second{
+  position: relative;
   background-color: $white;
   &__row{
     display: flex;
@@ -4304,7 +4306,53 @@ body.mm-ocd-opened {
   padding: 20px;
   box-sizing: border-box;
   background-color: $white;
-  &:hover{
+  position: relative;
+  &__symbol{
+    width: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;justify-content: center;
+    text-align: center;
+    margin: 0 10px;
+    padding-top: 3px;
+    box-sizing: border-box;
+    color: #8592AD;
+    @include for-sm(){
+     &--desktop{
+       display: none;
+     }
+    }
+  }
+  &__total{
+    font-size: 18px;
+    line-height: 21px;
+    color: #14181F;
+    font-weight: 700;
+    min-width: 100px;
+  }
+  &__remove{
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+    background-color: #FFE5EC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FF0040;
+    transition: .3s;
+    margin-left: 20px;
+    @include for-sm(){
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    &:hover{
+      color: $redHover;
+    }
+  }
+  &:not(.card-tiny--in-basket):hover{
     .card-tiny__image{
       cursor: pointer;
       &:before{
@@ -4469,6 +4517,7 @@ body.mm-ocd-opened {
     }
     @include for-sm(){
       width: 100%;
+     
     }
   }
   &__name{
@@ -4499,6 +4548,37 @@ body.mm-ocd-opened {
     color: #8592AD;
     text-decoration: line-through;
     margin-left: 5px;
+  }
+  
+}
+.card-tiny.card-tiny--in-basket{
+  .card-tiny__avia,.card-tiny__rating{
+    font-size: 12px;
+  }
+  .preview-item__coast-value{
+    width: auto;
+    @include for-sm(){
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .preview-item__counter-wrap{
+    margin: 0;
+  }
+  .counter{
+    width: 90px;
+    .counter__button{
+      width: 25px;
+    }
+  }
+  .card-tiny__col{
+    @include for-md(){
+      flex-direction: row;
+      align-items: center;
+    }
+    @include for-sm(){
+      flex-wrap: wrap;
+    }
   }
 }
 .pagination{
@@ -8107,6 +8187,25 @@ body.mm-ocd-opened {
       flex-direction: column;
       align-items: flex-end;
     }
+    .basket__footer-row{
+      flex-direction: column;
+    }
+    .basket__promocode{
+      margin-bottom: 20px;
+    }
+    .card-tiny--in-basket .card-tiny__col{
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 10px;
+      .preview-item__counter-wrap{
+        width: 90px;
+      }
+    }
+    .card-tiny--in-basket .card-tiny__row{
+      flex-wrap: wrap;
+    }
     .card-tiny .preview-item__coast-value{
       width: auto;
       margin-bottom: 10px;
@@ -8880,6 +8979,161 @@ body.mm-ocd-opened {
     i{
       transition: .3s;
       margin-left: 8px;
+    }
+  }
+}
+
+.basket{
+  &__head{
+    background-color: #0D1526;
+    padding: 30px;
+    border-radius: 3px 3px 0 0;
+    @include for-md(){
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    &-row{
+      justify-content: space-between;
+      @include for-md{
+        flex-direction: column;
+      }
+    }
+    &-input{
+      height: 40px;
+      max-width: 300px;
+      width: 100%;
+      border-radius: 5px;
+      background-color: #132039;
+      box-sizing: border-box;
+      padding: 0 18px;
+      color: $white;
+      @include for-sm(){
+        max-width: 100%;
+      }
+      &::placeholder{
+        transition: .3s;
+        color: #9FB5DF;
+      }
+      &:focus::placeholder{
+        opacity: 0;
+      }
+    }
+    &-button{
+      background-color: #CC0033;
+      margin-left: 20px;
+      padding: 11.5px 24px;
+      @include for-sm(){
+        margin-left: 0;
+        margin-top: 15px;
+      }
+      i{
+        margin-right: 5px;
+      }
+      &:hover{
+        background-color: $redHover;
+      }
+    }
+    &-right{
+      display: flex;
+      align-items: center;
+      padding-top: 3px;
+      @include for-md(){
+        margin-left: auto;
+        margin-top: 10px;
+      }
+      @include for-sm(){
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &-desc{
+      color: $white;
+    }
+  }
+  &__footer{
+    padding: 30px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 3px 3px;
+    background-color: $white;
+    @include for-md(){
+      padding: 15px;
+    }
+    &-row{
+      justify-content: space-between;
+      align-items: center;
+      @include for-md(){
+        flex-direction: column;
+      }
+    }
+    &-right{
+      display: flex;
+      align-items: center;
+      @include for-sm(){
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+   
+    
+  }
+  &__total{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    margin-right: 30px;
+    @include for-sm(){
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    &-old-value{
+      color: #8592AD;
+    }
+    &__left{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      line-height: 20px;
+    }
+    &-value{
+      font-size: 30px;
+      line-height: 40px;
+      color: #14181F;
+      font-weight: 700;
+      margin-left: 10px;
+      min-width: 160px;
+      text-align: left;
+    }
+  }
+  &__buttons{
+    display: flex;
+    @include for-md-mob(){
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  &__button{
+    padding-left: 30px;
+    padding-right: 30px;
+    @include for-md-mob(){
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  &__button + &__button{
+    margin-left: 20px;
+    @include for-md-mob(){
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  &__promocode{
+    max-width: 300px;
+    width: 100%;
+    @include for-sm(){
+      max-width: 100%;
+      margin-bottom: 15px;
     }
   }
 }
