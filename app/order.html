@@ -400,7 +400,7 @@
                         <div class="order__row row">
                             <div class="order__left">
                                 <div class="order__item">
-                                    <div class="order__head">
+                                    <div class="order__head order__head--border">
                                         <div class="order__head-title">
                                             Получатель
                                         </div>
@@ -446,7 +446,7 @@
                                     </div>
                                 </div>
                                 <div class="order__item">
-                                    <div class="order__head">
+                                    <div class="order__head order__head--border">
                                         <div class="order__head-title">
                                             Доставка  <span>434 ₽</span>
                                         </div>
@@ -458,7 +458,7 @@
                                     <div class="order__body">
                                         <div class="order__options">
                                             <div class="row order__options-row">
-                                                <div class="order__options-container order__options-container--lit">
+                                                <div class="order__options-container order__options-container--lit-type-2">
                                                     <select  class="order__select">
                                                         <option value="">Россия</option>
                                                         <option value="">Россия</option>
@@ -659,7 +659,7 @@
                                                 Выбор пункта выдачи (г. Москва)
                                             </div>
                                             <div class="row order__options-row">
-                                                <div class="order__options-container order__options-container--lit">
+                                                <div class="order__options-container order__options-container--lit-type-2">
                                                  
                                                     <input type="text" class="order__input" placeholder="Поиск пункта выдачи"> 
                                                 </div>
@@ -678,10 +678,9 @@
                                                      
                                                  ymaps.ready(function () {
                                                         var myMap = new ymaps.Map('map', {
-                                                                center: [55.751574, 37.573856],
-                                                                zoom: 9
-                                                            }, {
-                                                                searchControlProvider: 'yandex#search'
+                                                                center: [55.792721, 37.780203],
+                                                                zoom: 15,
+                                                                controls:[],
                                                             }),
 
                                                             // Создаём макет содержимого.
@@ -697,38 +696,20 @@
                                                                 // Необходимо указать данный тип макета.
                                                                 iconLayout: 'default#image',
                                                                 // Своё изображение иконки метки.
-                                                                iconImageHref: 'images/myIcon.gif',
+                                                                iconImageHref: 'images/map_icon.svg',
                                                                 // Размеры метки.
-                                                                iconImageSize: [30, 42],
+                                                                iconImageSize: [30, 41],
                                                                 // Смещение левого верхнего угла иконки относительно
                                                                 // её "ножки" (точки привязки).
                                                                 iconImageOffset: [-5, -38]
-                                                            }),
-
-                                                            myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-                                                                hintContent: 'Собственный значок метки с контентом',
-                                                                balloonContent: 'А эта — новогодняя',
-                                                                iconContent: '12'
-                                                            }, {
-                                                                // Опции.
-                                                                // Необходимо указать данный тип макета.
-                                                                iconLayout: 'default#imageWithContent',
-                                                                // Своё изображение иконки метки.
-                                                                iconImageHref: 'images/ball.png',
-                                                                // Размеры метки.
-                                                                iconImageSize: [48, 48],
-                                                                // Смещение левого верхнего угла иконки относительно
-                                                                // её "ножки" (точки привязки).
-                                                                iconImageOffset: [-24, -24],
-                                                                // Смещение слоя с содержимым относительно слоя с картинкой.
-                                                                iconContentOffset: [15, 15],
-                                                                // Макет содержимого.
-                                                                iconContentLayout: MyIconContentLayout
                                                             });
+
+                                                           
+                                                         
 
                                                         myMap.geoObjects
                                                             .add(myPlacemark)
-                                                            .add(myPlacemarkWithContent);
+                                                          
                                                     });
 
                                                 </script>
@@ -736,9 +717,303 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="order__item">
+                                    <div class="order__head order__head--border">
+                                        <div class="order__head-title">
+                                            Способ оплаты
+                                        </div>
+                                        
+
+                                    </div>
+                                    <div class="order__body">
+                                        <div class="order__options">
+                                            <div class="row order__options-row">
+                                                <div class="order__options-container order__options-container--lit">
+                                                    <label class="order-radio">
+                                                        <input type="radio" name="payment" checked>
+                                                        <span class="order-radio__wrap">
+                                                           <span class="order-radio__top">
+                                                            <span class="order-radio__image-container">
+                                                                <img src="images/payment/1.svg" alt="">
+                                                            </span>
+                                                            <span class="order-radio__right">
+                                                                <span class="order-radio__info order-radio__info--align-right">
+                                                                    <span class="order-radio__info-title">Мы поможем Вам определить лучшие условия</span> 
+                                                                </span>
+                                                                
+                                                            </span>
+                                                           </span>
+                                                           <span class="order-radio__footer">
+                                                            <span class="order-radio__name">Решить с менеджером</span>
+                                                           </span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="order__options-container order__options-container--lit">
+                                                    <label class="order-radio">
+                                                        <input type="radio" name="payment">
+                                                        <span class="order-radio__wrap">
+                                                           <span class="order-radio__top">
+                                                            <span class="order-radio__image-container">
+                                                                <img src="images/payment/2.svg" alt="">
+                                                            </span>
+                                                            <span class="order-radio__right">
+                                                                <span class="order-radio__info order-radio__info--align-right order-radio__info--column">
+                                                                    <span class="order-radio__info-title">Комиссия:</span><span class="order-radio__info-value order-radio__info-value--bold">от 2%</span> 
+                                                                </span>
+                                                                
+                                                            </span>
+                                                           </span>
+                                                           <span class="order-radio__footer">
+                                                            <span class="order-radio__name">Банковский перевод</span>
+                                                           </span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="order__options-container order__options-container--lit">
+                                                    <label class="order-radio">
+                                                        <input type="radio" name="payment">
+                                                        <span class="order-radio__wrap">
+                                                           <span class="order-radio__top">
+                                                            <span class="order-radio__image-container">
+                                                                <img src="images/payment/3.svg" alt="">
+                                                            </span>
+                                                            <span class="order-radio__right">
+                                                                <span class="order-radio__info order-radio__info--align-right order-radio__info--column">
+                                                                    <span class="order-radio__info-title">Комиссия:</span><span class="order-radio__info-value order-radio__info-value--bold">согл. тарифам</span> 
+                                                                </span>
+                                                                
+                                                            </span>
+                                                           </span>
+                                                           <span class="order-radio__footer">
+                                                            <span class="order-radio__name">Оплата при получении</span>
+                                                           </span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="order__options-container order__options-container--lit">
+                                                    <label class="order-radio">
+                                                        <input type="radio" name="payment">
+                                                        <span class="order-radio__wrap">
+                                                           <span class="order-radio__top">
+                                                            <span class="order-radio__image-container">
+                                                                <img src="images/payment/4.svg" alt="">
+                                                            </span>
+                                                            <span class="order-radio__right">
+                                                                <span class="order-radio__info order-radio__info--align-right order-radio__info--column">
+                                                                    <span class="order-radio__info-title">Комиссия:</span><span class="order-radio__info-value order-radio__info-value--bold">1% + 50 ₽</span> 
+                                                                </span>
+                                                                
+                                                            </span>
+                                                           </span>
+                                                           <span class="order-radio__footer">
+                                                            <span class="order-radio__name">ЮMoney</span>
+                                                           </span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="order__options-container order__options-container--lit">
+                                                    <label class="order-radio">
+                                                        <input type="radio" name="payment">
+                                                        <span class="order-radio__wrap">
+                                                           <span class="order-radio__top">
+                                                            <span class="order-radio__image-container">
+                                                                <img src="images/payment/5.svg" alt="">
+                                                            </span>
+                                                            <span class="order-radio__right">
+                                                                <span class="order-radio__info order-radio__info--align-right order-radio__info--column">
+                                                                    <span class="order-radio__info-title">Комиссия:</span><span class="order-radio__info-value order-radio__info-value--bold">3%</span> 
+                                                                </span>
+                                                                
+                                                            </span>
+                                                           </span>
+                                                           <span class="order-radio__footer">
+                                                            <span class="order-radio__name">QIWI </span>
+                                                           </span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__item">
+                                    <div class="order__head order__head--border">
+                                        <div class="order__head-title">
+                                            Способ оплаты
+                                        </div>
+                                        <div class="order__head-right">
+                                            <a href="#">Изменить корзину</a>
+                                        </div>
+
+                                    </div>
+                                    <div class="order__body">
+                                        <div class="order-table">
+                                           <div class="order-table__scroll">
+                                            <div class="order-table__head">
+                                                <div class="order-table__th">Товар</div>
+                                                <div class="order-table__th">Цена за 1 ед.</div>
+                                                <div class="order-table__th">Кол-во</div>
+                                                <div class="order-table__th">Сумма</div>
+                                            </div>
+                                            <div class="order-table__body">
+                                                <div class="order-item">
+                                                    <div class="order-item__info">
+                                                        <a href="#" class="order-item__image">
+                                                            <img src="images/prod.jpg" alt="">
+                                                        </a>
+                                                        <div class="order-item__right">
+                                                            <a href="#" class="order-item__name">Оригинальный тачскрин для Xiaomi Mi Play (Черный)</a>
+                                                           
+                                                            <span class="order-item__articul">
+                                                                <span class="order-item__articul-title">Артикул: </span>
+                                                                084412
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-item__price">
+                                                        <div class="order-item__price-top">
+                                                           <span class="order-item__price-one">  2 400 ₽</span>
+                                                            <div class="order-item__symbol">
+                                                                <i class="fa-light fa-xmark"></i>
+                                                            </div>
+                                                            1 шт.
+                                                            <div class="order-item__symbol">
+                                                                =
+                                                            </div>
+                                                            <b>4 800 ₽</b>
+
+                                                           
+                                                        </div>
+                                                       
+                                                    </div>
+
+                                                </div>
+                                                <div class="order-item">
+                                                    <div class="order-item__info">
+                                                        <a href="#" class="order-item__image">
+                                                            <img src="images/prod2.jpg" alt="">
+                                                        </a>
+                                                        <div class="order-item__right">
+                                                            <a href="#" class="order-item__name">Anker Powerline+ USB Type-C V3 0.9м, Red (A8187H91)</a>
+                                                           
+                                                            <span class="order-item__articul">
+                                                                <span class="order-item__articul-title">Артикул: </span>
+                                                                068129
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-item__price">
+                                                        <div class="order-item__price-top">
+                                                           <span class="order-item__price-one">  2 400 ₽</span>
+                                                            <div class="order-item__symbol">
+                                                                <i class="fa-light fa-xmark"></i>
+                                                            </div>
+                                                            1 шт.
+                                                            <div class="order-item__symbol">
+                                                                =
+                                                            </div>
+                                                            <b>4 800 ₽</b>
+
+                                                           
+                                                        </div>
+                                                       
+                                                    </div>
+
+                                                </div>
+                                                <div class="order-item">
+                                                    <div class="order-item__info">
+                                                        <a href="#" class="order-item__image">
+                                                            <img src="images/prod3.jpg" alt="">
+                                                        </a>
+                                                        <div class="order-item__right">
+                                                            <a href="#" class="order-item__name">Samsung 27" LS27R350FHIXCI IPS/FHD/HDMI/VGA/5ms/75Гц</a>
+                                                           
+                                                            <span class="order-item__articul">
+                                                                <span class="order-item__articul-title">Артикул: </span>
+                                                                062420
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-item__price">
+                                                        <div class="order-item__price-top">
+                                                           <span class="order-item__price-one"> 12 000 ₽</span>
+                                                            <div class="order-item__symbol">
+                                                                <i class="fa-light fa-xmark"></i>
+                                                            </div>
+                                                            1 шт.
+                                                            <div class="order-item__symbol">
+                                                                =
+                                                            </div>
+                                                            <b>12 000 ₽</b>
+
+                                                           
+                                                        </div>
+                                                       
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="order__right">
-                                123
+                                <div class="order__item">
+                                    <div class="order__final-coast final-coast">
+                                        <ul class="final-coast__list">
+                                            <li class="final-coast__item">
+                                                <span class="final-coast__item-title">
+                                                    Предытог
+                                                </span>
+                                                <span class="final-coast__item-value final-coast__item-value--bold final-coast__item-value--medium">
+                                                    60 906 ₽
+                                                </span>
+                                            </li>
+                                            <li class="final-coast__item">
+                                                <span class="final-coast__item-title final-coast__item-title--grey">
+                                                    Стоимость доставки
+                                                </span>
+                                                <span class="final-coast__item-value final-coast__item-value--bold final-coast__item-value--purple">
+                                                    434 ₽
+                                                </span>
+                                            </li>
+                                            <li class="final-coast__item">
+                                                <span class="final-coast__item-title">
+                                                    Всего к оплате
+                                                    <spab class="final-coast__item-title--grey">(с учётом доставки)</spab>
+                                                </span>
+                                                <span class="final-coast__item-value final-coast__item-value--bold final-coast__item-value--big">
+                                                    57 870 ₽
+                                                </span>
+                                            </li>
+                                        </ul>
+                                        <div class="final-coast__promocode promocode">
+                                            <input type="text" class="promocode__input" placeholder="Промокод">
+                                            <button class="promocode__button">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__item">
+                                    <div class="order-details">
+                                        <textarea class="order-details__textarea form__textarea form__textarea--lit" placeholder="Комментарий к заказу"></textarea>
+                                        <label class="checkbox order-details__checkbox">
+                                            <input type="checkbox">
+                                             <span class="checkbox__icon">
+                                                 <i class="fa-regular fa-check"></i>
+                                             </span>
+                                             Не звоните мне, я уверен(а) в заполненных данных.
+                                            
+                                        </label>
+                                        <div class="order-details__buttons">
+                                          <button class="button button--size-big button--default button--shadow-type-2">Подтвердить заказ</button>
+                                          <button class="button button--size-big button--round-type-3">Сохранить данные и отложить заказ</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
