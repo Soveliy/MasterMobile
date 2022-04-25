@@ -301,7 +301,7 @@ button{
     i{
       position: absolute;
       top: 0;
-      right: 0;
+      right: 20px;
       width: 40px;
       height: 100%;
       z-index: 50;
@@ -408,7 +408,9 @@ select:invalid {
   line-height: 18px;
   color: #001133;
   cursor: pointer;
-
+  a{
+    margin-left: 5px;
+  }
   &--type-2{
     .checkbox__icon{
       background-color: #E0E4EB;
@@ -7953,6 +7955,384 @@ body.mm-ocd-opened {
     padding-left: 0;
   }
 }
+
+.profile{
+  &__item{
+    background-color: $white;
+    padding: 30px;
+    box-sizing: border-box;
+
+    &-body-title{
+      margin: 25px 0 15px;
+      font-weight: 600;
+    }
+    @include for-md(){
+      padding: 15px;
+    }
+    & + &{
+      margin-top: 30px;
+      @include for-md(){
+        margin-top: 15pxc;
+      }
+    }
+    &-head{
+      position: relative;
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, #e0e4eb 15%, #fff 100%);
+      }
+     
+    }
+    &-title{
+      font-size: 18px;
+      line-height: 21px;
+      color: #14181F;
+    }
+  }
+  &__right-sidebar{
+    width: 470px;
+    margin-left: 30px;
+    flex-shrink: 0;
+  }
+  &__card-type{
+    margin-top: 30px;
+    @include for-md(){
+      margin-top: 15px;
+    }
+  }
+  &__sidebar{
+    width: 270px;
+    flex-shrink: 0;
+   
+    margin-right: 30px;
+    border-radius: 5px;
+  }
+  &__menu{
+    background-color: $white;
+    border-radius: 5px;
+    
+    &-link{
+      display: flex;
+      align-items: center;
+      color: #14181F;
+      transition: .3s;
+      padding: 12px 20px 8px;
+      line-height: 20px;
+      box-sizing: border-box;
+      &--current{
+        background: linear-gradient(90deg, rgba(240,241,245,1) 0%, rgba(255,255,255,0) 100%);
+        color: #FF0040;
+        svg{
+          stroke: #FF0040;
+        }
+      }
+      &:hover{
+        color: #FF0040;
+
+        svg{
+          stroke: #FF0040;
+        }
+      }
+      svg{
+        height: 20px;
+        width: 20px;
+        flex-shrink: 0;
+        margin-right: 10px;
+        transition: .3s;
+        margin-top: -3px;
+        fill: none;
+        stroke: #14181F;
+      }
+      &-counter{
+        border-radius: 5px;
+        box-sizing: border-box;
+        background-color: #F0F1F5;
+        padding: 5px 5px 3px;
+        font-size: 12px;
+        line-height: 12px;
+        color: #8592AD;
+        margin-left: auto;
+        i{
+          // margin-top: 1px;
+          margin-right: 2px;
+        }
+        &--red{
+          background-color: #FF0040;
+          color: $white;
+        }
+        &--purple{
+          background-color: #801AE5;
+          color: $white;
+        }
+      }
+    }
+  }
+  &__content{
+    width: 100%;
+  }
+  &__list{
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    &-item{
+      line-height: 0;
+
+      // & + &{
+      //   margin-top: 10px;
+      // }
+      &:last-child{
+        padding-top: 10px;
+        border-top: 1px solid $mainbg;
+      }
+    }
+  }
+  &__points{
+    margin-bottom: 30px;
+    @include for-md(){
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.profile-more{
+  &__title{
+    font-size: 22px;
+    line-height: 25px;
+    color: #8592AD;
+    margin-bottom: 25px;
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+      position: relative;
+      display: block;
+      padding-left: 10px;
+    }
+    li:before{
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+.card-type{
+  &__head{
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px 5px 0 0;
+    &__name{
+      font-weight: 700;
+    }
+    &--platinum{
+      background: url(../images/platinum-bg.svg) no-repeat center left;
+      background-size: cover;
+      color: $white;
+    }
+  }
+  &__body{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $white;
+
+  }
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &-item{
+      display: flex;
+      align-items: flex-start;
+      & + &{
+        margin-top: 15px;
+      }
+    }
+  }
+  svg{
+    fill: none;
+    stroke: #14181F;
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+  &__name{
+    span{
+      font-weight: 700;
+      color: $red;
+    }
+  }
+  &__mark{
+    font-size: 12px;
+    line-height: 15px;
+    color: #8592AD;
+    & + &{
+      margin-top: 5px;
+    }
+  }
+  &__desc-type{
+    margin-bottom: 20px;
+  }
+  &__footer{
+    margin-top: 1px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $white;
+    i{
+      width: 20px;
+      margin-right: 5px;
+    }
+  }
+}
+.opportunities{
+  &__item{
+    display: flex;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    & + &{
+      border-top: 1px dashed $mainbg;
+    }
+  }
+  &__image-container{
+    height: 120px;
+    width: 120px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid #E0E4EB;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+    img{
+      max-height: 60px;
+      max-width: 100%;
+    }
+  }
+  &__name{
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 15px;
+  }
+  &__desc{
+    margin-bottom: 10px;
+  }
+}
+
+.points{
+  border-radius: 5px;
+
+  &__content{
+    padding: 30px 30px 25px;
+    box-sizing: border-box;
+  }
+  &--purple{
+    background: url(../images/point_bg.jpg) no-repeat left center;
+    background-size: cover;
+    color: $white;
+    width: 100%;
+  }
+  &__title{
+    margin-bottom: 15px;
+  }
+  &__value{
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+.pointer-list{
+  &__row{
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+  &__item-container{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 25%;
+  }
+  &__head{
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #0D1526;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    color: $white;
+    svg{
+      stroke: #B376EF;
+      height: 30px;
+      width: 30px;
+      fill: transparent;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+  }
+  &__counter{
+    font-size: 20px;
+    margin-right: 5px;
+    line-height: 20px;
+  }
+  &__desc{
+    padding-top: 4px;
+  }
+  &__body{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F0F1F5;
+    border-radius: 0 0 5px 5px;
+  }
+}
+.pointer-table{
+  &__item{
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px;
+    box-sizing: border-box;
+    & + &{
+      border-top: 1px dashed $mainbg;
+    }
+    }
+  svg{
+    height: 30px;
+    width: 30px;
+    fill: none;
+    stroke: #8592AD;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  &__value{
+    min-width: 80px;
+    font-weight: 500;
+    color: #801AE5;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  &__date{
+    margin-left: auto;
+  }
+  &__time{
+    color: #8592AD;
+    &:before{
+      content: '•';
+      margin: 0 3px 0 5px;
+    }
+  }
+}
 @include content-active(){
   .card-second__footer{
     flex-direction: column;
@@ -9525,6 +9905,15 @@ body.mm-ocd-opened {
 .recipient{
   &__head{
     display: flex;
+    p:first-child{
+      margin-top: 0;
+    }
+    p:last-child{
+      margin-bottom: 0;
+    }
+    &--column{
+      flex-direction: column;
+    }
     @include for-tiny-tablet(){
       flex-direction: column;
       text-align: center;
@@ -9592,6 +9981,9 @@ body.mm-ocd-opened {
       }
     }
  
+  }
+  &__button{
+    margin-top: 15px;
   }
 }
 
