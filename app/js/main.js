@@ -181,6 +181,11 @@ $('.counter__button--plus').click(function() {
   count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
   $input.val(parseInt(count));
 }); 
+$('.lk-allert__close').click(function() {
+  $(".lk-allert").hide(300)
+}); 
+
+
 // Убираем все лишнее и невозможное при изменении поля
 $('.counter__input').bind("change keyup input click", function() {
   if (this.value.match(/[^0-9]/g)) {
@@ -281,7 +286,7 @@ let el = document.querySelector('.flyBasket__scroll');
 
         $(document).ready(function() {
           $('select').niceSelect();
-          $('.search__form-input').on('focus', function(e) {
+          $('.header .search__form-input').on('focus', function(e) {
             
             $(".search-items").slideDown(300)
             $(".search-items").toggleClass("is-visible")
@@ -290,7 +295,7 @@ let el = document.querySelector('.flyBasket__scroll');
             }, 100);
           })
 
-          $('.search__form-input').on('keypress', function(e) {
+          $('.header .search__form-input').on('keypress', function(e) {
             $(".search-items").slideUp(300)
             $(".live-search").slideDown(300)
            
@@ -314,10 +319,10 @@ let el = document.querySelector('.flyBasket__scroll');
 
           
         //  клик снаружи элемента 
-            if($(".search__form-input").hasClass("is-focus")){
+            if($(".header .search__form-input").hasClass("is-focus")){
               $('.search-items').slideUp();
               $('.live-search').slideUp();
-              $(".search__form-input").removeClass("is-focus")
+              $(".header .search__form-input").removeClass("is-focus")
             }
 
           });
