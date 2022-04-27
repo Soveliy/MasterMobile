@@ -359,38 +359,46 @@
            <!-- end page-navigation-->
            <div class="compare-page">
                <div class="container container--big">
-                <div class="compare-options">
-                    <div class="compare-options__top">
-                        <div class="compare-options__row row">
-                            <select class="select compare-options__select">
+                <div class="settings">
+                    <div class="settings__top">
+                        <div class="settings__row row">
+                            <select class="select settings__select">
                                 <option>Тачскрины (4)</option>
                                 <option>Тачскрины (4)</option>
                             </select>
-                            <a href="#" class="button button--black button--size-medium">Добавить другие товары</a>
-                            <div class="more-options compare-options__more-options">
+                            <a href="#" class="settings__button-link button button--black button--size-medium">Добавить другие товары</a>
+                            <div class="more-options settings__more-options">
                                 <button class="more-options__button"><i class="fa-light fa-ellipsis"></i></button>
+                                <div class="more-options__body">
+                                    <button class="settings__button button ">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        Очистить список
+                                    </button>
+                                </div>
                             </div>
-                            <div class="more-options__body">
-                                <button class="compare-options__button button ">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                    Очистить список
-                                </button>
-                            </div>
+                           
                         </div>
                     </div>
-                    <div class="compare-options__bottom">
-                        <div class="row">
-                            <label class="toggler compare-options__toggler">
+                    <div class="settings__bottom">
+                        <div class="settings__row row">
+                            <label class="toggler settings__toggler">
                                 <input type="checkbox" name="checkbox">
                                 <span class="toggler__checkbox"></span>
                                 <span class="toggler__text">Только отличия</span>
                             </label>
-                            <label class="toggler compare-options__toggler">
+                            <label class="toggler settings__toggler">
                                 <input type="checkbox" name="checkbox">
                                 <span class="toggler__checkbox"></span>
                                 <span class="toggler__text">Только тех. параметры</span>
                             </label>
                         </div>
+                    </div>
+                </div>
+                <div class="compare-help">
+                    <div class="row compare-help__row">
+                        <i class="fa-light fa-chevron-left"></i>
+                        листать свайпом
+                        <i class="fa-light fa-chevron-right"></i>
                     </div>
                 </div>
                 <div class="compare-table">

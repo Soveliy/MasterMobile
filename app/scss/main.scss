@@ -882,6 +882,9 @@ select:invalid {
   flex: 1;
   &--padding-bottom{
     padding-bottom: 50px;
+    @include for-md(){
+      padding-bottom: 15px;
+    }
   }
   &--white{
     background-color: $white;
@@ -929,6 +932,10 @@ select:invalid {
       &--icon-left{
        padding-left: 40px;
        background-color: #F0F1F5;
+       border: 1px solid #F0F1F5;
+       &:focus{
+         border-radius: 5px;
+       }
       }
       &::placeholder{
         color: $light-blue;
@@ -1648,7 +1655,7 @@ select:invalid {
   }
   &__name-container{
     @include for-sm(){
-      margin-top: -5px;
+      // margin-top: -5px;
     }
   }
   &__name{
@@ -3885,12 +3892,12 @@ body.mm-ocd-opened {
   margin-right: 10px;
 }
 .mm-spn a > i{
-  margin-top: -5px;
+  // margin-top: -5px;
   margin-right: 5px;
   width: 25px;
 }
 .mm-spn a > svg{
-  margin-top: -5px;
+  // margin-top: -5px;
   margin-right: 10px;
   width: 20px;
   max-height: 20px;
@@ -4473,8 +4480,8 @@ body.mm-ocd-opened {
     }
     i{
       color: #00B377;
-      margin-left: 3px;
-      margin-top: -5px;
+      // margin-right: 3px;
+      margin-top: -3px;
     }
     &-value{
       color: #8592AD;
@@ -4651,6 +4658,16 @@ body.mm-ocd-opened {
     }
     @include for-sm(){
       flex-wrap: wrap;
+    }
+  }
+}
+.card-tiny.favotires__card-tiny{
+  .card-tiny__image{
+    height: 80px;
+    width: 80px;
+    img{
+      max-height: 80px;
+      max-width: 80px;
     }
   }
 }
@@ -6704,40 +6721,99 @@ body.mm-ocd-opened {
   }
 }
 .more-options{
+  position: relative;
   &__button{
-    display: flex;
-    height: 40px;
-    width: 60px;
-    border-radius: 3px;
-    box-sizing: border-box;
-    border: 1px solid #C2C9D6;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: #14181F;
-    background-color: $white;
-    
+   
+      display: none;
+      @include for-sm(){
+        display: flex;
+        height: 40px;
+        width: 60px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        border: 1px solid #C2C9D6;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #14181F;
+        background-color: $white;
+      }
+  }
+  &__body{
+    @include for-sm(){
+      display: none;
+      margin-top: 10px;
+      box-shadow: 0px 0px 10px 0 rgba(224, 228, 235, 1);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 156px !important;
+      border-radius: 3px;
+      z-index: 50;
+      &:before{
+        content: '';
+        position: absolute;
+        top: -5px;
+        height: 10px;
+        width: 10px;
+        transform: rotate(45deg);
+        right: 23px;
+        background-color: $white;
+        box-shadow: 0px 0px 10px 0 rgba(224, 228, 235, 1);
+        z-index: -1;
+      }
+    }
   }
 }
-  .compare-options{
+.compare-help{
+  display: none;
+  @include for-md(){
+    display: block;
+    margin: 15px 0;
+  }
+
+  &__row{
+    justify-content: space-between;
+    color: #8592AD;
+    align-items: center;
+  }
+}
+  .settings{
     &__more-options{
-      display: none;
-      @include for-md(){
-        display: block;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    &__search{
+      width: 100%;
+      margin-right: 20px;
+    }
+    &__row{
+      @include for-sm(){
+        flex-wrap: wrap;
       }
     }
   border-radius: 3px;
   background-color: $white;
   padding: 30px;
   box-sizing: border-box;
+  @include for-sm(){
+    padding: 15px;
+  }
 
   &__top{
     margin-bottom: 20px;
+    @include for-md(){
+      margin-bottom: 30px;
+    }
   }
   &__select{
     max-width: 300px;
     width: 100%;
     margin-right: 20px;
+    @include for-sm(){
+      max-width: 100%;
+      margin: 0 0 15px;
+    }
   }
   &__button{
     margin-left: auto;
@@ -6748,8 +6824,16 @@ body.mm-ocd-opened {
     align-items: center;
     justify-content: center;
     border-radius: 3px;
-    padding: 10px 23px;
+    padding: 11.5px 23px;
     box-sizing: border-box;
+    @include for-sm(){
+      background-color: $white;
+      padding:10px 0;
+      color: #14181F;
+      margin-left: 0;
+      width: 100%;
+      justify-content: center;
+    }
     i{
       margin-right: 4px;
     }
@@ -6758,9 +6842,19 @@ body.mm-ocd-opened {
     }
 
   }
+  &__button-link{
+    @include for-sm(){
+      width: calc(100% - 80px);
+      justify-content: center;
+    }
+  }
   &__toggler{
     & + &{
       margin-left: 20px;
+      @include for-sm(){
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -6768,6 +6862,9 @@ body.mm-ocd-opened {
   position: relative;
   overflow: hidden;
   margin-top: 30px;
+  @include for-md(){
+    margin-top: 0;
+  }
   &_arrow{
     position: absolute;
     width: 90px;
@@ -6812,6 +6909,9 @@ body.mm-ocd-opened {
     padding-bottom: 54px;
     box-sizing: border-box;
     border-radius: 3px 0 0 3px;
+    @include for-md(){
+      display: none;
+    }
   }
   &__right{
     width: calc(100% - 260px);
@@ -6820,9 +6920,24 @@ body.mm-ocd-opened {
     overflow: hidden;
     border-radius: 0 3px 3px;
     background-color: $white;
+    @include for-md(){
+      width: 100%;
+      border-radius: 3px;
+      padding-bottom: 0;
+      .preview-item__rating{
+        flex-direction: row;
+        margin-top: 10px;
+      }
+      .preview-item__rating-counter{
+        margin-left: 5px;
+      }
+    }
   }
   &__scrollbar{
     margin: 20px 20px 0;
+    @include for-md(){
+      display: none;
+    }
 
   }
   &__info{
@@ -6858,15 +6973,24 @@ body.mm-ocd-opened {
     min-width: 200px;
     width: 200px;
     box-sizing: border-box;
-    // &:before{
-    //   content: attr(data-text);
-    // }
+    border-bottom: 1px dashed $mainbg;
+    &:before{
+      @include for-md(){
+        content: attr(data-text);
+        display: block;
+        color: #8592AD;
+        margin-bottom: 10px;
+      }
+    }
   }
+  
   &__option{
  
-    border-bottom: 1px dashed $mainbg;
+   
     padding: 7px 20px;
-    box-sizing: border-box;
+  
+
+   
   }
 }
 .reviews{
@@ -8193,6 +8317,10 @@ body.mm-ocd-opened {
     @include for-md(){
       flex-direction: column;
     }
+  }
+  &__favorites{
+    margin-top: 30px;
+    border-radius: 3px;
   }
   &__item{
     background-color: $white;

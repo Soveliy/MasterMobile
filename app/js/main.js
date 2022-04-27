@@ -562,7 +562,13 @@ let el = document.querySelector('.flyBasket__scroll');
          
         });
 
-        $(".card__head-close").click(function(){
+        $(".more-options__button").click(function(){
+          $(this).next().toggle(300)
+      
+
+        })
+
+          $(".card__head-close").click(function(){
           $(this).toggleClass("js-active");
           $(this).closest(".card__item").find(".card__body").slideToggle();
 
