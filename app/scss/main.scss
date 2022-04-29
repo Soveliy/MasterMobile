@@ -988,6 +988,12 @@ select:invalid {
       }
     }
   }
+  &__button-more{
+    width: 100%;
+    margin-top: 15px;
+    justify-content: center;
+    font-weight: 400;
+  }
 }
 .live-search{
   display: none;
@@ -10169,6 +10175,71 @@ body.mm-ocd-opened {
   }
 }
 
+.blog{
+  &__left{
+    max-width: 300px;
+    width: 100%;
+    flex-shrink: 0;
+    margin-right: 30px;
+  }
+  &__element{
+    border-radius: 5px;
+    background-color: $white;
+    padding: 30px;
+    box-sizing: border-box;
+    @include for-md(){
+      padding: 15px;
+    }
+    & + &{
+      margin-top: 30px;
+      @include for-md(){
+        margin-top: 15px;
+      }
+    }
+  }
+
+}
+.block-category{
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &-item + &-item{
+      margin-top: 20px;
+    }
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    color: #14181F;
+    &-icon{
+      height: 30px;
+      width: 30px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+  }
+}
+.subscription{
+  &__image{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  &__desc{
+    margin: 30px auto;
+    text-align: center;
+    max-width: 70%;
+  }
+  &__button{
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 .order{
   .recipient__button{
