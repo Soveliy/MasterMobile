@@ -11,6 +11,20 @@ $('.catalog-menu__exit-button').on('click', function(e) {
   $('.content').toggleClass('content--active');
   $(".header__button--catalog-js").show(300)
 })
+$('.blog-item__like').on('click', function(e) {
+ $(this).toggleClass("is-liked")
+})
+$('.share__button').on('click', function(e) {
+  $(this).next().slideToggle(300)
+ })
+
+ $('.block-category__title').on('click', function(e) {
+  $(this).next().slideToggle(300)
+  $(this).toggleClass('is-open')
+ })
+
+
+
 // Voice Search
 /* setup vars for our trigger, form, text input and result elements */
 const $voiceTrigger = $(".search__form-voice-button");
