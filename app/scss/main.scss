@@ -8978,10 +8978,18 @@ body.mm-ocd-opened {
   }
   &__title{
     margin-bottom: 15px;
+  
+    &--lit{
+      line-height: 14px;
+    }
   }
   &__value{
     font-size: 50px;
     line-height: 50px;
+    &--lit{
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 .pointer-list{
@@ -10326,6 +10334,45 @@ body.mm-ocd-opened {
     }
   }
 }
+.reg-info{
+  &__allert{
+    display: flex;
+    align-items: flex-start;
+    &-right{
+      color: #8592AD;
+      font-style: italic;
+      line-height: 21px;
+      margin-top: -2px;
+    }
+
+    &-icon{
+      font-size: 21px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-shrink: 0;
+      margin-right: 15px;
+      color: #8592AD;
+      }
+    
+  }
+  &__list{
+    padding: 0;
+    margin: 30px 0 0 0;
+    list-style: none;
+    li{
+      display: flex;
+    }
+  }
+  &__title{
+    color: #8592AD;
+    min-width: 70px;
+    margin-right: 45px;
+  }
+}
 .blog{
   padding-bottom: 40px;
   @include for-md(){
@@ -11044,6 +11091,18 @@ body.mm-ocd-opened {
   .recipient__button{
     margin-top: 0;
   }
+  &__points{
+    margin-bottom: 30px;
+    @include for-md(){
+      margin-bottom: 15px;
+    }
+  }
+  &__card-type{
+    margin-bottom: 30px;
+    @include for-md(){
+      margin-bottom: 15px;
+    }
+  }
   padding-bottom: 60px;
   &__left{
     width: calc(100% - 500px);
@@ -11110,6 +11169,28 @@ body.mm-ocd-opened {
     &-right{
       span{
         color: #8592AD;
+      }
+    }
+    &-links{
+      @include for-sm(){
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+      }
+    }
+    &-link{
+      i{
+        margin-right: 5px;
+      }
+      & + &{
+        margin-left: 30px;
+        @include for-sm(){
+          margin-left: 0;
+          margin-top: 5px;
+        }
+      }
+      &--purple{
+        color: #801AE5;
       }
     }
   }
@@ -11280,6 +11361,74 @@ body.mm-ocd-opened {
     }
   }
 }
+.bonuses-form{
+  display: flex;
+  &__coin-btn{
+    background-color: #801AE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    transition: .3s;
+    &:hover{
+      opacity: .8;
+    }
+
+  }
+  &__input{
+    margin: 0 10px;
+    border-radius: 3px;
+    border: 1px solid #F0F1F5;
+    background-color: #F0F1F5;
+    box-sizing: border-box;
+    width: 80px;
+    transition: .3s;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    &::placeholder{
+      transition: .3s;
+    }
+    &:focus{
+      background-color: $white;
+      &::placeholder{
+        opacity: 0;
+      }
+    }
+  }
+  &__button{
+    background-color: #801AE5;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 15px;
+    color: $white;
+    padding: 7px 25px;
+    transition: .3s;
+    &:hover{
+      opacity: .9;
+    }
+    &:disabled{
+      opacity: .5;
+    }
+    
+  }
+  &__cancel{
+    background-color: #F2E8FC;
+    color: #801AE5;
+    padding: 7.5px 20px;
+    width: 300px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    transition: .3s;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
 .order-table{
   @include for-sm(){
     position: relative;
@@ -11313,6 +11462,11 @@ body.mm-ocd-opened {
 .order-item{
   display: flex;
   padding: 20px 0;
+  &:hover{
+    .order-item__bonuses-line{
+      opacity: 1;
+    }
+  }
   box-sizing: border-box;
   & + &{
     border-top: 1px dashed $mainbg;
@@ -11336,8 +11490,14 @@ body.mm-ocd-opened {
     margin-left: auto;
     &-top{
       display: flex;
+      justify-content: flex-end;
     }
    
+  }
+  &__bonuses-line{
+    margin-top: 10px;
+    opacity: 0;
+    transition: .3s;
   }
   &__symbol{
     width: 20px;
@@ -11347,6 +11507,12 @@ body.mm-ocd-opened {
     justify-content: center;
     color: #8592AD;
     margin: 0 8px;
+  }
+
+  &__price-full{
+    &--purple{
+      color: #801AE5;
+    }
   }
 }
 .order-details{
@@ -11400,6 +11566,9 @@ body.mm-ocd-opened {
       }
       &--purple{
         color: #801AE5;
+      }
+      &--red{
+        color: $red;
       }
       &--big{
         font-size: 30px;

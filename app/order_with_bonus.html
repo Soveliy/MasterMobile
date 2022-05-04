@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Корзина</title>
+    <title>Оформление заказа с бонусами</title>
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -407,41 +407,24 @@
 
                                     </div>
                                     <div class="order__body">
-                                        <div class="recipient">
-                                            <div class="recipient__head">
-                                                <a href="#" class="recipient__button button button--round-type-2">Войти в аккаунт</a>
-                                                <div class="recipient__head-right">
-                                                    Или оформить как новый покупатель
-                                                   
-                                                    <div class="recipient__head-desc">
-                                                        Здесь какой-то текст (наверно)
-                                                    </div>  
+                                        <div class="reg-info">
+                                            <div class="reg-info__allert">
+                                                <i class="fa-light fa-circle-exclamation reg-info__allert-icon"></i>
+                                                <div class="reg-info__allert-right">
+                                                    Контактные данные всегда можно изменить в <a href="#">настройках профиля</a>. Эти данные могут быть использованы для этого и последующих заказов. Их редактирование НЕ влечет за собой изменение адресатов в уже совершенных заказах.
                                                 </div>
                                             </div>
-                                            <div class="recipient__body">
-                                                <form action="#" class="recipient__form">
-                                                    <div class="recipient__form-item">
-                                                        <input type="text" class="recipient__form-input" name="name" type="text" placeholder="Имя и Фамилия">
-                                                        <label class="recipient__form-label">На это имя будут оформлены все документы</label>
-                                                    </div>
-                                                    <div class="recipient__form-item">
-                                                        <input type="text" class="recipient__form-input" name="email" type="email" placeholder="E-mail">
-                                                        <label class="recipient__form-label">На этот почтовый ящик пришлем подробности заказа</label>
-                                                    </div>
-                                                    <div class="recipient__form-item">
-                                                        <input type="text" class="recipient__form-input recipient__form-input--phone" name="text" type="text" placeholder="Телефон">
-                                                        <label class="recipient__form-label">Контактный телефон только на случай вопросов по вашему заказу</label>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <label class="checkbox">
-                                                <input type="checkbox">
-                                                <span class="checkbox__icon">
-                                                    <i class="fa-regular fa-check"></i>
-                                                </span>
-                                                Зарегистрировать меня?
-                                                
-                                            </label>
+                                            <ul class="reg-info__list">
+                                                <li>
+                                                    <span class="reg-info__title">Имя:</span>Саша Серая
+                                                </li>
+                                                <li>
+                                                    <span class="reg-info__title">Телефон:</span>8-800-200-23-16
+                                                </li>
+                                                <li>
+                                                    <span class="reg-info__title">Email:</span>shashka@mm.ru
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -843,7 +826,11 @@
                                             Способ оплаты
                                         </div>
                                         <div class="order__head-right">
-                                            <a href="#">Изменить корзину</a>
+                                            <div class="order__head-links">
+                                                <a class="order__head-link order__head-link--purple" href="#"><i class="fa-solid fa-coin"></i>Применить баллы </a>
+                                                <a class="order__head-link" href="#"><i class="fa-solid fa-pencil"></i>Изменить корзину</a>
+                                            </div>
+                                           
                                         </div>
 
                                     </div>
@@ -917,6 +904,17 @@
 
                                                            
                                                         </div>
+                                                        <div class="order-item__bonuses-line">
+                                                            <div class="bonuses-form">
+                                                                <button class="bonuses-form__coin-btn"><i class="fa-solid fa-coin"></i></button>
+                                                                <input type="text" class="bonuses-form__input" placeholder="0">
+                                                                <button class="bonuses-form__button" disabled>Использовать баллы</button>
+
+                                                            </div>
+                                                                
+                                                              
+                                                       
+                                                        </div>
                                                        
                                                     </div>
 
@@ -945,9 +943,20 @@
                                                             <div class="order-item__symbol">
                                                                 =
                                                             </div>
-                                                            <b>12 000 ₽</b>
+                                                            <b class="order-item__price-full order-item__price-full--purple">0</b>
 
                                                            
+                                                        </div>
+                                                        <div class="order-item__bonuses-line">
+                                                            <div class="bonuses-form">
+                                                                <button class="bonuses-form__cancel">
+                                                                    Отменить <b>760</b> баллов
+                                                                </button>
+
+                                                            </div>
+                                                                
+                                                              
+                                                       
                                                         </div>
                                                        
                                                     </div>
@@ -960,6 +969,54 @@
                                 </div>
                             </div>
                             <div class="order__right">
+                                <div class="points order__points points--purple">
+                            
+                                    <div class="points__content">
+                                        <div class="points__title points__title--lit">
+                                            Сейчас у вас баллов:
+                                        </div>
+                                        <div class="points__value points__value--lit">
+                                            1 200
+                                        </div>
+                                    </div>
+                                   </div>
+                                <div class="order__card-type  card-type">
+                                    <div class="card-type__head card-type__head--platinum">
+                                        <div class="card-type__name">Platinum card</div>
+                                        <div class="card-type__number">Номер: #000001</div>
+                                    </div>
+                                    <div class="card-type__body">
+                                        <div class="card-type__desc-type">
+                                         Сейчас вы являетесь обладетелем клиентской карты <b>Platinum</b>, которая предлагает такие бонусы:
+                                        </div>
+                                        <ul class="card-type__list">
+                                            <li class="card-type__list-item">
+                                             <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#truck-2"></use></svg>
+                                             <div class="card-type__right">
+                                                 <div class="card-type__name"><span>Бесплатная доставка</span>:</div>
+                                                 <div class="card-type__desc">доступно 5 из 7</div>
+                                                 <div class="card-type__mark">*Только по Москве в пределах
+                                                     МКАД</div>
+                                                 <div class="card-type__mark">*Для заказов суммой от 5 000 ₽</div>
+                                             </div>
+                                            </li>
+                                            <li class="card-type__list-item">
+                                             <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#shield"></use></svg>
+                                             <div class="card-type__right">
+                                                 <div class="card-type__name"><span>Гарантия на возврат/обмен</span>:</div>
+                                                 <div class="card-type__desc">5 месяцев
+                                                 </div>
+                                                
+                                                 <div class="card-type__mark">*При условии соблюдения <a href="#">регламента</a></div>
+                                             </div>
+                                            </li>
+                                        </ul>
+                                      
+                                    </div>
+                                    <div class="card-type__footer">
+                                     <a href="#">  <i class="fa-solid fa-credit-card"></i> Подробней о картах</a>
+                                    </div>
+                                </div>
                                 <div class="order__item">
                                     <div class="order__final-coast final-coast">
                                         <ul class="final-coast__list">
@@ -969,6 +1026,22 @@
                                                 </span>
                                                 <span class="final-coast__item-value final-coast__item-value--bold final-coast__item-value--medium">
                                                     60 906 ₽
+                                                </span>
+                                            </li>
+                                            <li class="final-coast__item">
+                                                <span class="final-coast__item-title final-coast__item-title--grey">
+                                                    Бонусные баллы
+                                                </span>
+                                                <span class="final-coast__item-value final-coast__item-value--bold final-coast__item-value--red">
+                                                    434 ₽
+                                                </span>
+                                            </li>
+                                            <li class="final-coast__item">
+                                                <span class="final-coast__item-title final-coast__item-title--grey">
+                                                    Оптовая скидка
+                                                </span>
+                                                <span class="final-coast__item-value final-coast__item-value--bold final-coast__item-value--red">
+                                                    434 ₽
                                                 </span>
                                             </li>
                                             <li class="final-coast__item">
@@ -1009,7 +1082,7 @@
                                             
                                         </label>
                                         <div class="order-details__buttons">
-                                          <button class="button button--size-big button--default button--shadow-type-2">Подтвердить заказ</button>
+                                          <button class="button button--size-big button--default button--shadow-type-2">Подтвердить заказ и перейти к оплате</button>
                                           <button class="button button--size-big button--round-type-3">Сохранить данные и отложить заказ</button>
                                         </div>
                                     </div>

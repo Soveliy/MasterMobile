@@ -320,6 +320,18 @@ let el = document.querySelector('.flyBasket__scroll');
             $(".live-search").slideDown(300)
            
           })
+
+          $('.bonuses-form__input').on('keyup', function(e) {
+           setTimeout(() => {
+            if ($(this).val() == 0) {
+              $(this).next().attr("disabled", true);
+            } else {
+              $(this).next().removeAttr("disabled");
+            }
+           }, 100);
+          })
+
+      
         
 
           
