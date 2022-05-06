@@ -201,13 +201,13 @@ $('.lk-allert__close').click(function() {
 
 
 // Убираем все лишнее и невозможное при изменении поля
-$('.counter__input').bind("change keyup input click", function() {
+$('.counter__input,.pagination__input').bind("change keyup input click", function() {
   if (this.value.match(/[^0-9]/g)) {
       this.value = this.value.replace(/[^0-9]/g, '');
   }
-  if (this.value == "") {
-      this.value = 1;
-  }
+  // if (this.value == "") {
+  //     this.value = 1;
+  // }
   if (this.value > parseInt($(this).data('max-count'))) {
       this.value = parseInt($(this).data('max-count'));
   }    

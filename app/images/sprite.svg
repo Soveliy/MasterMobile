@@ -169,7 +169,7 @@
   <symbol viewBox="0 0 46 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" id="lit-logo">
     <g transform="matrix(1,0,0,1,-60,-557)">
         <g transform="matrix(3.68865,0,0,4.31977,-861.505,-13946.4)">
-            <rect x="233.556" y="3228.51" width="439.185" height="152.091" style="fill:transparent;"/>
+            <rect x="233.556" y="3228.51"  style="fill:transparent;"/>
         </g>
         <g>
             <g transform="matrix(0.416278,0,0,0.416278,-149.129,357.21)">
