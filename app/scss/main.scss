@@ -8727,6 +8727,8 @@ body.mm-ocd-opened {
   }
 }
 .my-orders-table{
+
+  
   &__head{
     display: flex;
     background-color: #0D1526;
@@ -8787,6 +8789,10 @@ body.mm-ocd-opened {
     padding: 20px 30px;
     box-sizing: border-box;
     // align-items: flex-start;
+
+    & + &{
+      border-top: 1px dashed $mainbg;
+    }
   }
   &__info{
     display: flex;
@@ -8809,6 +8815,7 @@ body.mm-ocd-opened {
   }
   &__buttons{
     display: flex;
+    justify-content: flex-end;
     .button + .button{
       margin-left: 10px;
     }
@@ -8827,7 +8834,7 @@ body.mm-ocd-opened {
     &--dots{
       width: 60px;
     }
-    &--print{
+    &--print,&--link{
       width: 40px;
     }
 
@@ -8839,6 +8846,53 @@ body.mm-ocd-opened {
   &__desc{
     font-size: 12px;
     line-height: 15px;
+  }
+  &__params-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+  &__param{
+    i{
+      color: $white;
+      background-color: #8592AD;
+      padding: 1px;
+      margin-right: 5px;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    &-name{
+      color: #8592AD;
+    }
+    &-value{
+      &--green{
+        font-weight: 700;
+        color: #00B277;
+      }
+    }
+  }
+  &__reviews{
+    &-item{
+      display: flex;
+      // justify-content: space-between;
+    }
+    &-title{
+      color: #8592AD;
+      min-width: 80px;
+      margin-right: 4px;
+    }
+    &-value{
+      &--red{
+        color: #FF0040;
+      }
+    }
+  }
+}
+.my-orders__body--reviews{
+  .my-orders-table__head-item:first-child,.my-orders-table__col:first-child{
+    width: 580px;
   }
 }
 .lk-allert{
