@@ -23,6 +23,12 @@ $resolution2: 320;
   @mixin for-big {
     @media (max-width: 1500px) { @content; }
   }
+  @mixin for-big-min {
+    @media (max-width: 1550px) and (max-width: 1401px) { @content; }
+  }
+  @mixin content-active-1450{
+    @media (max-width: 1450px) { @content; }
+  }
   @mixin content-active-1400 {
     @media (max-width: 1400px) and (min-width:1024px) { @content; }
   }

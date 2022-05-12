@@ -58,7 +58,49 @@ if (window.SpeechRecognition) {
 }
 
 jQuery(document).ready(function(){
+  // Решение собственной функции масштабирования в Safari: предотвращение двойного щелчка для увеличения
+// var lastTime = 0;
+// document.addEventListener('touchstart', function(event) {
+//     if (event.touches.length > 1) {
+//         event.preventDefault();
+//     }
+// });
+// document.addEventListener('touchend', function(event) {
+//     var nowTime = (new Date()).getTime();
+//     if (nowTime - lastTime <= 100) {
+//         event.preventDefault();
+//     }
+//     lastTime = nowTime;
+// }, false);
 
+
+// $(function () {
+//   if (!(/iPad|iPhone|iPod/.test(navigator.userAgent))) return
+//   $(document.head).append(
+//     '<style>*{cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0)}</style>'
+//   )
+//   $(window).on('gesturestart touchmove', function (evt) {
+//     if (evt.originalEvent.scale !== 1) {
+//       evt.originalEvent.preventDefault()
+//       document.body.style.transform = 'scale(1)'
+//     }
+//   })
+// })
+
+ // Решение собственной функции масштабирования Safari: предотвращение масштабирования двумя пальцами
+// document.addEventListener('gesturestart', function(event) {
+//     event.preventDefault();
+// });
+
+
+
+$(window).bind('gesturestart touchmove', function(event) {
+  event = event.originalEvent || event;
+  if (event.scale !== 1) {
+       event.preventDefault();
+       document.body.style.transform = 'scale(1)'
+  }
+});
     /* Trigger listen event when our trigger is clicked */
     $voiceTrigger.on('click touch', listenStart);
 });

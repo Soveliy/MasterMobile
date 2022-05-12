@@ -182,6 +182,23 @@
     </g>
 </symbol>
 
+<symbol id="icon-info" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <circle cx="12" cy="12" r="10" style="fill:none;stroke-width:1px;"/>
+    <path d="M12,16L12,12" style="fill:none;fill-rule:nonzero;stroke-width:1px;"/>
+    <path d="M12,8L12.01,8" style="fill:none;fill-rule:nonzero;stroke-width:1px;"/>
+</symbol>
+
+<svg id="icon-clock" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g>
+        <path d="M20.932,13.432L20.932,13.432C20.106,18.331 15.466,21.633 10.567,20.807C5.668,19.981 2.366,15.341 3.192,10.442C3.829,6.664 6.789,3.704 10.567,3.067" style="fill:none;fill-rule:nonzero;stroke-width:1px;"/>
+        <path d="M20.496,8.799C20.693,9.329 20.839,9.876 20.933,10.433" style="fill:none;fill-rule:nonzero;stroke-width:1px;"/>
+        <path d="M19.002,6.197C18.641,5.76 18.24,5.359 17.803,4.998" style="fill:none;fill-rule:nonzero;stroke-width:1px;"/>
+        <path d="M15.201,3.505C14.671,3.307 14.124,3.161 13.567,3.067" style="fill:none;fill-rule:nonzero;stroke-width:1px;"/>
+        <path d="M16,12.391L11.609,12.391L11.609,7" style="fill:none;fill-rule:nonzero;stroke-width:1px;"/>
+    </g>
+    <rect x="0" y="0" width="24" height="24" style="fill:none;stroke:none; fill-rule:nonzero;"/>
+</svg>
+
 
 </defs>
 </svg>
