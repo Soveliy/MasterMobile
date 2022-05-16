@@ -9696,6 +9696,53 @@ body.mm-ocd-opened {
     }
   }
 }
+.text-page{
+  &__content{
+    min-width: 0;
+  }
+  &__menu{
+    > ul{
+      padding: 0;
+    }
+  }
+  &__left{
+    max-width: 300px;
+    flex-shrink: 0;
+    margin-right: 30px;
+    width: 100%;
+    @include for-md(){
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  &__element{
+    border-radius: 5px;
+    background-color: $white;
+    padding: 30px;
+    box-sizing: border-box;
+    @include for-md(){
+      padding: 15px;
+    }
+
+    &--mobile{
+      display: none;
+      @include for-md(){
+        display: block;
+      }
+    }
+    &--desktop{
+      @include for-md(){
+        display: none;
+      }
+    }
+    & + &{
+      margin-top: 30px;
+      @include for-md(){
+        margin-top: 15px;
+      }
+    }
+  }
+}
 @include content-active(){
   .card-second__footer{
     flex-direction: column;
@@ -12508,3 +12555,4 @@ content: '';
           font-size: 16px;
       }
   }
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g>
+        <path d="M18.704,18.296C19.323,18.915 19.323,19.918 18.704,20.536C18.085,21.155 17.082,21.155 16.464,20.536C15.845,19.917 15.845,18.914 16.464,18.296C17.083,17.677 18.086,17.677 18.704,18.296" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M7.704,18.296C8.323,18.915 8.323,19.918 7.704,20.536C7.085,21.155 6.082,21.155 5.464,20.536C4.846,19.917 4.845,18.914 5.464,18.296C6.083,17.678 7.085,17.677 7.704,18.296" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M10,4L14,4C14.552,4 15,4.448 15,5L15,15L2,15" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M5,19.416L3,19.416C2.448,19.416 2,18.968 2,18.416L2,13" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M15,7L19.323,7C19.732,7 20.1,7.249 20.251,7.629L21.857,11.643C21.951,11.879 22,12.131 22,12.385L22,18.333C22,18.885 21.552,19.333 21,19.333L19.169,19.333" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M16,19.42L8.17,19.42" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M22,14L18,14L18,10L21.2,10" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M2,4L7,4" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M2,7L5,7" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M3,10L2,10" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+    </g>
+    <rect x="0" y="0" width="24" height="24" style="fill:none;fill-rule:nonzero;"/>
+</svg>
