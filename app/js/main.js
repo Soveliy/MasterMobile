@@ -23,8 +23,17 @@ $('.share__button').on('click', function(e) {
   $(this).toggleClass('is-open')
  })
 
+ $('.text-page-menu__item-parent a').on('click', function(e) {
+  e.preventDefault();
+  $(this).parent().toggleClass("text-page-menu__item-parent--is-active");
+  $(this).next().slideToggle(300);
+})
+$('.text-page-menu__button').on('click', function(e) {
 
+  $(this).next().slideToggle(300);
+})
 
+ 
 // Voice Search
 /* setup vars for our trigger, form, text input and result elements */
 const $voiceTrigger = $(".search__form-voice-button");
