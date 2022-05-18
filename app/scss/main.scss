@@ -7893,7 +7893,7 @@ body.mm-ocd-opened {
     font-size: 14px;
     line-height: 17px;
     color: #14181F;
-    padding: 12px 20px 8px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     transition: .3s;
@@ -7907,6 +7907,15 @@ body.mm-ocd-opened {
       margin-left: 0;
       padding-left: 10px;
     }
+  }
+}
+.text-page-menu{
+  border-radius: 3px;
+  background-color: $white;
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 }
 .docs{
@@ -8011,7 +8020,7 @@ body.mm-ocd-opened {
     }
     &--type-1{
       .offers__option-wrap{
-        padding: 8px 20px 5.5px;
+        padding: 7px 20px;
         color: #0D1526; 
       }
       input:checked + .offers__option-wrap{
@@ -8687,7 +8696,7 @@ body.mm-ocd-opened {
       align-items: center;
       color: #14181F;
       transition: .3s;
-      padding: 12px 20px 8px;
+      padding: 10px 20px;
       line-height: 20px;
       box-sizing: border-box;
       &--current{
