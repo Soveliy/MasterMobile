@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Бонусные баллы</title>
+    <title> Контакты и адреса </title>
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
@@ -153,7 +153,7 @@
                         <span class="button__icon">
                         <svg class="icon icon-menu-show2"><use xlink:href="images/sprite.svg#icon-menu-show2"></use></svg>
                         </span>
-                        Каталог
+                        Контакты
                    </a>
                    <div class="header__logo logo">
                     <img src="images/logo.svg" alt="">
@@ -338,152 +338,256 @@
                                 <li class="breadcrumbs__list-item">
                                     <a href="/" class="breadcrumbs__link">Главная </a>
                                 </li>  
-                               
+                            
                                 <li class="breadcrumbs__list-item">
-                                    <span class="breadcrumbs__link"> Профиль </span>
+                                    <span class="breadcrumbs__link">  Контакты и адреса </span>
                                 </li>
                             </ul>
                         </nav>
                 
                 </div>
-            
+                <h1 class="page-navigation__title">
+                    Контакты и адреса 
+                </h1>
             </div>
             
            </div>
-           <!--end page-navigation-->
-           <div class="profile">
-               <div class="container container--big">
-                   <div class="profile__row row">
-                      <div class="profile__content">
-                          <div class="profile__item">
-                            Уже зарегистрированы? <a href="#">Войдите в личный кабинет</a>
-                          </div>
-                        <div class="profile__item">
-                            <div class="recipient">
-                                <div class="recipient__head recipient__head--column">
-                                  <p>
-                                      Зарегистрируйтесь, чтобы использовать все возможности личного кабинета: отслеживание заказов, настройку подписки, связи с социальными сетями и другие.
-                                  </p>
-                                  <p>
-                                      Мы никогда и ни при каких условиях не разглашаем личные данные клиентов. Контактная информация будет использована только для оформления заказов и более удобной работы с сайтом.
-                                  </p>
+            <div class="contacts">
+                <div class="container container--big">
+                    <div class="contacts__row row">
+                        <div class="contacts__left">
+                            <div class="contacts__head">
+                                <select class="select contacts__select">
+                                    <option value="">Все зоны</option>
+                                    <option value="">Все зоны</option>
+                                    <option value="">Все зоны</option>
+                                </select>
+                                <input type="text" class="contacts__input" placeholder="Поиск по ключевым словам">
+                            </div>
+                            <div class="contacts__items">
+                                <div class="contacts__item">
+                                    <div class="contacts__image">
+                                        <img src="images/contacts/1.png" alt="">
+                                    </div>
+                                    <div class="contacts__item-right">
+                                        <div class="contacts__item-name">Центральный офис</div>
+                                        <div class="contacts__item-info">
+                                            <span><i class="fa-solid fa-building"></i> Представительство - </span> г. Москва, ул. Барклая 8
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="recipient__body">
-                                    <form action="#" class="recipient__form">
-                                        <div class="recipient__form-item">
-                                            <input type="text" class="recipient__form-input" name="name" placeholder="Имя и Фамилия">
-                                            <label class="recipient__form-label">На это имя будут оформлены все заказы.</label>
+                                <div class="contacts__item">
+                                    <div class="contacts__image">
+                                        <img src="images/contacts/2.png" alt="">
+                                    </div>
+                                    <div class="contacts__item-right">
+                                        <div class="contacts__item-name">Центральный офис</div>
+                                        <div class="contacts__item-info">
+                                            <span><i class="fa-solid fa-store"></i> Магазин - </span>  Багратионовский проезд, д.7, корп.2, пав. С2-012А
                                         </div>
-                                        <div class="recipient__form-item">
-                                            <input type="text" class="recipient__form-input" name="email" placeholder="E-mail">
-                                            <label class="recipient__form-label">На этот почтовый ящик пришлем подробности заказа.</label>
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__image">
+                                        <img src="images/contacts/3.png" alt="">
+                                    </div>
+                                    <div class="contacts__item-right">
+                                        <div class="contacts__item-name">Центральный офис</div>
+                                        <div class="contacts__item-info">
+                                            <span><i class="fa-solid fa-store"></i> Магазин - </span>  Багратионовский проезд, д.7, корп.2, пав. С2-012А
                                         </div>
-                                        <div class="recipient__form-item">
-                                            <input type="text" class="recipient__form-input recipient__form-input--phone" name="text" placeholder="Телефон">
-                                            <label class="recipient__form-label">Контактный телефон только на случай вопросов по вашему заказу.</label>
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__image">
+                                        <img src="images/contacts/4.png" alt="">
+                                    </div>
+                                    <div class="contacts__item-right">
+                                        <div class="contacts__item-name">ТЦ Гранд Юг «Электронный рай»
                                         </div>
-                                        <div class="recipient__form-item">
-                                            <div class="form__item">
-                                                <input type="password" class="recipient__form-input" name="pass" placeholder="Пароль">
-                                                <i class="fa-solid fa-eye showpass-btn"></i>
+                                        <div class="contacts__item-info">
+                                            <span><i class="fa-solid fa-store"></i> Магазин - </span>  Кировоградская улица, 15, пав. В-34, Этаж: 0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__image">
+                                        <img src="images/contacts/5.png" alt="">
+                                    </div>
+                                    <div class="contacts__item-right">
+                                        <div class="contacts__item-name">Радиорынок «Электромир»</div>
+                                        <div class="contacts__item-info">
+                                            <span><i class="fa-solid fa-store"></i> Магазин - </span>  Багратионовский проезд, д.7, корп.2, пав. С2-012А
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__right">
+                            <div class="contacts__map">
+                                <div id="map" class="contacts__map-js"></div>
+                                                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b1433269-e012-46e0-87b6-6f557d18cf2f" type="text/javascript"></script>
+                                                <script>
+                                                     
+                                                 ymaps.ready(function () {
+                                                        var myMap = new ymaps.Map('map', {
+                                                                center: [55.792721, 37.780203],
+                                                                zoom: 15,
+                                                                controls:[],
+                                                            }),
+
+                                                            // Создаём макет содержимого.
+                                                            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                                                            ),
+
+                                                            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                                                                hintContent: 'Собственный значок метки',
+                                                                balloonContent: 'Это красивая метка'
+                                                            }, {
+                                                                // Опции.
+                                                                // Необходимо указать данный тип макета.
+                                                                iconLayout: 'default#image',
+                                                                // Своё изображение иконки метки.
+                                                                iconImageHref: 'images/map_icon.svg',
+                                                                // Размеры метки.
+                                                                iconImageSize: [30, 41],
+                                                                // Смещение левого верхнего угла иконки относительно
+                                                                // её "ножки" (точки привязки).
+                                                                iconImageOffset: [-5, -38]
+                                                            });
+
+                                                           
+                                                         
+
+                                                        myMap.geoObjects
+                                                            .add(myPlacemark)
+                                                          
+                                                    });
+
+                                                </script>
+                            </div>
+                            <div class="contacts__form">
+                                <div class="contacts__form-head">
+                                    Есть вопросы или предложения?
+                                </div>
+                                <div class="contacts-form">
+                                    <div class="contacts-form-adv">
+                                        <div class="row contacts-form-adv__row">
+                                            <div class="contacts-form-adv__item-container">
+                                                <div class="contacts-form-adv">
+                                                    <div class="contacts-form-adv__icon">
+                                                        <img src="images/contacts/phone.svg" alt="">
+                                                    </div>
+                                                    <div class="contacts-form-adv__right">
+                                                        <div class="contacts-form-adv__name">
+                                                            Горячая линия:
+                                                        </div>
+                                                        <div class="contacts-form-adv__link-container">
+                                                            <a href="tel:+79361111550">+7 (936) 1111-550</a>
+                                                           
+                                                        </div>
+                                                        Пн - Пт: 9.00 - 17.00
+                                                    </div>
+                                                </div>
                                             </div>
-                                           
-                                            <label class="recipient__form-label form__input--with-icon">Пароль должен состоять минимум из 6 знаков.</label>
+                                            <div class="contacts-form-adv__item-container">
+                                                <div class="contacts-form-adv">
+                                                    <div class="contacts-form-adv__icon">
+                                                        <img src="images/contacts/mail.svg" alt="">
+                                                    </div>
+                                                    <div class="contacts-form-adv__right">
+                                                        <div class="contacts-form-adv__name">
+                                                            Email:
+                                                        </div>
+                                                        <div class="contacts-form-adv__link-container">
+                                                            <a href="mailto:info@master-mobile.ru">info@master-mobile.ru</a>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="contacts-form-adv__item-container">
+                                                <div class="contacts-form-adv">
+                                                    <div class="contacts-form-adv__icon">
+                                                        <img src="images/contacts/mess.svg" alt="">
+                                                    </div>
+                                                    <div class="contacts-form-adv__right">
+                                                        <div class="contacts-form-adv__name">
+                                                            Мессенджеры:
+                                                        </div>
+                                                        <div class="contacts-form-adv__link-container">
+                                                            Telegram: <a href="#">mastermobile</a>
+                                                        </div>
+                                                        <div class="contacts-form-adv__link-container">
+                                                            WhatsApp: <a href="#">mastermobile</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="recipient__form-item">
-                                            <input type="password" class="recipient__form-input " name="pass_repeat" placeholder="Подтверждение пароля">
-                    
-                                        </div>
-                                    </form>
-                                </div>
-                                <label class="checkbox">
-                                    <input type="checkbox">
-                                    <span class="checkbox__icon">
-                                        <i class="fa-regular fa-check"></i>
-                                    </span>
-                                    Я согласен на <a href="#"> обработку  персональных данных</a>
-                                    
-                                </label>
-                                <button class="recipient__regButton button button--default button--size-medium">
-                                    Зарегистрироваться
-                                </button>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="profile__right-sidebar">
-                          <div class="profile__item">
-                              <div class="profile-more">
-                                  <div class="profile-more__title">
-                                    А ещё у нас тут есть:
-                                  </div>
-                                  <ul>
-                                      <li>Система контроля заказов и отслеживания статусов доставки посылки.</li>
-                                      <li>Программа скидок и бонусных баллов, которая позволит получить приятную цену для товара.</li>
-                                      <li>Прекрасная техническая поддержка по всем вопросам о товарах, логистике, партнерстве и работе магазина в целом.</li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                   </div>
-               </div>
-           </div>
-      
-        <!--end visited-->
-        <div class="tizers">
-            <div class="container container--big">
-                <div class="tizers__row row">
-                    <div class="tizers__item-container">
-                        <div class="tizers__item">
-                            <div class="tizers__item-image-container">
-                                <img src="images/tizersfront/1.svg" alt="" class="tizers__item-image">
-                            </div>
-                            <div class="tizers__item-content">
-                                <div class="tizers__item-title">
-                                    Мы предлагаем:
-                                </div>
-                                <div class="tizers__item-desc">
-                                    Интересные предложения для <br>
-                                    постоянных покупателей
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tizers__item-container">
-                        <div class="tizers__item">
-                            <div class="tizers__item-image-container">
-                                <img src="images/tizersfront/2.svg" alt="" class="tizers__item-image">
-                            </div>
-                            <div class="tizers__item-content">
-                                <div class="tizers__item-title">
-                                    Мы гарантируем:
-                                </div>
-                                <div class="tizers__item-desc">
-                                    Полную исправность и качество <br>
-                                    на продаваемые товары
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tizers__item-container">
-                        <div class="tizers__item">
-                            <div class="tizers__item-image-container">
-                                <img src="images/tizersfront/3.svg" alt="" class="tizers__item-image">
-                            </div>
-                            <div class="tizers__item-content">
-                                <div class="tizers__item-title">
-                                    Мы консультируем:
-                                </div>
-                                <div class="tizers__item-desc">
-                                    И оказываем техподдержку по <br>
-                                    мобильным устройствам
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--end tizers-->
+            <div class="tizers">
+                <div class="container container--big">
+                    <div class="tizers__row row">
+                        <div class="tizers__item-container">
+                            <div class="tizers__item">
+                                <div class="tizers__item-image-container">
+                                    <img src="images/tizersfront/1.svg" alt="" class="tizers__item-image">
+                                </div>
+                                <div class="tizers__item-content">
+                                    <div class="tizers__item-title">
+                                        Мы предлагаем:
+                                    </div>
+                                    <div class="tizers__item-desc">
+                                        Интересные предложения для <br>
+                                        постоянных покупателей
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tizers__item-container">
+                            <div class="tizers__item">
+                                <div class="tizers__item-image-container">
+                                    <img src="images/tizersfront/2.svg" alt="" class="tizers__item-image">
+                                </div>
+                                <div class="tizers__item-content">
+                                    <div class="tizers__item-title">
+                                        Мы гарантируем:
+                                    </div>
+                                    <div class="tizers__item-desc">
+                                        Полную исправность и качество <br>
+                                        на продаваемые товары
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tizers__item-container">
+                            <div class="tizers__item">
+                                <div class="tizers__item-image-container">
+                                    <img src="images/tizersfront/3.svg" alt="" class="tizers__item-image">
+                                </div>
+                                <div class="tizers__item-content">
+                                    <div class="tizers__item-title">
+                                        Мы консультируем:
+                                    </div>
+                                    <div class="tizers__item-desc">
+                                        И оказываем техподдержку по <br>
+                                        мобильным устройствам
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end tizers-->
         </main>
         <footer class="footer">
             <div class="container container--big">
@@ -706,7 +810,7 @@
                             <div class="flyBasket-item__bottom">
                                 <div class="flyBasket-item__one-elem">
                                     <div class="flyBasket-item__coast">400 ₽</div>
-                                    <div class="flyBasket-item__coast-title">цена за  шт.</div>
+                                    <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
                                 </div>
                                 <div class="counter flyBasket-item__counter">
                                     <button class="counter__button counter__button--minus">-</button>
@@ -736,7 +840,7 @@
                             <div class="flyBasket-item__bottom">
                                 <div class="flyBasket-item__one-elem">
                                     <div class="flyBasket-item__coast">400 ₽</div>
-                                    <div class="flyBasket-item__coast-title">цена за  шт.</div>
+                                    <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
                                 </div>
                                 <div class="counter flyBasket-item__counter">
                                     <button class="counter__button counter__button--minus">-</button>
@@ -766,7 +870,7 @@
                                 <div class="flyBasket-item__bottom">
                                     <div class="flyBasket-item__one-elem">
                                         <div class="flyBasket-item__coast">400 ₽</div>
-                                        <div class="flyBasket-item__coast-title">цена за  шт.</div>
+                                        <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
                                     </div>
                                     <div class="counter flyBasket-item__counter">
                                         <button class="counter__button counter__button--minus">-</button>
@@ -796,7 +900,7 @@
                                 <div class="flyBasket-item__bottom">
                                     <div class="flyBasket-item__one-elem">
                                         <div class="flyBasket-item__coast">400 ₽</div>
-                                        <div class="flyBasket-item__coast-title">цена за  шт.</div>
+                                        <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
                                     </div>
                                     <div class="counter flyBasket-item__counter">
                                         <button class="counter__button counter__button--minus">-</button>
@@ -826,7 +930,7 @@
                                 <div class="flyBasket-item__bottom">
                                     <div class="flyBasket-item__one-elem">
                                         <div class="flyBasket-item__coast">400 ₽</div>
-                                        <div class="flyBasket-item__coast-title">цена за  шт.</div>
+                                        <div class="flyBasket-item__coast-title">цена за 1 шт.</div>
                                     </div>
                                     <div class="counter flyBasket-item__counter">
                                         <button class="counter__button counter__button--minus">-</button>
@@ -1114,449 +1218,6 @@
         </ul>
     </nav>
  </div>
-  <!-- modals -->
-  <div class="g-hidden">
-    <div class="b-modal" id="callback-modal">
-        <!-- <div class="b-modal_close arcticmodal-close"></div> -->
-
-        <div class="modal-content">
-            <div class="card-added">
-                <div class="card-added__head">
-                    <div class="card-added__title">
-                        <svg class="icon icon-map-marker">
-                            <use xlink:href="/images/sprite.svg#icon-shopping-cart"></use>
-                        </svg>
-                       <span> Добавлен <a class="card-added__title-link" href="#">1 товар</a> на сумму 129 ₽</span>
-                    </div>
-                    <div class="card-added__close arcticmodal-close">
-                        <svg class="icon icon-close">
-                            <use xlink:href="images/sprite.svg#icon-close"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-added__body">
-                    <div class="card-added-item">
-                        <div class="card-added-item__image-container">
-                            <img src="images/advices/Add.jpg" alt="">
-                        </div>
-                        <div class="card-added-item__right">
-                            <div class="card-added-item__name">
-                                Держатель сим карты (SIM) + карты памяти (MicroSD) для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5 (2016) / A710 Galaxy A7 (2016) (компл. 2 шт.)
-                            </div>
-                            <div class="card-added-item__counter-wrap">
-                                <div class="counter card-added-item__counter">
-                                    <button class="counter__button counter__button--minus">-</button>
-                                    <input type="text" class="counter__input" value="1" data-max-count="20">
-                                    <button class="counter__button counter__button--plus">+</button>
-                                </div>
-                                <span class="card-added-item__symbol">=</span>  <b>129 ₽</b>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-added__advise advise">
-                        <div class="advise__title">
-                            Советуем взглянуть также на эти товары:
-                        </div>
-                        <div class="advise__slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="advise-item">
-                                        <div class="advise-item__top">
-                                            <a href="#" class="advise-item__image-container">
-                                                <img src="images/advices/1.jpg" alt="">
-                                            </a>
-                                            <a href="#" class="advise-item__name">Держатель сим карты (SIM) для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5...</a>
-                                        </div>
-                                        <div class="advise-item__bottom">
-                                            <div class="advise-item__value">
-                                                от 79 ₽
-                                            </div>
-                                            <a href="#" class="advise-item__button button">Подробней</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="advise-item">
-                                        <div class="advise-item__top">
-                                            <a href="#" class="advise-item__image-container">
-                                                <img src="images/advices/2.jpg" alt="">
-                                            </a>
-                                            <a href="#" class="advise-item__name">Шлейф для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5 (2016) / A710 Gal...</a>
-                                        </div>
-                                        <div class="advise-item__bottom">
-                                            <div class="advise-item__value">
-                                                139 ₽
-                                            </div>
-                                            <a href="#" class="advise-item__button button">Подробней</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="advise-item">
-                                        <div class="advise-item__top">
-                                            <a href="#" class="advise-item__image-container">
-                                                <img src="images/advices/3.jpg" alt="">
-                                            </a>
-                                            <a href="#" class="advise-item__name">Коннектор сим карты (SIM) + коннектор карты памяти (MMC) для Samsung A310...</a>
-                                        </div>
-                                        <div class="advise-item__bottom">
-                                            <div class="advise-item__value">
-                                                119 ₽
-                                            </div>
-                                            <a href="#" class="advise-item__button button">Подробней</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                  <div class="swiper-slide">
-                                    <div class="advise-item">
-                                        <div class="advise-item__top">
-                                            <a href="#" class="advise-item__image-container">
-                                                <img src="images/advices/1.jpg" alt="">
-                                            </a>
-                                            <a href="#" class="advise-item__name">Держатель сим карты (SIM) для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5...</a>
-                                        </div>
-                                        <div class="advise-item__bottom">
-                                            <div class="advise-item__value">
-                                                от 79 ₽
-                                            </div>
-                                            <a href="#" class="advise-item__button button">Подробней</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="advise-item">
-                                        <div class="advise-item__top">
-                                            <a href="#" class="advise-item__image-container">
-                                                <img src="images/advices/2.jpg" alt="">
-                                            </a>
-                                            <a href="#" class="advise-item__name">Шлейф для Samsung A310 Galaxy A3 (2016) / A510 Galaxy A5 (2016) / A710 Gal...</a>
-                                        </div>
-                                        <div class="advise-item__bottom">
-                                            <div class="advise-item__value">
-                                                139 ₽
-                                            </div>
-                                            <a href="#" class="advise-item__button button">Подробней</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="advise-item">
-                                        <div class="advise-item__top">
-                                            <a href="#" class="advise-item__image-container">
-                                                <img src="images/advices/3.jpg" alt="">
-                                            </a>
-                                            <a href="#" class="advise-item__name">Коннектор сим карты (SIM) + коннектор карты памяти (MMC) для Samsung A310...</a>
-                                        </div>
-                                        <div class="advise-item__bottom">
-                                            <div class="advise-item__value">
-                                                119 ₽
-                                            </div>
-                                            <a href="#" class="advise-item__button button">Подробней</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="custom-arrow advise__nav-arrow advise__nav-arrow-left swiper-button-prev"></div>
-                            <div class="custom-arrow advise__nav-arrow advise__nav-arrow-right swiper-button-next"></div>
-                            <div class="swiper-scrollbar swiper-scrollbar-custom advise__scrollbar">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal__checkbox">
-                        <label class="checkbox checkbox--type-2">
-                            <input type="checkbox">
-                             <span class="checkbox__icon">
-                                 <i class="fa-regular fa-check"></i>
-                             </span>
-                             Отключить это окно на 24 часа
-                            
-                        </label>
-                    </div>
-                </div>
-                <div class="card-added__footer">
-                    <button class="button button--size-big button--round-type-2 button--shadow" type="submit">Оформить заказ</button>
-                    <a href="#" class="button button--size-big button--round-type-2">Открыть корзину</a>
-                    <button class="button button--size-big button--round-type-2 arcticmodal-close">Закрыть окно</button>
-                </div>
-
-            </div>
-        </div>
-        
-    </div>
-    <div class="b-modal fast-view" id="fast-view">
-        <!-- <div class="b-modal_close arcticmodal-close"></div> -->
-
-        <div class="modal-content">
-           <div class="modal review">
-            <div class="modal__head">
-                <div class="modal__title">
-                    
-                   <span>Hoco C12Q QC 3.0 + кабель Type-C</span>
-                </div>
-                <div class="modal__close arcticmodal-close">
-                    <svg class="icon icon-close">
-                        <use xlink:href="images/sprite.svg#icon-close"></use>
-                    </svg>
-                </div>
-                <div class="card__top-options">
-                    <div class="card__top-options-item">
-                        <div class="card__rating">
-                            <div class="card__rating-value">
-                                <i class="fa-solid fa-star"></i>
-                                4.8
-                            </div>
-                            <span class="card__rating-counter">6 оценок</span>
-                        </div>
-                    </div>
-                    <div class="card__top-options-item">
-                        <div class="card__aviable card__aviable--active">
-                            <i class="fa-light fa-box-check"></i>
-                            В наличии
-                        </div>
-                    </div>
-                    <div class="card__top-options-item">
-                        <div class="card__like-icons card__toFav card__toFav--active">
-                            <i class="fa-solid fa-heart"></i>
-                            В избранные
-
-                        </div>
-                    </div>
-                    <div class="card__top-options-item">
-                        <div class="card__like-icons card__like-icons--toCompare">
-                            <i class="fa-light fa-square-kanban"></i>
-                            Сравнить
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="fast-view__content">
-                <div class="fast-view__row row">
-                    <div class="fast-view__image-gallery image-gallery">
-                        <div class="image-gallery__row row">
-                            <div thumbsSlider class="swiper image-gallery__thumbs">
-                                <div class="swiper-wrapper">
-                                    <div class="image-gallery__thumbs-slide swiper-slide">
-                                        <img src="images/advices/1.jpg" />
-                                    </div>
-                                    <div class="image-gallery__thumbs-slide swiper-slide">
-                                        <img src="images/advices/2.jpg" />
-                                    </div>
-                                    <div class="image-gallery__thumbs-slide swiper-slide">
-                                        <img src="images/advices/3.jpg" />
-                                    </div>
-                                    
-                                </div>
-                                <div
-                                    class="image-gallery__arrow image-gallery__arrow--next swiper-button-next">
-                                    <i class="fa-light fa-angle-down"></i></div>
-                                <div
-                                    class="image-gallery__arrow image-gallery__arrow--right swiper-button-prev">
-                                    <i class="fa-light fa-angle-up"></i></div>
-                            </div>
-                            <div class="swiper image-gallery__main">
-                                <div class="image-gallery__stickers stickers">
-                                    <div
-                                        class="stickers__item stickers__item--big stickers__item--articul">
-                                        011241
-                                    </div>
-                                    <div class="stickers__item stickers__item--big stickers__item--new">
-                                        Новинка
-                                    </div>
-                                    <div
-                                        class="stickers__item stickers__item--big stickers__item--action">
-                                        Акция
-                                    </div>
-                                </div>
-
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a data-fancybox
-                                            href="images/noimage-big.jpg"
-                                            class="image-gallery__fancy"><i
-                                                class="fa-light fa-magnifying-glass"></i></a>
-                                        <img src="images/noimage-big.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-
-                                        <a data-fancybox
-                                            href="images/noimage-big.jpg"
-                                            class="image-gallery__fancy"><i
-                                                class="fa-light fa-magnifying-glass"></i></a>
-                                        <img src="images/noimage-big.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a data-fancybox
-                                            href="images/noimage-big.jpg"
-                                            class="image-gallery__fancy"><i
-                                                class="fa-light fa-magnifying-glass"></i></a>
-                                        <img src="images/noimage-big.jpg" />
-                                    </div>
-                                   
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="fast-view__right">
-                      
-                       
-                      
-                        <div class="card__offers offers">
-                            <div class="offers__item">
-                                <div class="offers__value">
-                                    <span class="offers__value-title">Качество:</span><span
-                                        class="offers__value-option">Оригинал</span>
-                                </div>
-                                <div class="offers__row row">
-                                    <div class="offers__option-container">
-                                        <label class="offers__option offers__option--type-1">
-                                            <input type="radio" name="group1">
-                                            <span class="offers__option-wrap">
-                                                <span>Оригинал</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="offers__option-container">
-                                        <label class="offers__option offers__option--type-1">
-                                            <input type="radio" name="group1">
-                                            <span class="offers__option-wrap">
-                                                <span>Копия</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="offers__option-container">
-                                        <label
-                                            class="offers__option offers__option--type-1 offers__option--disabled">
-                                            <input type="radio" name="group1" disabled>
-                                            <span class="offers__option-wrap">
-                                                <span>EVO</span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offers__item">
-                                <div class="offers__value">
-                                    <span class="offers__value-title">Цвет:</span><span
-                                        class="offers__value-option">Синий с зеленым</span>
-                                </div>
-                                <div class="offers__row row">
-                                    <div class="offers__option-container">
-                                        <label class="offers__option offers__option--type-2">
-                                            <input type="radio" name="group2">
-                                            <span class="offers__option-wrap">
-                                                <span class="offers__option-color"
-                                                    style="background-color: #000000;"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="offers__option-container">
-                                        <label class="offers__option offers__option--type-2">
-                                            <input type="radio" name="group2">
-                                            <span class="offers__option-wrap">
-                                                <span class="offers__option-color"
-                                                    style="background: linear-gradient(90deg, rgba(0,0,255,1) 50%, rgba(136,204,0,1) 50%);"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="offers__option-container">
-                                        <label class="offers__option offers__option--type-2">
-                                            <input type="radio" name="group2">
-                                            <span class="offers__option-wrap">
-                                                <span class="offers__option-color"
-                                                    style="background: #F0F1F5"></span>
-                                            </span>
-                                        </label>
-                                    </div>
-
-
-                                    <div class="offers__option-container">
-                                        <label
-                                            class="offers__option offers__option--type-2 offers__option--disabled">
-                                            <input type="radio" name="group2" disabled>
-                                            <span class="offers__option-wrap">
-                                                <span class="offers__option-color"
-                                                    style="background: #F0F1F5"></span>
-                                            </span>
-                                        </label>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card__prices prices">
-                            
-                               
-                                    <div class="prices__item-title">
-                                        Цена:
-                                    </div>
-                                    <div class="prices__item-wrap">
-                                        <span class="prices__coast prices__coast--new">430 ₽</span>
-                                        <span class="prices__coast prices__coast--old">440 ₽</span>
-                                    </div>
-                                    <div class="prices__economy economy">
-
-                                        <span class="economy__value">-2%</span>
-                                        <span class="economy__text">Экономия 10 руб.</span>
-                                    </div>
-                               
-                             
-                         
-                        </div>
-                      
-                        <div class="card__counter-wrap">
-                            <div class="counter card__counter">
-                                <button class="counter__button counter__button--minus">-</button>
-                                <input type="text" class="counter__input" value="1" data-max-count="20">
-                                <button class="counter__button counter__button--plus">+</button>
-                            </div>
-                            <a class="card__addToCart button  button--with-icon-big">
-                                <span class="button__icon">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </span>
-                                <span class="card__addToCart-text"> В корзину</span>
-                            </a>
-                            <a href="#" class="card__info-button button button--round-type-2">Купить в 1
-                                клик</a>
-                        </div>
-                        <div class="card__info">
-                           
-                            <div class="card__info-body">
-                                <div class="card__desc">
-                                    <p>
-                                        Зарядное устройство состоит из сетевого адаптера и USB-Type-C провода,
-                                        длиной 1м. Максимальный ток на выходе достигает 3А и способен заряжать
-                                        смартфоны, поддерживающие технологию "QC 3.0".
-                                    </p>
-                                </div>
-                                <ul>
-                                    <li><span>Бренд / ТМ:</span> <a href="#">Hoco</a></li>
-                                    <li><span>Назначение:</span> <a href="#">Универсальный</a>,<a href="#"> Type-C</a></li>
-                                    <li><span>Артикул:</span> 011241</li>
-                                    <li><span>Штрихкод EAN-13:</span> 4601969736510</li>
-                                </ul>
-                              
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal__footer modal__footer--margin-negative">
-                <a class="fast-view__button button--grey-type-2 button--size-big" href="#">
-                    Больше информации о товаре
-                    <i class="fa-light fa-arrow-right"></i>
-                </a>
-            </div>
-           </div>
-        </div>
-        
-    </div>
-    </div>
     <link rel="stylesheet" href="css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css"> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

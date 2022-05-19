@@ -824,7 +824,7 @@ let el = document.querySelector('.flyBasket__scroll');
         });
       });
 
-      $(".card-tiny__image").click(function(){
+      $(".card-tiny__image,.like-icons__item--glass").click(function(){
         $("#fast-view").arcticmodal({
           afterOpen: function(data, el) {
             $('body').css('overflow','hidden');
@@ -1404,3 +1404,18 @@ let el = document.querySelector('.flyBasket__scroll');
 }));
 
     });
+    // Check if iPhone or iPod
+if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)) {
+  var cssPath = "css/iphonefix.css";
+}
+
+// Load CSS file
+if (cssPath) {
+  var head = document.getElementsByTagName('head')[0];
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = cssPath;
+  link.media = 'all';
+  head.appendChild(link);
+}

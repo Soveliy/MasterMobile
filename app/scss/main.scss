@@ -1643,7 +1643,7 @@ select:invalid {
     padding-top: 15px;
   }
   &__title{
-    margin: 0 0 18px 0;
+    margin: 0 0 23px 0;
     font-size: 26px;
     line-height: 30px;
     @include for-sm(){
@@ -1703,13 +1703,14 @@ select:invalid {
   }
   &__miniblog{
     height: 100%;
-    padding: 30px;
+    padding: 25px 30px 30px 30px;
     box-sizing: border-box;
     background-color: $white;
     @include for-md(){
       padding: 15px;
     }
   }
+
   &__content-block{
     @include for-sm(){
       margin-left: -60px;
@@ -1722,6 +1723,9 @@ select:invalid {
     @include for-md(){
       flex-wrap: wrap;
     }
+  }
+  &__section-head{
+    align-items: flex-start;
   }
   &__item-container{
     padding: 0 15px;
@@ -1839,7 +1843,7 @@ select:invalid {
     padding-left: 30px;
     box-sizing: border-box;
     border-left: 1px solid #E0E4EB;
-    display: flex;
+
     @include for-md(){
       border-left: 0;
       padding-left: 0;
@@ -1886,7 +1890,7 @@ select:invalid {
     align-items: center;
     span{
       font-size: 14px;
-      margin: 0 3px;
+      margin: 0 5px;
     }
     b{
       font-size: 40px;
@@ -1900,7 +1904,7 @@ select:invalid {
 .agr-list{
   &__row{
     margin: 0 -15px;
-    width: 100%;
+    // width: 100%;
   }
   &__item-container{
     padding: 0 15px;
@@ -2643,12 +2647,12 @@ select:invalid {
     background-color: #FFF7CC;
     &-value{
       box-sizing: border-box;
-      padding: 1px 10px;
+      padding: 0 10px;
       background-color: #FFDD33;
       clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
     }
     &-title{
-      padding: 1px 10px;
+      padding: 0 10px;
       box-sizing: border-box;
     }
   }
@@ -2950,6 +2954,9 @@ select:invalid {
     // @include for-md(){
     //   display: none;
     // }
+    i{
+      margin-right: 4px;
+    }
     &--true{
      i{
       color: $greennav;
@@ -3067,7 +3074,7 @@ a.preview-item__option-value{
     flex-shrink: 0;
     line-height: 38px;
     color: #C1C8D7;
-    font-size: 18px;
+    font-size: 20px;
     background-color: transparent;
   }
   input{
@@ -4562,6 +4569,10 @@ body.mm-ocd-opened {
     // padding-top: 3px;
     box-sizing: border-box;
     color: #8592AD;
+
+    &--big{
+
+    }
     @include for-sm(){
      &--desktop{
        display: none;
@@ -4650,7 +4661,9 @@ body.mm-ocd-opened {
   }
   &__avia{
     margin-right: 30px;
+    font-size: 12px;
     i{
+      margin-right: 4px;
       color: #00B377;
     }
   }
@@ -4658,6 +4671,7 @@ body.mm-ocd-opened {
     display: flex;
     align-items: center;
     margin-right: 25px;
+    font-size: 12px;
     &-counter{
       color: #00B377;
       margin: 0 8px 0 3px;
@@ -4677,7 +4691,7 @@ body.mm-ocd-opened {
     background-color: #F0F1F5;
     border-color:#F0F1F5 ;
     &__button{
-      line-height: 40px;
+      line-height: 38px;
     }
     input{
       background-color: #F0F1F5;
@@ -4846,7 +4860,14 @@ body.mm-ocd-opened {
   }
 }
 .card-tiny.favotires__card-tiny{
-
+  &:first-child{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  &:last-child{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
   .card-tiny__row{
     align-items: flex-start;
     @include for-sm(){
@@ -4903,6 +4924,11 @@ body.mm-ocd-opened {
       .preview-item__info-vendor{
         margin-top: 5px;
       }
+    }
+  }
+   .preview-item__info-vendor{
+    @include for-sm(){
+      margin-top: 5px;
     }
   }
   .card-tiny__content{
@@ -4977,7 +5003,7 @@ body.mm-ocd-opened {
     width: 60px;
     text-align: center;
     color: $white;
-    padding: 10px 2px;
+    padding: 8px 2px;
     box-sizing: border-box;
     border-radius: 3px;
     background-color: $red;
@@ -5041,8 +5067,11 @@ body.mm-ocd-opened {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 9px 20px 7px;
+      padding: 8px 20px;
       box-sizing: border-box;
+      @include for-md(){
+        padding: 8px 0;
+      }
     }
   }
   &__input{
@@ -5105,6 +5134,9 @@ body.mm-ocd-opened {
     position: relative;
     overflow: auto;
     white-space: nowrap;
+    @include for-md(){
+      padding: 11px 0;
+    }
   }
   &__list-item:not(:first-child){
     .breadcrumbs__link{
@@ -5282,7 +5314,7 @@ body.mm-ocd-opened {
     @include for-sm(){
       min-height: 110px;
       display: flex;
-      align-items: center;
+      // align-items: center;
       margin-bottom: 0;
     }
   }
@@ -5799,6 +5831,7 @@ body.mm-ocd-opened {
   background-color: $white;
   text-align: center;
   height: 100%;
+  justify-content: space-between;
   &:hover{
     .subcategory-item__title{
       color: $redHover;
@@ -5823,6 +5856,7 @@ body.mm-ocd-opened {
     color: #0D1526;
     max-width: 250px;
     transition: .3s;
+    font-weight: 500;
     @include for-lg(){
       font-size: 14px;
       line-height: 21px;
@@ -6354,6 +6388,13 @@ body.mm-ocd-opened {
     border-radius: 3px;
     padding: 30px;
 
+    &--lit{
+      padding: 20px 30px;
+      @include for-md(){
+        padding: 15px;
+      }
+    }
+
     &--desc{
       @include for-sm(){
         height: 330px;
@@ -6463,7 +6504,7 @@ body.mm-ocd-opened {
   &__title{
     font-size: 18px;
     line-height: 21px;
-    
+    font-weight: 500;
     color: #14181F;
     @include for-sm(){
       font-size: 14px;
@@ -6525,6 +6566,7 @@ body.mm-ocd-opened {
   }
   &__top-options{
     display: flex;
+    align-items: center;
     @include for-md(){
       flex-wrap: wrap;
     }
@@ -6567,7 +6609,7 @@ body.mm-ocd-opened {
     i{
       font-size: 18px;
       line-height: 21px;
-      margin-right: 5px;
+      margin-right: 8px;
       // margin-top: -2px;
       color: #8592AD;
     }
@@ -6604,7 +6646,7 @@ body.mm-ocd-opened {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 0;
       padding: 6.5px 15px 6.5px 5px;
       -webkit-box-sizing: border-box;
@@ -6622,7 +6664,7 @@ body.mm-ocd-opened {
       transition: .3s;
 
       i{
-        font-size: 10px;
+        font-size: 12px;
         line-height: 13px;
         margin-right: 5px;
         // margin-top: -4px;
@@ -6748,6 +6790,13 @@ body.mm-ocd-opened {
     box-shadow: 0px 5px 8px 0px rgba(255, 0, 65, .25);
     font-weight: 700;
     justify-content: flex-start;
+
+    &-text{
+      margin: 0 auto;
+    }
+    .button__icon{
+      margin-right: 0;
+    }
     @include for-sm(){
       width: 50%;
       justify-content: flex-start;
@@ -7078,6 +7127,7 @@ body.mm-ocd-opened {
     max-width: 300px;
     width: 100%;
     margin-right: 20px;
+    color: #0D1526;
     @include for-sm(){
       max-width: 100%;
       margin: 0 0 15px;
@@ -7103,7 +7153,7 @@ body.mm-ocd-opened {
       justify-content: center;
     }
     i{
-      margin-right: 4px;
+      margin-right: 10px;
     }
     &:hover{
       background-color: $redHover;
@@ -7238,6 +7288,9 @@ body.mm-ocd-opened {
   }
   .swiper-slide{
     width: auto;
+    .preview-item__available i{
+      margin-right: 4px;
+    }
   }
   td{
     border-right: 1px solid  $mainbg;
@@ -7245,6 +7298,7 @@ body.mm-ocd-opened {
     width: 200px;
     box-sizing: border-box;
     border-bottom: 1px dashed $mainbg;
+    
     &:before{
       @include for-md(){
         content: attr(data-text);
@@ -7254,10 +7308,12 @@ body.mm-ocd-opened {
       }
     }
   }
-  
+ 
   &__option{
  
-   
+    a{
+      text-decoration: underline;
+    }
     padding: 7px 20px;
   
 
@@ -7885,14 +7941,24 @@ body.mm-ocd-opened {
       }
     }
     tr:not(:last-child) td{
-      border-bottom: 1px solid $mainbg;
+      border-bottom: 1px dashed $mainbg;
     }
+    
     tr:last-child td{
       height: 50px;
       padding-bottom: 0;
     }
 
     
+  }
+  tbody {
+    td:nth-child(2){
+      color: #000;
+      i{
+        margin-left: 5px;
+        color: #8592AD;
+      }
+    }
   }
 }
 .other-service{
@@ -8137,6 +8203,7 @@ body.mm-ocd-opened {
   &__size{
     color: #8592AD;
     line-height: 17px;
+    margin-top: 5px;
   }
 }
 .offers{
@@ -8421,10 +8488,12 @@ body.mm-ocd-opened {
   position: relative;
   overflow: hidden;
   img{
-    width: 100%;
-    display: block;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+  }
+  .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .stickers__item{
     border: none;
@@ -8435,16 +8504,9 @@ body.mm-ocd-opened {
     }
   }
 
-  img{
-    @include for-md(){
-      width: 100%;
-      display: block;
-      height: 100%;
-      object-fit: cover;
 
-    }
   
-  }
+ 
   
   @include for-md(){
     position: relative;
@@ -8781,6 +8843,7 @@ body.mm-ocd-opened {
     background-color: $white;
     padding: 30px;
     box-sizing: border-box;
+    border-radius: 3px;
 
     &-body-title{
       margin: 25px 0 15px;
@@ -8795,6 +8858,7 @@ body.mm-ocd-opened {
         margin-top: 15pxc;
       }
     }
+    
     &-head{
       position: relative;
       padding-bottom: 20px;
@@ -8816,6 +8880,7 @@ body.mm-ocd-opened {
       font-size: 18px;
       line-height: 21px;
       color: #14181F;
+      font-weight: 500;
       span{
         color: #8592AD;
       }
@@ -8920,7 +8985,7 @@ body.mm-ocd-opened {
         border-radius: 5px;
         box-sizing: border-box;
         background-color: #F0F1F5;
-        padding: 5px 5px 3px;
+        padding: 4px 5px 4px;
         font-size: 12px;
         line-height: 12px;
         color: #8592AD;
@@ -9071,7 +9136,7 @@ body.mm-ocd-opened {
       justify-content: center;
     }
     i{
-      margin-right: 5px;
+      margin-right: 10px;
     }
   }
   &__inputfile{
@@ -9145,6 +9210,7 @@ body.mm-ocd-opened {
     a i{
       width: 20px;
       text-align: center;
+      margin-right: 5px;
     }
     .fa-envelope-open{
       color: #8592AD;
@@ -9228,6 +9294,9 @@ body.mm-ocd-opened {
   &__top{
     display: flex;
     justify-content: space-between;
+  }
+  &__right{
+    width: 100%;
   }
   &__text{
     margin-top: 10px;
@@ -9336,6 +9405,7 @@ body.mm-ocd-opened {
       stroke: #8592AD;
       flex-shrink: 0;
       margin-right: 15px;
+      margin-top: 8px;
     }
     &-link{
       margin-top: 5px;
@@ -9637,6 +9707,11 @@ body.mm-ocd-opened {
     }
   }
 }
+.profile-item{
+  &__list{
+    padding-left: 16px;
+  }
+}
 .profile-more{
   &__title{
     font-size: 22px;
@@ -9652,6 +9727,10 @@ body.mm-ocd-opened {
       position: relative;
       display: block;
       padding-left: 10px;
+
+      & + &{
+        margin-top: 5px;
+      }
     }
     li:before{
       content: '•';
@@ -9662,10 +9741,11 @@ body.mm-ocd-opened {
   }
 }
 .card-type{
+  
   &__head{
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 5px 5px 0 0;
+    border-radius: 3px 3px 0 0;
     &__name{
       font-weight: 700;
     }
@@ -9679,6 +9759,7 @@ body.mm-ocd-opened {
     padding: 20px;
     box-sizing: border-box;
     background-color: $white;
+  
 
   }
   &__list{
@@ -9700,6 +9781,7 @@ body.mm-ocd-opened {
     width: 20px;
     flex-shrink: 0;
     margin-right: 10px;
+    margin-top: 5px;
   }
   &__name{
     span{
@@ -9723,6 +9805,7 @@ body.mm-ocd-opened {
     padding: 20px;
     box-sizing: border-box;
     background-color: $white;
+    border-radius: 0 0 3px 3px;
     i{
       width: 20px;
       margin-right: 5px;
@@ -9767,6 +9850,7 @@ body.mm-ocd-opened {
       font-size: 16px;
       line-height: 20px;
       margin-bottom: 15px;
+      font-weight: 500;
   }
   &__desc{
     margin-bottom: 10px;
@@ -10554,7 +10638,118 @@ body.mm-ocd-opened {
     justify-content: center;
   }
 }
-
+.contacts{
+  &__head{
+    display: flex;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    background-color: $white;
+  }
+  &__select{
+    max-width: 240px;
+    width: 100%;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  &__input{
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0 20px 0;
+    box-sizing: border-box;
+    background-color: #F0F1F5;
+    border: 1px solid #F0F1F5;
+  }
+  &__items{
+    padding: 0 30px;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 3px;
+  }
+  &__image{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  &__left{
+    width: 50%;
+  }
+  &__right{
+    width: 50%;
+    margin-left: 30px;
+  }
+  &__map-js{
+    height: 700px;
+  }
+  &__item{
+    padding: 30px 0;
+    display: flex;
+   
+    &-info{
+      span{
+        color: #8592AD;
+      }
+    }
+    &-right{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+    }
+    & + &{
+      border-top: 1px dashed $mainbg;
+    }
+    &:first-child{
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    &:last-child{
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
+  &__form{
+    background-color: $white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-top: 5px;
+    @include for-md(){
+      padding: 15px;
+    }
+  }
+}
+.contacts-form-adv{
+    &__row{
+      margin: 0 -15px;
+    }
+    &__item-container{
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+    &__icon{
+      height: 60px;
+      width: 60px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-right: 10%;
+      border: 1px solid $mainbg;
+      img{
+        max-height: 30px;
+        max-width: 100%;
+      }
+    }
+    &__name{
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+}
  /* global */
  .g-hidden { display: none; }
  .g-line { zoom: 1; }
@@ -11266,13 +11461,14 @@ body.mm-ocd-opened {
     &-button{
       background-color: #CC0033;
       margin-left: 20px;
-      padding: 11.5px 24px;
+      padding: 11.5px 21px;
       @include for-sm(){
         margin-left: 0;
         margin-top: 15px;
       }
       i{
-        margin-right: 5px;
+        margin-right:11px;
+        line-height: 17px;
       }
       &:hover{
         background-color: $redHover;
@@ -11346,7 +11542,7 @@ body.mm-ocd-opened {
       line-height: 40px;
       color: #14181F;
       font-weight: 700;
-      margin-left: 10px;
+      margin-left: 20px;
       min-width: 160px;
       text-align: left;
     }
@@ -12716,7 +12912,7 @@ body.mm-ocd-opened {
     }
     @include for-tiny-tablet(){
       flex-direction: column;
-      text-align: center;
+      // text-align: center;
       align-items: center;
     }
     &-desc{
@@ -12727,6 +12923,12 @@ body.mm-ocd-opened {
       flex-direction: column;
       line-height: 20px;
     }
+  }
+  &__regButton{
+    margin-top: 15px;
+    max-width: 185px;
+    width: 100%;
+    justify-content: center;
   }
   &__button{
     margin-right: 20px;
@@ -12810,6 +13012,11 @@ body.mm-ocd-opened {
         width: 100%;
         margin-right: 0;
         margin-bottom: 5px;
+      }
+    }
+    &-label{
+      a{
+        text-decoration: underline;
       }
     }
  
@@ -12986,9 +13193,4 @@ content: '';
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select:focus, textarea:focus, input:focus {
-          font-size: 16px;
-      }
-  }
 
