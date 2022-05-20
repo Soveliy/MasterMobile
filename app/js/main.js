@@ -371,7 +371,21 @@ let el = document.querySelector('.flyBasket__scroll');
             $(".live-search").slideDown(300)
            
           })
+          $('.recipient__form-input--phone').mask('+7 (999) 999 99-99');
 
+          $('.showpass-btn').on('click', function(e) {
+            $(this).toggleClass("fa-eye")
+            $(this).toggleClass("fa-eye-slash")
+            if ($(this).prev().attr('type') == 'password'){
+              
+              $(this).prev().attr('type', 'text');
+            } else {
+             
+              $(this).prev().attr('type', 'password');
+            }
+            return false;
+           })
+           
           $('.bonuses-form__input').on('keyup', function(e) {
            setTimeout(() => {
             if ($(this).val() == 0) {

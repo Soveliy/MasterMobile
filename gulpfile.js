@@ -68,6 +68,7 @@ gulp.task('js', function(){
         'assest/js/simple-scrollbar.js',
         'assest/js/ion.rangeSlider.js',
         'assest/js/jquery.arcticmodal.js',
+        'assest/js/jquery.mask.min.js',
       
     // 'assest/js/aos.js',
     // 'assest/js/swiper.js',
