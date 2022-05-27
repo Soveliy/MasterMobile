@@ -440,21 +440,27 @@
                                                             MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
                                                                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
                                                             ),
-
-                                                            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                                                            MyIconLayout = ymaps.templateLayoutFactory.createClass([
+                                                            '<div class="map-placemark"><i class="fa-solid fa-building"></i></div>'].join('')),
+                                                                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
                                                                 hintContent: 'Собственный значок метки',
                                                                 balloonContent: 'Это красивая метка'
                                                             }, {
                                                                 // Опции.
                                                                 // Необходимо указать данный тип макета.
-                                                                iconLayout: 'default#image',
+                                                                iconLayout: MyIconLayout,
                                                                 // Своё изображение иконки метки.
-                                                                iconImageHref: 'images/map_icon.svg',
+                                                             
                                                                 // Размеры метки.
-                                                                iconImageSize: [30, 41],
-                                                                // Смещение левого верхнего угла иконки относительно
-                                                                // её "ножки" (точки привязки).
-                                                                iconImageOffset: [-5, -38]
+                                                                // iconImageSize: [30, 41],
+                                                                // // Смещение левого верхнего угла иконки относительно
+                                                                // // её "ножки" (точки привязки).
+                                                                // iconImageOffset: [-5, -38]
+                                                                iconShape: {
+                                                                    type: 'Circle',
+                                                                    coordinates: [0, 0],
+                                                                    radius: 23
+                                                                }
                                                             });
 
                                                            
@@ -472,7 +478,7 @@
                                     Есть вопросы или предложения?
                                 </div>
                                 <div class="contacts-form">
-                                    <div class="contacts-form-adv">
+                                    <div class="">
                                         <div class="row contacts-form-adv__row">
                                             <div class="contacts-form-adv__item-container">
                                                 <div class="contacts-form-adv">
@@ -525,6 +531,33 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="contacts-form__container">
+                                            <div class="contacts-form__desc">
+                                                Или заполните контактную форму и мы свяжемся с вами для уточнения деталей:
+                                            </div>
+                                            <div class="contacts-form__row row">
+                                                <div class="contacts-form__left">
+                                                    <input type="text" class="contacts__input" placeholder="Ваше имя">
+                                                    <input type="text" class="contacts__input phonemask" placeholder="Контактный телефон *">
+                                                    <input type="email" class="contacts__input" placeholder="Email *">
+                                                    <input type="text" class="contacts__input" placeholder="Тема общения">
+                                                </div>
+                                                <div class="contacts-form__right">
+                                                    <textarea placeholder="Сообщение" class="contacts__textarea"></textarea>
+                                                </div>
+                                            </div>
+                                            <label class="checkbox checkbox--inb contacts-form__checkbox">
+                                                <input type="checkbox">
+                                                <span class="checkbox__icon">
+                                                    <i class="fa-regular fa-check"></i>
+                                                </span>
+                                                Я соглашаюсь на обработку моих персональных данных согласно<a href="#"> порядку</a> и подтверждаю ознакомление с ним.
+                                                
+                                            </label>
+                                            <button class="contacts-form__button button button--black button--size-big">
+                                                Отправить
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

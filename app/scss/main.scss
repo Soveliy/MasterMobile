@@ -436,7 +436,8 @@ select:invalid {
     display: block;
 
     .checkbox__icon{
-      display: inline-block;
+      display: inline-flex;
+      vertical-align: bottom;
     }
   }
   a{
@@ -10721,6 +10722,11 @@ body.mm-ocd-opened {
     margin-right: 20px;
     flex-shrink: 0;
   }
+  &__row{
+    @include for-md(){
+      flex-direction: column;
+    }
+  }
   &__input{
     width: 100%;
     height: 40px;
@@ -10729,6 +10735,35 @@ body.mm-ocd-opened {
     box-sizing: border-box;
     background-color: #F0F1F5;
     border: 1px solid #F0F1F5;
+    transition: .3s;
+    &:focus{
+      background-color: $white;
+      &::placeholder{
+        opacity: 0;
+      }
+    }
+
+   & + &{
+      margin-top: 20px;
+    }
+  }
+ 
+  &__textarea{
+      height: 218px;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #F0F1F5;
+      border: 1px solid #F0F1F5;
+      transition: .3s;
+      width: 100%;
+      resize: none;
+      &:focus{
+        background-color: $white;
+        &::placeholder{
+          opacity: 0;
+        }
+      }
+      
   }
   &__items{
     padding: 0 30px;
@@ -10744,10 +10779,18 @@ body.mm-ocd-opened {
   }
   &__left{
     width: 50%;
+    @include for-md(){
+      width: 100%;
+    }
   }
   &__right{
     width: 50%;
     margin-left: 30px;
+    @include for-md(){
+      width: 100%;
+      margin-left: 0;
+      margin-top: 15px;
+    }
   }
   &__map-js{
     height: 700px;
@@ -10785,13 +10828,43 @@ body.mm-ocd-opened {
     box-sizing: border-box;
     padding: 30px;
     margin-top: 5px;
+    &-head{
+      font-size: 22px;
+     
+      padding-bottom: 20px;
+      border-bottom: 1px solid $mainbg;
+      font-weight: 500;
+    }
     @include for-md(){
       padding: 15px;
     }
+    
+  }
+}
+.contacts-form{
+  &__right,&__left{
+    width: 50%;
+    
+  }
+  &__right{
+    margin-left: 20px;
+  }
+  &__row{
+    margin-top: 20px;
+  }
+  &__checkbox{
+    margin: 20px 0;
+  }
+  &__button{
+    max-width: 272px;
+    width: 100%;
+    justify-content: center;
   }
 }
 .contacts-form-adv{
+
     &__row{
+      padding: 20px 0;
       margin: 0 -15px;
     }
     &__item-container{
@@ -10817,6 +10890,9 @@ body.mm-ocd-opened {
     &__name{
       font-weight: 700;
       margin-bottom: 10px;
+    }
+    &__link-container{
+      white-space: nowrap;
     }
 }
 .contacts-form-adv{
@@ -12667,6 +12743,17 @@ body.mm-ocd-opened {
   }
 
 }
+.map-placemark{
+  height: 90px;
+  width: 60px;
+  background: url(../images/contacts/map-bg.svg) no-repeat center center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $red;
+  font-size: 24px;
+}
 .order-radio{
   cursor: pointer;
   input{
@@ -13241,23 +13328,39 @@ body.mm-ocd-opened {
 #map{
   position: relative;
 }
-.ymaps-2-1-79-ground-pane::before {
-content: '';
- position: absolute;
- left: 0;
- top: 0;
- z-index: 100;
- background: #fff;
- display: block;
- width: 100%;
- height: 100%;
- mix-blend-mode: difference;
- pointer-events: none;
-}
-
-.ymaps-2-1-79-map ymaps, .ymaps-2-1-79-map ymaps:after, .ymaps-2-1-79-map ymaps:before{
+#map::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
   mix-blend-mode: difference;
+  pointer-events: none;
 }
+.ymaps-2-1-79-places-pane{
+  filter: invert(1);
+}
+// .ymaps-2-1-79-ground-pane::before {
+// content: '';
+//  position: absolute;
+//  left: 0;
+//  top: 0;
+//  z-index: 100;
+//  background: #fff;
+//  display: block;
+//  width: 100%;
+//  height: 100%;
+//  mix-blend-mode: difference;
+//  pointer-events: none;
+// }
+
+// .ymaps-2-1-79-map ymaps, .ymaps-2-1-79-map ymaps:after, .ymaps-2-1-79-map ymaps:before{
+//   mix-blend-mode: difference;
+// }
 .ymaps-2-1-79-map-copyrights-promo,.ymaps-2-1-79-copyright__content-cell{
   display: none !important;
 }
