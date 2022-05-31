@@ -850,8 +850,72 @@ let el = document.querySelector('.flyBasket__scroll');
           },
         });
       });
+      $(".nav-tabs__item--auth").click(function(){
+        $("#auth").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      $(".card__button--question").click(function(){
+        $("#question").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      $(".card__button--shops").click(function(){
+        $("#shops").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      $(".nav-tabs__item--city").click(function(){
+        $("#chose-city").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      $(".card__button--view").click(function(){
+        $("#subscription").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+     
+   
 
-
+    $(".subscription-modal--close").click(function () {
+      $("#subscription").arcticmodal("close")
+    })
       $(".reviews__top-button").click(function(){
         $("#review-modal").arcticmodal({
           afterOpen: function(data, el) {
@@ -1413,6 +1477,9 @@ let el = document.querySelector('.flyBasket__scroll');
                 }
             });
         }, false);
+
+   
+
 
 
 }));

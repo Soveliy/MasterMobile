@@ -320,6 +320,15 @@ button{
         width: 100%;
       }
     }
+    &--big{
+      i{
+        right: 0;
+        height: 50px
+      }
+      .form__input{
+        height: 50px;
+      }
+    }
     i{
       position: absolute;
       top: 0;
@@ -438,6 +447,7 @@ select:invalid {
     .checkbox__icon{
       display: inline-flex;
       vertical-align: bottom;
+      margin-right: 5px;
     }
   }
   a{
@@ -2169,7 +2179,7 @@ select:invalid {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;  
     overflow: hidden;
-    margin-top: -7px;
+    margin-top: -4px;
 
   }
   &__coast{
@@ -6774,6 +6784,7 @@ body.mm-ocd-opened {
     align-items: center;
     color: #14181F;
     padding: 2px 10px;
+    cursor: pointer;
     i{
       color: #FF0040;
       margin-right: 5px;
@@ -9129,6 +9140,10 @@ body.mm-ocd-opened {
   &__answer{
     max-width: 100px;
     width: 100%;
+
+    &--w100{
+      max-width: 100%;
+    }
     @include for-md-mob(){
       max-width: 100%;
       justify-content: center;
@@ -10708,6 +10723,7 @@ body.mm-ocd-opened {
   }
 }
 .contacts{
+  padding-bottom: 40px;
   &__head{
     display: flex;
     padding: 25px 30px;
@@ -10715,12 +10731,21 @@ body.mm-ocd-opened {
     margin-bottom: 5px;
     border-radius: 3px;
     background-color: $white;
+    @include for-md(){
+      padding: 15px;
+      flex-direction: column;
+    }
   }
   &__select{
     max-width: 240px;
     width: 100%;
     margin-right: 20px;
     flex-shrink: 0;
+    @include for-md(){
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
   &__row{
     @include for-md(){
@@ -10770,12 +10795,20 @@ body.mm-ocd-opened {
     box-sizing: border-box;
     background-color: $white;
     border-radius: 3px;
+    @include for-md(){
+      padding: 0 15px;
+    }
   }
   &__image{
     width: 60px;
     height: 60px;
     flex-shrink: 0;
     margin-right: 20px;
+    @include for-md(){
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
   }
   &__left{
     width: 50%;
@@ -10792,16 +10825,34 @@ body.mm-ocd-opened {
       margin-top: 15px;
     }
   }
+  &__map{
+    @include for-md(){
+      margin: 0 -15px;
+    }
+  }
   &__map-js{
     height: 700px;
+    @include for-md(){
+      height: 500px;
+    }
   }
   &__item{
     padding: 30px 0;
     display: flex;
-   
+    @include for-md(){
+      padding: 15px 0;
+    }
+    &-name{
+      @include for-md(){
+        font-size: 16px;
+      }
+    }
     &-info{
       span{
         color: #8592AD;
+        @include for-md(){
+          display: block;
+        }
       }
     }
     &-right{
@@ -10834,23 +10885,49 @@ body.mm-ocd-opened {
       padding-bottom: 20px;
       border-bottom: 1px solid $mainbg;
       font-weight: 500;
+      @include for-md(){
+        font-size: 16px;
+        padding-bottom: 15px;
+      }
     }
     @include for-md(){
       padding: 15px;
+      margin-top: 15px;
     }
     
+  }
+  &__section-title{
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 50px 0 20px 0;
+    @include for-md(){
+      font-size: 20px;
+      margin: 30px 0 15px;
+    }
   }
 }
 .contacts-form{
   &__right,&__left{
     width: 50%;
+    @include for-md(){
+      width: 100%;
+    }
     
   }
   &__right{
     margin-left: 20px;
+    @include for-md(){
+      margin-left: 0;
+      margin-top: 15px;
+    }
   }
   &__row{
     margin-top: 20px;
+    @include for-md(){
+      margin-top: 15px;
+      flex-direction: column;
+    }
   }
   &__checkbox{
     margin: 20px 0;
@@ -10859,6 +10936,9 @@ body.mm-ocd-opened {
     max-width: 272px;
     width: 100%;
     justify-content: center;
+    @include for-sm(){
+      max-width: 100%;
+    }
   }
 }
 .contacts-form-adv{
@@ -10866,11 +10946,23 @@ body.mm-ocd-opened {
     &__row{
       padding: 20px 0;
       margin: 0 -15px;
+      @include for-md(){
+        padding: 15px 0;
+        margin: 0;
+        flex-direction: column;
+      }
     }
     &__item-container{
       padding: 0 15px;
       box-sizing: border-box;
       width: 33.3%;
+      @include for-md(){
+        width: 100%;
+        padding: 0;
+        & + &{
+          margin-top: 15px;
+        }
+      }
     }
     &__icon{
       height: 60px;
@@ -10882,6 +10974,7 @@ body.mm-ocd-opened {
       flex-shrink: 0;
       margin-right: 10%;
       border: 1px solid $mainbg;
+      box-sizing: border-box;
       img{
         max-height: 30px;
         max-width: 100%;
@@ -10890,6 +10983,9 @@ body.mm-ocd-opened {
     &__name{
       font-weight: 700;
       margin-bottom: 10px;
+      @include for-md(){
+        margin-bottom: 5px;
+      }
     }
     &__link-container{
       white-space: nowrap;
@@ -10922,6 +11018,7 @@ body.mm-ocd-opened {
  .arcticmodal-error { padding: 20px;  border-radius: 10px; background: #000; color: #fff; }
 
  .b-modal{
+   border-radius: 3px;
    background-color: #fff;
  }
 
@@ -11118,11 +11215,26 @@ body.mm-ocd-opened {
  }
 
  .modal{
+   border-radius: 3px;
    position: relative;
    padding: 30px;
    box-sizing: border-box;
    @include for-sm(){
      padding: 15px;
+   }
+   &__allert{
+     padding-bottom: 20px;
+     border-bottom: 1px solid $mainbg;
+     display: flex;
+     font-style: italic;
+     font-weight: 400;
+     svg{
+       height: 30px;
+       width: 30px;
+       flex-shrink: 0;
+       margin-right: 20px;
+       stroke: #0055FF;
+     }
    }
    &__checkbox{
      margin: 16px 0 30px;
@@ -11140,6 +11252,9 @@ body.mm-ocd-opened {
        height: 1px;
        width: 100%;
        background: linear-gradient(90deg, #e0e4eb 15%, #fff 100%);
+     }
+     svg{
+       stroke: #14181F;
      }
    }
    &__title{
@@ -11177,6 +11292,182 @@ body.mm-ocd-opened {
      }
    }
  }
+ .modal-content{
+   border-radius: 3px;
+ }
+ .subscription-modal{
+   padding: 0;display: flex;
+ }
+ #auth{
+   max-width: 400px;
+ }
+ #question, #shops,#chose-city{
+   max-width: 600px;
+ }
+ #subscription{
+   max-width: 900px;
+ }
+ .subscription-modal{
+   &__image{
+     @include for-md(){
+       display: none;
+     }
+   }
+   &__content{
+     padding: 30px;
+     box-sizing: border-box;
+     @include for-md(){
+       padding: 15px;
+     }
+   }
+   &__link{
+     color: #8592AD;
+     text-decoration: underline;
+    &-container{
+      margin: 30px 0 15px;
+      @include for-md(){
+        margin: 15px 0;
+      }
+    }
+   }
+   &__footer{
+     display: flex;
+     @include for-sm(){
+       flex-direction: column;
+     }
+     .button{
+       height: 50px;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+     }
+     .button + .button{
+       margin-left: 20px;
+       @include for-sm(){
+         margin-left: 0;
+         margin-top: 15px;
+       }
+     }
+   }
+ }
+ .togglers{
+   margin-top: 20px;
+  .toggler{
+    margin: 0;
+  }
+  .toggler + .toggler{
+    margin-top: 15px; 
+  }
+   
+ }
+.chosen-city{
+  &__title{
+    font-size: 12px;
+    color: #8592AD;
+    margin-bottom: -5px;
+  }
+  &__button{
+    margin: 20px 0;
+  }
+
+}
+.search__title{
+  margin-bottom: 10px;
+}
+.auth-form{
+  &__label{
+    margin-bottom: 10px;
+  }
+  &__input-container + &__input-container{
+    margin-top: 20px;
+    @include for-md(){
+      margin-top: 15px;
+    }
+  }
+  &__input{
+    height: 40px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    border: 1px solid #F0F1F5;
+    background-color: #F0F1F5;
+    box-sizing: border-box;
+    padding: 0 15px;
+    &:focus{
+      background-color: #fff !important;
+    }
+  }
+  &__row{
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  &__link{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 1px;
+  }
+  &__button{
+    width: 100%;
+  }
+  &__footer{
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    background-color: #F0F1F5;
+    box-sizing: border-box;
+    margin: 20px -30px -30px;
+    border-radius: 0 0 3px 3px;
+    p{
+      margin: 0;
+      font-size: 12px;
+      color: #8592AD;
+    }
+    &-button{
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+  }
+}
+.shops-list{
+  &__select{
+    max-width: 100%;
+    width: 100%;
+  }
+  &__item{
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    & + &{
+      border-top: 1px dashed $mainbg;
+    }
+    &-name{
+      font-weight: 700;
+      color: $red;
+    }
+    &-avia{
+      font-weight: 700;
+      &--green{
+        color: #00B277;
+      }
+      &--yellow{
+        color: #FFAA00;
+      }
+    }
+    &-option{
+      &--grey{
+        color: #8592AD;
+      }
+    }
+  }
+  &__right{
+    flex-shrink: 0;
+    text-align: right;
+  }
+}
+
 .SmartFilter__itemBody .checkbox:first-child{
   //  padding-top: 3px;
  }
@@ -11744,7 +12035,7 @@ body.mm-ocd-opened {
   &__image{
     height: 140px;
     flex-shrink: 0;
-    margin-right: 70px;
+    margin-right: 80px;
     img{
       max-height: 140px;
     }
@@ -11757,9 +12048,10 @@ body.mm-ocd-opened {
   }
   &__pretitle{
     color: $white;
+    margin-bottom: 5px;
   }
   &__button{
-    margin-top: 10px;
+    margin-top: 20px;
   }
   &__title{
     font-size: 22px;
@@ -11848,6 +12140,7 @@ body.mm-ocd-opened {
       font-size: 18px;
       line-height: 21px;
       margin-bottom: 15px;
+      font-weight: 500;
     }
     ul{
       margin: 0;
@@ -11866,6 +12159,9 @@ body.mm-ocd-opened {
           position: relative;
           color: #14181F;
           line-height: 30px;
+          &:hover{
+            color: $redHover;
+          }
           &.active{
             &:before{
               content: '';
@@ -12111,6 +12407,9 @@ body.mm-ocd-opened {
   }
   &__answer{
     color: #FF0040;
+    i{
+      margin-right: 3px;
+    }
 
   }
   &__text{
@@ -12196,6 +12495,7 @@ body.mm-ocd-opened {
 }
 .blog-item{
   background-color: $white;
+  border-radius: 3px;
 
   & + &{
     margin-top: 30px;
@@ -12256,7 +12556,7 @@ body.mm-ocd-opened {
     margin-top: 30px;
     padding: 30px 60px;
     box-sizing: border-box;
-    border-top: 1px dashed $mainbg;
+    border-top: 1px solid $mainbg;
     display: flex;
     @include for-md(){
       margin-top: 15px;
@@ -12272,12 +12572,19 @@ body.mm-ocd-opened {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    padding: 6.5px 17px;
+    padding: 7.5px 17px 5.5px;
     margin: 5px;
     
   }
+  &__date-new{
+    color: #8592AD;
+    margin-bottom: 20px;
+    i{
+      margin-right: 4px;
+    }
+  }
   &__teg{
-    padding: 2.5px 17px;
+    padding: 3.5px 17px 2.5px;
     box-sizing: border-box;
     border-radius: 3px;
     font-weight: 700;
@@ -12291,6 +12598,7 @@ body.mm-ocd-opened {
   &__title{
     font-size: 30px;
     line-height: 46.5px;
+    font-weight: 500;
     color: #14181F;
     @include for-md(){
       font-size: 16px;
@@ -12307,6 +12615,11 @@ body.mm-ocd-opened {
       width: 100%;
     }
   }
+  &__button{
+    max-width: 110px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 .read-also{
   background-color: $white;
@@ -12317,6 +12630,7 @@ body.mm-ocd-opened {
   box-sizing: border-box;
   &__title{
     margin: 0 0 30px 0;
+    font-weight: 500;
     @include for-md(){
       margin-bottom: 20px;
     }
@@ -12363,6 +12677,7 @@ body.mm-ocd-opened {
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 20px;
+    font-weight: 500;
   }
   &__list{
     padding: 0;
@@ -12385,6 +12700,7 @@ body.mm-ocd-opened {
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 20px;
+    font-weight: 500;
   }
   &__row{
     margin: -5px;
@@ -12481,6 +12797,7 @@ body.mm-ocd-opened {
   &__button{
     width: 100%;
     justify-content: center;
+    text-transform: uppercase;
   }
 }
 .socials{
@@ -12999,6 +13316,96 @@ body.mm-ocd-opened {
     }
   }
 }
+.contacts-detail{
+  &__top{
+    position:relative;
+  }
+  &__image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    color: $white;
+    padding: 30px;
+    box-sizing: border-box;
+    min-height: 200px;
+    @include for-md(){
+      padding: 15px;
+      min-height: 240px;
+    }
+    span{
+      color: #9CAAC9;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    b{
+      font-size: 14px;
+      font-weight: 500;
+    }
+    b + b{
+      margin-top: 5px;
+    }
+  }
+  &__body{
+    padding: 30px;
+    background-color: $white;
+    @include for-md(){
+      padding: 15px;
+    }
+    
+  }
+  &__row{
+    @include for-md(){
+      flex-direction: column;
+    }
+  }
+  &__right{
+    max-width: 240px;
+    width: 100%;
+    margin-left: 60px;
+    flex-shrink: 0;
+    @include for-md(){
+      max-width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+  &__title{
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    @include for-md(){
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    &-item{
+      display: flex;
+    }
+    &-title{
+      color: #8592AD;
+      min-width: 100px;
+      margin-right: 5px;
+    }
+  }
+  &__map{
+    background-color: #F0F1F5;
+    height: 240px;
+  }
+}
+
 .order-details{
  
   &__buttons{

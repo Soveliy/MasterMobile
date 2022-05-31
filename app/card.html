@@ -280,7 +280,7 @@
                             </form>
                         </div>
                         <div class="header__nav-tabs nav-tabs">
-                            <div class=" nav-tabs__item">
+                            <div class=" nav-tabs__item nav-tabs__item--city">
                                 <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker">
                                         <use xlink:href="/images/sprite.svg#icon-map-marker"></use>
                                     </svg></div>
@@ -295,16 +295,16 @@
 
                                 </div>
                             </div>
-                            <div class=" nav-tabs__item">
+                            <div class="nav-tabs__item nav-tabs__item--auth">
                                 <div class="nav-tabs__item-icon"><svg class="icon icon-map-marker">
                                         <use xlink:href="/images/sprite.svg#icon-profile"></use>
                                     </svg></div>
                                 <div class="nav-tabs__item-info">
                                     <div class="nav-tabs__item-top">
-                                        <a href="#">Overlord</a>
+                                        <a>Войти</a>
                                     </div>
                                     <div class="nav-tabs__item-bottom">
-                                        <a href="#"> Мой кабинет</a>
+                                        <a> в кабинет</a>
                                     </div>
 
                                 </div>
@@ -664,15 +664,15 @@
                                     </div>
                                     <div class="card__buttons">
                                         <div class="card__buttons-row row">
-                                            <a href="#" class="card__button">
+                                            <a  class="card__button card__button--shops">
                                                 <i class="fa-solid fa-boxes-stacked"></i>
                                                 Товар в 6 магазинах
                                             </a>
-                                            <a href="#" class="card__button">
+                                            <a  class="card__button card__button--question">
                                                 <i class="fa-solid fa-comment-question"></i>
                                                 Задать вопрос
                                             </a>
-                                            <a href="#" class="card__button">
+                                            <a class="card__button card__button--view">
                                                 <i class="fa-solid fa-video"></i>
                                                 Обзор товара
                                             </a>
@@ -10448,15 +10448,15 @@
                                     </div>
                                     <div class="card__buttons">
                                         <div class="card__buttons-row row">
-                                            <a href="#" class="card__button">
+                                            <a  class="card__button card__button--shops">
                                                 <i class="fa-solid fa-boxes-stacked"></i>
                                                 Товар в 6 магазинах
                                             </a>
-                                            <a href="#" class="card__button">
+                                            <a class="card__button card__button--question">
                                                 <i class="fa-solid fa-comment-question"></i>
                                                 Задать вопрос
                                             </a>
-                                            <a href="#" class="card__button">
+                                            <a  class="card__button card__button--view">
                                                 <i class="fa-solid fa-video"></i>
                                                 Обзор товара
                                             </a>
@@ -13524,6 +13524,321 @@
                     <button type="submit" class="button button--black button--size-big ">Оставить отзыв</button>
 
                 </form>
+               </div>
+            </div>
+            
+        </div>
+        <div class="b-modal" id="auth">
+            <!-- <div class="b-modal_close arcticmodal-close"></div> -->
+
+            <div class="modal-content">
+               <div class="modal auth-form">
+                <div class="modal__head">
+                    <div class="modal__title">
+                        <svg class="icon icon-map-marker">
+                            <use xlink:href="/images/sprite.svg#icon-profile"></use>
+                        </svg>
+                       <span>Личный кабинет</span>
+                    </div>
+                    <div class="modal__close arcticmodal-close">
+                        <svg class="icon icon-close">
+                            <use xlink:href="images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <form class="auth-form__body">
+                    <div class="auth-form__input-container">
+                        <label class="auth-form__label">Логин:</label>
+                        <input type="text" class="auth-form__input input">
+                    </div>
+                    <div class="auth-form__input-container">
+                        <label class="auth-form__label">Пароль:</label>
+                        <input type="password" class="auth-form__input input">
+                    </div>
+                    <div class="auth-form__row row">
+                        <label class="checkbox checkbox--inb">
+                            <input type="checkbox">
+                            <span class="checkbox__icon">
+                                <i class="fa-regular fa-check"></i>
+                            </span>
+                            Запомнить меня
+                            
+                        </label>
+                        <a href="#" class="auth-form__link">Забыли пароль?</a>
+                    </div>
+                    <button class="button auth-form__button button--default button--size-medium">Войти</button>
+                </form>
+                <div class="auth-form__footer">
+                    <a href="#" class="button auth-form__footer-button button--black button--size-medium">Регистрация</a>
+                    <p>Чтобы получить управление рассылками, заказами, отзывами.</p>
+                </div>
+              
+               </div>
+            </div>
+            
+        </div>
+        <div class="b-modal" id="question">
+            <!-- <div class="b-modal_close arcticmodal-close"></div> -->
+
+            <div class="modal-content">
+               <div class="modal auth-form">
+                <div class="modal__head">
+                    <div class="modal__title">
+                        <svg class="icon icon-map-marker">
+                            <use xlink:href="images/sprite.svg#icon-question"></use>
+                        </svg>
+                       <span>Какой вопрос вы хотите задать?</span>
+                    </div>
+                    <div class="modal__close arcticmodal-close">
+                        <svg class="icon icon-close">
+                            <use xlink:href="images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+               
+                <div class="modal__allert">
+                    <svg class="icon icon-map-marker"><use xlink:href="/images/sprite.svg#icon-info"></use></svg>
+                    Введите описание вашей проблемы или предложения по улучшению нашего сервиса. Ответ прийдет в профиль, в разделе тикеты.
+                </div>
+                <form action="#" class="ticket-form profile__ticket-form">
+                    <div class="ticket-form__item">
+                        <label class="ticket-form__label">Тема:</label>
+                        <input type="text" class="ticket-form__input" placeholder="Укажите суть общения">
+                     
+                    </div>
+                    <div class="ticket-form__item">
+                        <label class="ticket-form__label">Сообщение:</label>
+                        <textarea class="ticket-form__textarea" placeholder="Опишите подробно"></textarea>
+                    </div>
+                    <div class="ticket-form__file">
+                        <input type="file" id="ticket-file" class="ticket-form__inputfile">
+                       
+                        <label for="ticket-file" class="ticket-form__file-button button button--round-type-2">
+                            <i class="fa-light fa-paperclip"></i>
+                            Прикрепить файл
+                        </label>
+                        <div class="ticket-form__file-desc">
+                            Фото, видео, rar/zip архив размером до 100 МБ. <br>
+                            Если файл весит больше, воспользуйтесь файлообменником.
+                        </div>
+                       
+                    </div>
+                    <button class="button ticket-form__answer  ticket-form__answer--w100 button--default button--size-medium">
+                        Создать тикет
+                    </button>
+
+                </form>
+              
+               </div>
+            </div>
+            
+        </div>
+        <div class="b-modal" id="shops">
+            <!-- <div class="b-modal_close arcticmodal-close"></div> -->
+
+            <div class="modal-content">
+               <div class="modal shops-modal">
+                <div class="modal__head">
+                    <div class="modal__title">
+                        <svg class="icon icon-map-marker">
+                            <use xlink:href="images/sprite.svg#icon-avia"></use>
+                        </svg>
+                       <span>Наличие товара</span>
+                    </div>
+                    <div class="modal__close arcticmodal-close">
+                        <svg class="icon icon-close">
+                            <use xlink:href="images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reviews-form__item">
+                    <div class="reviews-form__image">
+                        <img src="images/noimage.jpg" alt="">
+                    </div>
+                    <div class="reviews-form__right">
+                        <div class="reviews-form__item-category">
+                            Зарядные устройства
+                        </div>
+                        <div class="reviews-form__item-name">
+                            Hoco C12Q QC 3.0 + кабель Type-C
+                        </div>
+                       
+                    </div>
+                </div>
+                <select  class="select shops-list__select">
+                    <option value="">Все зоны</option>
+                    <option value="">Все зоны</option>
+                </select>
+                <div class="shops-list">
+                    <div class="shops-list__item">
+                        <div class="shops-list__left">
+                            <div class="shops-list__item-name">
+                                Магазин «MASTER MOBILE»
+                            </div>
+                            <div class="shops-list__item-option">
+                                г. Санкт-Петербург, ул. Садовая 28-30 к.1
+                            </div>
+                            <div class="shops-list__item-option">
+                                Тел: +7 921 422 30 07
+                            </div>
+                        </div>
+                        <div class="shops-list__right">
+                            <div class="shops-list__item-avia shops-list__item-avia--green">В наличии
+                            </div>
+                            <div class="shops-list__item-option">
+                                меньше 10 шт
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-list__item">
+                        <div class="shops-list__left">
+                            <div class="shops-list__item-name">
+                                Магазин «MASTER MOBILE»
+                            </div>
+                            <div class="shops-list__item-option">
+                                г. Санкт-Петербург, ул. Садовая 28-30 к.1
+                            </div>
+                            <div class="shops-list__item-option">
+                                Тел: +7 921 422 30 07
+                            </div>
+                        </div>
+                        <div class="shops-list__right">
+                            <div class="shops-list__item-avia shops-list__item-avia--green">В наличии
+                            </div>
+                            <div class="shops-list__item-option">
+                                меньше 10 шт
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-list__item">
+                        <div class="shops-list__left">
+                            <div class="shops-list__item-name">
+                                Магазин «MASTER MOBILE»
+                            </div>
+                            <div class="shops-list__item-option">
+                                г. Санкт-Петербург, ул. Садовая 28-30 к.1
+                            </div>
+                            <div class="shops-list__item-option">
+                                Тел: +7 921 422 30 07
+                            </div>
+                        </div>
+                        <div class="shops-list__right">
+                            <div class="shops-list__item-avia shops-list__item-avia--yellow">Предзаказ
+                            </div>
+                            <div class="shops-list__item-option shops-list__item-option--grey">
+                                доставка 1-3 дня
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+               </div>
+            </div>
+            
+        </div>
+
+        <div class="b-modal" id="chose-city">
+            <!-- <div class="b-modal_close arcticmodal-close"></div> -->
+
+            <div class="modal-content">
+               <div class="modal shops-modal">
+                <div class="modal__head">
+                    <div class="modal__title">
+                        <svg class="icon icon-map-marker">
+                            <use xlink:href="images/sprite.svg#icon-map-marker"></use>
+                        </svg>
+                       <span>Подскажите нам, где Вы находитесь</span>
+                    </div>
+                    <div class="modal__close arcticmodal-close">
+                        <svg class="icon icon-close">
+                            <use xlink:href="images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="chosen-city">
+                    <div class="chosen-city__title">
+                        Выбранный город:
+                    </div>
+                    <div class="chosen-city__value">
+                        <b>Москва</b>, Московская область, Россия
+                    </div>
+                    <button class="button button--default chosen-city__button button--size-medium  button--type-shadow">Да, это мой город</button>
+                    <div class="search__title">Если нет, выберите свой город из списка:</div>
+                    <form class="search__form">
+                                
+                      
+                               
+                        <input type="text" class="search__form-input search__form-input--icon-left" placeholder="Поиск по товарам...">
+                        <i class="fa-light fa-magnifying-glass search__form-icon-left"></i>
+                      
+                    
+                    </form>
+                </div>
+              
+               </div>
+            </div>
+            
+        </div>
+        <div class="b-modal" id="subscription">
+            <!-- <div class="b-modal_close arcticmodal-close"></div> -->
+
+            <div class="modal-content modal-content--nopadding">
+               <div class="modal subscription-modal">
+                   <img src="images/sub-img.jpg" alt="" class="subscription-modal__image">
+                
+                <form class="subscription-modal__content">
+                    <div class="modal__head">
+                        <div class="modal__title">
+                           <span>Оставайтесь в курсе</span>
+                        </div>
+                        <div class="modal__close arcticmodal-close">
+                            <svg class="icon icon-close">
+                                <use xlink:href="images/sprite.svg#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <p>
+                        Предлагаем подписаться, если не хотите пропустить уведомления о новинках, акционных скидках или других приятных предложений. А еще у нас есть <a href="#">уютный бложек</a>, в котором мы публикуем сводку о новинках на рынке, обучающие статьи по ремонту, и всякие интересности о технологиях..
+                    </p>
+                    <div class="subscription-modal__input form__item form__item--big">
+                        <input type="text" class="form__input form__input--with-icon" placeholder="mymail@gmail.com">
+                        <i class="fa-light fa-pen-to-square"></i>
+                    </div>
+                    <div class="togglers">
+                        <label class="toggler recipient__toggler">
+                            <input type="checkbox" name="checkbox" checked="">
+                            <span class="toggler__checkbox"></span>
+                            <span class="toggler__text">Получать уведомления о скидках</span>
+                        </label>
+                        <label class="toggler recipient__toggler">
+                            <input type="checkbox" name="checkbox" checked="">
+                            <span class="toggler__checkbox"></span>
+                            <span class="toggler__text">Получать рекомендации к покупкам</span>
+                        </label>
+                        <label class="toggler recipient__toggler">
+                            <input type="checkbox" name="checkbox" checked="">
+                            <span class="toggler__checkbox"></span>
+                            <span class="toggler__text">Получать сводку новостей из блога</span>
+                        </label>
+                        <label class="toggler recipient__toggler">
+                            <input type="checkbox" name="checkbox" checked="">
+                            <span class="toggler__checkbox"></span>
+                            <span class="toggler__text">Получать push-уведомления</span>
+                        </label>
+                    </div>
+                    <div class="subscription-modal__link-container">
+                        <a href="#" class="subscription-modal__link">Политика конфиденциальности</a>
+                    </div>
+                    <div class="subscription-modal__footer">
+                        <button class="button button--default subscription-modal__button ">
+                            Сохранить настройки
+                        </button>
+                        <button class="button button--round-type-3 subscription-modal--close subscription-modal__button">Закрыть окно</button>
+                    </div>
+                </form>
+              
+              
                </div>
             </div>
             
