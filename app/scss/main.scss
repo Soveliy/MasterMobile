@@ -5223,10 +5223,19 @@ body.mm-ocd-opened {
 }
 .category-list{
   &__row{
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    @include for-lg(){
+      grid-template-columns: 1fr 1fr;
+    }
+    @include for-sm(){
+      grid-template-columns: 1fr;
+    }
   }
   &__item-container{
-    width: 33.3%;
+    // width: 33.3%;
     &:first-child{
       .category-item{
      
@@ -5252,7 +5261,7 @@ body.mm-ocd-opened {
   }
   @include for-lg(){
     &__item-container{
-      width: 50%;
+      // width: 50%;
 
       &:first-child{
         .category-item{
@@ -5285,9 +5294,9 @@ body.mm-ocd-opened {
     }
   }
   @include for-sm(){
-    &__item-container{
-      width: 100%;
-    }
+    // &__item-container{
+    //   width: 100%;
+    // }
     &__item-container + &__item-container{
       margin-top: 10px;
     }
@@ -10664,8 +10673,11 @@ body.mm-ocd-opened {
       width: auto;
       margin-bottom: 10px;
     }
+    .category-list__row{
+      grid-template-columns: 1fr 1fr;
+    }
     .category-list__item-container{
-      width: 50%;
+      // width: 50%;
       &:first-child{
         .category-item{
        
