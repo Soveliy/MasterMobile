@@ -2560,6 +2560,9 @@ select:invalid {
       
       width: calc(50% - 7.5px);
       // margin-left: 15px;
+      padding-top: 11.5px;
+      padding-bottom: 11.5px;
+      
     }
   }
   &__button{
@@ -2583,6 +2586,7 @@ select:invalid {
       display: none;
       @include for-md(){
         display: block;
+     
       }
     }
     @include for-md(){
@@ -3110,10 +3114,16 @@ a.preview-item__option-value{
     max-width: 40px;
     width: 100%;
     flex-shrink: 0;
-    line-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #C1C8D7;
     font-size: 20px;
     background-color: transparent;
+
+    &--minus{
+      padding-bottom: 3px;
+    }
   }
   input{
     height: 38px;
@@ -3946,8 +3956,8 @@ body.mm-ocd-opened {
   right: 0;
   height: 70px;
   // height: var(--mm-spn-item-height);
-  padding: 0 40px;
-  padding: 0 calc(var(--mm-spn-item-indent) * 2);
+  padding: 3px 40px 0;
+  padding: 3px calc(var(--mm-spn-item-indent) * 2) 0;
   line-height: 70px;
   // line-height: var(--mm-spn-head-height);
   opacity: 1;
@@ -4086,7 +4096,7 @@ body.mm-ocd-opened {
  opacity: 1;
  color: #14181F;
  font-size: 18px;
- margin-top: -11px;
+ margin-top: -9px;
 }
 
 .mobile-links{
@@ -4735,7 +4745,10 @@ body.mm-ocd-opened {
     background-color: #F0F1F5;
     border-color:#F0F1F5 ;
     &__button{
-      line-height: 38px;
+      line-height: 20px;
+      &.counter__button--minus{
+        padding-bottom: 2px;
+      }
     }
     input{
       background-color: #F0F1F5;
@@ -5832,8 +5845,10 @@ body.mm-ocd-opened {
   @include for-md(){
   &__SmartFilter-shadow{
       position: fixed;
+      top:0;
+      right: 0;
       height: 100%;
-      width: 100%;
+      width: calc(100% - 250px);
       background-color: rgba(#0D1526, .7);
       z-index: 200;
       display: none;
@@ -7155,6 +7170,27 @@ body.mm-ocd-opened {
     &__more-options{
       margin-left: auto;
       flex-shrink: 0;
+      &--mobile{
+        display: none;
+        @include for-md(){
+          display: block;
+          width: 100%;
+          margin-top: 30px;
+          .more-options__body{
+            width: 100% !important;
+
+            &:before{
+            left: 50%;
+            margin-left: -5px;
+            }
+          }
+        }
+      }
+      &--desktop{
+        @include for-md(){
+          display: none;
+        }
+      }
     }
     &__search{
       width: 100%;
@@ -7210,9 +7246,11 @@ body.mm-ocd-opened {
     }
     i{
       margin-right: 10px;
+      margin-top: -2px;
     }
     &:hover{
       background-color: $redHover;
+      color: $white;
     }
 
   }
@@ -9579,6 +9617,10 @@ body.mm-ocd-opened {
     &:nth-child(2),&:nth-child(3),&:nth-child(4){
       width: 150px;
       margin-left: 20px;
+      @include for-md(){
+        width: 33.3%;
+        margin-left: 0;
+      }
     }
     &:last-child{
       margin-left: auto;
@@ -9586,6 +9628,9 @@ body.mm-ocd-opened {
   }
   &__status{
     font-weight: 700;
+    @include for-md(){
+      line-height: 17px;
+    }
     &--processed{
       color: #FFAA00;
     }
@@ -9610,11 +9655,32 @@ body.mm-ocd-opened {
   &__time{
     color: #8592AD;
   }
+  &__date{
+    @include for-md(){
+      color: #8592AD;
+      font-size: 12px;
+    }
+  }
   &__item{
     display: flex;
     padding: 20px 30px;
     box-sizing: border-box;
     // align-items: flex-start;
+    &-head{
+        display: none;
+        @include for-md(){
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          border-bottom: 1px dashed $mainbg;
+        }
+    }
+    @include for-md(){
+      flex-wrap: wrap;
+      padding: 15px;
+    }
 
     & + &{
       border-top: 1px dashed $mainbg;
@@ -9673,6 +9739,14 @@ body.mm-ocd-opened {
   &__name{
     line-height: 17px;
     margin-bottom: 10px;
+    &--desktop{
+      @include for-md(){
+        display: none;
+      }
+    }
+    @include for-md(){
+      color: #FF0040;
+    }
   }
   &__desc{
     font-size: 12px;
@@ -9795,6 +9869,17 @@ body.mm-ocd-opened {
 .profile-item{
   &__list{
     padding-left: 16px;
+    list-style: none;
+
+    li{
+      position: relative;
+      &:before{
+        content: '•';
+        position: absolute;
+        left: -16px;
+      }
+    }
+    
   }
 }
 .profile-more{
@@ -9803,6 +9888,11 @@ body.mm-ocd-opened {
     line-height: 25px;
     color: #8592AD;
     margin-bottom: 25px;
+    @include for-md(){
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 15px;
+    }
   }
   ul{
     padding: 0;
@@ -9812,7 +9902,9 @@ body.mm-ocd-opened {
       position: relative;
       display: block;
       padding-left: 10px;
-
+      @include for-md(){
+        font-size: 13px;
+      }
       & + &{
         margin-top: 5px;
       }
@@ -9847,6 +9939,9 @@ body.mm-ocd-opened {
   
 
   }
+  &__desc{
+    color: #14181F;
+  }
   &__list{
     list-style: none;
     padding: 0;
@@ -9862,8 +9957,8 @@ body.mm-ocd-opened {
   svg{
     fill: none;
     stroke: #14181F;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     flex-shrink: 0;
     margin-right: 10px;
     margin-top: 5px;
@@ -10602,7 +10697,7 @@ body.mm-ocd-opened {
     }
     .preview-item__counter-wrap{
       // width: 245px;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
     }
     .card-second__info{
       flex-wrap: wrap;
@@ -12139,6 +12234,7 @@ body.mm-ocd-opened {
       flex-shrink: 0;
       margin-right: 15px;
       color: #8592AD;
+      stroke: #8592AD;
       }
     
   }
@@ -12976,6 +13072,9 @@ body.mm-ocd-opened {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    &--negative-margin{
+      margin-bottom: -20px;
+    }
     @include for-tiny-tablet(){
         flex-direction: column;
     }
@@ -13096,9 +13195,12 @@ body.mm-ocd-opened {
   }
   &__select{
     border-color: #C2C9D6;
-    position: relative;
-    // overflow: hidden;
-    text-overflow: ellipsis;
+    .current{
+      display: block;
+      position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
   &__map{
     height: 200px;
@@ -13286,6 +13388,7 @@ body.mm-ocd-opened {
   @include for-sm(){
     position: relative;
     overflow: auto;
+    margin: 0 -15px;
   }
   &__scroll{
     @include for-sm(){
@@ -13327,6 +13430,9 @@ body.mm-ocd-opened {
   &__info{
     display: flex;
     align-items: flex-start;
+    @include for-sm(){
+      padding-left: 15px;
+    }
   }
   &__image{
     height: 60px;
@@ -13575,6 +13681,11 @@ body.mm-ocd-opened {
     }
     &--mt{
       margin-top: 20px;
+    }
+    &-label{
+      span{
+        color: #8592AD;
+      }
     }
     &-item{
       display: flex;

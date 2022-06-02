@@ -701,7 +701,7 @@ let el = document.querySelector('.flyBasket__scroll');
       }
 
 
-      $(window).on('load resize',windowSize);
+      $(window).on('load',windowSize);
 
 
       // Карточка товара
