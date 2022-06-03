@@ -3119,6 +3119,7 @@ a.preview-item__option-value{
     justify-content: center;
     color: #C1C8D7;
     font-size: 20px;
+    line-height: 2;
     background-color: transparent;
 
     &--minus{
@@ -4348,8 +4349,12 @@ body.mm-ocd-opened {
     }
     &--active{
       background-color: #18141F;
-      color: $white;
+      color: $white !important;
       border-color: #18141F;
+
+      &:focus{
+        color: $white;
+      }
     }
     &:hover{
       border-color: #18141F;
@@ -9537,6 +9542,9 @@ body.mm-ocd-opened {
 .my-orders{
   background-color: $white;
   border-radius: 3px;
+  @include for-md(){
+    background-color: transparent;
+  }
   &--mt-top{
     margin-top: 30px;
     @include for-md(){
@@ -9547,7 +9555,10 @@ body.mm-ocd-opened {
     padding: 30px;
     box-sizing: border-box;
     @include for-md(){
+      background-color: $white;
       padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 3px;
     }
   }
   &__sort{
@@ -9583,6 +9594,12 @@ body.mm-ocd-opened {
       }
     }
   }
+  &__body{
+    @include for-md(){
+      background-color: $white;
+      border-radius: 3px;
+    }
+  }
 }
 .my-orders-table{
 
@@ -9611,15 +9628,27 @@ body.mm-ocd-opened {
     }
   }
   &__col{
-    &:first-child{
+    &:nth-child(2){
       width: 300px;
+      @include for-md(){
+        width: 100%;
+      }
     }
-    &:nth-child(2),&:nth-child(3),&:nth-child(4){
+    &:nth-child(3),&:nth-child(4),&:nth-child(5){
       width: 150px;
       margin-left: 20px;
       @include for-md(){
-        width: 33.3%;
+        // width: 33.3%;
         margin-left: 0;
+        width: 100%;
+      }
+    }
+    @include for-md(){
+      &:nth-child(3),&:nth-child(4),&:nth-child(5){
+        display: none;
+      }
+      &:nth-child(2){
+        width: 100%;
       }
     }
     &:last-child{
@@ -9647,9 +9676,19 @@ body.mm-ocd-opened {
   }
   &__value{
     font-weight: 700;
+    @include for-md(){
+      font-size: 12px;
+    }
       &-desc{
         color: #8592AD;
         font-weight: 400;
+      }
+      &--mobile{
+        display:none;
+        @include for-md(){
+          margin-top: 5px;
+          display: block;
+        }
       }
   }
   &__time{
@@ -9739,6 +9778,9 @@ body.mm-ocd-opened {
   &__name{
     line-height: 17px;
     margin-bottom: 10px;
+    @include for-md(){
+      margin-bottom: 5px;
+    }
     &--desktop{
       @include for-md(){
         display: none;
@@ -9779,8 +9821,15 @@ body.mm-ocd-opened {
     }
   }
   &__reviews{
+    &-values{
+      @include for-md(){
+        margin-left: 80px;
+        font-size: 12px;
+      }
+    }
     &-item{
       display: flex;
+     
       // justify-content: space-between;
     }
     &-title{
@@ -11940,6 +11989,7 @@ body.mm-ocd-opened {
   &__image-gallery{
     max-width: 460px;
     margin-right: 20px;
+    flex-shrink: 0;
     .image-gallery__thumbs,.image-gallery__main{
       height: 400px;
       
@@ -13683,6 +13733,9 @@ body.mm-ocd-opened {
       margin-top: 20px;
     }
     &-label{
+      @include for-md(){
+        font-size: 13px;
+      }
       span{
         color: #8592AD;
       }

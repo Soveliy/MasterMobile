@@ -3,4 +3,6 @@
             font-size: 16px;
         }
     }
-  
+.counter__button{
+    padding-top: 7px;
+}
