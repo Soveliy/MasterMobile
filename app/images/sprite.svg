@@ -280,6 +280,30 @@
     </g>
     <rect x="0" y="0" width="24" height="24" style="fill:none;stroke:none;fill-rule:nonzero;"/>
 </symbol>
+<symbol id="icon-wallet"  viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g>
+        <path d="M13.499,13.48C13.361,13.481 13.25,13.593 13.25,13.731C13.25,13.869 13.362,13.981 13.5,13.98C13.638,13.98 13.75,13.868 13.75,13.73C13.75,13.592 13.638,13.48 13.499,13.48" style="fill:none;stroke:rgb(20,24,31);fill-rule:nonzero;stroke-width:1px;"/>
+        <path d="M3,6.283L3,6C3,4.343 4.343,3 6,3L18,3C19.657,3 21,4.343 21,6L21,15C21,16.657 19.657,18 18,18L17,18" style="fill:none;fill-rule:nonzero;stroke-width:1px;stroke:rgb(20,24,31);"/>
+        <path d="M21,9L17,9" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M13.325,20.922C15.205,21.356 17,19.928 17,17.999L17,9.387C17,7.99 16.036,6.778 14.675,6.464L5.45,4.335C4.196,4.045 3,4.997 3,6.283L3,16.152C3,17.549 3.964,18.761 5.325,19.075L13.325,20.922Z" style="fill:none;stroke:rgb(20,24,31);fill-rule:nonzero;stroke-width:1px;"/>
+    </g>
+</symbol>
+<symbol id="icon-profile2" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g>
+        <path d="M5,20C5,17.544 6.991,15.553 9.447,15.553L14.553,15.553C17.009,15.553 19,17.544 19,20" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+        <path d="M15.005,5.245C16.665,6.905 16.665,9.595 15.005,11.255C13.345,12.915 10.655,12.915 8.995,11.255C7.335,9.595 7.335,6.905 8.995,5.245C10.655,3.585 13.345,3.585 15.005,5.245" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+    </g>
+    <rect x="0" y="0" width="24" height="24" style="fill:none;fill-rule:nonzero;"/>
+</symbol>
+
+<symbol id="icon-phone2"  viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke:transparent">
+    <path d="M10.856,13.144C9.686,11.974 8.804,10.664 8.218,9.335C8.094,9.054 8.167,8.725 8.384,8.508L9.203,7.69C9.874,7.019 9.874,6.07 9.288,5.484L8.114,4.31C7.333,3.529 6.067,3.529 5.286,4.31L4.634,4.962C3.893,5.703 3.584,6.772 3.784,7.832C4.278,10.445 5.796,13.306 8.245,15.755C10.694,18.204 13.555,19.722 16.168,20.216C17.228,20.416 18.297,20.107 19.038,19.366L19.689,18.715C20.47,17.934 20.47,16.668 19.689,15.887L18.516,14.714C17.93,14.128 16.98,14.128 16.395,14.714L15.492,15.618C15.275,15.835 14.946,15.908 14.665,15.784C13.336,15.197 12.026,14.314 10.856,13.144Z" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+    <rect x="0" y="0" width="24" height="24" style="fill:none;fill-rule:nonzero;"/>
+</symbol>
+<symbol id="icon-email" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke:transparent">
+    <path d="M16,12C16,14.209 14.209,16 12,16C9.791,16 8,14.209 8,12C8,9.791 9.791,8 12,8C14.209,8 16,9.791 16,12L16,13.5C16,14.881 17.119,16 18.5,16C19.881,16 21,14.881 21,13.5L21,12C21,7.029 16.971,3 12,3C7.029,3 3,7.029 3,12C3,16.971 7.029,21 12,21C13.149,21 14.317,20.782 15.444,20.315C16.052,20.063 16.614,19.747 17.133,19.386" style="fill:none;fill-rule:nonzero;stroke:rgb(20,24,31);stroke-width:1px;"/>
+    <rect x="0" y="0" width="24" height="24" style="fill:none;fill-rule:nonzero;"/>
+</symbol>
 
 </defs>
 </svg>

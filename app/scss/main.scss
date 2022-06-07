@@ -7819,6 +7819,49 @@ body.mm-ocd-opened {
   }
   
 }
+.payment-info{
+  &__row{
+    flex-wrap: wrap;
+    margin: 0 -30px;
+  }
+  &__item{
+    width: 50%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    &:nth-child(2n){
+      border-left: 1px dashed $mainbg;
+    }
+  }
+  &__title{
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__option{
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    &-icon{
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-right: 10px;
+      svg{
+       
+        height: 100%;
+        width: 100%;
+        display: block;
+
+      }
+    }
+    & + &{
+      margin-top: 10px;
+    }
+  }
+
+  &__options + .payment-info__title{
+    margin-top: 30px;
+  }
+}
 .rating{
   &__item + &__item{
     margin-top: 5px;
