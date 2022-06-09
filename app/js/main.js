@@ -666,7 +666,7 @@ let el = document.querySelector('.flyBasket__scroll');
         })
         var swiper = new Swiper(".visited-list__slider", {
           slidesPerView: "auto",
-          spaceBetween: 0,
+          spaceBetween: 1,
           scrollbar: {
             el: ".visited-list__slider .swiper-scrollbar",
             hide: false,
