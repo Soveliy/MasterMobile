@@ -409,7 +409,7 @@
                             </div>
                             <div class="contacts__items">
                                 <div class="contacts__item">
-                                    <div class="contacts__image">
+                                    <div class="contacts__image contacts__image--active">
                                         <img src="images/contacts/1.png" alt="">
                                     </div>
                                     <div class="contacts__item-right">
@@ -476,7 +476,7 @@
                                                         var myMap = new ymaps.Map('map', {
                                                                 center: [55.792721, 37.780203],
                                                                 zoom: 15,
-                                                                controls:[],
+                                                                controls: ['zoomControl'],
                                                             }),
 
                                                             // Создаём макет содержимого.
@@ -484,7 +484,7 @@
                                                                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
                                                             ),
                                                             MyIconLayout = ymaps.templateLayoutFactory.createClass([
-                                                            '<div class="map-placemark"><i class="fa-solid fa-building"></i></div>'].join('')),
+                                                            '<div class="map-placemark map-placemark--active"><i class="fa-solid fa-building"></i></div>'].join('')),
                                                                 myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
                                                                 hintContent: 'Собственный значок метки',
                                                                 balloonContent: 'Это красивая метка'
@@ -584,7 +584,10 @@
                                                     <input type="text" class="contacts__input" placeholder="Ваше имя">
                                                     <input type="text" class="contacts__input phonemask" placeholder="Контактный телефон *">
                                                     <input type="email" class="contacts__input" placeholder="Email *">
-                                                    <input type="text" class="contacts__input" placeholder="Тема общения">
+                                                    <select class="select contacts-form__select">
+                                                        <option value="" disabled>Тема обращения</option>
+                                                        <option value="">Тема обращения</option>
+                                                    </select>
                                                 </div>
                                                 <div class="contacts-form__right">
                                                     <textarea placeholder="Сообщение" class="contacts__textarea"></textarea>

@@ -468,9 +468,7 @@ select:invalid {
       margin-right: 5px;
     }
   }
-  a{
-    margin-left: 5px;
-  }
+
   &--type-2{
     .checkbox__icon{
       background-color: #E0E4EB;
@@ -1496,8 +1494,8 @@ select:invalid {
         left: 0;
         top: 10px;
         content: "";
-        height: 5px;
-        width: 5px;
+        height: 4px;
+        width: 4px;
         border-radius: 50%;
         background-color: #14181F;
       }
@@ -10442,6 +10440,7 @@ body.mm-ocd-opened {
   background-color: $white;
   padding: 60px;
   box-sizing: border-box;
+  border-radius: 0 0 3px 3px;
   @include for-lg(){
    padding: 30px;
   }
@@ -10471,6 +10470,9 @@ body.mm-ocd-opened {
     width: 100%;
     @include for-sm(){
       max-width: 100%;
+    }
+    .current{
+      color: #14181F;
     }
   }
   &__select + &__select +  &__select{
@@ -10561,6 +10563,14 @@ body.mm-ocd-opened {
  
   
   .content--active{
+
+    .contacts-form-adv__row{
+      flex-wrap: wrap;
+      
+    }
+    .contacts-form-adv__item-container{
+      width: 50%;
+    }
     .recipient__form-item{
       flex-direction: column;
       align-items: flex-start;
@@ -10996,7 +11006,7 @@ body.mm-ocd-opened {
     }
   }
   &__row{
-    @include for-md(){
+    @include for-lg(){
       flex-direction: column;
     }
   }
@@ -11052,6 +11062,21 @@ body.mm-ocd-opened {
     height: 60px;
     flex-shrink: 0;
     margin-right: 20px;
+
+    &--active{
+      padding: 4px;
+      box-sizing: border-box;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url(../images/contacts-border.svg) no-repeat center center;
+      }
+    }
     @include for-md(){
       width: 50px;
       height: 50px;
@@ -11060,14 +11085,14 @@ body.mm-ocd-opened {
   }
   &__left{
     width: 50%;
-    @include for-md(){
+    @include for-lg(){
       width: 100%;
     }
   }
   &__right{
     width: 50%;
     margin-left: 30px;
-    @include for-md(){
+    @include for-lg(){
       width: 100%;
       margin-left: 0;
       margin-top: 15px;
@@ -11080,6 +11105,12 @@ body.mm-ocd-opened {
   }
   &__map-js{
     height: 700px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    .ymaps-2-1-79-map{
+      border-radius: 3px;
+    }
     @include for-md(){
       height: 500px;
     }
@@ -11091,13 +11122,18 @@ body.mm-ocd-opened {
       padding: 15px 0;
     }
     &-name{
+      font-weight: 500;
       @include for-md(){
         font-size: 16px;
       }
     }
     &-info{
+      i{
+        margin-right:5px;
+      }
       span{
         color: #8592AD;
+      
         @include for-md(){
           display: block;
         }
@@ -11130,7 +11166,7 @@ body.mm-ocd-opened {
     &-head{
       font-size: 22px;
      
-      padding-bottom: 20px;
+      padding-bottom: 15px;
       border-bottom: 1px solid $mainbg;
       font-weight: 500;
       @include for-md(){
@@ -11177,8 +11213,20 @@ body.mm-ocd-opened {
       flex-direction: column;
     }
   }
+  &__select{
+    background-color: #F0F1F5;
+    border: 1px solid #F0F1F5;
+    width: 100%;
+    margin-top: 20px;
+    @include for-md(){
+      margin-top: 15px;
+    }
+  }
   &__checkbox{
     margin: 20px 0;
+    @include for-md(){
+      margin: 15px 0;
+    }
   }
   &__button{
     max-width: 272px;
@@ -11220,7 +11268,7 @@ body.mm-ocd-opened {
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-right: 10%;
+      margin-right: 10px;
       border: 1px solid $mainbg;
       box-sizing: border-box;
       img{
@@ -11230,7 +11278,7 @@ body.mm-ocd-opened {
     }
     &__name{
       font-weight: 700;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
       @include for-md(){
         margin-bottom: 5px;
       }
@@ -13605,6 +13653,9 @@ body.mm-ocd-opened {
       color: #9CAAC9;
       font-size: 12px;
       margin-bottom: 20px;
+      i{
+        margin-right: 5px;
+      }
     }
     b{
       font-size: 14px;
@@ -14016,8 +14067,67 @@ body.mm-ocd-opened {
   mix-blend-mode: difference;
   pointer-events: none;
 }
-.ymaps-2-1-79-places-pane{
+.ymaps-2-1-79-places-pane,.ymaps-2-1-79-controls__control{
   filter: invert(1);
+}
+.ymaps-2-1-79-controls__control{
+  top: auto !important;
+  bottom: 0 !important;
+}
+.ymaps-2-1-79-controls-pane{
+  bottom: 0 !important;
+  top: auto !important;
+}
+.ymaps-2-1-79-zoom__minus {
+  border-radius: 0 0 3px 3px !important;
+  border-top: 1px solid #F0F1F5 !important;
+}
+.ymaps-2-1-79-zoom__plus {
+  border-radius: 3px 3px 0 0 !important;
+
+}
+.ymaps-2-1-79-zoom__minus .ymaps-2-1-79-zoom__icon{
+  background: url(../images/minus.svg) no-repeat center center !important;
+  height: 100% !important;
+  width: 100% !important;
+  background-size:8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+ 
+}
+.ymaps-2-1-79-zoom__plus .ymaps-2-1-79-zoom__icon{
+  background: url(../images/plus.svg) no-repeat center center !important;
+  height: 100% !important;
+  width: 100% !important;
+  background-size: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+.ymaps-2-1-79-controls__control{
+  top: auto;
+  left: 0;
+  inset: 0 !important;
+  bottom: 0;
+  .ymaps-2-1-79-zoom{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 80px !important;
+    padding: 0;
+    width: 40px;
+    border: 1px solid rgba(#8592AD,.2);
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  .ymaps-2-1-79-zoom__scale{
+    display: none;
+  }
+  .ymaps-2-1-79-zoom__button{
+    height: 40px;
+    width: 40px;
+  }
 }
 // .ymaps-2-1-79-ground-pane::before {
 // content: '';
