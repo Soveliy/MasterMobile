@@ -828,6 +828,7 @@ select:invalid {
   &--active{
    max-width: 300px;
    width: 100%;
+   overflow: visible;
   }
   &__container{
     width: 300px;
@@ -843,6 +844,9 @@ select:invalid {
     color: $white;
     background-color: $red;
     transition: .3s;
+    @include for-lg(){
+      padding: 15.5px 30px;
+    }
     &:hover{
       background-color: $redHover;
       color: $white;
@@ -859,6 +863,12 @@ select:invalid {
   }
   &__list-title + .catalog-menu__list{
     padding-top: 0;
+    .second-menu{
+      position: fixed;
+      top: 0;
+      left: 300px;
+      height: 100%;
+    }
   }
   &__list{
     padding: 21px 30px 0;
@@ -872,7 +882,37 @@ select:invalid {
       margin: 20px 0;
       box-sizing: border-box;
     }
-    a{
+    > li{
+      
+      
+      &:hover{
+        .second-menu{
+          display: block;
+          &:before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            right: 100%;
+            top: 0;
+          }
+        }
+
+        > a{
+          color: #9FB5DF;
+            &:after{
+              content:'';
+              position: absolute;
+              top: 0;
+              right: -37px;
+              height: 57px;
+              width: 22px;
+              background: url(../images/menu-after.svg) no-repeat center center;
+            }
+          }
+      }
+    }
+    > li > a{
       position: relative;
       display: flex;
       align-items: center;
@@ -14127,6 +14167,94 @@ body.mm-ocd-opened {
   .ymaps-2-1-79-zoom__button{
     height: 40px;
     width: 40px;
+  }
+}
+.second-menu{
+    display: none;
+    position:absolute;
+    top: 0;
+    left: 100%;
+    height: calc(100vh - 80px);
+    
+    top: 80px;
+    background-color: $white;
+    z-index: 6000;
+    @include for-lg(){
+      top: 61px;
+    
+    }
+    &__container{
+      width: 900px;
+      height: 100%;
+      @include for-lg(){
+        width: 725px;
+      }
+    }
+    &__row{
+      height: 100%;
+      justify-content: space-between;
+    }
+    &__left-side{
+      padding: 30px;
+      box-sizing: border-box;
+    }
+    &__right-menu{
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 100%;
+    }
+    &__list{
+      columns: 2;
+      column-gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      @include for-lg(){
+        column-gap: 15px;
+      }
+      &-title{
+        font-size: 22px;
+        color: #14181F;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      &-item{
+        margin-bottom: 10px;
+
+        &-link{
+          @include for-lg(){
+            font-size: 12px;
+          }
+        }
+      }
+      &-item-counter{
+        color: #8592AD;
+      }
+    }
+    
+}
+.second-menu-link{
+  height: 50%;
+  display: block;
+  padding: 72px 30px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  &__title{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  &__cat{
+    font-size: 16px;
+  }
+  &__desc{
+    font-size: 22px;
   }
 }
 // .ymaps-2-1-79-ground-pane::before {
