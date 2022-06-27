@@ -32,7 +32,11 @@ $('.text-page-menu__button').on('click', function(e) {
 
   $(this).next().slideToggle(300);
 })
+// $('.catalog-menu__list > li').hover(function(){
 
+//   $(this).find("div.second-menu").toggleClass("is-hover")
+//   $(this).find("div.second-menu").slideToggle(300)
+// });
  
 // Voice Search
 /* setup vars for our trigger, form, text input and result elements */
