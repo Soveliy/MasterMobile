@@ -1504,3 +1504,27 @@ if (cssPath) {
   link.media = 'all';
   head.appendChild(link);
 }
+
+
+function copyToClipboard(str) {
+  var area = document.createElement('textarea');
+
+  document.body.appendChild(area);  
+    area.value = str;
+    area.select();
+    document.execCommand("copy");
+  document.body.removeChild(area);  
+}
+
+
+
+$('.logistics__item-value--copy').click(function() {
+  copyToClipboard($(this).find("span").text())
+}); 
+
+
+$('.track__list-item-show-more').click(function() {
+
+ $(".track__list-item").show(300);
+ $(this).parent().hide(300)
+}); 
