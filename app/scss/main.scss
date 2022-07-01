@@ -2660,7 +2660,22 @@ select:invalid {
   &__available-value{
     color: #8592AD;
   }
-
+  &:not(.preview-item--in-basket){
+    @include for-sm(){
+      display: flex;
+      flex-direction: column;
+      .preview-item__body{
+        display: flex;
+        flex-direction: column;
+        .preview-item__info{
+          margin-bottom: 15px;
+        }
+        .preview-item__buttoт-mobile {
+          margin-top: auto;
+        }
+      }
+    }
+  }
   &:not(.preview-item--in-basket):hover{
     box-shadow: 0px 15px 15px 0px rgba(194, 201, 214, 0.5);
     z-index: 100;
@@ -4248,6 +4263,16 @@ body.mm-ocd-opened {
     transform-origin: inherit;
     right: 18px;
   }
+  .current{
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+  }
+}
+select{
+  display: none;
 }
 .nice-select + select + .nice-select{
   margin-top: 10px;
@@ -4258,10 +4283,19 @@ body.mm-ocd-opened {
 }
 .nice-select .list{
   width: 100%;
+  overflow-y: auto;
+  max-height: 200px;
 }
 .nice-select .option{
   background-color: $white;
   color: #14181F;
+  white-space: normal;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  box-sizing: border-box;
 }
 .nice-select .option + .option{
   border-top: 1px solid #F0F1F5;
@@ -4506,7 +4540,7 @@ body.mm-ocd-opened {
     display: flex;
     padding: 20px;
     box-sizing: border-box;
-
+    justify-content: space-between;
     @include for-md(){
       flex-direction: column;
       align-items: center;
@@ -5835,6 +5869,7 @@ body.mm-ocd-opened {
       max-width:0;
       position: relative;
       overflow: hidden;
+   
     }
 
     &--active{
@@ -5842,6 +5877,7 @@ body.mm-ocd-opened {
       width: 100%;
       margin-right: 30px;
       flex-shrink: 0;
+      visibility: visible;
 
       // @include for-md(){
       //   display: block;
@@ -5863,6 +5899,8 @@ body.mm-ocd-opened {
       overflow: auto;
       height: 100%;
       width: 100%;
+    
+      
     }
   }
   &__content{
@@ -8696,6 +8734,10 @@ body.mm-ocd-opened {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s;
+    &.swiper-slide-active{
+      z-index:500;
+    }
   }
   .stickers__item{
     border: none;
@@ -11481,6 +11523,15 @@ body.mm-ocd-opened {
    &__counter{
      width: 90px;
      height: 40px;
+     position: relative;
+     justify-content: space-between;
+     input{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: transparent;
+      width: 40px;
+     }
    }
    &__symbol{
      color: #8592AD;
@@ -11519,6 +11570,7 @@ body.mm-ocd-opened {
      &__top{
        display: flex;
       //  justify-content: space-between;
+      align-items: flex-start;
      }
      &__image-container{
        display: flex;
@@ -11542,6 +11594,7 @@ body.mm-ocd-opened {
        display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;  
+      overflow: hidden;
      }
      &__bottom{
        display: flex;
@@ -12097,6 +12150,7 @@ body.mm-ocd-opened {
      }
    }
    &__preview-remove{
+      width: 100%;
       height: 20px;
       text-align: center;
       font-size: 10px;
@@ -12124,6 +12178,9 @@ body.mm-ocd-opened {
  }
  #review-modal{
    max-width: 600px;
+   .modal__head svg {
+    stroke: inherit;
+  }
  }
 
  .nice-select.open{
