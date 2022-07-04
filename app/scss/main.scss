@@ -826,7 +826,9 @@ select:invalid {
   // transform: translateX(-300px);
   background-color: #0A1429;
 
-  
+  @include for-md(){
+    display:none
+  }
   &--active{
    max-width: 300px;
    width: 100%;
@@ -2265,7 +2267,7 @@ select:invalid {
   color: $white;
 
   @include for-md(){
-    padding: 20px 0 50px;
+    padding: 20px 0 75px;
   }
 
   &__row{
@@ -4297,7 +4299,7 @@ select{
 .nice-select .list{
   width: 100%;
   overflow-y: auto;
-  max-height: 200px;
+  max-height: 210px;
 }
 .nice-select .option{
   background-color: $white;
@@ -5857,6 +5859,9 @@ select{
       margin-top: 15px;
     }
   }
+  &__subcategory{
+    margin-bottom: 20px;
+  }
   &__SmartFilter-container{
     width: 270px;
     position: relative;
@@ -5970,7 +5975,7 @@ select{
     }
   }
   &__current-filters{
-    margin: 20px 0;
+    margin:  0 0 20px;
   }
   &__pagination{
     margin-top: 20px;
@@ -7957,7 +7962,7 @@ select{
       &:before{
         content: '';
         position: absolute;
-        top: 8px;
+        top: 11px;
         height: 3px;
         width: 3px;
         border-radius: 50%;
@@ -14695,3 +14700,48 @@ select{
 }
 
 
+.error-page{
+    height: 100%;
+    background: url(../images/city.png) no-repeat bottom center #fff;
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include for-md(){
+      height:auto;
+      padding:50px 0 100px
+    }
+    &__name{
+      font-size: 200px;
+      line-height: 200px;
+      color: #C2C9D6;
+      font-weight:500;
+      @include for-md(){
+        font-size: 150px;
+        line-height: 150px;
+      }
+    }
+    &__title{
+      font-size: 30px;
+      @include for-md(){
+        font-size: 22px;
+        font-weight:500;
+      }
+    }
+    
+    &__buttons{
+      display: flex;
+      margin-top: 50px;
+      justify-content: center;
+    }
+    &__button{
+      padding: 10px 35px;
+     
+    }
+    &__button +  &__button{
+      margin-left: 20px;
+     }
+
+}
