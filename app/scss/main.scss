@@ -987,6 +987,8 @@ select:invalid {
 .main{
   background-color: $mainbg;
   flex: 1;
+  display:flex;
+  flex-direction:column;
   &--padding-bottom{
     padding-bottom: 50px;
     @include for-md(){
@@ -2022,6 +2024,7 @@ select:invalid {
 }
 
 .tizers{
+  margin-top: auto;
   background-color: $red;
   padding: 30px 0;
   &__row{
@@ -5928,6 +5931,7 @@ select{
       width: 100%;
       margin-right: 30px;
       flex-shrink: 0;
+      overflow: visible;
       visibility: visible;
 
       // @include for-md(){
@@ -6571,6 +6575,11 @@ select{
   }
   &__visited-list{
     margin-top: 30px;
+    margin-bottom: 30px;
+
+    + .visited{
+      padding-top: 0;
+    }
   }
   &__row{
     justify-content: space-between;
