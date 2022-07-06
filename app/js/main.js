@@ -354,7 +354,32 @@ let el = document.querySelector('.flyBasket__scroll');
 				});
 
         $(document).ready(function() {
+          let subcat_slider = new Swiper(".subcategory__slider", {
+            slidesPerView: "auto",
+            spaceBetween:15,
+            scrollbar: {
+              el: ".subcategory .swiper-scrollbar",
+              hide: false,
+              draggable: true,
+             
+            },
+            navigation: {
+              nextEl: '.subcategory__nav-arrow-right',
+              prevEl: '.subcategory__nav-arrow-left',
+            },
 
+            breakpoints: {
+              768: {
+              
+                spaceBetween: 1,
+              
+              },
+             
+             
+              
+            }
+           
+          });
           $('.compare-table__info-item').each(function (index, value){
             let height = $(".compare-table__slider tr").eq(index + 1).height();
             console.log(height);
@@ -386,6 +411,20 @@ let el = document.querySelector('.flyBasket__scroll');
             } else {
              
               $(this).prev().attr('type', 'password');
+            }
+            return false;
+           })
+
+
+           $('.card-form__change-visible').on('click', function(e) {
+            $(this).toggleClass("fa-eye")
+            $(this).toggleClass("fa-eye-slash")
+            if ($(this).closest(".card-form__input-container").find("input").attr('type') == 'password'){
+              
+              $(this).closest(".card-form__input-container").find("input").attr('type', 'text');
+            } else {
+             
+              $(this).closest(".card-form__input-container").find("input").attr('type', 'password');
             }
             return false;
            })
@@ -461,6 +500,7 @@ let el = document.querySelector('.flyBasket__scroll');
           $('.catalog__SmartFilter-shadow').click(function(){
             $(".filters__button").removeClass("filters__button--active");
             $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")
+            $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--visible")
             $(".filters__button .filters__button--desktop").html(`Показать фильтры`)
             $(".filters__button i").toggleClass("fa-filter");
             $(".filters__button i").toggleClass(" fa-filter-slash");
@@ -469,6 +509,7 @@ let el = document.querySelector('.flyBasket__scroll');
           $('.SmartFilter__close').click(function(){
             $(".filters__button").removeClass("filters__button--active");
             $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")
+            $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--visible")
             $(".filters__button .filters__button--desktop").html(`Показать фильтры`)
             $(".filters__button i").toggleClass("fa-filter");
             $(".filters__button i").toggleClass(" fa-filter-slash");
@@ -481,12 +522,15 @@ let el = document.querySelector('.flyBasket__scroll');
             $(this).toggleClass("filters__button--active");
             $(".catalog__content").toggleClass("catalog__content--active")
             $(".catalog__SmartFilter").toggleClass("catalog__SmartFilter--active");
-            if($(this).hasClass("filters__button--active")){
             
+            if($(this).hasClass("filters__button--active")){
+              $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--visible")
               $(this).find("span.filters__button--desktop").html(`Показать фильтры`)
             }
             else {
-              
+              setTimeout(() => {
+                $(".catalog__SmartFilter").addClass("catalog__SmartFilter--visible")
+              }, 300);
               $(this).find("span.filters__button--desktop").html(`Скрыть фильтры`)
             }
             
@@ -683,6 +727,8 @@ let el = document.querySelector('.flyBasket__scroll');
           },
          
         });
+
+       
         var tableScroll = new Swiper(".delivery__table-scroll", {
           direction: "horizontal",
           slidesPerView: "auto",
