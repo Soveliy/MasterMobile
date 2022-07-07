@@ -25,7 +25,7 @@ html{
 
 body{
   touch-action: manipulation;
-   
+  overflow: visible !important;
     height: 100%;
     font-family: 'Muller', 'sans-serif';
     margin: 0;
@@ -45,6 +45,14 @@ body{
     // }
     @include for-md(){
       overflow: visible !important;
+    }
+    &.js-review-hidden{
+      position: relative;
+      overflow: hidden !important;
+      margin-right:8px !important;
+      @include for-md(){
+        overflow: visible !important;
+      }
     }
 }
 input{
@@ -1315,6 +1323,9 @@ select:invalid {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @include for-md(){
+      height:auto;
+    }
     img{
       @include for-sm(){
         margin-right: -30px;
