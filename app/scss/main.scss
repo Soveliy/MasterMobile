@@ -4987,14 +4987,15 @@ select{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // max-width: 750px;
-    // width: 100%;
+    max-width: 545px;
+    width: 100%;
     flex-shrink: 0;
     margin-left: auto;
     // flex-grow: 1;
 
     @include for-md(){
       flex-direction: column;
+      max-width: 100%;
     }
     @include for-sm(){
       width: 100%;
@@ -5527,6 +5528,9 @@ select{
       color: #FF0040;
     }
   }
+  &__right{
+    width: 100%;
+  }
   &__name-container{
     @include for-sm(){
       min-height: 110px;
@@ -5541,6 +5545,7 @@ select{
     display: flex;
     margin: 10px 0 0 0;
     flex-wrap: wrap;
+    width: 100%;
     gap: 5px;
     &-item{
       width: calc(50% - 5px);
@@ -11095,6 +11100,8 @@ select{
     .card-tiny__col{
       flex-direction: column;
       align-items: flex-end;
+      max-width:inherit;
+      width:auto;
     }
     .basket__footer-row{
       flex-direction: column;
