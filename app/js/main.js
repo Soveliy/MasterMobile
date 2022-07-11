@@ -279,6 +279,7 @@ $('.footer__title-btn').click(function() {
  $(this).parent().next().slideToggle();
 }); 
 let el = document.querySelector('.flyBasket__scroll');
+
   SimpleScrollbar.initEl(el);
   // let el2 = document.querySelector('.delivery__table-scroll');
   // SimpleScrollbar.initEl(el2);
@@ -766,10 +767,7 @@ let el = document.querySelector('.flyBasket__scroll');
         loop:false,
         touchRatio: 0.2,
         slideToClickedSlide: true,
-        navigation: {
-          nextEl: '.image-gallery__arrow--next',
-          prevEl: '.image-gallery__arrow--right',
-        },
+       
         breakpoints: {
           // when window width is >= 320px
          
@@ -802,6 +800,10 @@ let el = document.querySelector('.flyBasket__scroll');
         effect: 'fade',
         fadeEffect: {
           crossFade: true
+        },
+        navigation: {
+          nextEl: '.image-gallery__arrow--next',
+          prevEl: '.image-gallery__arrow--right',
         },
         // effect: "fade",
         
@@ -888,6 +890,19 @@ let el = document.querySelector('.flyBasket__scroll');
         });
       });
 
+      $(".button--order").click(function(){
+        $("#order-prod").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      
       $(".card-tiny__image,.like-icons__item--glass").click(function(){
         $("#fast-view").arcticmodal({
           afterOpen: function(data, el) {
