@@ -66,6 +66,9 @@ table{
 button:active, button:focus {
   outline: none !important;
 }
+select{
+  display:none;
+}
 a.active.focus,
 a.active:focus,
 a.focus,
@@ -345,6 +348,7 @@ button{
     background-color: #801AE5;
     color: $white;
     border: 1px solid #801AE5;
+    justify-content:center;
     &:hover{
       color: #801AE5;
       background-color: $white;
