@@ -235,7 +235,8 @@ $('.main-slider__swiper').each(function(){
   });
   $('.preview-item__image-slider .swiper-pagination-bullet').hover(function() {
     $( this ).trigger( "click" );
- });   
+ });  
+
 // Убавляем кол-во по клику
 $('.counter__button--minus').click(function() {
   let $input = $(this).parent().find('.counter__input');

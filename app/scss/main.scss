@@ -2888,6 +2888,7 @@ select:invalid {
     padding-top: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    display:block;
     @include for-md(){
       margin-bottom: 0;
     }
@@ -2938,6 +2939,9 @@ select:invalid {
       }
       &.swiper-pagination-bullet-active{
         background-color: #C1C8D7;
+        &:before{
+          height: 0;
+        }
       }
     }
 
@@ -4502,6 +4506,13 @@ select{
       margin-left: 2px;
     }
   }
+  &__content{
+    display: none;
+
+    &:not([style="display: none;"]){
+      display: block;
+    }
+  }
   
 }
 .accordeon{
@@ -4597,6 +4608,9 @@ select{
 .card-second{
   position: relative;
   background-color: $white;
+  .ruble:after, .wd_rub:after{
+    vertical-align: middle;
+  }
   &__row{
     display: flex;
     padding: 20px;
@@ -4882,9 +4896,16 @@ select{
   &__avia{
     margin-right: 30px;
     font-size: 12px;
+
+ 
     i{
       margin-right: 4px;
       color: #00B377;
+    }
+    &--false{
+      i{
+        color: rgb(13, 21, 38);
+      }
     }
   }
   &__rating{
