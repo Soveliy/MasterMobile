@@ -1472,14 +1472,14 @@ body.compensate-for-scrollbar {
 
 .fancybox-navigation .fancybox-button--arrow_left {
     left: 0;
- 
+    left: env(safe-area-inset-left);
     padding: 31px 26px 31px 6px;
 }
 
 .fancybox-navigation .fancybox-button--arrow_right {
     padding: 31px 6px 31px 26px;
     right: 0;
-
+  
 }
 
 /* Caption */
@@ -1505,6 +1505,7 @@ body.compensate-for-scrollbar {
     text-align: center;
     z-index: 99996;
 }
+
 
 
 .fancybox-caption--separate {
@@ -1688,7 +1689,7 @@ body.compensate-for-scrollbar {
         padding-right: 12px;
     }
 
-   
+  
 }
 /* Share */
 

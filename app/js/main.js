@@ -1600,3 +1600,21 @@ $('.track__list-item-show-more').click(function() {
  $(".track__list-item").show(300);
  $(this).parent().hide(300)
 }); 
+
+$('.track__list-item-show-more').click(function() {
+
+  $(".track__list-item").show(300);
+  $(this).parent().hide(300)
+ }); 
+ 
+ $('.track__list-item-show-more').click(function() {
+
+  $(".track__list-item").show(300);
+  $(this).parent().hide(300)
+ }); 
+  $('.rating-bar span').click(function() {
+      $(this).siblings().removeClass("active")
+      $(this).addClass("active").nextAll().addClass("active")
+      let ratingVal = $(this).siblings(".active").length + 1
+      $(this).closest(".rating-bar").find(".rating-bar__input").val(ratingVal)
+  }); 

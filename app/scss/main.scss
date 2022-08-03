@@ -66,7 +66,7 @@ table{
 button:active, button:focus {
   outline: none !important;
 }
-select{
+.select{
   display:none;
 }
 a.active.focus,
@@ -4336,9 +4336,7 @@ body.mm-ocd-opened {
     overflow: hidden;
   }
 }
-select{
-  display: none;
-}
+
 .nice-select + select + .nice-select{
   margin-top: 10px;
 }
