@@ -3,7 +3,7 @@ $('.header__button--catalog-js').on('click', function(e) {
   e.preventDefault();
   $('.catalog-menu').toggleClass('catalog-menu--active');
   $('.content').toggleClass('content--active');
-  $(this).hide(300);
+  $(this).hide();
 })
 $('.catalog-menu__exit-button').on('click', function(e) {
   e.preventDefault();
@@ -282,6 +282,8 @@ $('.footer__title-btn').click(function() {
 let el = document.querySelector('.flyBasket__scroll');
 
   SimpleScrollbar.initEl(el);
+  // SimpleScrollbar.initEl(el2);
+  // let el2 = document.querySelector('.shops-list');
   // let el2 = document.querySelector('.delivery__table-scroll');
   // SimpleScrollbar.initEl(el2);
 
@@ -356,6 +358,9 @@ let el = document.querySelector('.flyBasket__scroll');
 				});
 
         $(document).ready(function() {
+          $(".second-menu").parent().addClass("parent")
+          $(".second-menu__list").prev().addClass("parent")
+          
           let subcat_slider = new Swiper(".subcategory__slider", {
             slidesPerView: "auto",
             spaceBetween:15,
