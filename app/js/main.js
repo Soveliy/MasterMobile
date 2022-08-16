@@ -407,7 +407,7 @@ let el = document.querySelector('.flyBasket__scroll');
             $(".live-search").slideDown(300)
            
           })
-          $('.recipient__form-input--phone,.phonemask').mask('+7 (999) 999 99-99');
+          // $('.recipient__form-input--phone,.phonemask').mask('+7 (999) 999 99-99');
 
           $('.showpass-btn').on('click', function(e) {
             $(this).toggleClass("fa-eye")
