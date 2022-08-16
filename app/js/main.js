@@ -23,7 +23,7 @@ $('.share__button').on('click', function(e) {
   $(this).toggleClass('is-open')
  })
 
- $('.text-page-menu__item-parent a').on('click', function(e) {
+ $('.text-page-menu__item-parent > a').on('click', function(e) {
   e.preventDefault();
   $(this).parent().toggleClass("text-page-menu__item-parent--is-active");
   $(this).next().slideToggle(300);
