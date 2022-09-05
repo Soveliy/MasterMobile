@@ -71,6 +71,10 @@ if (window.SpeechRecognition) {
 }
 
 jQuery(document).ready(function(){
+  $(function() {
+    //The passed argument has to be at least a empty object or a object with your desired options
+    $("body").overlayScrollbars({ });
+  });
   // Решение собственной функции масштабирования в Safari: предотвращение двойного щелчка для увеличения
 // var lastTime = 0;
 // document.addEventListener('touchstart', function(event) {

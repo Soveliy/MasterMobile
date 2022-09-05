@@ -14,6 +14,9 @@ $pagcolor:#868A92;
 $mainbg:#F0F1F5;
 $green:#00B268;
 $greennav:#00B377;
+.wrapper select{
+  display: none;
+}
 html{
     // height: 100%;
     margin: 0;
@@ -24,8 +27,12 @@ html{
 }
 
 body{
+  .os-scrollbar-handle{
+    cursor: pointer;
+  }
   touch-action: manipulation;
   overflow: visible !important;
+  // overflow: hidden;
     height: 100%;
     font-family: 'Muller', 'sans-serif';
     margin: 0;
@@ -66,7 +73,7 @@ table{
 button:active, button:focus {
   outline: none !important;
 }
-.select{
+select.select{
   display:none;
 }
 a.active.focus,
@@ -5401,10 +5408,17 @@ body.mm-ocd-opened {
     padding: 27px 0 11px;
     margin: 0;
     position: relative;
-    overflow: auto;
+    width: auto;
+    // overflow: auto;
     white-space: nowrap;
     @include for-md(){
       padding: 11px 0;
+    }
+  }
+  .swiper-scrollbar-custom{
+    margin-bottom: 15px;
+    &.swiper-scrollbar-lock{
+      display: none;
     }
   }
   &__list-item:not(:first-child){
@@ -6952,6 +6966,11 @@ body.mm-ocd-opened {
     }
   }
   &__top-options-item{
+    @include for-md(){
+      &:nth-child(2){
+        width: 40%;
+      }
+    }
     &:nth-child(3){
       padding-left: 20px;
       border-left: 1px solid #E0E4EB;
@@ -12061,9 +12080,9 @@ body.mm-ocd-opened {
 .shops-list{
   padding-right: 15px;
     margin-right: -15px;
-  // .ss-scroll{
-  //   opacity: 1;
-  // }
+  .ss-scroll{
+    opacity: 1;
+  }
   max-height: 290px;
   &__select{
     max-width: 100%;
@@ -14551,13 +14570,25 @@ body.mm-ocd-opened {
       justify-content: space-between;
     }
     &__left-side{
-      padding: 30px;
       box-sizing: border-box;
       position:relative;
-      overflow:auto;
+      overflow:hidden;
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
+      padding: 30px 0;
+    
+      .ss-content{
+        display: flex;
+        flex-wrap: wrap;
+        padding:0 30px;
+        box-sizing: border-box;
+
+        
+      }
+      .ss-scroll{
+        margin-left: -8px;
+        background-color: rgba(#000000,.4);
+        width: 4px;
+      }
     }
     &__right-menu{
       display: flex;

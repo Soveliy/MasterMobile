@@ -34,9 +34,11 @@ gulp.task('css', function(){
    
     'node_modules/jquery-nice-select/css/nice-select.css',
     'node_modules/swiper/swiper.min.css',
+    // 'node_modules/overlayscrollbars/styles/overlayscrollbars.css',
     'assest/css/simple-scrollbar.css',
-    'assest/css/simple-scrollbar.css',
-
+    'assest/css/OverlayScrollbars.css',
+    
+    
     // 'assest/css/mmenu.css',
     // 'assest/css/mmenu.css',
     // 'assest/css/aos.css',
@@ -69,7 +71,9 @@ gulp.task('js', function(){
         'assest/js/ion.rangeSlider.js',
         'assest/js/jquery.arcticmodal.js',
         'assest/js/jquery.mask.min.js',
-      
+        'assest/js/OverlayScrollbars.min.js',
+        
+        // 'node_modules/overlayscrollbars/dist/overlayscrollbars.esm.js',
     // 'assest/js/aos.js',
     // 'assest/js/swiper.js',
         // 'node_modules/swiper/swiper-bundle.min.js',
