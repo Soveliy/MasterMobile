@@ -114,7 +114,7 @@ img{
     overflow-x: hidden;
 }
 .content{
-  transition: .3s;
+  // transition: .3s;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -865,7 +865,7 @@ select:invalid {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
-  transition: .3s;
+  // transition: .3s;
   // transform: translateX(-300px);
   background-color: #0A1429;
 
@@ -3488,7 +3488,9 @@ a.preview-item__option-value{
   width: 100%;
   z-index: 5000;
   background-color: rgba(0, 0, 0,.6);
-
+  .ss-content{
+    width: 100%;
+  }
   &__bg{
     position: absolute;
     height: 100%;
@@ -3648,6 +3650,9 @@ a.preview-item__option-value{
   box-sizing: border-box;
   &:not(:last-child){
     border-bottom: 1px dotted #E0E4EB;
+  }
+  &__info{
+    width: 100%;
   }
   &__image-container{
     flex-shrink: 0;
@@ -3811,12 +3816,21 @@ body {
   box-sizing: border-box;
   align-items: center;
   height: 70px;
+  opacity: 0;
+  pointer-events: none;
+}
+.mm-spn--main .mmenu_header{
+  opacity: 1;
+  pointer-events: auto;
 }
 .mm-spn--main img {
   height: 30px;
   display: block;
 }
+.mm-ocd .mm-ocd__content .mmenu_header img{
+  max-width:150px;
 
+}
 .mmenu_footer p {
   opacity: 0.5;
   margin-top: 0;
@@ -6083,7 +6097,7 @@ body.mm-ocd-opened {
     }
   }
   &__content{
-    width: calc(100% - 270px);
+    width: calc(100% - 300px);
     transition: .3s;
     &--active{
       width: 100%;
