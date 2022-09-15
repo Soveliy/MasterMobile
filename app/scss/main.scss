@@ -2772,6 +2772,7 @@ select:invalid {
     .preview-item__bottom{
       display: block;
     }
+  
   }
   &__remove-button{
     height: 40px;
@@ -3488,9 +3489,15 @@ a.preview-item__option-value{
   width: 100%;
   z-index: 5000;
   background-color: rgba(0, 0, 0,.6);
-  .ss-content{
-    width: 100%;
+  &__scroll{
+
+    > .ss-wrapper > .ss-content{
+      width: 100%;
+      overflow:hidden;
+     
+    }
   }
+   
   &__bg{
     position: absolute;
     height: 100%;
@@ -3595,6 +3602,20 @@ a.preview-item__option-value{
 }
 .promocode{
   position: relative;
+  &__container{
+    position:relative;
+  }
+  &__coupon{
+    margin-top: 5px;
+     > div{
+      display: flex;
+      justify-content: space-between;
+      span{
+        flex-shrink:0;
+        margin-left: 5px;
+      }
+     }
+  }
   &__button{
     background-color: transparent;
     position: absolute;
@@ -3827,6 +3848,7 @@ body {
   height: 30px;
   display: block;
 }
+
 .mm-ocd .mm-ocd__content .mmenu_header img{
   max-width:150px;
 
@@ -5119,6 +5141,13 @@ body.mm-ocd-opened {
   
 }
 .card-tiny.card-tiny--in-basket{
+  .card-tiny__col{
+    width:auto;
+    max-width:inherit
+  }
+  .preview-item__coast-value{
+    min-width:100px
+  }
   .card-tiny__avia,.card-tiny__rating{
     font-size: 12px;
   }
@@ -7692,7 +7721,7 @@ body.mm-ocd-opened {
     }
   }
   &__scrollbar{
-    margin: 20px 20px 0;
+    margin: 20px 20px -24px;
     @include for-md(){
       display: none;
     }
@@ -7720,6 +7749,10 @@ body.mm-ocd-opened {
   background-color: $white;
   &__slider{
     width: 100%;
+    padding-bottom: 24px;
+    @include for-md(){
+      padding-bottom: 0;
+    }
     // position: relative;
     // overflow: hidden;
   }
@@ -15248,3 +15281,10 @@ body.mm-ocd-opened {
 // .mm-spn a.mmenu_header{
 //   width: 100%;
 // }
+
+.red_text{
+  color:#FF0040
+}
+.green_text{
+  color: #00B377;
+}
