@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Autorich Sans Lite';
+    src: url('AutorichSansLite.woff2') format('woff2'),
+        url('AutorichSansLite.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -64,3 +64,12 @@
     font-style: italic;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Autorich Sans Lite';
+    src: url('../fonts/AutorichSansLite.woff2') format('woff2'),
+        url('../fonts/AutorichSansLite.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
