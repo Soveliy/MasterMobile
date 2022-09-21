@@ -697,17 +697,17 @@ $('.footer__title-btn').click(function() {
         });
 
        
-        var tableScroll = new Swiper(".delivery__table-scroll", {
-          direction: "horizontal",
-          slidesPerView: "auto",
-          freeMode: true,
-          scrollbar: {
-            el: ".delivery__table-scroll--scrollbar",
-            hide: false,
-            draggable: true,
-          },
-          mousewheel: true,
-        });
+        // var tableScroll = new Swiper(".delivery__table-scroll", {
+        //   direction: "horizontal",
+        //   slidesPerView: "auto",
+        //   freeMode: true,
+        //   scrollbar: {
+        //     el: ".delivery__table-scroll--scrollbar",
+        //     hide: false,
+        //     draggable: true,
+        //   },
+        //   mousewheel: true,
+        // });
         function windowSize(){
           if ($(window).width() <= '1300'){
              $(".catalog__SmartFilter").removeClass("catalog__SmartFilter--active")

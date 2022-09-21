@@ -3265,6 +3265,11 @@ a.preview-item__option-value{
     line-height: 2;
     background-color: transparent;
 
+    &.disabled{
+      cursor: pointer;
+      pointer-events: none;
+    }
+
     &--minus{
       padding-bottom: 3px;
     }
@@ -3489,14 +3494,14 @@ a.preview-item__option-value{
   width: 100%;
   z-index: 5000;
   background-color: rgba(0, 0, 0,.6);
-  &__scroll{
+  // &__scroll{
 
-    > .ss-wrapper > .ss-content{
-      width: 100%;
-      overflow:hidden;
+  //   > .ss-wrapper > .ss-content{
+  //     width: 100%;
+  //     overflow:hidden;
      
-    }
-  }
+  //   }
+  // }
    
   &__bg{
     position: absolute;
@@ -5183,6 +5188,9 @@ body.mm-ocd-opened {
   }
 }
 .card-tiny.favotires__card-tiny{
+  .card-tiny .preview-item__coast-value{
+    margin-bottom: 0;
+  }
   &:first-child{
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -7651,18 +7659,32 @@ body.mm-ocd-opened {
       .settings__bottom{
         position: relative;
       }
+      .settings__search{
+        margin-right: 0;
+      }
+
       .more-options{
         position: absolute;
-        top: 0;
+          top: -14px;
           right: 0;
           width: max-content;
           margin-top: 0;
 
       }
       .settings__more-options--mobile .more-options__body:before{
-        right: 30px;
+        right: 25px;
         margin-left: 0; 
-        left: 0;
+        left: auto;
+      }
+    }
+    @include for-md-mob(){
+      .more-options{
+          top: 0;
+        
+
+      }
+      .settings__row{
+        flex-direction: column;
       }
     }
   }
@@ -8415,11 +8437,17 @@ body.mm-ocd-opened {
     font-size: 12px;
     line-height: 14px;
     text-align: center;
+    @include for-tiny-tablet(){
+      text-align: left;
+    }
   }
   &__price{
     text-align: center;
     color: #FF0040;
     font-weight: 700;
+    @include for-tiny-tablet(){
+      text-align: left;
+    }
   }
  
   &__table-container{
@@ -8432,8 +8460,10 @@ body.mm-ocd-opened {
   }
   table{
     width: 100%;
-    @include for-sm(){
-      min-width: 700px;
+    thead{
+      @include for-tiny-tablet(){
+        display: none;
+      }
     }
     th{
       color: #8592AD;
@@ -8461,9 +8491,23 @@ body.mm-ocd-opened {
       vertical-align: middle;
       padding:10px 20px;
       box-sizing: border-box;
+      @include for-tiny-tablet(){
+        height:auto;
+
+      }
+      
       &:first-child{
         padding-left: 0;
         width: 80px;
+        @include for-tiny-tablet(){
+          border-radius: 3px;
+          border: 1px solid #E0E4EB;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 13px 10px;
+        }
         position: relative;
         &::before{
           content: '';
@@ -8474,7 +8518,11 @@ body.mm-ocd-opened {
           width: 1px;
        
           background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(240,241,245,1) 50%, rgba(255,255,255,0) 100%);
+          @include for-tiny-tablet(){
+            display: none;
+          }
         }
+        
       }
       b{
         color: #000;
@@ -8485,15 +8533,57 @@ body.mm-ocd-opened {
       &:nth-child(2){
         color: #8592AD;
         font-size: 12px;
+        @include for-tiny-tablet(){
+          font-size: 14px;
+        }
       }
+      &:not(:first-child){
+        @include for-tiny-tablet(){
+          padding: 0 0 0 15px;
+          border: none;
+        }
+      }
+    }
+    tr{
+      @include for-tiny-tablet(){
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 80px 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "delivery__logo delivery__name delivery__name delivery__name delivery__name"
+          "delivery__logo delivery__date delivery__date delivery__date delivery__date"
+          "delivery__logo delivery__price delivery__price delivery__price delivery__price"
+          "delivery__logo delivery__info delivery__info delivery__info delivery__info"; 
+        td{
+          display: block;
+          height: auto;
+          padding: 0;
+        }
+        .delivery__logo { grid-area: delivery__logo; }
+        .delivery__name { grid-area: delivery__name; }
+        .delivery__date { grid-area: delivery__date; }
+        .delivery__price { grid-area: delivery__price; }
+        .delivery__info { grid-area: delivery__info; }
+      }
+      
     }
     tr:not(:last-child) td{
       border-bottom: 1px dashed $mainbg;
+      &:not(:first-child){
+        @include for-tiny-tablet(){
+          border: none;
+        }
+      }
     }
     
     tr:last-child td{
       height: 50px;
       padding-bottom: 0;
+      @include for-tiny-tablet(){
+        height: auto;
+      }
     }
 
     
@@ -10261,10 +10351,11 @@ body.mm-ocd-opened {
     i{
       color: $white;
       background-color: #8592AD;
-      padding: 1px;
+      padding: 3px;
       margin-right: 5px;
       box-sizing: border-box;
       border-radius: 3px;
+      font-size: 12px;
     }
     &-name{
       color: #8592AD;
@@ -10303,6 +10394,14 @@ body.mm-ocd-opened {
 .my-orders__body--reviews{
   .my-orders-table__head-item:first-child,.my-orders-table__col:first-child{
     width: 580px;
+  }
+  .my-orders-table__col:nth-child(2){
+    width: 150px;
+    margin-left: 20px;
+    @include for-md(){
+      width: 100%;
+      margin-left: 0;
+    }
   }
 }
 .lk-allert{
@@ -15320,5 +15419,18 @@ body.mm-ocd-opened {
 .favotires{
   .preview-item__counter-wrap{
     flex-shrink:0
+  }
+  @include for-md(){
+    .card-tiny__col{
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+  @include for-sm(){
+    .card-tiny__content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
