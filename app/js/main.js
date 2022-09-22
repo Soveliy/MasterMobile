@@ -359,7 +359,10 @@ $('.footer__title-btn').click(function() {
             });
           }
           compareWidth();
-          $('select').niceSelect();
+          $('.select').niceSelect();
+          $( ".select--with-checkboxes" ).each(function( index ) {
+            $(this).filterMultiSelect();
+          });
           $('.header .search__form-input').on('focus', function(e) {
             
             $(".search-items").slideDown(300)

@@ -6971,8 +6971,7 @@ body.mm-ocd-opened {
       margin-bottom: 0;
     }
     @include for-sm(){
-      margin: 10px 0;
-      padding-top: 10px;
+      padding-top: 15px;
     }
     &--footer:last-child{
       clear: both;
@@ -8432,6 +8431,23 @@ body.mm-ocd-opened {
   
 }
 .delivery{
+  tr + tr{
+    @include for-tiny-tablet(){
+      padding-top: 15px;
+      margin-top: 15px;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px dashed #E0E4EB;
+        width: 100%;
+        height: 1px;
+        box-sizing: border-box;
+      }
+    }
+  }
   &__date,&__info{
     color: #8592AD;
     font-size: 12px;
@@ -8460,6 +8476,7 @@ body.mm-ocd-opened {
   }
   table{
     width: 100%;
+   
     thead{
       @include for-tiny-tablet(){
         display: none;
@@ -8501,12 +8518,15 @@ body.mm-ocd-opened {
         width: 80px;
         @include for-tiny-tablet(){
           border-radius: 3px;
-          border: 1px solid #E0E4EB;
+          border: 1px solid #E0E4EB !important;
           height: 50px;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 13px 10px;
+          padding: 5px;
+          img{
+            max-height: 100%;
+          }
         }
         position: relative;
         &::before{
@@ -8545,27 +8565,60 @@ body.mm-ocd-opened {
       }
     }
     tr{
+      
       @include for-tiny-tablet(){
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-template-columns: 80px 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          "delivery__logo delivery__name delivery__name delivery__name delivery__name"
-          "delivery__logo delivery__date delivery__date delivery__date delivery__date"
-          "delivery__logo delivery__price delivery__price delivery__price delivery__price"
-          "delivery__logo delivery__info delivery__info delivery__info delivery__info"; 
+        position: relative;
+        // display: grid; 
+        // grid-auto-columns: 1fr; 
+        // grid-template-columns: 80px 1fr 1fr 1fr 1fr; 
+        // grid-template-rows: 1fr 1fr 1fr 1fr; 
+        // gap: 0px 0px; 
+        // grid-template-areas: 
+        //   "delivery__logo delivery__name delivery__name delivery__name delivery__name"
+        //   "delivery__logo delivery__date delivery__date delivery__date delivery__date"
+        //   "delivery__logo delivery__price delivery__price delivery__price delivery__price"
+        //   "delivery__logo delivery__info delivery__info delivery__info delivery__info"; 
+        display: block;
+
+       
         td{
           display: block;
           height: auto;
           padding: 0;
+          &.delivery__logo{
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          &.delivery__price{
+            font-weight: 700;
+            margin-top: 2px;
+            &:before{
+              font-weight: 400;
+              content: 'Предоплата: ';
+              color: #8592AD;
+            }
+          }
+          &.delivery__info{
+            font-size: 14px;
+            font-weight: 700;
+            &::before{
+              content: 'Наложенный: ';
+              font-weight: 400;
+            }
+          }
+          &:not(.delivery__logo){
+            padding: 0 0 0 95px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 50;
+          }
         }
-        .delivery__logo { grid-area: delivery__logo; }
-        .delivery__name { grid-area: delivery__name; }
-        .delivery__date { grid-area: delivery__date; }
-        .delivery__price { grid-area: delivery__price; }
-        .delivery__info { grid-area: delivery__info; }
+        // .delivery__logo { grid-area: delivery__logo; }
+        // .delivery__name { grid-area: delivery__name; }
+        // .delivery__date { grid-area: delivery__date; }
+        // .delivery__price { grid-area: delivery__price; }
+        // .delivery__info { grid-area: delivery__info; }
       }
       
     }
@@ -15432,5 +15485,48 @@ body.mm-ocd-opened {
       flex-direction: column;
       align-items: center;
     }
+  }
+}
+.dropdown-toggle{
+    display: flex;
+    align-items: center;
+    border:1px solid #F0F1F5;
+    background-color: transparent;
+    color: #8592AD;
+    float: none;
+    height: 40px;
+    transition: .3s;
+    padding-left: 18px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.dropdown-menu {
+
+    width: 100%;
+    overflow-y: auto;
+    max-height: 210px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68,68,68,.11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scale(0.75) translateY(-21px);
+    z-index: 9;
+  &.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
   }
 }

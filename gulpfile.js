@@ -37,6 +37,7 @@ gulp.task('css', function(){
     // 'node_modules/overlayscrollbars/styles/overlayscrollbars.css',
     'assest/css/simple-scrollbar.css',
     'assest/css/OverlayScrollbars.css',
+    // 'assest/css/filter_multi_select.css',
     
     
     // 'assest/css/mmenu.css',
@@ -72,6 +73,7 @@ gulp.task('js', function(){
         'assest/js/jquery.arcticmodal.js',
         'assest/js/jquery.mask.min.js',
         'assest/js/OverlayScrollbars.min.js',
+        'assest/js/filter-multi-select-bundle.min.js',
         
         // 'node_modules/overlayscrollbars/dist/overlayscrollbars.esm.js',
     // 'assest/js/aos.js',
