@@ -65,7 +65,7 @@ gulp.task('js', function(){
     // 'node_modules/slick-carousel/slick/slick.js',
       'assest/js/mmenu.js',
         'node_modules/swiper/swiper-bundle.min.js',
-        'node_modules/jquery-nice-select/js/jquery.nice-select.js',
+        // 'node_modules/jquery-nice-select/js/jquery.nice-select.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
         'node_modules/fast-average-color/dist/index.min.js',
         'assest/js/simple-scrollbar.js',
@@ -73,7 +73,9 @@ gulp.task('js', function(){
         'assest/js/jquery.arcticmodal.js',
         'assest/js/jquery.mask.min.js',
         'assest/js/OverlayScrollbars.min.js',
-        'assest/js/filter-multi-select-bundle.min.js',
+        'assest/js/jquery.nice-select.min.js',
+        // 'assest/js/filter-multi-select-bundle.min.js',
+        
         
         // 'node_modules/overlayscrollbars/dist/overlayscrollbars.esm.js',
     // 'assest/js/aos.js',

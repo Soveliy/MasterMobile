@@ -359,10 +359,33 @@ $('.footer__title-btn').click(function() {
             });
           }
           compareWidth();
-          $('.select').niceSelect();
-          $( ".select--with-checkboxes" ).each(function( index ) {
-            $(this).filterMultiSelect();
-          });
+          $('select').niceSelect();
+          // $( ".select--with-checkboxes" ).each(function( index ) {
+          //   $(this).filterMultiSelect();
+
+          // });
+          // if($("[data-select-models]").length){
+          //   $('[data-select-models]').filterMultiSelect({
+          //     placeholderText:"Все производители",
+          //     filterText:"Искать по названию"
+          //   });
+          // }
+          // if($("[data-select-manufacturers]").length){
+          //   $('[data-select-manufacturers]').filterMultiSelect({
+          //     placeholderText:"Все модели",
+          //     filterText:"Искать по названию"
+          //   });
+          // }
+        
+
+        
+        // $(document).ready(function(){
+        //   $(".select--with-checkboxes").niceSelect();
+
+        // })
+           
+         
+        
           $('.header .search__form-input').on('focus', function(e) {
             
             $(".search-items").slideDown(300)
