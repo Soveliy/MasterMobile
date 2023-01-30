@@ -194,6 +194,7 @@ $('.main-slider__swiper').each(function(){
         
       observer: true,  
       observeParents: true,
+      watchOverflow:true,
       slidesPerView: 1,
       spaceBetween: 30,
     });
@@ -360,6 +361,19 @@ $('.footer__title-btn').click(function() {
           }
           compareWidth();
           $('select').niceSelect();
+          let selectScroll = document.querySelectorAll('.nice-select .list');
+          if (selectScroll) {
+         
+                selectScroll.forEach(function(selectScroll) {
+                        console.table(selectScroll)
+                        SimpleScrollbar.initEl(selectScroll);
+                    })
+          }
+          // let selectScroll = document.querySelectorAll('.nice-select .list');
+          // selectScroll.forEach(function(selectScroll) {
+          //       // console.table(menuScroll)
+          //       SimpleScrollbar.initEl(selectScroll);
+          //   })
           // $( ".select--with-checkboxes" ).each(function( index ) {
           //   $(this).filterMultiSelect();
 
@@ -697,10 +711,34 @@ $('.footer__title-btn').click(function() {
 
         $(".more-options__button").click(function(){
           $(this).next().toggle(300)
-      
-
+        })
+        
+        $(".my-orders-table__button--dots").click(function(){
+       
         })
 
+        $(document).on("click", function (e) {
+          if (!$(e.target).closest(".my-orders-table__button--dots").length) {
+            $(".dropdown-search").removeClass("active");
+            $(".search-button").removeClass("active");
+          }
+          e.stopPropagation();
+        });
+
+        function dropdownSearch() {
+          $(".my-orders-table__button--dots").on("click", function () {
+            $(this).next().toggle(300)
+          });
+        
+          $(document).on("click", function (e) {
+            if (!$(e.target).closest(".my-orders-table__button--dots, .more-menu").length) {
+              $(".more-menu__list").hide("300");
+  
+            }
+            e.stopPropagation();
+          });
+        }
+        dropdownSearch()
           $(".card__head-close").click(function(){
           $(this).toggleClass("js-active");
           $(this).closest(".card__item").find(".card__body").slideToggle();
@@ -931,6 +969,58 @@ $('.footer__title-btn').click(function() {
         $("#chose-city").arcticmodal({
           afterOpen: function(data, el) {
             $('body').css('overflow','hidden');
+            let shopsScroll = document.querySelector('.search-shops__container');
+            SimpleScrollbar.initEl(shopsScroll);
+           
+            $(".arcticmodal-container").overlayScrollbars({ });
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      $(".nav-tabs__item--city2").click(function(){
+        $("#chose-city2").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+            let shopsScroll = document.querySelector('.search-shops__container');
+            SimpleScrollbar.initEl(shopsScroll);
+           
+            $(".arcticmodal-container").overlayScrollbars({ });
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      $(".nav-tabs__item--city3").click(function(){
+        $("#chose-city3").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+            let shopsScroll = document.querySelector('.search-shops__container');
+            SimpleScrollbar.initEl(shopsScroll);
+           
+            $(".arcticmodal-container").overlayScrollbars({ });
+          },
+          beforeClose: function(data, el) {
+           setTimeout(() => {
+            $('body').css('overflow','auto');
+           }, 100);
+          },
+        });
+      });
+      $(".nav-tabs__item--city4").click(function(){
+        $("#chose-city4").arcticmodal({
+          afterOpen: function(data, el) {
+            $('body').css('overflow','hidden');
+            let shopsScroll = document.querySelector('.search-shops__container');
+            SimpleScrollbar.initEl(shopsScroll);
+           
+            $(".arcticmodal-container").overlayScrollbars({ });
           },
           beforeClose: function(data, el) {
            setTimeout(() => {
